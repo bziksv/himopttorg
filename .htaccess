@@ -1,0 +1,245 @@
+<RequireAll>
+    Require all granted
+    
+    Require not ip 49.13.193.0/24
+    Require not ip 5.139.230.0/24
+    Require not ip 5.139.253.0/24
+    Require not ip 31.181.248.0/24
+    Require not ip 37.18.38.0/24
+    Require not ip 37.77.111.0/24
+    Require not ip 45.140.18.0/24
+    Require not ip 62.183.46.0/24
+    Require not ip 77.110.108.0/24
+    Require not ip 83.239.97.0/24
+    Require not ip 85.172.109.0/24
+    Require not ip 85.174.205.0/24
+    Require not ip 85.175.197.0/24
+    Require not ip 85.175.217.0/24
+    Require not ip 91.233.43.0/24
+    Require not ip 95.153.163.0/24
+    Require not ip 95.153.177.0/24
+    Require not ip 95.153.178.0/24
+    Require not ip 95.153.180.0/24
+    Require not ip 95.25.184.0/24
+    Require not ip 178.176.211.0/24
+    Require not ip 185.10.173.0/24
+    Require not ip 188.162.140.0/24
+    Require not ip 188.162.143.0/24
+    Require not ip 188.170.169.0/24
+    Require not ip 217.78.231.0/24
+</RequireAll>
+
+
+ErrorDocument 404 /404.php
+
+php_value default_charset utf-8
+php_value display_errors 1
+
+<IfModule mod_php5.c>
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+
+	#php_value display_errors 1
+
+	#php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+
+RewriteEngine On
+RewriteRule ^(\.git|scripts|\.local)(/|$) - [F,L]
+RewriteRule ^README\.md$ - [F,L]
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_URI} !^/bitrix/admin/1c_exchange.php
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+
+
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+	RewriteEngine On
+</IfModule>
+Redirect 301 /articles/aminat-d-i-k/ /catalog/aminat_d/
+Redirect 301 /articles/zhidkosti-antifriz-g11-g12/ /catalog/antifriz_g11_g12/
+Redirect 301 /articles/zhidkosti-antifriz-g11-g12/ /catalog/antifriz_g11_g12/
+Redirect 301 /articles/atseton/	/catalog/atseton/
+Redirect 301 /articles/atseton/	/catalog/atseton/
+Redirect 301 /articles/Grunt_GF-021/ /catalog/grunty_gf_021/
+Redirect 301 /articles/Grunt_GF-021/ /catalog/grunty_gf_021/
+Redirect 301 /articles/grunt-emal-hv-0278/ /catalog/grunt_emal_khv_0278/
+Redirect 301 /articles/azotnaya_kislota/ /catalog/azotnaya_kislota/
+Redirect 301 /articles/neorganicheskoe-soedinenie-kislota-ortofosfornaya/ /catalog/azotnaya_kislota/
+Redirect 301 /articles/neorganicheskoe-soedinenie-kislota-ortofosfornaya/ /catalog/azotnaya_kislota/
+Redirect 301 /articles/sernaya-kislota/	/catalog/sernaya_kislota/
+Redirect 301 /articles/sernaya-kislota/	/catalog/sernaya_kislota/
+Redirect 301 /articles/Kislota_solyanaya_texnicheskaya/	/catalog/solyanaya_kislota/
+Redirect 301 /articles/Kislota_solyanaya_texnicheskaya/	/catalog/solyanaya_kislota/
+Redirect 301 /articles/sulfaminovaya-kislota/ /catalog/sulfaminovaya_kislota/
+Redirect 301 /articles/sulfaminovaya-kislota/ /catalog/sulfaminovaya_kislota/
+Redirect 301 /articles/organicheskoe-khimicheskoe-soedinenie-ksilol/ /catalog/ksilol/
+Redirect 301 /articles/organicheskoe-khimicheskoe-soedinenie-ksilol/ /catalog/ksilol/
+Redirect 301 /articles/polietilenpoliamin/ /catalog/polietilenpoliamin/
+Redirect 301 /articles/smola-ed-20/ /catalog/smoly/
+Redirect 301 /articles/Soda_kalcinirovannaya/ /catalog/soda_kaltsinirovannaya_1/
+Redirect 301 /articles/Soda_kalcinirovannaya/ /catalog/soda_kaltsinirovannaya_1/
+Redirect 301 /articles/sol-tabletirovannaya/ /catalog/sol_tabletirovannaya_1/
+Redirect 301 /articles/Texplastina/ /catalog/tekhplastiny/
+Redirect 301 /articles/Texplastina/ /catalog/tekhplastiny/
+Redirect 301 /articles/Texplastina/ /catalog/tekhplastiny/
+Redirect 301 /articles/Tosol_A-40/ /catalog/tosol_a_40/
+Redirect 301 /articles/trinatriyfosfat/ /catalog/trinatriyfosfat/
+Redirect 301 /articles/organicheskie-soedineniya-khladon-12-22-134/ /catalog/khladony_1/
+Redirect 301 /articles/organicheskie-soedineniya-khladon-12-22-134/ /catalog/khladony_1/
+Redirect 301 /articles/organicheskie-soedineniya-khladon-12-22-134/ /catalog/khladony_1/
+Redirect 301 /articles/emal-ko-868/ /catalog/emali_gf_as_ko_ep/
+Redirect 301 /articles/Soda_kalcinirovannaya/ /catalog/soda_kaltsinirovannaya_1/
+Redirect 301 /articles/Soda_kalcinirovannaya/ /catalog/soda_kaltsinirovannaya_1/
+Redirect 301 /catalog/bumaga/ /catalog/bumaga_promyshlennaya_1/
+Redirect 301 /catalog/produktsiya_dlya_avto_i_s_kh_tekhniki/ /catalog/avtomobilnye_kraski/
+Redirect 301 /catalog/tosol_a_40/ /catalog/tosol_antifriz/
+Redirect 301 /catalog/shpatlevki/ /catalog/khozyaystvennye_tovary/
+Redirect 301 /catalog/grunty/grunt_vl_02_zh_vedro_20_kg_kompl_16_osnova_4_kislotn_razbavitel_lida/ /catalog/grunty_gf_021_1/
+Redirect 301 /catalog/kraska_dlya_derevev/ /catalog/lakokrasochnaya_produktsiya/
+Redirect 301 /catalog/propitki/ /catalog/lakokrasochnaya_produktsiya/
+Redirect 301 /catalog/emali_avtomobilnye/ /catalog/lakokrasochnaya_produktsiya/
+Redirect 301 /catalog/kraski_maslyanye/ /catalog/lakokrasochnaya_produktsiya/
+Redirect 301 /catalog/emali_pfs_strela/emal_pfs_strela_krasnaya_ral_3000_bar_45_kg_yaroslavl/ /catalog/emali_pfs_strela/
+Redirect 301 /catalog/pudra_alyuminievaya/ /catalog/laki_propitki_olify_pudra/pudra_alyuminievaya_pap_1_bar_volgograd/
+Redirect 301 /catalog/kraski_dorozhnye/ /catalog/dorozhnye_kraski/
+Redirect 301 /catalog/pishchevaya_produktsiya/ /
+Redirect 301 /catalog/vse_dlya_piknika/ /catalog/khozyaystvennye_tovary/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/laki/ /catalog/laki_propitki_olify_pudra/lak_gf_95_bar_40_kg/
+Redirect 301 /catalog/laki/lak_bt_577_chernyy_bar_50_kg_moskva/ /catalog/laki_propitki_olify_pudra/lak_ml_92_bar_42_kg_kh_i/
+Redirect 301 /catalog/bumaga_promyshlennaya/ /catalog/bumaga_promyshlennaya_1/
+Redirect 301 /catalog/kraski_vodoemulsionnye/ /catalog/vodoemulsionnye_kraski/
+Redirect 301 /catalog/diski_otreznye_i_pilnye/ /catalog/diski_pilnye_1/
+Redirect 301 /catalog/diski_pilnye/ /catalog/diski_pilnye_1/
+Redirect 301 /catalog/koronki_i_chashki_almaznye/ /catalog/koronki_i_chashki_almaznye_1/
+Redirect 301 /catalog/sverla/ /catalog/khozyaystvennye_tovary/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/lestnitsa_stremyanka_alyum_7_st_sarayli/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/stremyanka_alyum_kombinir_europa_color_6_st_sarayli/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/lestnitsa_stremyanka_evropa_met_4_ct_sarayli/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/lestnitsa_stremyanka_alyum_5_st_sarayli/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/lestnitsa_stremyanka_evropa_met_5_ct_sarayli/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/lestnitsa_stremyanka_alyum_8_st_sarayli/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/antifriz_g11_g12/ /catalog/tosol_antifriz/
+Redirect 301 /catalog/emali_nitro/ /catalog/emali_nts/
+Redirect 301 /catalog/lestnitsy_i_stremyanki/lestnitsa_stremyanka_evropa_met_6_ct_sarayli/ /catalog/lestnitsy_i_stremyanki_1/
+Redirect 301 /catalog/emali_pkhv/ /catalog/emali_gf_as_ko_ep_khv_khs/
+Redirect 301 /catalog/rezino_tekhnicheskie_izdeliya/ /catalog/rezinotekhnicheskie_izdeliya/
+Redirect 301 /catalog/rukava_s_nityanym_opletom/rukav_s_nit_opl_50kh61_5_mm_1_6_mpa_krt/ /catalog/rukava_s_nityanym_opletom/rukav_s_nit_opl_50kh61_5_mm_1_6_mpa_kvart/
+Redirect 301 /catalog/remni_klinovye_a/ /catalog/remni_klinovye/
+Redirect 301 /catalog/remni_klinovye_o_z/ /catalog/remni_klinovye/
+Redirect 301 /catalog/shlangi_pvkh_pishchevye/ /catalog/shlangi_pvkh/
+Redirect 301 /catalog/izolenta_khb/ /catalog/rezinotekhnicheskie_izdeliya/
+Redirect 301 /catalog/rukava_napornye_sh/rukav_napornyy_sh_25kh41_mm_1_6_mpa_kvart/ /catalog/rukava_napornye_b_1/
+
+Redirect 301 /catalog/rukava_napornye_vg/ /catalog/rukava_napornye_vg_1/
+Redirect 301 /catalog/rukava_napornye_v/ /rukava_napornye_v_1/
+Redirect 301 /catalog/rukava_napornye_p/ /rukava_napornye_p_1/
+Redirect 301 /catalog/rukava_napornye_sh/ /rukava_napornye_p_1/
+Redirect 301 /catalog/rukava_napornye_vg/rukav_napornyy_vg_25kh40_mm_1_0_mpa_kvart/ /catalog/rukava_napornye_vg_1/rukav_napornyy_vg_38kh53_mm_1_0_mpa_kvart/
+Redirect 301 /catalog/rukava_pozharnye/ /catalog/rezinotekhnicheskie_izdeliya/
+Redirect 301 /catalog/remni_klinovye_v_b/ /catalog/remni_klinovye/
+Redirect 301 /catalog/rukava_vsasyvayushchie_b/ /catalog/rukava_vsasyvayushchie_b_1/
+Redirect 301 /catalog/syraya_rezina/ /catalog/rezinotekhnicheskie_izdeliya/
+Redirect 301 /catalog/shlangi_pvkh_mbs/ /catalog/shlangi_pvkh/
+
+Redirect 301 /catalog/remni_klinovye_d_g/ /catalog/remni_klinovye/
+Redirect 301 /catalog/olify/ /catalog/laki_propitki_olify_pudra/
+Redirect 301 /catalog/prodecor/ /catalog/prodecor_kraski/
+Redirect 301 /catalog/sol/ /articles/primenenie_i_pravilnyy_vybor_razlichnykh_vidov_soli/
+Redirect 301 /catalog/trinatriyfosfat/ /
+
+Redirect 301 /catalog/laboratornoe_oborudovanie/ /
+Redirect 301 /catalog/aminat_d/ /catalog/sredstva_dlya_vodopodgotovki/aminat_d_pl_kan_22_kg_ekos_1/
+Redirect 301 /catalog/sernaya_kislota/ /catalog/kisloty/kislota_akkumulyatornaya_sernaya_/
+Redirect 301 /catalog/rukava_vsasyvayushchie_p/ /catalog/rukava_vsasyvayushchie_b_1/
+Redirect 301 /catalog/rukava_napornye_b/ /catalog/rukava_napornye_b_1/
+Redirect 301 /catalog/tachki_stroitelnye/ /
+Redirect 301 /catalog/manzhety/ /
+
+Redirect 301 /catalog/rastvoriteli_646_r_4_r_5/ /catalog/rastvoriteli_1/
+Redirect 301 /catalog/rukava_vsasyvayushchie_v/ /catalog/rukava_vsasyvayushchie_v_1/
+Redirect 301 /catalog/rukava_vsasyvayushchie_kshch/ /catalog/rukava_vsasyvayushchie_kshch_1/
+Redirect 301 /catalog/remni_ventilyatornye/ /
+Redirect 301 /catalog/viniplast/ /
+Redirect 301 /catalog/grunty_gf_021/ /catalog/grunty_gf_021_1/
+Redirect 301 /catalog/emali_gf_as_ko_ep/ /catalog/emali_gf_as_ko_ep_khv_khs/
+Redirect 301 /catalog/emal_ko_868/ /catalog/emali_gf_as_ko_ep_khv_khs/emal_ko_868_sereb_seraya_tes_termo_bar_25_kg/
+Redirect 301 /catalog/azotnaya_kislota/ /catalog/kisloty/
+Redirect 301 /catalog/trubka-pvkh/ /catalog/khozyaystvennye_tovary/
+Redirect 301 /catalog/zhidkost_tormoznaya/ /
+Redirect 301 /catalog/rastvoriteli/ /catalog/rastvoriteli_1/
+Redirect 301 /catalog/akkumulyatory/ /
+Redirect 301 /catalog/emkosti_i_tara/ /
+Redirect 301 /catalog/tara/ /
+Redirect 301 /catalog/stroitelnye_materialy/ /
+Redirect 301 /catalog/elektrody/ /
+
+Redirect 301 /catalog/kley/ /catalog/khozyaystvennye_tovary/
+Redirect 301 /catalog/polotno_kh_proshivnoe/ /catalog/polotno_kh_proshivnoe_1/polotno_kh_proshivnoe/
+Redirect 301 /catalog/malyarnye_instrumenty/ /catalog/khozyaystvennye_tovary/
+Redirect 301 /catalog/fanera/ /
+Redirect 301 /catalog/steklotkan/ /catalog/steklotkan_shpagat/
+Redirect 301 /catalog/slesarnye_instrumenty/ /
+Redirect 301 /catalog/polietilenpoliamin/ /catalog/kley_smola_ed_20_polietilenpoliamin/
+Redirect 301 /catalog/smoly/ /catalog/kley_smola_ed_20_polietilenpoliamin/
+Redirect 301 /catalog/perchatki_i_prochee/ /catalog/khozyaystvennye_tovary/
+Redirect 301 /catalog/shpagat/ /catalog/steklotkan_shpagat/
+Redirect 301 /catalog/utepliteli/ /
+Redirect 301 /catalog/nabivki_khbp/ /
+Redirect 301 /catalog/asbostalnoy_list/ /catalog/asbestotekhnicheskie_izdeliya/
+Redirect 301 /catalog/nabivki_apr_31/ /catalog/asbestotekhnicheskie_izdeliya/
+Redirect 301 /catalog/nabivki_lp/ /catalog/asbestotekhnicheskie_izdeliya/
+Redirect 301 /catalog/nabivki_ap_31/ /catalog/asbestotekhnicheskie_izdeliya/
+Redirect 301 /catalog/paronit_pmb/ /catalog/paronit/
+Redirect 301 /catalog/ortofosfornaya_kislota/ /catalog/kisloty/kislota_ortofosfornaya_tekh_tu_pl_kan_35_kg_voskresensk/
+Redirect 301 /catalog/emkosti/ /
+
+Redirect 301 /catalog/mramornaya_kroshka/ /catalog/mramornaya_kroshka_1/
+Redirect 301 /catalog/diski_otreznye/ /catalog/diski_pilnye_1/
+Redirect 301 /catalog/nabivki_agi/ /catalog/asbestotekhnicheskie_izdeliya/ 
+Redirect 301 /catalog/smazochnye_materialy/ /catalog/smazochnye_materialy_1/
+Redirect 301 /catalog/smazki/ /catalog/smazochnye_materialy_1/
+Redirect 301 /catalog/maslo_promyshlennoe/ /
+Redirect 301 /catalog/maslo_motornoe/ /
+Redirect 301 /catalog/maslo_transmissionnoe/ /
+Redirect 301 /catalog/paronit_pon/ /articles/Paronit/
+Redirect 301 /catalog/grafit_/ /
+Redirect 301 /catalog/tekhplastiny/ /catalog/rezinotekhnicheskie_izdeliya/
+Redirect 301 /catalog/tekhplastiny_mbs/ /catalog/tekhplastiny_mbs_1/
+Redirect 301 /catalog/tekhplastiny_tmkshch/ /catalog/tekhplastiny_mbs_1/
+Redirect 301 /catalog/tekhplastiny_gubchatye/ /catalog/tekhplastiny_gubchatye_1/
+Redirect 301 /catalog/tekhplastiny_pishchevye/ /catalog/tekhplastiny_mbs_1/
+Redirect 301 /catalog/tekhplastiny_vakuumnye/ /catalog/tekhplastiny_vakuumnye_1/
+Redirect 301 /catalog/tekhplastina_transformatornaya/ /catalog/tekhplastiny_transformatornye/
+Redirect 301 /catalog/remni_klinovye_s_v/ /catalog/remni_klinovye/
+Redirect 301 /catalog/diski_almaznye/ /catalog/diski_almaznye_1/
+Redirect 301 /catalog/dobavki_dlya_betona/ /
+Redirect 301 /catalog/kisloty_na_rozliv/ /catalog/kisloty/
+Redirect 301 /catalog/sulfaminovaya_kislota/ /catalog/kisloty/
+Redirect 301 /catalog/solyanaya_kislota/ /catalog/kisloty/kislota_solyanaya_novomoskovsk/
+Redirect 301 /articles/Paronit/ /catalog/paronit/
+Redirect 301 /articles/rastvoriteli-646-p4-p5/ /articles/rastvoritel-r-4/
+Redirect 301 /articles/ftoroplast/ /catalog/ftoroplast/
+Redirect 301 /articles/uayt-spirit-voronezh/ /catalog/uayt_spirit/
+Redirect 301 /articles/uayt-spirit/ /catalog/uayt_spirit/
+Redirect 301 /articles/khlornaya_izvest/ /catalog/izvest_khlornaya/
+Redirect 301 /articles/emulsol/ /catalog/emulsol/
+Redirect 301 /spravochnik-khimopttorg/karbid-kaltsiya-ispolzovanie-i-mery-predostorozhnosti/ /catalog/karbid_kaltsiya/
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+</IfModule>

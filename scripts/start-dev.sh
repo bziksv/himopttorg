@@ -2,7 +2,7 @@
 set -e
 cd "$(dirname "$0")/.."
 PROJECT="$(pwd)"
-SITE_ROOT="$PROJECT/himopttorg.ru"
+SITE_ROOT="$PROJECT"
 PHP83=/opt/homebrew/opt/php@8.3
 NGINX=/opt/homebrew/bin/nginx
 RUN_DIR="$PROJECT/.local/run"

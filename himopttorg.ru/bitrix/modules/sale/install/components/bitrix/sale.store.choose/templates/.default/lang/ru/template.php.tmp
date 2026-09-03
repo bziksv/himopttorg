@@ -1,8 +1,0 @@
-<?
-$MESS["SALE_SSC_PHONE"] = "РўРµР»РµС„РѕРЅ";
-$MESS["SALE_SSC_ADRES"] = "РђРґСЂРµСЃ";
-$MESS["SALE_SSC_WORK"] = "Р РµР¶РёРј СЂР°Р±РѕС‚С‹";
-$MESS["SALE_SSC_STORE"] = "РЎРєР»Р°Рґ";
-$MESS["SALE_SSC_EMAIL"] = "Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°";
-$MESS["SALE_SSC_DESC"] = "РћРїРёСЃР°РЅРёРµ";
-$MESS["SALE_SSC_CHANGE"] = "Р

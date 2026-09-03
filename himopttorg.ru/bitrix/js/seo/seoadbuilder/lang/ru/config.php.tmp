@@ -1,7 +1,0 @@
-<?php
-$MESS["UI_TAG_SELECTOR_START_INPUT"] = "РќР°С‡РЅРёС‚Рµ РІРІРѕРґРёС‚СЊ С‚РµРєСЃС‚";
-$MESS["UI_HELPER_ERROR_MSG"] = "РќР°С‡РЅРёС‚Рµ РІРІРѕРґРёС‚СЊ С‚РµРєСЃС‚";
-$MESS["UI_HELPER_BUTTON_CLOSE"] = "Р—Р°РєСЂС‹С‚СЊ";
-$MESS["SEO_AD_BUILDER_YEARS_OLD"] = "Р»РµС‚";
-$MESS["SEO_AD_BUILDER_GENDER"] = "РџРѕР»";
-$MESS["SEO_AD_BUILDER_INTERESTS"] = "Р

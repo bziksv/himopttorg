@@ -36,17 +36,17 @@
 
 | Путь | Что это | В git |
 |------|---------|--------|
-| `himopttorg.ru/` | Корень сайта (document root) | да, без кэша, upload и конфигов |
-| `himopttorg.ru/bitrix/templates/himopttorg/` | Активный шаблон сайта | да |
-| `himopttorg.ru/bitrix/php_interface/` | Кастомная логика, обмен с 1С | да, без `dbconn.php` |
-| `himopttorg.ru/bitrix/modules/askaron.pro1c/` | Модуль Askaron Pro1C (обмен с 1С) | да |
+| `.` | Корень сайта (document root = корень git) | да, без кэша, upload и конфигов |
+| `bitrix/templates/himopttorg/` | Активный шаблон сайта | да |
+| `bitrix/php_interface/` | Кастомная логика, обмен с 1С | да, без `dbconn.php` |
+| `bitrix/modules/askaron.pro1c/` | Модуль Askaron Pro1C (обмен с 1С) | да |
 | `webdata/` | Локальная выгрузка CommerceML + картинки | нет |
 | `import0_1.xml`, `offers0_1.xml` | Копии каталога и предложений | нет |
 | `himopttorg_s.sql` | Дамп MySQL | нет |
 | `himopttorg.tar.gz`, `webdata.zip` | Архивы | нет |
 
 Сайт один: `s1`. Активный шаблон: **`himopttorg`**.  
-Ядро лежит в `himopttorg.ru/bitrix/`, папки `local/` нет — доработки в legacy-путях.
+Ядро лежит в `bitrix/`, папки `local/` нет — доработки в legacy-путях.
 
 ## Архитектура
 
@@ -124,8 +124,8 @@ upload/1c_catalog/   import0_1.xml + offers0_1.xml
 
 Ручные скрипты (не для продакшена в открытом доступе):
 
-- `himopttorg.ru/hand1CtoSite.php`
-- `himopttorg.ru/1c.php`
+- `hand1CtoSite.php`
+- `1c.php`
 
 Cron-обвязка импорта: `bitrix/php_interface/include/catalog_import/cron_frame.php`.
 
@@ -161,21 +161,36 @@ Cron-обвязка импорта: `bitrix/php_interface/include/catalog_import
 
 Нужны PHP 8.3 (mysqli, short_open_tag), nginx или `php -S`, MySQL 8.
 
-1. Скопировать `himopttorg.ru/` в document root.
-2. Создать БД `himopttorg_s` и залить дамп **локально** (файл `himopttorg_s.sql` в репозиторий не входит).
-3. Скопировать примеры конфигов и прописать свои данные:
+Корень git = корень сайта. На Бегете `public_html` — это и есть репозиторий.
+
+Один раз, сайт уже лежит в `public_html`:
 
 ```bash
-cp himopttorg.ru/bitrix/php_interface/dbconn.php.example \
-   himopttorg.ru/bitrix/php_interface/dbconn.php
-cp himopttorg.ru/bitrix/.settings.php.example \
-   himopttorg.ru/bitrix/.settings.php
-cp himopttorg.ru/bitrix/license_key.php.example \
-   himopttorg.ru/bitrix/license_key.php
+cd ~/himopttorg.beget.tech/public_html
+git init
+git remote add origin https://github.com/bziksv/himopttorg.git
+git fetch origin
+git checkout -f -B main origin/main
 ```
 
-4. Права на `upload/`, `bitrix/cache/`, `bitrix/managed_cache/` — на запись для веб-сервера.
-5. Document root = `himopttorg.ru/`. HTTPS и редиректы — в `.htaccess`.
+`upload/`, `dbconn.php`, `.settings.php` и `license_key.php` в git нет — `checkout -f` их не затрёт.
+
+Потом только так:
+
+```bash
+cd ~/himopttorg.beget.tech/public_html
+git pull origin main
+```
+
+Локально: создать БД `himopttorg_s` и залить дамп (файл `himopttorg_s.sql` в репозиторий не входит). Скопировать примеры конфигов:
+
+```bash
+cp bitrix/php_interface/dbconn.php.example bitrix/php_interface/dbconn.php
+cp bitrix/.settings.php.example bitrix/.settings.php
+cp bitrix/license_key.php.example bitrix/license_key.php
+```
+
+Права на `upload/`, `bitrix/cache/`, `bitrix/managed_cache/` — на запись для веб-сервера. HTTPS и редиректы — в `.htaccess`. `.git`, `scripts/`, `.local/` с веба закрыты.
 
 На проде выключить `$DBDebug` и `exception_handling.debug`.
 
@@ -190,11 +205,11 @@ cp himopttorg.ru/bitrix/license_key.php.example \
 
 | Файл | Что внутри |
 |------|------------|
-| `himopttorg.ru/bitrix/php_interface/dbconn.php` | логин/пароль MySQL |
-| `himopttorg.ru/bitrix/.settings.php` | то же для D7 |
-| `himopttorg.ru/bitrix/license_key.php` | ключ лицензии Битрикс |
+| `bitrix/php_interface/dbconn.php` | логин/пароль MySQL |
+| `bitrix/.settings.php` | то же для D7 |
+| `bitrix/license_key.php` | ключ лицензии Битрикс |
 | `himopttorg_s.sql` | полная БД, в т.ч. пользователи и заказы |
-| `himopttorg.ru/adminer-*.php` | веб-доступ к БД |
+| `adminer-*.php` | веб-доступ к БД |
 | `webdata/`, `*.xml` выгрузки | ассортимент и цены |
 
 Секрет reCAPTCHA сейчас лежит в `init.php` — файл в git пойдёт. Перед пушем в публичный репозиторий вынести ключ в игнорируемый конфиг.

@@ -14,7 +14,7 @@ from io import StringIO
 from xml.etree.ElementTree import iterparse
 
 ROOT = Path(__file__).resolve().parents[1]
-COPY_DIR = ROOT / "himopttorg.ru/upload/1c_catalog_copy_askaron_pro1c"
+COPY_DIR = ROOT / "upload/1c_catalog_copy_askaron_pro1c"
 OUT_HTML = ROOT / "sverka-1c.html"
 
 

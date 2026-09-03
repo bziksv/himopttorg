@@ -1,0 +1,22 @@
+<?
+$MESS["VRT_COMP_CAT_CONTENT"] = "РљРѕРЅС‚РµРЅС‚";
+$MESS["VRT_COMP_CAT_SERVICE"] = "РЎРµСЂРІРёСЃС‹";
+$MESS["VRT_COMP_CAT_COMMUNICATION"] = "РћР±С‰РµРЅРёРµ";
+$MESS["VRT_COMP_CAT_E-STORE"] = "РњР°РіР°Р·РёРЅ";
+$MESS["VRT_COMP_CAT_UTILITY"] = "РЎР»СѓР¶РµР±РЅС‹Рµ";
+$MESS["COMP_PROP_SEF_MODE"] = "Р’РєР»СЋС‡РёС‚СЊ РїРѕРґРґРµСЂР¶РєСѓ Р§РџРЈ";
+$MESS["COMP_PROP_SEF_MODE_NO"] = "РќРµС‚";
+$MESS["COMP_PROP_SEF_MODE_YES"] = "Р”Р°";
+$MESS["COMP_PROP_SEF_FOLDER"] = "РљР°С‚Р°Р»РѕРі Р§РџРЈ (РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РєРѕСЂРЅСЏ СЃР°Р№С‚Р°)";
+$MESS["COMP_GROUP_SEF_MODE"] = "РЈРїСЂР°РІР»РµРЅРёРµ Р°РґСЂРµСЃР°РјРё СЃС‚СЂР°РЅРёС†";
+$MESS["COMP_PROP_SET_TITLE"] = "РЈСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє СЃС‚СЂР°РЅРёС†С‹";
+$MESS["COMP_GROUP_ADDITIONAL_SETTINGS"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["COMP_PROP_CACHE_TIME"] = "Р’СЂРµРјСЏ РєРµС€РёСЂРѕРІР°РЅРёСЏ (СЃРµРє.)";
+$MESS["COMP_PROP_CACHE_TYPE"] = "РўРёРї РєРµС€РёСЂРѕРІР°РЅРёСЏ";
+$MESS["COMP_PROP_CACHE_TYPE_AUTO"] = "РђРІС‚Рѕ";
+$MESS["COMP_PROP_CACHE_TYPE_YES"] = "РљРµС€РёСЂРѕРІР°С‚СЊ";
+$MESS["COMP_PROP_CACHE_TYPE_NO"] = "РќРµ РєРµС€РёСЂРѕРІР°С‚СЊ";
+$MESS["COMP_GROUP_CACHE_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё РєРµС€РёСЂРѕРІР°РЅРёСЏ";
+$MESS["COMP_GROUP_URL_TEMPLATES"] = "РЁР°Р±Р»РѕРЅС‹ СЃСЃС‹Р»РѕРє";
+$MESS["COMP_GROUP_VISUAL"] = "Р’РЅРµС€РЅРёР№ РІРёРґ";
+$MESS["COMP_GROUP_DATA_SOURCE"] = "Р

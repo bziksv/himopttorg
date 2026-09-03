@@ -1,0 +1,41 @@
+<?php
+/**
+ * Bitrix Framework
+ * @package Bitrix\Sale\Location
+ * @subpackage sale
+ * @copyright 2001-2014 Bitrix
+ */
+namespace Bitrix\Sale\Location\Search;
+
+use Bitrix\Main;
+use Bitrix\Main\DB;
+use Bitrix\Main\Entity;
+use Bitrix\Main\Localization\Loc;
+use Bitrix\Sale\Location;
+
+Loc::loadMessages(__FILE__);
+
+final class WordStatTable extends Entity\DataManager
+{
+	public static function getFilePath()
+	{
+		return __FILE__;
+	}
+
+	public static function getTableName()
+	{
+		return 'b_sale_loc_word_stat';
+	}
+
+	public static function cleanUp()
+	{
+		Main\HttpApplication::getConnection()->query('truncate table '.static::getTableName());
+	}
+
+	const STEP_SIZE = 100;
+
+	// tmp
+	protected static $blackList = array(
+		'Р РђР™РћРќ' => true,
+		'РћР‘Р›РђРЎРўР¬' => true,
+		'РЈР›Р

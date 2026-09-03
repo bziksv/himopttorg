@@ -1,0 +1,4 @@
+<?
+$MESS["ACCESS_DENIED"] = "Р”РѕСЃС‚СѓРї Р·Р°РїСЂРµС‰РµРЅ";
+$MESS["SALE_REFUND_HANDLERS_TITLE"] = "РќР°СЃС‚СЂРѕР№РєР° РІРѕР·РІСЂР°С‚РѕРІ";
+$MESS["SALE_REFUND_HANDLERS_LIST_EXTERNAL_ID"] = "Р

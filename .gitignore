@@ -20,11 +20,11 @@ credentials.json
 secrets.json
 
 # Bitrix: доступ к БД, лицензия, D7-конфиг
-himopttorg.ru/bitrix/.settings.php
-himopttorg.ru/bitrix/.settings_extra.php
-himopttorg.ru/bitrix/php_interface/dbconn.php
-himopttorg.ru/bitrix/php_interface/dbconn.local.php
-himopttorg.ru/bitrix/license_key.php
+bitrix/.settings.php
+bitrix/.settings_extra.php
+bitrix/php_interface/dbconn.php
+bitrix/php_interface/dbconn.local.php
+bitrix/license_key.php
 
 # Локальный рантайм nginx/php-fpm
 .local/run/
@@ -49,25 +49,24 @@ webdata.zip
 webdata/
 /import0_1.xml
 /offers0_1.xml
-himopttorg.ru/upload/1c_catalog/
-himopttorg.ru/upload/1c_catalog_copy_askaron_pro1c/
+upload/1c_catalog/
+upload/1c_catalog_copy_askaron_pro1c/
 
 # --- Bitrix runtime ---
-himopttorg.ru/bitrix/cache/
-himopttorg.ru/bitrix/managed_cache/
-himopttorg.ru/bitrix/stack_cache/
-himopttorg.ru/bitrix/backup/
-himopttorg.ru/bitrix/tmp/
-himopttorg.ru/bitrix/updates/
-himopttorg.ru/upload/
+bitrix/cache/
+bitrix/managed_cache/
+bitrix/stack_cache/
+bitrix/backup/
+bitrix/tmp/
+bitrix/updates/
+upload/
 
 # --- Логи ---
 *.log
 log_askaron*
-himopttorg.ru/log_askaron*
-himopttorg.ru/testing.log
+testing.log
 
 # --- Опасные инструменты в корне сайта ---
-himopttorg.ru/adminer*.php
-himopttorg.ru/phpminiadmin*.php
-himopttorg.ru/mail1.php
+adminer*.php
+phpminiadmin*.php
+mail1.php

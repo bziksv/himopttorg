@@ -5,7 +5,7 @@ PROJECT="$(pwd)"
 # shellcheck disable=SC1091
 . "$PROJECT/.local/db.env"
 
-SITE_ROOT="$PROJECT/himopttorg.ru"
+SITE_ROOT="$PROJECT"
 DBCONN="$SITE_ROOT/bitrix/php_interface/dbconn.php"
 SETTINGS="$SITE_ROOT/bitrix/.settings.php"
 LOCAL="$SITE_ROOT/bitrix/php_interface/dbconn.local.php"
@@ -78,4 +78,4 @@ file_put_contents(\$file, \"<?php\\n\\nreturn \" . \$export . \";\\n\");
 "
 fi
 
-echo "local DB config → himopttorg.ru ($DB_LOGIN@$DB_HOST / $DB_NAME)"
+echo "local DB config → $SITE_ROOT ($DB_LOGIN@$DB_HOST / $DB_NAME)"
