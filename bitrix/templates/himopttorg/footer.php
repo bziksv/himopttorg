@@ -46,6 +46,12 @@ IncludeTemplateLangFile(__FILE__);
 				<div class="him">
 				 	<p>&copy; ООО «ХИМОПТТОРГ» <time datetime="2026">2026</time></p>
 					<p><noindex><a rel=nofollow href="mailto:hot@hot.vrn.ru"> hot@hot.vrn.ru</a></noindex></p>
+					<?php
+					$himoptShowSverka = (!empty($GLOBALS["USER"]) && $GLOBALS["USER"]->IsAdmin())
+						|| in_array($_SERVER["REMOTE_ADDR"] ?? "", ["127.0.0.1", "::1"], true);
+					if ($himoptShowSverka) { ?>
+					<p><a href="/sverka-1c.php">Сверка 1С</a> · <a href="/bitrix/admin/">Админка</a></p>
+					<?php } ?>
 
 				</div>
 

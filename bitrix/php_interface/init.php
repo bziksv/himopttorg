@@ -111,16 +111,56 @@ function catalogProductActive()
 AddEventHandler("main", "OnBuildGlobalMenu", "himopttorgSverkaMenu");
 function himopttorgSverkaMenu(&$aGlobalMenu, &$aModuleMenu)
 {
-	$aModuleMenu[] = [
-		"parent_menu" => "global_menu_store",
+	$item = [
 		"section" => "himopttorg_sverka",
 		"sort" => 55,
 		"text" => "Сверка 1С и сайта",
-		"title" => "Сравнить живой каталог с /upload/1c_catalog_copy_askaron_pro1c",
+		"title" => "Сравнить живой каталог с выгрузкой 1С",
 		"url" => "himopttorg_sverka_1c.php?lang=".LANGUAGE_ID,
 		"icon" => "sale_menu_icon",
 		"items_id" => "menu_himopttorg_sverka",
 	];
+	$aModuleMenu[] = $item + ["parent_menu" => "global_menu_store"];
+	$aModuleMenu[] = $item + ["parent_menu" => "global_menu_content", "sort" => 80, "items_id" => "menu_himopttorg_sverka_content"];
 }
+
+AddEventHandler("main", "OnPanelCreate", "himopttorgSverkaPanel");
+function himopttorgSverkaPanel()
+{
+	global $USER, $APPLICATION;
+	if (!is_object($USER) || !$USER->IsAdmin()) {
+		return;
+	}
+	$APPLICATION->AddPanelButton([
+		"HREF" => "/sverka-1c.php",
+		"ID" => "himopttorg_sverka",
+		"SRC" => "/bitrix/images/sale/sale_menu_icon.png",
+		"ALT" => "Сверка 1С и сайта",
+		"TEXT" => "Сверка 1С",
+		"MAIN_SORT" => 450,
+		"TYPE" => "BIG",
+		"HINT" => [
+			"TITLE" => "Сверка 1С",
+			"TEXT" => "Сравнить каталог сайта с import/offers из 1С",
+		],
+	]);
+}
+
+AddEventHandler("main", "OnAdminContextMenuShow", "himopttorgSverkaAdminButton");
+function himopttorgSverkaAdminButton(&$items)
+{
+	$script = isset($_SERVER["SCRIPT_NAME"]) ? $_SERVER["SCRIPT_NAME"] : "";
+	if (!preg_match("~/(cat_|iblock_|askaron_pro1c|1c_)~", $script)) {
+		return;
+	}
+	$items[] = [
+		"TEXT" => "Сверка 1С",
+		"TITLE" => "Сверка каталога с выгрузкой 1С",
+		"LINK" => "/bitrix/admin/himopttorg_sverka_1c.php?lang=".(defined("LANGUAGE_ID") ? LANGUAGE_ID : "ru"),
+		"ICON" => "btn_list",
+	];
+}
+
+require_once __DIR__."/include/himopttorg_1c_catalog_lock.php";
 
 ?>

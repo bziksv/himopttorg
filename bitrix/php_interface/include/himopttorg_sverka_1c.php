@@ -229,7 +229,8 @@ function himopttorg_sverka_load_site()
 	$sql = "
 		SELECT e.ID, e.NAME, e.XML_ID, e.ACTIVE, e.CODE,
 			IFNULL(p.QUANTITY, 0) AS QTY, pr.PRICE,
-			IFNULL(s.NAME, '') AS SECTION
+			IFNULL(s.NAME, '') AS SECTION,
+			IFNULL(s.CODE, '') AS SECTION_CODE
 		FROM b_iblock_element e
 		LEFT JOIN b_catalog_product p ON p.ID = e.ID
 		LEFT JOIN b_catalog_price pr ON pr.PRODUCT_ID = e.ID AND pr.CATALOG_GROUP_ID = ".intval(HIMOPT_SVERKA_PRICE_GROUP)."
@@ -249,6 +250,7 @@ function himopttorg_sverka_load_site()
 			"qty" => (float)$r["QTY"],
 			"price" => ($price === null || $price === "") ? null : (float)$price,
 			"section" => $r["SECTION"],
+			"section_code" => $r["SECTION_CODE"],
 		];
 	}
 	return $rows;
@@ -343,6 +345,41 @@ function himopttorg_sverka_build($site, $importP, $offers, $formed)
 	];
 }
 
+function himopttorg_sverka_front_url($id, $code, $sectionCode)
+{
+	$id = (int)$id;
+	$code = trim((string)$code);
+	$sectionCode = trim((string)$sectionCode);
+	if ($id <= 0) {
+		return "";
+	}
+	if ($sectionCode !== "" && $code !== "") {
+		return "/catalog/".rawurlencode($sectionCode)."/".rawurlencode($code)."/";
+	}
+	return "/catalog/?ELEMENT_ID=".$id;
+}
+
+function himopttorg_sverka_admin_url($id)
+{
+	$id = (int)$id;
+	if ($id <= 0) {
+		return "";
+	}
+	return "/bitrix/admin/iblock_element_edit.php?IBLOCK_ID=".intval(HIMOPT_SVERKA_IBLOCK).
+		"&type=catalog&lang=ru&ID=".$id."&find_section_section=-1";
+}
+
+function himopttorg_sverka_links_from_site($s)
+{
+	$id = isset($s["id"]) ? (int)$s["id"] : 0;
+	$code = isset($s["code"]) ? $s["code"] : "";
+	$sectionCode = isset($s["section_code"]) ? $s["section_code"] : "";
+	return [
+		"front_url" => himopttorg_sverka_front_url($id, $code, $sectionCode),
+		"admin_url" => himopttorg_sverka_admin_url($id),
+	];
+}
+
 function himopttorg_sverka_cell($val, $missing = false, $diff = false)
 {
 	$cls = [];
@@ -360,6 +397,57 @@ function himopttorg_sverka_cell($val, $missing = false, $diff = false)
 	}
 	$class = $cls ? ' class="'.implode(" ", $cls).'"' : "";
 	return "<td".$class.">".himopttorg_sverka_esc($val)."</td>";
+}
+
+function himopttorg_sverka_name_cell($val, $url, $missing = false, $diff = false)
+{
+	$cls = [];
+	if ($missing) {
+		$cls[] = "miss";
+		if ($val === null || $val === "" || $val === "нет на сайте") {
+			$val = "нет на сайте";
+		}
+	}
+	if ($diff) {
+		$cls[] = "diff";
+	}
+	if ($val === null || $val === "") {
+		$val = "—";
+	}
+	$class = $cls ? ' class="'.implode(" ", $cls).'"' : "";
+	$inner = himopttorg_sverka_esc($val);
+	if ($url && $val !== "нет на сайте" && $val !== "—") {
+		$inner = '<a class="name-link" href="'.himopttorg_sverka_esc($url).'" target="_blank" rel="noopener">'.$inner."</a>";
+	}
+	return "<td".$class.">".$inner."</td>";
+}
+
+function himopttorg_sverka_id_cell($r)
+{
+	$id = $r["site_id"];
+	$url = !empty($r["admin_url"]) ? $r["admin_url"] : "";
+	if ($id === "—" || $id === "" || !$url) {
+		return "<td>".himopttorg_sverka_esc($id)."</td>";
+	}
+	return '<td><a class="id-link" href="'.himopttorg_sverka_esc($url).'" target="_blank" rel="noopener">'.
+		himopttorg_sverka_esc($id)."</a></td>";
+}
+
+function himopttorg_sverka_open_cell($r)
+{
+	$front = !empty($r["front_url"]) ? $r["front_url"] : "";
+	$admin = !empty($r["admin_url"]) ? $r["admin_url"] : "";
+	if (!$front && !$admin) {
+		return '<td class="open">—</td>';
+	}
+	$html = '<td class="open">';
+	if ($front) {
+		$html .= '<a class="go go-front" href="'.himopttorg_sverka_esc($front).'" target="_blank" rel="noopener">Сайт</a>';
+	}
+	if ($admin) {
+		$html .= '<a class="go go-admin" href="'.himopttorg_sverka_esc($admin).'" target="_blank" rel="noopener">Админ</a>';
+	}
+	return $html."</td>";
 }
 
 function himopttorg_sverka_badge(array $kinds)
@@ -404,6 +492,8 @@ function himopttorg_sverka_rows($data)
 			"price_diff" => false,
 			"file_missing" => false,
 			"site_missing" => true,
+			"front_url" => "",
+			"admin_url" => "",
 		];
 	}
 
@@ -433,7 +523,7 @@ function himopttorg_sverka_rows($data)
 				"qty_diff" => false,
 				"price_diff" => false,
 				"file_missing" => false,
-			];
+			] + himopttorg_sverka_links_from_site($s);
 		}
 	}
 
@@ -455,7 +545,7 @@ function himopttorg_sverka_rows($data)
 			"qty_diff" => false,
 			"price_diff" => false,
 			"file_missing" => false,
-		];
+		] + himopttorg_sverka_links_from_site($s);
 	}
 
 	foreach ($data["only_site"] as $s) {
@@ -476,7 +566,7 @@ function himopttorg_sverka_rows($data)
 			"qty_diff" => false,
 			"price_diff" => false,
 			"file_missing" => true,
-		];
+		] + himopttorg_sverka_links_from_site($s);
 	}
 
 	$byGuid = [];
@@ -527,12 +617,13 @@ function himopttorg_sverka_render_table($rows)
 		$fileQty = $r["file_qty"] !== null ? $r["file_qty"] : "нет в файле";
 		$sitePrice = $r["site_price"] !== null ? $r["site_price"] : "нет на сайте";
 		$filePrice = $r["file_price"] !== null ? $r["file_price"] : "нет в файле";
-		$text = mb_strtolower(($r["site_name"] ?: "")." ".($r["file_name"] ?: "")." ".($r["guid"] ?: ""), "UTF-8");
+		$text = mb_strtolower(($r["site_id"] ?: "")." ".($r["site_name"] ?: "")." ".($r["file_name"] ?: "")." ".($r["guid"] ?: "")." ".($r["section"] ?: ""), "UTF-8");
 		$body[] =
 			'<tr class="'.$extra.'" data-kind="'.himopttorg_sverka_esc($kinds).'" data-text="'.himopttorg_sverka_esc($text).'">'.
 			"<td>".himopttorg_sverka_badge($r["kinds"])."</td>".
-			"<td>".himopttorg_sverka_esc($r["site_id"])."</td>".
-			himopttorg_sverka_cell($siteName, !empty($r["site_missing"]), !empty($r["name_diff"])).
+			himopttorg_sverka_id_cell($r).
+			himopttorg_sverka_open_cell($r).
+			himopttorg_sverka_name_cell($siteName, !empty($r["front_url"]) ? $r["front_url"] : "", !empty($r["site_missing"]), !empty($r["name_diff"])).
 			himopttorg_sverka_cell($fileName, !empty($r["file_missing"]), !empty($r["name_diff"])).
 			himopttorg_sverka_cell($siteQty, !empty($r["site_missing"]), !empty($r["qty_diff"])).
 			himopttorg_sverka_cell($fileQty, !empty($r["file_missing"]), !empty($r["qty_diff"])).
@@ -544,12 +635,25 @@ function himopttorg_sverka_render_table($rows)
 			"</tr>";
 	}
 	return "<table id='grid'><thead><tr>".
-		"<th>Статус</th><th>ID</th>".
-		"<th>Название на сайте</th><th>Название в файле 1С</th>".
-		"<th>Остаток сайт</th><th>Остаток в файле</th>".
-		"<th>Цена сайт</th><th>Цена в файле</th>".
-		"<th>Активен</th><th>Раздел</th><th>GUID</th>".
+		himopttorg_sverka_th("Статус").
+		himopttorg_sverka_th("ID", "num").
+		himopttorg_sverka_th("Открыть").
+		himopttorg_sverka_th("Название на сайте").
+		himopttorg_sverka_th("Название в файле 1С").
+		himopttorg_sverka_th("Остаток сайт", "num").
+		himopttorg_sverka_th("Остаток в файле", "num").
+		himopttorg_sverka_th("Цена сайт", "num").
+		himopttorg_sverka_th("Цена в файле", "num").
+		himopttorg_sverka_th("Активен").
+		himopttorg_sverka_th("Раздел").
+		himopttorg_sverka_th("GUID").
 		"</tr></thead><tbody>".implode("", $body)."</tbody></table>";
+}
+
+function himopttorg_sverka_th($label, $type = "text")
+{
+	return '<th class="sortable" data-type="'.$type.'" scope="col" title="Сортировать">'.
+		himopttorg_sverka_esc($label)."</th>";
 }
 
 function himopttorg_sverka_card($key, $n, $title, $sub, $extra = "")
@@ -641,8 +745,12 @@ function himopttorg_sverka_render()
   * { box-sizing: border-box; }
   body { margin: 0; font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
   header { background: #16324f; color: #fff; padding: 22px 28px 18px; }
-  header h1 { margin: 0 0 6px; font-size: 20px; }
+  header h1 { margin: 0 0 10px; font-size: 20px; }
   header p { margin: 0; color: #c5d4e4; font-size: 13px; }
+  .nav-btns { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 12px; }
+  .nav-btns a { display: inline-block; padding: 6px 12px; border-radius: 8px; background: #2a5074; color: #fff; text-decoration: none; font-size: 13px; }
+  .nav-btns a:hover { background: #3a6a96; }
+  .nav-btns a.on { background: #1b6fb6; }
   .wrap { max-width: 1480px; margin: 0 auto; padding: 16px 18px 56px; }
   .legend { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin: 14px 0; color: var(--muted); }
   .pair { display: inline-flex; gap: 6px; align-items: center; margin-right: 16px; }
@@ -672,11 +780,24 @@ function himopttorg_sverka_render()
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 7px 8px; vertical-align: top; }
   thead th { position: sticky; top: 0; z-index: 2; background: #e8edf3; }
-  td:nth-child(3), td:nth-child(5), td:nth-child(7) { background: #f3f8fc; }
-  td:nth-child(4), td:nth-child(6), td:nth-child(8) { background: #faf6ea; }
+  th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+  th.sortable:hover { background: #dce4ee; }
+  th.sortable::after { content: " ↕"; color: #8a96a5; font-weight: 400; }
+  th.sortable.asc::after { content: " ↑"; color: #16324f; }
+  th.sortable.desc::after { content: " ↓"; color: #16324f; }
+  td:nth-child(4), td:nth-child(6), td:nth-child(8) { background: #f3f8fc; }
+  td:nth-child(5), td:nth-child(7), td:nth-child(9) { background: #faf6ea; }
   td.miss { background: var(--miss) !important; color: #8a1f13; font-weight: 650; }
   td.diff { background: var(--diff) !important; font-weight: 650; }
   tr.hot td:first-child { box-shadow: inset 3px 0 0 #e3a008; }
+  td.open { white-space: nowrap; }
+  .go { display: inline-block; padding: 3px 8px; margin: 0 4px 3px 0; border-radius: 6px; font-size: 11px; font-weight: 650; text-decoration: none; }
+  .go-front { background: #1b6fb6; color: #fff; }
+  .go-admin { background: #16324f; color: #fff; }
+  .go:hover { opacity: .88; }
+  a.id-link { color: #0b3d80; font-weight: 650; text-decoration: none; }
+  a.name-link { color: inherit; font-weight: 650; text-decoration: none; }
+  a.id-link:hover, a.name-link:hover { text-decoration: underline; }
   .badge { display: inline-block; padding: 2px 7px; border-radius: 999px; font-size: 11px; font-weight: 650; margin: 0 3px 3px 0; white-space: nowrap; }
   .b-miss { background: #f8d0cb; color: #7a160e; }
   .b-qty { background: #ffe08a; color: #6a4b00; }
@@ -693,6 +814,13 @@ function himopttorg_sverka_render()
 </head>
 <body>
 <header>
+  <div class="nav-btns">
+    <a href="/">На сайт</a>
+    <a href="/catalog/">Каталог</a>
+    <a href="/bitrix/admin/">Админка</a>
+    <a href="/sverka-1c.php"'.(strpos($_SERVER["SCRIPT_NAME"], "/bitrix/admin/") === false ? ' class="on"' : '').'>Сверка на сайте</a>
+    <a href="/bitrix/admin/himopttorg_sverka_1c.php"'.(strpos($_SERVER["SCRIPT_NAME"], "/bitrix/admin/") !== false ? ' class="on"' : '').'>Сверка в админке</a>
+  </div>
   <h1>Сверка: сайт слева · файл 1С справа</h1>
   <p>Выгрузка '.himopttorg_sverka_esc($data["formed"] ?: "—").
 	' · файлы скопированы '.$copied.
@@ -718,11 +846,21 @@ function himopttorg_sverka_render()
   </div>
 </div>
 <script>
-const rows = [...document.querySelectorAll("#grid tbody tr")];
+const tbody = document.querySelector("#grid tbody");
 const cards = [...document.querySelectorAll(".card")];
 let filter = "";
+let sortCol = -1;
+let sortDir = 1;
+function rowList() { return [...tbody.querySelectorAll("tr")]; }
+function parseNum(text) {
+  const t = (text || "").trim();
+  if (!t || t === "—" || t.indexOf("нет ") === 0) return null;
+  const n = parseFloat(t.replace(/\s/g, "").replace(",", "."));
+  return Number.isFinite(n) ? n : null;
+}
 function apply() {
   const q = document.getElementById("q").value.trim().toLowerCase();
+  const rows = rowList();
   let n = 0;
   rows.forEach(tr => {
     const kinds = (tr.dataset.kind || "").split(/\s+/);
@@ -735,10 +873,34 @@ function apply() {
   document.getElementById("count").textContent = "Показано " + n + " из " + rows.length;
   cards.forEach(b => b.classList.toggle("on", b.dataset.filter === filter && filter && filter !== "diffs"));
 }
+function sortBy(col, type) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+  document.querySelectorAll("#grid thead th").forEach((th, i) => {
+    th.classList.toggle("asc", i === col && sortDir === 1);
+    th.classList.toggle("desc", i === col && sortDir === -1);
+  });
+  rowList().sort((a, b) => {
+    const ta = a.children[col].innerText.trim();
+    const tb = b.children[col].innerText.trim();
+    if (type === "num") {
+      const na = parseNum(ta), nb = parseNum(tb);
+      if (na === null && nb === null) return 0;
+      if (na === null) return 1;
+      if (nb === null) return -1;
+      return (na - nb) * sortDir;
+    }
+    return ta.localeCompare(tb, "ru", {numeric: true, sensitivity: "base"}) * sortDir;
+  }).forEach(tr => tbody.appendChild(tr));
+  apply();
+}
 cards.forEach(btn => btn.addEventListener("click", () => {
   filter = filter === btn.dataset.filter ? "" : btn.dataset.filter;
   apply();
 }));
+document.querySelectorAll("#grid thead th.sortable").forEach((th, i) => {
+  th.addEventListener("click", () => sortBy(i, th.dataset.type || "text"));
+});
 document.getElementById("q").addEventListener("input", apply);
 document.getElementById("all").addEventListener("click", () => { filter = ""; document.getElementById("q").value = ""; apply(); });
 document.getElementById("diffs").addEventListener("click", () => { filter = "diffs"; apply(); });
