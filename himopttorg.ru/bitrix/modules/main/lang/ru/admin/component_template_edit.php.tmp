@@ -1,0 +1,10 @@
+<?
+$MESS ['MAIN_T_EDIT_TITLE_EDIT'] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР°";
+$MESS ['MAIN_T_EDIT_TITLE_NEW'] = "РќРѕРІС‹Р№ С€Р°Р±Р»РѕРЅ";
+$MESS ['MAIN_T_EDIT_TEMPL_LIST'] = "РЎРїРёСЃРѕРє С€Р°Р±Р»РѕРЅРѕРІ";
+$MESS ['MAIN_T_EDIT_NAME'] = "РќР°Р·РІР°РЅРёРµ:";
+$MESS ['MAIN_T_EDIT_DESCRIPTION'] = "РћРїРёСЃР°РЅРёРµ:";
+$MESS ['MAIN_T_EDIT_CONTENT'] = "Р’РЅРµС€РЅРёР№ РІРёРґ С€Р°Р±Р»РѕРЅР° СЃР°Р№С‚Р° (СЂР°Р±РѕС‡СѓСЋ РѕР±Р»Р°СЃС‚СЊ Р·Р°РјРµРЅРёС‚СЊ #WORK_AREA#):";
+$MESS ['MAIN_T_EDIT_STYLES'] = "Р¤Р°Р№Р» СЃС‚РёР»РµР№ (styles.css):";
+$MESS ['MAIN_T_EDIT_ADDIT_FILES'] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ С„Р°Р№Р»С‹ (РІРєР»СЋС‡Р°РµРјС‹Рµ РѕР±Р»Р°СЃС‚Рё, РєР°СЂС‚РёРЅРєРё):";
+$MESS ['MAIN_T_EDIT_CHANGE'] = "Р

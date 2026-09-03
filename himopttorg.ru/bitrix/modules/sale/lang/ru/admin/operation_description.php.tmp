@@ -1,0 +1,9 @@
+<?
+$MESS['OP_NAME_SALE_STATUS_VIEW'] = 'РџСЂРѕСЃРјРѕС‚СЂ';
+$MESS['OP_NAME_SALE_STATUS_CANCEL'] = 'Р¤Р»Р°Рі РѕС‚РјРµРЅС‹';
+$MESS['OP_NAME_SALE_STATUS_MARK'] = 'Р¤Р»Р°Рі РѕС‚РјРµС‚РєРё Рѕ РїСЂРѕР±Р»РµРјРµ РІ Р·Р°РєР°Р·Рµ';
+$MESS['OP_NAME_SALE_STATUS_DELIVERY'] = 'Р¤Р»Р°Рі РґРѕСЃС‚Р°РІРєРё';
+$MESS['OP_NAME_SALE_STATUS_DEDUCTION'] = 'Р¤Р»Р°Рі РѕС‚РіСЂСѓР·РєРё';
+$MESS['OP_NAME_SALE_STATUS_PAYMENT'] = 'Р¤Р»Р°Рі РѕРїР»Р°С‚С‹';
+$MESS['OP_NAME_SALE_STATUS_TO'] = 'РџРµСЂРµРІРѕРґ РІ СЌС‚РѕС‚ СЃС‚Р°С‚СѓСЃ';
+$MESS['OP_NAME_SALE_STATUS_UPDATE'] = 'Р

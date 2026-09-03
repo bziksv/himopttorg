@@ -1,0 +1,18 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"РњРµРЅСЋ", 
+		"/examples/menu/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"РљРѕРЅС‚СЂРѕР»РёСЂСѓРµРјРѕРµ СЃРєР°С‡РёРІР°РЅРёРµ", 
+		"/examples/download/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Р

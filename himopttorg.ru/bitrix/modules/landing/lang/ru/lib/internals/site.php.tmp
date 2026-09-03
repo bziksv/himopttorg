@@ -1,0 +1,19 @@
+<?php
+$MESS['LANDING_TABLE_FIELD_SITE_CODE'] = 'РђРґСЂРµСЃ СЃР°Р№С‚Р°';
+$MESS['LANDING_TABLE_FIELD_SITE_ACTIVE'] = 'РЎС‚Р°С‚СѓСЃ СЃР°Р№С‚Р°';
+$MESS['LANDING_TABLE_FIELD_SITE_DELETED'] = 'РЎР°Р№С‚ СѓРґР°Р»РµРЅ';
+$MESS['LANDING_TABLE_FIELD_SITE_TITLE'] = 'РќР°Р·РІР°РЅРёРµ СЃР°Р№С‚Р°';
+$MESS['LANDING_TABLE_FIELD_XML_ID'] = 'Р’РЅРµС€РёР№ РєРѕРґ';
+$MESS['LANDING_TABLE_FIELD_DESCRIPTION'] = 'РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ';
+$MESS['LANDING_TABLE_FIELD_TYPE'] = 'РўРёРї';
+$MESS['LANDING_TABLE_FIELD_TPL_ID'] = 'РЁР°Р±Р»РѕРЅ';
+$MESS['LANDING_TABLE_FIELD_TPL_CODE'] = 'РљРѕРґ С€Р°Р±Р»РѕРЅР° С‚РёРїРѕРІРѕРіРѕ СЂРµС€РµРЅРёСЏ';
+$MESS['LANDING_TABLE_FIELD_DOMAIN_ID'] = 'Р”РѕРјРµРЅ';
+$MESS['LANDING_TABLE_FIELD_SMN_SITE_ID'] = 'РЎР°Р№С‚ РіР»Р°РІРЅРѕРіРѕ РјРѕРґСѓР»СЏ';
+$MESS['LANDING_TABLE_FIELD_LANDING_ID_INDEX'] = 'Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°';
+$MESS['LANDING_TABLE_FIELD_LANDING_ID_404'] = 'РЎС‚СЂР°РЅРёС†Р° 404';
+$MESS['LANDING_TABLE_FIELD_LANDING_ID_503'] = 'РЎС‚СЂР°РЅРёС†Р° 503';
+$MESS['LANDING_TABLE_FIELD_SITE_VERSION'] = 'Р’РµСЂСЃРёСЏ СЃР°Р№С‚Р°';
+$MESS['LANDING_TABLE_FIELD_LANG'] = 'РЇР·С‹Рє СЃР°Р№С‚Р°';
+$MESS['LANDING_TABLE_FIELD_SPECIAL'] = 'РўРµС…РЅРёС‡РµСЃРєРёР№ СЃР°Р№С‚';
+$MESS['LANDING_TABLE_FIELD_CREATED_BY_ID'] = 'Р

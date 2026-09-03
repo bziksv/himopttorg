@@ -1,0 +1,7 @@
+<?
+$MESS["CPT_BCSL_OFFSET_MODE_NO"] = "Р±РµР· СЃРјРµС‰РµРЅРёСЏ";
+$MESS["CPT_BCSL_OFFSET_MODE_FIXED"] = "СЏРІРЅРѕ Р·Р°РґР°РЅРЅРѕРµ";
+$MESS["CPT_BCSL_OFFSET_MODE_DYNAMIC"] = "РёР· Р·Р°РїСЂРѕСЃР°";
+$MESS["CPT_BCSL_OFFSET_MODE"] = "РќР°С‡Р°Р»СЊРЅРѕРµ СЃРјРµС‰РµРЅРёРµ (СЃРєСЂРѕР»Р») Р±Р»РѕРєР° СЂР°Р·РґРµР»РѕРІ";
+$MESS["CPT_BCSL_OFFSET_VALUE"] = "Р’РµР»РёС‡РёРЅР° СЃРјРµС‰РµРЅРёСЏ";
+$MESS["CPT_BCSL_OFFSET_VARIABLE"] = "Р

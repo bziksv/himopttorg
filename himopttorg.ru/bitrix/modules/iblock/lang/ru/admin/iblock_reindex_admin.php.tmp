@@ -1,0 +1,7 @@
+<?
+$MESS["IBLOCK_RADM_ID"] = "ID";
+$MESS["IBLOCK_RADM_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["IBLOCK_RADM_ACTIVE"] = "РђРєС‚.";
+$MESS["IBLOCK_RADM_PROPERTY_INDEX"] = "РЎРѕСЃС‚РѕСЏРЅРёРµ";
+$MESS["IBLOCK_RADM_TITLE"] = "Р¤Р°СЃРµС‚РЅС‹Рµ РёРЅРґРµРєСЃС‹ РёРЅС„РѕР±Р»РѕРєРѕРІ";
+$MESS["IBLOCK_RADM_IBLOCKS"] = "Р

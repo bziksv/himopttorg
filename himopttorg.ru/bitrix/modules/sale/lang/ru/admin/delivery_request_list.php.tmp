@@ -1,0 +1,5 @@
+<?
+$MESS ['SALE_DELIVERY_REQ_LIST_DELETE'] = "Р—Р°СЏРІРєР° \"#ID#\" СѓРґР°Р»РµРЅР°";
+$MESS ['SALE_DELIVERY_REQ_LIST_DELETE_ERROR'] = "РџСЂРё СѓРґР°Р»РµРЅРёРё Р·Р°СЏРІРєРё \"#ID#\" РІРѕР·РЅРёРєР»Рё РѕС€РёР±РєРё";
+$MESS ['SALE_DELIVERY_REQ_LIST_UNKNOWN_ACTION'] = "РќРµРёР·РІРµСЃС‚РЅРѕРµ РґРµР№СЃС‚РІРёРµ \"#ACTION#\"";
+$MESS ['SALE_DELIVERY_REQ_LIST_F_ID'] = "Р

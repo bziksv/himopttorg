@@ -1,0 +1,6 @@
+<?
+global $MESS;
+
+$MESS["SPCP_DTITLE"] = "РљСЂРµРґРёС‚РџРёР»РѕС‚";
+$MESS["SPCP_DDESCR"] = "Р Р°Р±РѕС‚Р° С‡РµСЂРµР· <a href=\"http://www.kreditpilot.ru\" target=\"_blank\">www.kreditpilot.ru</a>";
+$MESS["SHOP_ACCOUNT"] = "Р

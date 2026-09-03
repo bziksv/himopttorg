@@ -1,0 +1,27 @@
+<?
+$MESS["FILEMAN_ADMIN_NEW_FOLDER"] = "РќРѕРІР°СЏ РїР°РїРєР°";
+$MESS["FILEMAN_ADMIN_NEW_FILE"] = "РќРѕРІС‹Р№ С„Р°Р№Р»";
+$MESS["FILEMAN_ADMIN_FILE_UPLOAD"] = "Р—Р°РіСЂСѓР·РёС‚СЊ С„Р°Р№Р»";
+$MESS["FILEMAN_ADMIN_MENU_ADD"] = "Р”РѕР±Р°РІРёС‚СЊ РјРµРЅСЋ";
+$MESS["FILEMAN_ADMIN_FOLDER_PROP"] = "РЎРІРѕР№СЃС‚РІР° РїР°РїРєРё";
+$MESS["FILEMAN_ADMIN_ACCESS"] = "Р”РѕСЃС‚СѓРї";
+$MESS["FILEMAN_ADMIN_RENAME"] = "РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ";
+$MESS["FILEMAN_ADMIN_DELETE"] = "РЈРґР°Р»РёС‚СЊ";
+$MESS["FILEMAN_ADMIN_COPY"] = "РљРѕРїРёСЂРѕРІР°С‚СЊ...";
+$MESS["FILEMAN_ADMIN_MOVE"] = "РџРµСЂРµРЅРµСЃС‚Рё...";
+$MESS["FILEMAN_ADMIN_IN"] = "РІ";
+$MESS["FILEMAN_ADMIN_SELECT_FOLDER"] = "(РІС‹Р±РµСЂРёС‚Рµ РїР°РїРєСѓ)";
+$MESS["FILEMAN_ADMIN_ROOT"] = "РєРѕСЂРµРЅСЊ";
+$MESS["FILEMAN_ADMIN_MENU_TYPE"] = "РњРµРЅСЋ С‚РёРїР° ";
+$MESS["FILEMAN_ADMIN_EDIT_AS_TEXT"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє С‚РµРєСЃС‚";
+$MESS["FILEMAN_ADMIN_EDIT_AS_HTML"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє HTML";
+$MESS["FILEMAN_ADMIN_EDIT_AS_MENU"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РјРµРЅСЋ";
+$MESS["FILEMAN_ADMIN_EDIT_AS_PHP"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє PHP";
+$MESS["FILEMAN_ADMIN_VIEW"] = "РџСЂРѕСЃРјРѕС‚СЂ С„Р°Р№Р»Р°";
+$MESS["FILEMAN_EDIT_IN_WORKFLOW"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РІ РјРѕРґСѓР»Рµ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°";
+$MESS["FILEMAN_FAST_PATH"] = "РџСѓС‚СЊ:";
+$MESS["FILEMAN_FAST_PATH_BUTTON"] = "РЎРјРµРЅРёС‚СЊ РїР°РїРєСѓ";
+$MESS["FILEMAN_T_FILES"] = "Р¤Р°Р№Р»С‹";
+$MESS["FILEMAN_FILE_ACTIONS"] = "Р”РµР№СЃС‚РІРёРµ";
+$MESS["FILEMAN_ADMIN_FILE_SIZE"] = "Р Р°Р·РјРµСЂ С„Р°Р№Р»Р°";
+$MESS["FILEMAN_ADMIN_FILE_TIMESTAMP"] = "Р

@@ -1,0 +1,39 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?><?
+//echo "<pre>"; print_r($arResult); echo "</pre>";
+//exit();
+//echo "<pre>"; print_r($_SESSION); echo "</pre>";
+
+if ($arResult['DATA_SAVED'] == 'Y')
+	echo ShowNote(GetMessage('PROFILE_DATA_SAVED'));
+?>
+<?$Update_date=substr($arResult["arUser"]["TIMESTAMP_X"],0,10);?>
+<?$Update_time=substr($arResult["arUser"]["TIMESTAMP_X"],11,8);?>
+<?$LastLogin_date=substr($arResult["arUser"]["LAST_LOGIN"],0,10);?>
+<?$LastLogin_time=substr($arResult["arUser"]["LAST_LOGIN"],11,8);?>
+
+<div class="dan-hold">
+	<h1>Р›РёС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ</h1>
+	<span class="ob-text">вЂ” РѕР±РѕР·РЅР°С‡РµРЅС‹ РїРѕР»СЏ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ</span>
+</div>
+<p class="tit"><a href="/personal/customer-profiles/">РњРѕРё РїСЂРѕС„РёР»Рё</a></p>
+<p class="tit">Р РµРіРёСЃС‚СЂР°С†РёРѕРЅРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ</p>
+<p><?=ShowError($arResult["strProfileError"]);?></p>
+<form class="autorization" style="width:auto;" name="form1" action="<?=$arResult["FORM_TARGET"]?>" method="post" enctype="multipart/form-data">
+<?=$arResult["BX_SESSION_CHECK"]?>
+<input type="hidden" name="lang" value="<?=LANG?>" />
+<input type="hidden" name="ID" value="<?=$arResult["ID"]?>" />
+<input type="hidden" name="LOGIN" value="<?=$arResult["arUser"]["LOGIN"]?>" />
+<input type="hidden" name="EMAIL" value="<?=$arResult["arUser"]["EMAIL"]?>" />
+<input type="hidden" name="save" value="<?=GetMessage("MAIN_SAVE")?>" />
+
+
+<div class="log_passw1">
+	<p class="inp1"><label for="log">Р”Р°С‚Р° РѕР±РЅРѕРІР»РµРЅРёСЏ:</label></p>
+	<p class="inp2" style="background:none;margin:0;padding:0;"><?=$Update_date?> <?=$Update_time?></p>
+</div>
+<div class="log_passw1">
+	<p class="inp1"><label for="log">РџРѕСЃР»РµРґРЅСЏСЏ Р°РІС‚РѕСЂРёР·Р°С†РёСЏ:</label></p>
+	<p class="inp2" style="background:none;margin:0;padding:0;"><?=$LastLogin_date?> <?=$LastLogin_time?></p>
+</div>
+<div class="log_passw1">
+	<p class="inp1"><label for="log">Р

@@ -1,0 +1,3 @@
+<?php
+$MESS["SALE_HPS_BEPAID"] = "BePaid";
+$MESS["SALE_HPS_BEPAID_ID_DESC"] = "Р

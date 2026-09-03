@@ -1,0 +1,12 @@
+<?
+$MESS["CONVERSION_SUMMARY_TITLE"] = "РЎРІРѕРґРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° РєРѕРЅРІРµСЂСЃРёРё";
+$MESS["CONVERSION_SUMMARY_TITLE2"] = "РљРѕРЅРІРµСЂСЃРёСЏ";
+$MESS["CONVERSION_SUMMARY_PERIOD"] = "РџРѕРєР°Р·Р°С‚РµР»СЊ РѕР±С‰РёР№ Р·Р° РїРµСЂРёРѕРґ: #from# - #to#";
+$MESS["CONVERSION_SUMMARY_TOTAL_GRAPH"] = "РћР±С‰Р°СЏ РєРѕРЅРІРµСЂСЃРёСЏ";
+$MESS["CONVERSION_SUMMARY_DETAILED"] = "РљРѕРЅРІРµСЂСЃРёСЏ РґРµС‚Р°Р»СЊРЅР°СЏ";
+$MESS["CONVERSION_SUMMARY_TRAFFIC"] = "РўСЂР°С„РёРє";
+$MESS["CONVERSION_SUMMARY_LESS"] = "СЃРІРµСЂРЅСѓС‚СЊ";
+$MESS["CONVERSION_SUMMARY_MORE"] = "РїРѕРґСЂРѕР±РЅРµРµ";
+$MESS["CONVERSION_SUMMARY_GRAPH_SHOW_ALL"] = "РџРѕРєР°Р·Р°С‚СЊ РІСЃС‘";
+$MESS["CONVERSION_SPLIT_OTHER"] = "РџСЂРѕС‡РµРµ";
+$MESS["CONVERSION_SPLIT_TOTAL"] = "Р

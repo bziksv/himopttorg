@@ -1,0 +1,5 @@
+<?
+$MESS ['askaron_pro1c_forbidden_page'] =
+	"Р­С‚Р° СЃС‚СЂР°РЅРёС†Р° #THIS_PAGE# Р·Р°РїСЂРµС‰РµРЅР° РІ РЅР°СЃС‚СЂРѕР№РєР°С… РјРѕРґСѓР»СЏ \"РџСЂРѕРґРІРёРЅСѓС‚С‹Р№ РѕР±РјРµРЅ СЃ 1РЎ\".\n".
+	"РЎС‚СЂР°РЅРёС†Р° РЅР°СЃС‚СЂРѕРµРє http://#SERVER_NAME#/bitrix/admin/settings.php?mid=askaron.pro1c&lang=#LANG#\n".
+	"Р

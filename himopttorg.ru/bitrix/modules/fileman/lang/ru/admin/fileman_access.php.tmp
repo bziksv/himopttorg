@@ -1,0 +1,12 @@
+<?
+$MESS ['FILEMAN_ACCESS_TITLE'] = "РџСЂР°РІР° РЅР° РґРѕСЃС‚СѓРї РїСЂРѕРґСѓРєС‚Р°";
+
+$MESS ['FM_FOLDER_ACCESS_DENIED'] = "Р—Р°РїСЂРµС‰РµРЅ";
+$MESS ['FM_FOLDER_ACCESS_READ'] = "Р§С‚РµРЅРёРµ";
+$MESS ['FM_FOLDER_ACCESS_WRITE'] = "Р—Р°РїРёСЃСЊ";
+$MESS ['FM_FOLDER_ACCESS_FULL'] = "РџРѕР»РЅС‹Р№ РґРѕСЃС‚СѓРї";
+$MESS ['FM_FOLDER_ACCESS_WORKFLOW'] = "Р”РѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚";
+$MESS ['FILEMAN_FOLDER_ACCESS_INHERIT'] = "РќР°СЃР»РµРґРѕРІР°С‚СЊ";
+
+$MESS ['FILEMAN_ACCESS_TO_DENIED'] = "РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РґРѕСЃС‚СѓРїР° Рє";
+$MESS ['FILEMAN_ACCESS_CHANGE_TO'] = "Р

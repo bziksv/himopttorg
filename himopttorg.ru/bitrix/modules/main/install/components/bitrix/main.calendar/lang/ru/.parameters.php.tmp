@@ -1,0 +1,5 @@
+<?
+$MESS ['COMP_MAIN_CALENDAR_SHOW_INPUT'] = "РџРѕРєР°Р·С‹РІР°С‚СЊ СЌР»РµРјРµРЅС‚ СѓРїСЂР°РІР»РµРЅРёСЏ";
+$MESS ['COMP_MAIN_CALENDAR_SHOW_INPUT_Y'] = "СЃ РїРѕР»РµРј РІРІРѕРґР°";
+$MESS ['COMP_MAIN_CALENDAR_SHOW_INPUT_N'] = "С‚РѕР»СЊРєРѕ РёРєРѕРЅРєСѓ";
+$MESS ['COMP_MAIN_CALENDAR_FORM_NAME'] = "Р

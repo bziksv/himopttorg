@@ -1,0 +1,9 @@
+<?
+$MESS["SALE_ORDER_BUYER_FIND"] = "РќР°Р№С‚Рё РїРѕРєСѓРїР°С‚РµР»СЏ";
+$MESS["SALE_ORDER_BUYER_START_TO_CREATE"] = "РёР»Рё РЅР°С‡РЅРёС‚Рµ Р·Р°РїРѕР»РЅСЏС‚СЊ РїРѕР»СЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ";
+$MESS["SALE_ORDER_BUYER"] = "РџРѕРєСѓРїР°С‚РµР»СЊ";
+$MESS["SALE_ORDER_BUYER_PAYER_TYPE"] = "РўРёРї РїР»Р°С‚РµР»СЊС‰РёРєР°";
+$MESS["SALE_ORDER_BUYER_CHOOSE_PROFILE"] = "Р’С‹Р±РѕСЂ РїСЂРѕС„РёР»СЏ";
+$MESS["SALE_ORDER_BUYER_COMMENT"] = "РљРѕРјРјРµРЅС‚Р°СЂРёР№";
+$MESS["SALE_ORDER_BUYER_ORDERCOMMENT"] = "РљРѕРјРјРµРЅС‚Р°СЂРёР№ РїРѕРєСѓРїР°С‚РµР»СЏ Рє Р·Р°РєР°Р·Сѓ";
+$MESS["SALE_ORDER_BUYER_CHANGE"] = "Р

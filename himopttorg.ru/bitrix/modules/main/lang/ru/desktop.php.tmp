@@ -1,0 +1,9 @@
+<?
+$MESS["UPDATER_DESKTOP_CREATEDBY_KEY"] = "РЎРѕР·РґР°С‚РµР»СЊ СЃР°Р№С‚Р°";
+$MESS["UPDATER_DESKTOP_CREATEDBY_VALUE"] = "Р“СЂСѓРїРїР° РєРѕРјРїР°РЅРёР№ &laquo;1РЎ-Р‘РёС‚СЂРёРєСЃ&raquo;.";
+$MESS["UPDATER_DESKTOP_URL_KEY"] = "РђРґСЂРµСЃ СЃР°Р№С‚Р°";
+$MESS["UPDATER_DESKTOP_URL_VALUE"] = "<a href=\"http://www.1c-bitrix.ru\">www.1c-bitrix.ru</a>";
+$MESS["UPDATER_DESKTOP_PRODUCTION_KEY"] = "РЎР°Р№С‚ СЃРґР°РЅ";
+$MESS["UPDATER_DESKTOP_PRODUCTION_VALUE"] = "12 РґРµРєР°Р±СЂСЏ 2010 Рі.";
+$MESS["UPDATER_DESKTOP_RESPONSIBLE_KEY"] = "РћС‚РІРµС‚СЃС‚РІРµРЅРЅРѕРµ Р»РёС†Рѕ";
+$MESS["UPDATER_DESKTOP_RESPONSIBLE_VALUE"] = "Р

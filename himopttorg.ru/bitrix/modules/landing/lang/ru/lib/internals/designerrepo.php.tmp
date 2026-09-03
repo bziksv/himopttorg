@@ -1,0 +1,7 @@
+<?php
+$MESS['LANDING_TABLE_FIELD_DB_TITLE'] = 'РќР°Р·РІР°РЅРёРµ';
+$MESS['LANDING_TABLE_FIELD_DB_XML_ID'] = 'Р’РЅРµС€РЅРёР№ РєРѕРґ';
+$MESS['LANDING_TABLE_FIELD_DB_SORT'] = 'РЎРѕСЂС‚РёСЂРѕРІРєР°';
+$MESS['LANDING_TABLE_FIELD_DB_HTML'] = 'HTML-РєРѕРґ';
+$MESS['LANDING_TABLE_FIELD_DB_NODE_MANIFEST'] = 'РњР°РЅРёС„РµСЃС‚';
+$MESS['LANDING_TABLE_FIELD_CREATED_BY_ID'] = 'Р

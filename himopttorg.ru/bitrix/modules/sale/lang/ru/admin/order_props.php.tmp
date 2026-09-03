@@ -1,0 +1,21 @@
+<?
+$MESS["SALE_DELETE_ERROR"] = "РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР°";
+$MESS["SALE_SECTION_TITLE"] = "РЎРІРѕР№СЃС‚РІР° Р·Р°РєР°Р·Р°";
+$MESS["SALE_F_FILTER"] = "Р¤РёР»СЊС‚СЂ";
+$MESS["SALE_F_PERS_TYPE"] = "РўРёРї РїР»Р°С‚РµР»СЊС‰РёРєР°";
+$MESS["SALE_ALL"] = "РІСЃРµ";
+$MESS["SALE_F_TYPE"] = "РўРёРї СЃРІРѕР№СЃС‚РІР°";
+$MESS["SALE_F_USER"] = "Р’С…РѕРґРёС‚ РІ РїСЂРѕС„РёР»СЊ";
+$MESS["SALE_F_GROUP"] = "Р“СЂСѓРїРїР° СЃРІРѕР№СЃС‚РІ";
+$MESS["SALE_F_SUBMIT"] = "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ";
+$MESS["SALE_F_DEL"] = "РЎР±СЂРѕСЃРёС‚СЊ";
+$MESS["SALE_ADD"] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS["SALE_PERSON_TYPE"] = "РўРёРї РїР»Р°С‚РµР»СЊС‰РёРєР°";
+$MESS["SALE_FIELD_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["SALE_FIELD_TYPE"] = "РўРёРї";
+$MESS["SALE_REQUIED"] = "РћР±СЏР·.";
+$MESS["SALE_MULTIPLE"] = "РњРЅРѕР¶.";
+$MESS["SALE_GROUP"] = "Р“СЂСѓРїРїР°";
+$MESS["SALE_USER"] = "РџСЂРѕС„РёР»СЊ";
+$MESS["SALE_ACTION"] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS["SALE_EDIT"] = "Р

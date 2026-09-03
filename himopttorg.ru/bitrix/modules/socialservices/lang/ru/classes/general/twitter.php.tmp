@@ -1,0 +1,4 @@
+<?
+$MESS["socserv_tw_key"] = "РљР»СЋС‡ РїСЂРёР»РѕР¶РµРЅРёСЏ (Consumer key):";
+$MESS["socserv_tw_secret"] = "РЎРµРєСЂРµС‚РЅС‹Р№ РєРѕРґ РїСЂРёР»РѕР¶РµРЅРёСЏ (Consumer secret):";
+$MESS["socserv_tw_note"] = "Р

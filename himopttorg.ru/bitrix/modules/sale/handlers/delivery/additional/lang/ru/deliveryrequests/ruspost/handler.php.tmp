@@ -1,0 +1,5 @@
+<?
+$MESS["SALE_DLVRS_ADD_DREQ_BATCH_DOC_PREPARE"] = "РџРѕРґРіРѕС‚РѕРІРєР° Рё РѕС‚РїСЂР°РІРєР° СЌР»РµРєС‚СЂРѕРЅРЅРѕР№ С„РѕСЂРјС‹ Р¤103";
+$MESS["SALE_DLVRS_ADD_DREQ_BATCH_DOC_ALL"] = "РЎРєР°С‡Р°С‚СЊ РїР°РєРµС‚ РґРѕРєСѓРјРµРЅС‚Р°С†РёРё";
+$MESS["SALE_DLVRS_ADD_DREQ_BATCH_DOC_F103"] = "РЎРєР°С‡Р°С‚СЊ РїРµС‡Р°С‚РЅСѓСЋ С„РѕСЂРјСѓ Р¤103";
+$MESS["SALE_DLVRS_ADD_DREQ_BATCH_DATE_UPDATE"] = "Р

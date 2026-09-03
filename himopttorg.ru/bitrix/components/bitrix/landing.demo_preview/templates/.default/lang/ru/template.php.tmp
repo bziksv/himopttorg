@@ -1,0 +1,6 @@
+<?php
+$MESS['LANDING_TPL_TITLE'] = 'РџСЂРµРґРїСЂРѕСЃРјРѕС‚СЂ С€Р°Р±Р»РѕРЅР°';
+$MESS['LANDING_TPL_BUTTON_CREATE'] = 'РЎРѕР·РґР°С‚СЊ';
+$MESS['LANDING_TPL_BUTTON_CANCEL'] = 'РћС‚РјРµРЅРёС‚СЊ';
+$MESS['LANDING_TPL_HEADER_COLOR'] = 'Р¦РІРµС‚РѕРІР°СЏ РїР°Р»РёС‚СЂР°';
+$MESS['LANDING_TPL_COLOR_USE_SITE'] = 'Р

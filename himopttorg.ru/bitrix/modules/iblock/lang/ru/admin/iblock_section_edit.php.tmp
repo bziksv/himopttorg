@@ -1,0 +1,9 @@
+<?
+$MESS["IBSEC_E_TAB2"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕ";
+$MESS["IBSEC_E_TAB2_TITLE"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹";
+$MESS["IBSEC_E_TAB5"] = "SEO";
+$MESS["IBSEC_E_TAB5_TITLE"] = "РќР°СЃС‚СЂРѕР№РєРё SEO РёРЅС„РѕСЂРјР°С†РёРё";
+$MESS["IBSEC_E_PROPERTY_TAB"] = "РЎРІРѕР№СЃС‚РІР° СЌР»РµРјРµРЅС‚РѕРІ";
+$MESS["IBSEC_E_PROPERTY_TAB_TITLE"] = "РќР°СЃС‚СЂРѕР№РєР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ СЌР»РµРјРµРЅС‚РѕРІ";
+$MESS["IBLOCK_SECTION"] = "Р Р°Р·РґРµР»";
+$MESS["IBSEC_E_IBLOCK_MANAGE_HINT"] = "Р

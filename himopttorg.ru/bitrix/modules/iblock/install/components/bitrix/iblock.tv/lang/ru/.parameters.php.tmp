@@ -1,0 +1,6 @@
+<?
+$MESS["BITRIXTV_GROUP_SETTINGS"] = "РћР±С‰РёРµ РЅР°СЃС‚СЂРѕР№РєРё РєРѕРјРїРѕРЅРµРЅС‚Р°";
+$MESS["BITRIXTV_GROUP_PREVIEW_TV"] = "РќР°СЃС‚СЂРѕР№РєРё РїР»РµРµСЂР°";
+$MESS["BITRIXTV_GROUP_PREVIEW_TV_PLAYER"] = "РќР°СЃС‚СЂРѕР№РєРё СЃРїРёСЃРєР°";
+$MESS["BITRIXTV_SETTING_IBLOCK_TYPE"] = "РўРёРї РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРіРѕ Р±Р»РѕРєР°";
+$MESS["BITRIXTV_SETTING_IBLOCK_ID"] = "Р

@@ -1,0 +1,7 @@
+<?php
+$MESS['REST_INTEGRATION_PATTERNS_1_TITLE'] = 'Р”РѕР±Р°РІРёС‚СЊ Р»РёРґС‹';
+$MESS['REST_INTEGRATION_PATTERNS_1_DESCRIPTION'] = 'РЈ РІР°СЃ РµСЃС‚СЊ С„РѕСЂРјР° РѕР±СЂР°С‚РЅРѕР№ СЃРІСЏР·Рё РЅР° СЃР°Р№С‚Рµ РёР»Рё СЃРІРѕСЏ Р±Р°Р·Р° РґР°РЅРЅС‹С… СЃ РєР»РёРµРЅС‚Р°РјРё? Р”РѕР±Р°РІР»СЏР№С‚Рµ Р»РёРґС‹ РѕС‚С‚СѓРґР° РїСЂРѕСЃС‚С‹Рј РѕР±СЂР°С‰РµРЅРёРµРј Рє Р‘РёС‚СЂРёРєСЃ24';
+$MESS['REST_INTEGRATION_PATTERNS_1_INCOMING_QUERY_INFORMATION_URL'] = 'https://dev.1c-bitrix.ru/rest_help/crm/leads/crm_lead_add.php';
+$MESS['REST_INTEGRATION_PATTERNS_1_INCOMING_QUERY_TITLE'] = 'РџР°СЂР°РјРµС‚СЂС‹';
+$MESS['REST_INTEGRATION_PATTERNS_1_INCOMING_QUERY_ITEMS_VALUE_0'] = 'РќРѕРІС‹Р№ Р»РёРґ';
+$MESS['REST_INTEGRATION_PATTERNS_1_INCOMING_QUERY_ITEMS_VALUE_1'] = 'Р

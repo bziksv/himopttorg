@@ -1,0 +1,6 @@
+<?
+$MESS["BT_ADM_IEP_PROPERTY_NEW"] = "Р”РѕР±Р°РІР»РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°";
+$MESS["BT_ADM_IEP_PROPERTY_EDIT"] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃРІРѕР№СЃС‚РІР°: \"#NAME#\"";
+$MESS["BT_ADM_IEP_PROPERTY_ID_IS_ABSENT"] = "РќРµ СѓРєР°Р·Р°РЅ ID СЃРІРѕР№СЃС‚РІР°";
+$MESS["BT_ADM_IEP_IBLOCK_ID_IS_INVALID"] = "РќРµРІРµСЂРЅС‹Р№ ID РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["BT_ADM_IEP_IBLOCK_NOT_EXISTS"] = "Р

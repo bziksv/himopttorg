@@ -1,0 +1,12 @@
+<?
+$MESS["SBP_NEED_REQUIRED_MODULES"] = "Р”Р»СЏ СЂР°Р±РѕС‚С‹ РєРѕРјРїРѕРЅРµРЅС‚Р° РЅСѓР¶РЅС‹ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ РјРѕРґСѓР»Рё РјР°РіР°Р·РёРЅР°, РёРЅС„РѕР±Р»РѕРєРѕРІ, Рё РєР°С‚Р°Р»РѕРіР°.";
+$MESS["SBP_GROUPS_DISCOUNT"] = "РЎРєРёРґРєР°";
+$MESS["SBP_GROUPS_COUPON"] = "РљСѓРїРѕРЅ";
+$MESS["SBP_GROUPS_REPL_SETT"] = "РџР°СЂР°РјРµС‚СЂС‹";
+
+$MESS["SBP_PARAMETERS_DISCOUNT_VALUE"] = "Р—РЅР°С‡РµРЅРёРµ СЃРєРёРґРєРё";
+$MESS["SBP_PARAMETERS_DISCOUNT_UNIT"] = "РўРёРї СЃРєРёРґРєРё";
+$MESS["SBP_PARAMETERS_DISCOUNT_UNIT_EACH"] = "РќР° РєР°Р¶РґС‹Р№ С‚РѕРІР°СЂ";
+$MESS["SBP_PARAMETERS_DISCOUNT_UNIT_ALL"] = "РќР° СЃСѓРјРјСѓ С‚РѕРІР°СЂРѕРІ";
+
+$MESS["SBP_PARAMETERS_USE_DISCOUNT_ID"] = "Р

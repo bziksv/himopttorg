@@ -1,0 +1,6 @@
+<?php
+$MESS['SOCSERV_APPLE_ID'] = 'ID РїСЂРёР»РѕР¶РµРЅРёСЏ';
+$MESS['SOCSERV_APPLE_KEY_ID'] = 'ID РєР»СЋС‡Р°';
+$MESS['SOCSERV_APPLE_TEAM_ID'] = 'Team ID';
+$MESS['SOCSERV_APPLE_KEY_PEM'] = 'РЎРµРєСЂРµС‚РЅС‹Р№ РєР»СЋС‡ РІ С„РѕСЂРјР°С‚Рµ pem';
+$MESS['SOCSERV_APPLE_NOTE'] = 'Р

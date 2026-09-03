@@ -1,0 +1,6 @@
+<?
+$MESS["PULL_TAB_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё";
+$MESS["PULL_TAB_TITLE_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєР° РїР°СЂР°РјРµС‚СЂРѕРІ РјРѕРґСѓР»СЏ";
+$MESS["PULL_OPTIONS_PATH_TO_LISTENER"] = "РџСѓС‚СЊ РґР»СЏ С‡С‚РµРЅРёСЏ РєРѕРјР°РЅРґ (HTTP)";
+$MESS["PULL_OPTIONS_PATH_TO_LISTENER_SECURE"] = "РџСѓС‚СЊ РґР»СЏ С‡С‚РµРЅРёСЏ РєРѕРјР°РЅРґ (HTTPS)";
+$MESS["PULL_OPTIONS_PATH_TO_LISTENER_DESC"] = "Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РїРѕСЂС‚ РґР»СЏ HTTP РёР»Рё HTTPS.<br> Р

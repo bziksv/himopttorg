@@ -1,0 +1,11 @@
+<?
+$arEMSCityList = array();
+$arEMSCityList['РђР‘РђРљРђРќ'] = 'city--abakan';
+$arEMSCityList['РђРќРђР”Р«Р Р¬'] = 'city--anadyr';
+$arEMSCityList['РђРќРђРџРђ'] = 'city--anapa';
+$arEMSCityList['РђР РҐРђРќР“Р•Р›Р¬РЎРљ'] = 'city--arhangelsk';
+$arEMSCityList['РђРЎРўР РђРҐРђРќР¬'] = 'city--astrahan';
+$arEMSCityList['Р‘РђР™РљРћРќРЈР '] = 'city--bajkonur';
+$arEMSCityList['Р‘РђР РќРђРЈР›'] = 'city--barnaul';
+$arEMSCityList['Р‘Р•Р›Р“РћР РћР”'] = 'city--belgorod';
+$arEMSCityList['Р‘Р

@@ -1,0 +1,6 @@
+<?
+$MESS['SALE_DH_TITLE_EDIT'] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃР»СѓР¶Р±С‹ РґРѕСЃС‚Р°РІРєРё";
+$MESS['SALE_DH_TAB_TITLE_EDIT'] = "РџР°СЂР°РјРµС‚СЂС‹ РґРѕСЃС‚Р°РІРєРё";
+$MESS['SALE_DH_TAB_TITLE_EDIT_ALT'] = "РџР°СЂР°РјРµС‚СЂС‹ СЃР»СѓР¶Р±С‹ РґРѕСЃС‚Р°РІРєРё";
+$MESS['SALE_DH_SITES'] = 'Р’С‹Р±РѕСЂ СЃР°Р№С‚Р°';
+$MESS['SALE_DH_USE_DIFF_SITES_SETTINGS'] = 'Р

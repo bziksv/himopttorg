@@ -1,0 +1,7 @@
+<?
+$MESS["MAIN_T_ADMIN_TITLE_THEME"] = "РўРµРјС‹ РѕС„РѕСЂРјР»РµРЅРёСЏ";
+$MESS["MAIN_T_ADMIN_TITLE"] = "РЁР°Р±Р»РѕРЅС‹ СЃР°Р№С‚Р°";
+$MESS["MAIN_T_ADMIN_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["MAIN_T_ADMIN_DESCRIPTION"] = "РћРїРёСЃР°РЅРёРµ";
+$MESS["MAIN_T_ADMIN_ACTION"] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS["MAIN_T_ADMIN_EDIT"] = "Р

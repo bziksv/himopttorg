@@ -1,0 +1,17 @@
+<?
+$MESS ['IBLOCK_CML2_IBLOCK_ERROR'] = "РћС€РёР±РєР° С‡С‚РµРЅРёСЏ РёРЅС„РѕР±Р»РѕРєР°.";
+$MESS ['IBLOCK_CML2_FILE_ERROR'] = "РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ С„Р°Р№Р»Р°.";
+$MESS ['IBLOCK_CML2_SECTIONS'] = "Р­РєСЃРїРѕСЂС‚ СЂР°Р·РґРµР»РѕРІ РєР°С‚Р°Р»РѕРіР°.";
+$MESS ['IBLOCK_CML2_SECTIONS_PROGRESS'] = "Р­РєСЃРїРѕСЂС‚РёСЂРѕРІР°РЅРѕ #COUNT# СЂР°Р·РґРµР»РѕРІ РєР°С‚Р°Р»РѕРіР°.";
+$MESS ['IBLOCK_CML2_ELEMENTS'] = "Р­РєСЃРїРѕСЂС‚ СЌР»РµРјРµРЅС‚РѕРІ РєР°С‚Р°Р»РѕРіР°.";
+$MESS ['IBLOCK_CML2_ELEMENTS_PROGRESS'] = "Р­РєСЃРїРѕСЂС‚РёСЂРѕРІР°РЅРѕ #COUNT# СЌР»РµРјРµРЅС‚РѕРІ РєР°С‚Р°Р»РѕРіР°.";
+$MESS ['IBLOCK_CML2_METADATA_DONE'] = "РњРµС‚Р°РґР°РЅРЅС‹Рµ РєР°С‚Р°Р»РѕРіР° СЌРєСЃРїРѕСЂС‚РёСЂРѕРІР°РЅС‹.";
+$MESS ['IBLOCK_CML2_DONE'] = "Р­РєСЃРїРѕСЂС‚ Р·Р°РІРµСЂС€РµРЅ";
+$MESS ['IBLOCK_CML2_DONE_SECTIONS'] = "Р Р°Р·РґРµР»РѕРІ: #COUNT#";
+$MESS ['IBLOCK_CML2_DONE_ELEMENTS'] = "Р­Р»РµРјРµРЅС‚РѕРІ: #COUNT#";
+$MESS ['IBLOCK_CML2_TITLE'] = "Р­РєСЃРїРѕСЂС‚ XML";
+$MESS ['IBLOCK_CML2_TAB'] = "Р­РєСЃРїРѕСЂС‚";
+$MESS ['IBLOCK_CML2_TAB_TITLE'] = "РќР°СЃС‚СЂРѕР№РєРё СЌРєСЃРїРѕСЂС‚Р°";
+$MESS ['IBLOCK_CML2_URL_DATA_FILE'] = "Р¤Р°Р№Р» РґР»СЏ РІС‹РіСЂСѓР·РєРё";
+$MESS ['IBLOCK_CML2_OPEN'] = "РћС‚РєСЂС‹С‚СЊ...";
+$MESS ['IBLOCK_CML2_IBLOCK_ID'] = "Р

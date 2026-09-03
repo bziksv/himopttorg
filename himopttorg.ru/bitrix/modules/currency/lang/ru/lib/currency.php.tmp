@@ -1,0 +1,5 @@
+<?
+$MESS["CURRENCY_ENTITY_CURRENCY_FIELD"] = "Р’Р°Р»СЋС‚Р°";
+$MESS["CURRENCY_ENTITY_AMOUNT_CNT_FIELD"] = "РќРѕРјРёРЅР°Р»";
+$MESS["CURRENCY_ENTITY_AMOUNT_FIELD"] = "РљСѓСЂСЃ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["CURRENCY_ENTITY_SORT_FIELD"] = "Р

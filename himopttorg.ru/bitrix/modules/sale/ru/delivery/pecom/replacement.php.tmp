@@ -1,0 +1,10 @@
+<?
+namespace Bitrix\Sale\Delivery\Pecom;
+
+class Replacement
+{
+	public static function getRegionExceptions()
+	{
+		return array(
+			'РњРћРЎРљР’Рђ' => 'РњРћРЎРљРћР’РЎРљРђРЇ РћР‘Р›РђРЎРўР¬',
+			'РЎРђРќРљРў-РџР•РўР•Р Р‘РЈР Р“' => 'Р›Р•РќР

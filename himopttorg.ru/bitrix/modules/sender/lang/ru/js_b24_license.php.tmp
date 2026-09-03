@@ -1,0 +1,5 @@
+<?
+$MESS ['SENDER_B24_LICENSE_RC_TITLE'] = "Р“РµРЅРµСЂР°С‚РѕСЂ РїСЂРѕРґР°Р¶";
+$MESS ['SENDER_B24_LICENSE_AD_TITLE'] = "РЈРїСЂР°РІР»РµРЅРёРµ СЂРµРєР»Р°РјРѕР№";
+$MESS ['SENDER_B24_LICENSE_MAILING_TITLE'] = "Р Р°СЃСЃС‹Р»РєРё SMS, РјРµСЃСЃРµРЅРґР¶РµСЂС‹ Рё РёРЅС„Рѕ Р·РІРѕРЅРєРё ";
+$MESS ['SENDER_B24_LICENSE_AD_TEXT1'] = "Р

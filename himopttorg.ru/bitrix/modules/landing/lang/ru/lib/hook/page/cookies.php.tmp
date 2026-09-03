@@ -1,0 +1,4 @@
+<?php
+$MESS['LANDING_HOOK_COOKIES_TITLE'] = 'РћР±СЂР°Р±РѕС‚РєР° Cookie-С„Р°Р№Р»РѕРІ';
+$MESS['LANDING_HOOK_COOKIES_USE'] = 'РџРѕРєР°Р·Р°С‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ СЃРѕРіР»Р°СЃРёРё РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ Cookie-С„Р°Р№Р»РѕРІ';
+$MESS['LANDING_HOOK_COOKIES_AGREEMENT_ID'] = 'Р

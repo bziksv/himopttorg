@@ -1,0 +1,11 @@
+<?php
+$MESS['LANDING_DEMO_STORE_CLOTHES-DELIVERY--NAME'] = 'Р”РѕСЃС‚Р°РІРєР°';
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_1"] = "Р”РѕСЃС‚Р°РІРєР°";
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_2"] = "РЎС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё РєСѓСЂСЊРµСЂРѕРј";
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_3"] = "РњРµСЃС‚Рѕ РґРѕСЃС‚Р°РІРєРё";
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_4"] = "Р’СЂРµРјСЏ РґРѕСЃС‚Р°РІРєРё";
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_5"] = "РљРѕРіРґР° РІРѕР·РјРѕР¶РЅР° РґРѕСЃС‚Р°РІРєР°?";
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_6"] = "РџСЂР°РІРёР»Р°";
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_7"] = "РџСЂР°РІРёР»Р°";
+$MESS["LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_8"] = "РЎР»СѓР¶Р±Р° РґРѕСЃС‚Р°РІРєРё";
+$MESS["NOTTRANSLATE--LANDING_DEMO_STORE_CLOTHES-DELIVERY--TEXT_1"] = "<p>Р

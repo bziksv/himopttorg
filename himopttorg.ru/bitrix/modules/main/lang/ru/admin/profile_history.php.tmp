@@ -1,0 +1,14 @@
+<?
+$MESS["main_profile_history_error_date1"] = "РќРµРєРѕСЂСЂРµРєС‚РЅР°СЏ РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°.";
+$MESS["main_profile_history_error_date2"] = "РќРµРєРѕСЂСЂРµРєС‚РЅР°СЏ РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°.";
+$MESS["main_profile_history_records"] = "Р—Р°РїРёСЃРё";
+$MESS["main_profile_history_date"] = "Р”Р°С‚Р°";
+$MESS["main_profile_history_user"] = "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ";
+$MESS["main_profile_history_event"] = "РЎРѕР±С‹С‚РёРµ";
+$MESS["main_profile_history_updated_by"] = "РљС‚Рѕ РёР·РјРµРЅРёР»";
+$MESS["main_profile_history_changes"] = "Р§С‚Рѕ РёР·РјРµРЅРµРЅРѕ";
+$MESS["main_profile_history_ip"] = "IP-Р°РґСЂРµСЃ";
+$MESS["main_profile_history_browser"] = "Р‘СЂР°СѓР·РµСЂ";
+$MESS["main_profile_history_url"] = "URL СЃС‚СЂР°РЅРёС†С‹";
+$MESS["main_profile_history_adding"] = "Р”РѕР±Р°РІР»РµРЅРёРµ";
+$MESS["main_profile_history_updating"] = "Р

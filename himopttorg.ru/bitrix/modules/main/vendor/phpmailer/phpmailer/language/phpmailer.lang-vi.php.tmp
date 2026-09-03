@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Vietnamese (TiР±С”С—ng ViР±В»вЂЎt) PHPMailer language file: refer to English translation for definitive list.
+ * @package PHPMailer
+ * @author VINADES.,JSC <contact@vinades.vn>
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'LР±В»вЂ”i SMTP: KhР“Т‘ng thР±В»С“ xР“РЋc thР±В»В±c.';
+$PHPMAILER_LANG['connect_host']         = 'LР±В»вЂ”i SMTP: KhР“Т‘ng thР±В»С“ kР±С”С—t nР±В»вЂ

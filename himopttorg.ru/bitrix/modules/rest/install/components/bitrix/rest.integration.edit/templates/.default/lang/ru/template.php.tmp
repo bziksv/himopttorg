@@ -1,0 +1,4 @@
+<?
+$MESS['REST_INTEGRATION_EDIT_LABEL_WEBHOOK_URL'] = 'Р’РµР±С…СѓРє РґР»СЏ РІС‹Р·РѕРІР° rest api';
+$MESS['REST_INTEGRATION_EDIT_BLOCK_TITLE_INCOMING'] = 'Р“РµРЅРµСЂР°С‚РѕСЂ Р·Р°РїСЂРѕСЃРѕРІ';
+$MESS['REST_INTEGRATION_EDIT_BLOCK_TITLE_OUTGOING'] = 'Р

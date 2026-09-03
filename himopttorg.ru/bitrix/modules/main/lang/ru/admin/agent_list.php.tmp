@@ -1,0 +1,11 @@
+<?
+$MESS["MAIN_AGENT_LIST_PAGE"] = "РЎРїРёСЃРѕРє Р°РіРµРЅС‚РѕРІ:";
+$MESS["MAIN_AGENT_ID"] = "ID";
+$MESS["MAIN_AGENT_MODULE_ID"] = "РњРѕРґСѓР»СЊ";
+$MESS["MAIN_AGENT_USER_ID"] = "Р›РѕРіРёРЅ";
+$MESS["MAIN_AGENT_SORT"] = "РЎРѕСЂС‚РёСЂРѕРІРєР°";
+$MESS["MAIN_AGENT_NAME"] = "Р¤СѓРЅРєС†РёСЏ Р°РіРµРЅС‚Р°";
+$MESS["MAIN_AGENT_ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ";
+$MESS["MAIN_AGENT_LAST_EXEC"] = "РџРѕСЃР»РµРґРЅРёР№ Р·Р°РїСѓСЃРє";
+$MESS["MAIN_AGENT_NEXT_EXEC"] = "РЎР»РµРґСѓСЋС‰РёР№ Р·Р°РїСѓСЃРє";
+$MESS["MAIN_AGENT_INTERVAL"] = "Р

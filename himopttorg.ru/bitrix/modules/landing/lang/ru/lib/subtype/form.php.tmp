@@ -1,0 +1,7 @@
+<?php
+$MESS['LANDING_BLOCK_WEBFORM'] = 'CRM-С„РѕСЂРјР°';
+$MESS['LANDING_BLOCK_WEBFORM_SHOW_HEADER'] = 'Р—Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹';
+$MESS['LANDING_BLOCK_WEBFORM_SHOW_HEADER_Y'] = 'РџРѕРєР°Р·Р°С‚СЊ';
+$MESS['LANDING_BLOCK_WEBFORM_SHOW_HEADER_N'] = 'РЎРєСЂС‹С‚СЊ';
+$MESS['LANDING_BLOCK_WEBFORM_USE_STYLE'] = 'Р”РёР·Р°Р№РЅ С„РѕСЂРјС‹';
+$MESS['LANDING_BLOCK_WEBFORM_USE_STYLE_Y'] = 'Р

@@ -1,0 +1,8 @@
+<?php
+$MESS["UI_SIGN_UP_TAB_INITIALS_TITLE"] = 'РЎРѕР·РґР°С‚СЊ РёР· РёРјРµРЅРё';
+$MESS["UI_SIGN_UP_TAB_TOUCH_TITLE"] = 'РџРѕРґРїРёСЃР°С‚СЊ СЂСѓРєРѕР№';
+$MESS["UI_SIGN_UP_TAB_PHOTO_TITLE"] = 'Р—Р°РіСЂСѓР·РёС‚СЊ С„РѕС‚Рѕ';
+$MESS["UI_SIGN_UP_SAVE_BUTTON_LABEL"] = 'РЎРѕС…СЂР°РЅРёС‚СЊ';
+$MESS["UI_SIGN_UP_CANCEL_BUTTON_LABEL"] = 'РћС‚РјРµРЅРёС‚СЊ';
+
+$MESS["UI_SIGN_UP_TAB_INITIALS_LAST_NAME_LABEL"] = 'Р

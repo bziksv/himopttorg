@@ -1,0 +1,9 @@
+<?
+$MESS["T_IBLOCK_DESC_PAGER_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё РїРѕСЃС‚СЂР°РЅРёС‡РЅРѕР№ РЅР°РІРёРіР°С†РёРё";
+$MESS["T_IBLOCK_DESC_TOP_PAGER"] = "Р’С‹РІРѕРґРёС‚СЊ РЅР°Рґ СЃРїРёСЃРєРѕРј";
+$MESS["T_IBLOCK_DESC_BOTTOM_PAGER"] = "Р’С‹РІРѕРґРёС‚СЊ РїРѕРґ СЃРїРёСЃРєРѕРј";
+$MESS["T_IBLOCK_DESC_PAGER_TITLE"] = "РќР°Р·РІР°РЅРёРµ РєР°С‚РµРіРѕСЂРёР№";
+$MESS["T_IBLOCK_DESC_PAGER_SHOW_ALWAYS"] = "Р’С‹РІРѕРґРёС‚СЊ РІСЃРµРіРґР°";
+$MESS["T_IBLOCK_DESC_PAGER_TEMPLATE"] = "РќР°Р·РІР°РЅРёРµ С€Р°Р±Р»РѕРЅР°";
+$MESS["T_IBLOCK_DESC_PAGER_TEMPLATE_EXT"] = "РЁР°Р±Р»РѕРЅ РїРѕСЃС‚СЂР°РЅРёС‡РЅРѕР№ РЅР°РІРёРіР°С†РёРё";
+$MESS["T_IBLOCK_DESC_PAGER_DESC_NUMBERING"] = "Р

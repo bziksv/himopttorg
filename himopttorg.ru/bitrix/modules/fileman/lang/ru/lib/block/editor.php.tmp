@@ -1,0 +1,20 @@
+<?
+$MESS["BLOCK_EDITOR_COMMON_DEFAULT"] = "РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["BLOCK_EDITOR_COMMON_NO"] = "РќРµС‚";
+$MESS["BLOCK_EDITOR_PREVIEW_MODE_PHONE"] = "РЎРјР°СЂС‚С„РѕРЅ";
+$MESS["BLOCK_EDITOR_PREVIEW_MODE_TABLET"] = "РџР»Р°РЅС€РµС‚";
+$MESS["BLOCK_EDITOR_PREVIEW_MODE_DESKTOP"] = "Р”РµСЃРєС‚РѕРї";
+$MESS["BLOCK_EDITOR_TABS_EDIT"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ";
+$MESS["BLOCK_EDITOR_TABS_PREVIEW"] = "РџСЂРµРґРїСЂРѕСЃРјРѕС‚СЂ";
+$MESS["BLOCK_EDITOR_TABS_HTML"] = "РџРѕР»СѓС‡РёС‚СЊ html";
+$MESS["BLOCK_EDITOR_UI_BTN_MAX"] = "СЂР°Р·РІРµСЂРЅСѓС‚СЊ";
+$MESS["BLOCK_EDITOR_UI_BTN_MIN"] = "СЃРІРµСЂРЅСѓС‚СЊ";
+$MESS["BLOCK_EDITOR_UI_BTN_HTML_COPY"] = "РљРѕРїРёСЂРѕРІР°С‚СЊ HTML-РєРѕРґ РїРёСЃСЊРјР° РІ Р±СѓС„РµСЂ РѕР±РјРµРЅР°";
+$MESS["BLOCK_EDITOR_UI_STYLES"] = "Р”РёР·Р°Р№РЅ";
+$MESS["BLOCK_EDITOR_UI_BLOCKS"] = "Р‘Р»РѕРєРё";
+$MESS["BLOCK_EDITOR_UI_TOOL_CONTENT"] = "РћСЃРЅРѕРІРЅРѕРµ";
+$MESS["BLOCK_EDITOR_UI_TOOL_STYLES"] = "Р”РёР·Р°Р№РЅ";
+$MESS["BLOCK_EDITOR_UI_TOOL_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё";
+$MESS["BLOCK_EDITOR_UI_TOOL_EMPTY"] = "Р”Р°РЅРЅС‹Р№ Р±Р»РѕРє РЅРµ РёРјРµРµС‚ РЅР°СЃС‚СЂРѕРµРє";
+$MESS["BLOCK_EDITOR_UI_TOOL_SAVE"] = "СЃРІРµСЂРЅСѓС‚СЊ";
+$MESS["BLOCK_EDITOR_UI_TOOL_SAVE_TITLE"] = "Р

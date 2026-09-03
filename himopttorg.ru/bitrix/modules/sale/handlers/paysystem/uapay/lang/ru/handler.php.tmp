@@ -1,0 +1,4 @@
+<?php
+$MESS["SALE_HPS_UAPAY_ERROR_HTTP_STATUS"] = "РџРѕР»СѓС‡РµРЅ РѕС‚РІРµС‚ РѕС‚ СЃРµСЂРІРµСЂР° СЃ http СЃС‚Р°С‚СѓСЃРѕРј: #STATUS_CODE#";
+$MESS["SALE_HPS_UAPAY_ERROR_RESPONSE_STATUS"] = "РџРѕР»СѓС‡РµРЅ РѕС‚РІРµС‚ СЃРѕ СЃС‚Р°С‚СѓСЃРѕРј: РћС€РёР±РєР°";
+$MESS["SALE_HPS_UAPAY_ERROR_CLIENT_ID"] = "Р

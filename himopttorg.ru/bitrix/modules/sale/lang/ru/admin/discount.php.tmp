@@ -1,0 +1,24 @@
+<?
+$MESS["LANG_FILTER_NAME"] = "РЎР°Р№С‚";
+$MESS["ERROR_UPDATE_REC"] = "РћС€РёР±РєР° РёР·РјРµРЅРµРЅРёСЏ Р·Р°РїРёСЃРё ";
+$MESS["PERS_TYPE_ACTIVE"] = "РђРєС‚.";
+$MESS["PERS_TYPE_LID"] = "РЎР°Р№С‚";
+$MESS["PERS_TYPE_ID"] = "ID";
+$MESS["PERS_TYPE_SORT"] = "РЎРѕСЂС‚.";
+$MESS["DS_ALL"] = "(РІСЃРµ)";
+$MESS["SDSN_ACTIVE_FROM"] = "РђРєС‚РёРІРЅРѕ СЃ";
+$MESS["SDSN_ACTIVE_TO"] = "РђРєС‚РёРІРЅРѕ РїРѕ";
+$MESS["SDSN_PRIORITY"] = "РџСЂРёРѕСЂРёС‚РµС‚ РїСЂРёРјРµРЅРёРјРѕСЃС‚Рё";
+$MESS["SDSN_LAST_DISCOUNT_NEW"] = "РџСЂРµРєСЂР°С‚РёС‚СЊ РїСЂРёРј. РїСЂР°РІРёР»";
+$MESS["SDSN_LAST_LEVEL_DISCOUNT_NEW"] = "РџСЂРµРєСЂР°С‚РёС‚СЊ СѓСЂРѕРІРµРЅСЊ";
+$MESS["SDSN_SHOW_IN_CATALOG"] = "РџРѕРєР°Р· РІ РєР°С‚Р°Р»РѕРіРµ С‚РѕРІР°СЂРѕРІ";
+$MESS["SDSN_CREATED_BY_NEW"] = "РљРµРј СЃРѕР·РґР°РЅРѕ";
+$MESS["SDSN_DATE_CREATE"] = "Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ";
+$MESS["SDSN_MODIFIED_BY_NEW"] = "РљРµРј РёР·РјРµРЅРµРЅРѕ";
+$MESS["SDSN_TIMESTAMP_X"] = "Р”Р°С‚Р° РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["SDSN_XML_ID"] = "Р’РЅРµС€РЅРёР№ РєРѕРґ";
+$MESS["SDSN_USE_COUPONS"] = "РљСѓРїРѕРЅС‹";
+$MESS["SDSN_PRESET_ID"] = "РџСЂРµСЃРµС‚";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_TITLE"] = "РџСЂР°РІРёР»Р° СЂР°Р±РѕС‚С‹ СЃ РєРѕСЂР·РёРЅРѕР№";
+$MESS["BT_SALE_DISCOUNT_LIST_ERR_DELETE_DISCOUNT"] = "РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ РїСЂР°РІРёР»Р°";
+$MESS["BT_SALE_DISCOUNT_LIST_MESS_EDIT_DISCOUNT"] = "Р

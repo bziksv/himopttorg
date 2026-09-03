@@ -1,0 +1,10 @@
+<?
+$MESS ['mnu_sender_sect'] = "Email-РјР°СЂРєРµС‚РёРЅРі";
+$MESS ['mnu_sender_sect_title'] = "Email-РјР°СЂРєРµС‚РёРЅРі";
+
+$MESS ['mnu_sender_sect1'] = "РњР°СЂРєРµС‚РёРЅРі 24";
+$MESS ['mnu_sender_sect_title1'] = "РњР°СЂРєРµС‚РёРЅРі 24";
+
+$MESS ['mnu_sender_segments'] = "РЎРµРіРјРµРЅС‚С‹";
+$MESS ['mnu_sender_blacklist'] = "Р§РµСЂРЅС‹Р№ СЃРїРёСЃРѕРє";
+$MESS ['mnu_sender_blacklist_alt'] = "Р

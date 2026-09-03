@@ -1,0 +1,12 @@
+<?
+$MESS["ORDER_DISCOUNT_ENTITY_ID_FIELD"] = "ID";
+$MESS["ORDER_DISCOUNT_ENTITY_MODULE_ID_FIELD"] = "РњРѕРґСѓР»СЊ";
+$MESS["ORDER_DISCOUNT_ENTITY_DISCOUNT_ID_FIELD"] = "ID СЃСѓС‰РЅРѕСЃС‚Рё РІ РјРѕРґСѓР»Рµ";
+$MESS["ORDER_DISCOUNT_ENTITY_NAME_FIELD"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["ORDER_DISCOUNT_ENTITY_DISCOUNT_HASH_FIELD"] = "РҐРµС€";
+$MESS["ORDER_DISCOUNT_ENTITY_CONDITIONS_FIELD"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СѓСЃР»РѕРІРёСЏ";
+$MESS["ORDER_DISCOUNT_ENTITY_UNPACK_FIELD"] = "РЎРєРѕРјРїРёР»РёСЂРѕРІР°РЅРЅС‹Рµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СѓСЃР»РѕРІРёСЏ";
+$MESS["ORDER_DISCOUNT_ENTITY_ACTIONS_FIELD"] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS["ORDER_DISCOUNT_ENTITY_APPLICATION_FIELD"] = "РЎРєРѕРјРїРёР»РёСЂРѕРІР°РЅРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ";
+$MESS["ORDER_DISCOUNT_ENTITY_USE_COUPONS_FIELD"] = "РљСѓРїРѕРЅС‹";
+$MESS["ORDER_DISCOUNT_ENTITY_SORT_FIELD"] = "Р

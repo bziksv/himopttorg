@@ -1,0 +1,10 @@
+<?
+$MESS ['SMILE_TITLE'] = "РЎРїРёСЃРѕРє СЃРјР°Р№Р»РѕРІ";
+$MESS ['SMILE_DEL_CONF'] = "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ СЌС‚РѕС‚ СЃРјР°Р№Р»?";
+$MESS ['SMILE_NAV'] = "РЎРјР°Р№Р»С‹";
+$MESS ['SMILE_ID'] = "ID";
+$MESS ['SMILE_SORT'] = "РЎРѕСЂС‚.";
+$MESS ['SMILE_SET_NAME'] = "РќР°Р±РѕСЂ";
+$MESS ['SMILE_TYPE'] = "РўРёРї";
+$MESS ['SMILE_TYPING'] = "РќР°РїРёСЃР°РЅРёРµ";
+$MESS ['SMILE_ICON'] = "Р

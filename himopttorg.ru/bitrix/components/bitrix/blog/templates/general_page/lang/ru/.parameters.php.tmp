@@ -1,0 +1,16 @@
+<?
+$MESS["GENERAL_PAGE_GROUP_ID"] = "Р“СЂСѓРїРїР° Р±Р»РѕРіРѕРІ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ";
+$MESS["GENERAL_PAGE_PATH_TO_BLOG"] = "РџСѓС‚СЊ Рє Р±Р»РѕРіСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ";
+$MESS["GENERAL_PAGE_PATH_TO_POST"] = "РџСѓС‚СЊ Рє СЃРѕРѕР±С‰РµРЅРёСЋ РІ Р±Р»РѕРіРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ";
+$MESS["GENERAL_PAGE_PATH_TO_GROUP_BLOG"] = "РџСѓС‚СЊ Рє Р±Р»РѕРіСѓ РіСЂСѓРїРїС‹";
+$MESS["GENERAL_PAGE_PATH_TO_GROUP_BLOG_POST"] = "РџСѓС‚СЊ Рє СЃРѕРѕР±С‰РµРЅРёСЋ РІ Р±Р»РѕРіРµ РіСЂСѓРїРїС‹";
+$MESS["GENERAL_PAGE_PATH_TO_USER"] = "РџСѓС‚СЊ Рє СЃС‚СЂР°РЅРёС†Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ";
+$MESS["BLG_THEME"] = "РўРµРјР° С€Р°Р±Р»РѕРЅР°";
+$MESS["BLG_THEME_BLUE"] = "РЎРёРЅСЏСЏ";
+$MESS["BLG_THEME_GREEN"] = "Р—РµР»РµРЅР°СЏ";
+$MESS["BLG_THEME_RED"] = "РљСЂР°СЃРЅР°СЏ";
+$MESS["BLG_THEME_RED2"] = "РљСЂР°СЃРЅР°СЏ РїСЂРѕСЃС‚Р°СЏ";
+$MESS["BLG_THEME_ORANGE"] = "РћСЂР°РЅР¶РµРІР°СЏ";
+$MESS["GENERAL_PAGE_PATH_TO_BLOG_CATEGORY"] = "РџСѓС‚СЊ Рє СЃС‚СЂР°РЅРёС†Рµ Р±Р»РѕРіР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ c С„РёР»СЊС‚СЂРѕРј РїРѕ С‚РµРіСѓ";
+$MESS["GENERAL_PAGE_PATH_TO_GROUP_BLOG_CATEGORY"] = "РџСѓС‚СЊ Рє СЃС‚СЂР°РЅРёС†Рµ Р±Р»РѕРіР° РіСЂСѓРїРїС‹ c С„РёР»СЊС‚СЂРѕРј РїРѕ С‚РµРіСѓ";
+$MESS["GENERAL_PAGE_USE_SOCNET"] = "Р

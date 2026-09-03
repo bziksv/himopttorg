@@ -1,0 +1,10 @@
+<?
+$MESS["CATALOG_SET_BUY"] = "РљСѓРїРёС‚СЊ";
+$MESS["CATALOG_SET_DISCOUNT_DIFF"] = "(СЌРєРѕРЅРѕРјРёСЏ #PRICE#)";
+$MESS["CATALOG_SET_BUY_SET"] = "РљСѓРїРёС‚СЊ РЅР°Р±РѕСЂ";
+$MESS["CATALOG_SET_CONSTRUCT"] = "РЎРѕСЃС‚Р°РІРёС‚СЊ СЃРІРѕР№ РЅР°Р±РѕСЂ";
+$MESS["CATALOG_SET_POPUP_LOADER"] = "Р—Р°РіСЂСѓР·РєР°...";
+$MESS["CATALOG_SET_POPUP_TITLE_BAR"] = "РЎРѕР±РµСЂРё СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№ РЅР°Р±РѕСЂ";
+$MESS["CATALOG_SET_POPUP_TITLE"] = "Р”РѕР±Р°РІСЊС‚Рµ Р°РєСЃРµСЃСЃСѓР°СЂ РІ РЅР°Р±РѕСЂ";
+$MESS["CATALOG_SET_POPUP_DESC"] = "РџРµСЂРµС‚Р°С‰РёС‚Рµ Р»СЋР±РѕР№ С‚РѕРІР°СЂ СЃ РїРѕРјРѕС‰СЊСЋ РјС‹С€РєРё РІ РїСѓСЃС‚РѕРµ РїРѕР»Рµ РёР»Рё РїСЂРѕСЃС‚Рѕ РЅР°Р¶РјРёС‚Рµ РЅР° РЅРµРіРѕ";
+$MESS["CATALOG_SET_SUM"] = "Р

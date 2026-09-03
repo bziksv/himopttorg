@@ -1,0 +1,22 @@
+<?php
+$MESS["CP_BC_TPL_DML_SIMPLE"] = "РїСЂРѕСЃС‚РѕР№ СЂРµР¶РёРј";
+$MESS["CP_BC_TPL_DML_EXT"] = "СЂР°СЃС€РёСЂРµРЅРЅС‹Р№";
+$MESS["CPT_BC_TPL_THEME_SITE"] = "Р‘СЂР°С‚СЊ С‚РµРјСѓ РёР· РЅР°СЃС‚СЂРѕРµРє СЃР°Р№С‚Р° (РґР»СЏ СЂРµС€РµРЅРёСЏ bitrix.eshop)";
+$MESS["CPT_BC_TPL_THEME_BLUE"] = "СЃРёРЅСЏСЏ (С‚РµРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ)";
+$MESS["CPT_BC_TPL_THEME_GREEN"] = "Р·РµР»РµРЅР°СЏ";
+$MESS["CPT_BC_TPL_THEME_RED"] = "РєСЂР°СЃРЅР°СЏ";
+$MESS["CPT_BC_TPL_THEME_WOOD"] = "РґРµСЂРµРІРѕ";
+$MESS["CPT_BC_TPL_THEME_YELLOW"] = "Р¶РµР»С‚Р°СЏ";
+$MESS["CP_BC_TPL_THEME_BLACK"] = "С‚РµРјРЅР°СЏ";
+$MESS["CP_BC_TPL_DVDAR_RATING"] = "СЂРµР№С‚РёРЅРі";
+$MESS["CP_BC_TPL_DVDAR_AVERAGE"] = "СЃСЂРµРґРЅРµРµ Р·РЅР°С‡РµРЅРёРµ";
+$MESS["CPT_BC_TPL_VIEW_MODE_BANNER"] = "Р±Р°РЅРЅРµСЂ";
+$MESS["CPT_BC_TPL_VIEW_MODE_SLIDER"] = "СЃР»Р°Р№РґРµСЂ";
+$MESS["CPT_BC_TPL_VIEW_MODE_SECTION"] = "СЃРїРёСЃРѕРє";
+$MESS["CPT_BC_SECTIONS_VIEW_MODE_LIST"] = "РњРЅРѕРіРѕСѓСЂРѕРІРЅРµРІС‹Р№ СЃРїРёСЃРѕРє";
+$MESS["CPT_BC_SECTIONS_VIEW_MODE_LINE"] = "РЎРїРёСЃРѕРє";
+$MESS["CPT_BC_SECTIONS_VIEW_MODE_TEXT"] = "РўРµРєСЃС‚";
+$MESS["CPT_BC_SECTIONS_VIEW_MODE_TILE"] = "РџР»РёС‚РєР°";
+$MESS["CP_BC_TPL_TEMPLATE_THEME"] = "Р¦РІРµС‚РѕРІР°СЏ С‚РµРјР°";
+$MESS['CP_BC_TPL_SEARCH_PAGE_RESULT_COUNT_MSGVER_1'] = "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ";
+$MESS["CP_BC_TPL_SEARCH_RESTART"] = "Р

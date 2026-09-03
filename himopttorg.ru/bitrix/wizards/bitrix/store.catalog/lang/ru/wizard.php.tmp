@@ -1,0 +1,6 @@
+<?
+$MESS["WIZARD_TITLE"] = "РњР°СЃС‚РµСЂ СЃРѕР·РґР°РЅРёСЏ С‚РѕСЂРіРѕРІРѕРіРѕ РєР°С‚Р°Р»РѕРіР°";
+$MESS["WIZARD_TITLE_EDIT"] = "РњР°СЃС‚РµСЂ РЅР°СЃС‚СЂРѕР№РєРё С‚РѕСЂРіРѕРІРѕРіРѕ РєР°С‚Р°Р»РѕРіР°";
+$MESS["COPYRIGHT"] = "&copy; 2002 &laquo;Р‘РёС‚СЂРёРєСЃ&raquo;, 2007-#CURRENT_YEAR# &laquo;1РЎ-Р‘РёС‚СЂРёРєСЃ&raquo;";
+$MESS["SUPPORT"] = "<a href=\"http://www.1c-bitrix.ru/?referer1=bsm&referer2=install\" target=\"_blank\">www.1c-bitrix.ru</a> | <a href=\"http://www.1c-bitrix.ru/support/?referer1=bsm&referer2=install\" target=\"_blank\">РўРµС…РїРѕРґРґРµСЂР¶РєР°</a>";
+$MESS["INST_JAVASCRIPT_DISABLED"] = "Р”Р»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РїСЂРѕРґСѓРєС‚Р° РЅРµРѕР±С…РѕРґРёРјРѕ РІРєР»СЋС‡РёС‚СЊ JavaScript. РџРѕ-РІРёРґРёРјРѕРјСѓ, JavaScript Р»РёР±Рѕ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ Р±СЂР°СѓР·РµСЂРѕРј, Р»РёР±Рѕ РѕС‚РєР»СЋС‡РµРЅ. Р

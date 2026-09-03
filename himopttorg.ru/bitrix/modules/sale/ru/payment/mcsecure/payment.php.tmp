@@ -1,0 +1,4 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><?
+$ORDER_ID = intval($GLOBALS["SALE_INPUT_PARAMS"]["ORDER"]["ID"]);
+?>
+<p>Р’С‹ С…РѕС‚РёС‚Рµ РѕРїР»Р°С‚РёС‚СЊ РїРѕ РєСЂРµРґРёС‚РЅРѕР№ РєР°СЂС‚Рµ С‡РµСЂРµР· РїСЂРѕС†РµСЃСЃРёРЅРіРѕРІС‹Р№ С†РµРЅС‚СЂ РїР»Р°С‚РµР¶РЅРѕР№ СЃРёСЃС‚РµРјС‹ <strong>Р

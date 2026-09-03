@@ -1,0 +1,5 @@
+<?
+$MESS["IBLOCK_MENU_ITYPE"] = "РўРёРїС‹ РёРЅС„РѕР±Р»РѕРєРѕРІ";
+$MESS["IBLOCK_MENU_EXPORT"] = "Р­РєСЃРїРѕСЂС‚";
+$MESS["IBLOCK_MENU_EXPORT_ALT"] = "Р­РєСЃРїРѕСЂС‚ РґР°РЅРЅС‹С… РІ С„РѕСЂРјР°С‚ CSV";
+$MESS["IBLOCK_MENU_IMPORT"] = "Р

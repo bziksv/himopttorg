@@ -1,0 +1,60 @@
+<?
+
+namespace Cetacs\MultiEdit;
+
+use Bitrix\Iblock\PropertyTable;
+use Bitrix\Main\Localization\Loc;
+
+Loc::loadMessages(__FILE__);
+
+class Core
+{
+    private $adminList;
+    private $iblockId;
+    private $IDS;
+    private $checkInputName;
+    private static $allowTablesId = array("tbl_iblock_list_", "tbl_iblock_element_", "tbl_iblock_sub_element_", "tbl_product_list_", "tbl_product_admin_");
+    public static $allowEditFields = array("SORT", "PREVIEW_PICTURE", "DETAIL_PICTURE");
+
+    function __construct(\CAdminList $list)
+    {
+        $this->adminList = $list;
+        if ($list instanceof \CAdminSubList) {
+            $this->iblockId = $GLOBALS["intSubIBlockID"];
+            $this->IDS = is_array($_POST["SUB_ID"]) ? $_POST["SUB_ID"] : array();
+            $this->checkInputName = "SUB_ID";
+        } else {
+            $this->iblockId = $_GET["IBLOCK_ID"];
+            $this->IDS = is_array($_POST["ID"]) ? $_POST["ID"] : array();
+            $this->checkInputName = "ID";
+        }
+    }
+
+    function checkTableId()
+    {
+        foreach (self::$allowTablesId as $tableId)
+            if (strpos($this->adminList->table_id, $tableId) === 0)
+                return true;
+        return false;
+    }
+
+    public static function getPropertyList($iblockId)
+    {
+        $props = array();
+        $params = array(
+            "order" => array("SORT" => "ASC", "ID" => "ASC"),
+            "filter" => array("ACTIVE" => "Y", "IBLOCK_ID" => $iblockId)
+        );
+        $rsProperties = PropertyTable::getList($params);
+        while ($p = $rsProperties->fetch()) {
+            if ($p["USER_TYPE_SETTINGS"]) {
+                $p["USER_TYPE_SETTINGS"] = unserialize($p["USER_TYPE_SETTINGS"]);
+            }
+            $props[$p["ID"]] = $p;
+        }
+        return $props;
+    }
+
+    function showScript()
+    {
+        // Р Т‘Р В»РЎРЏ Р С

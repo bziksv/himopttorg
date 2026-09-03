@@ -1,0 +1,22 @@
+<?
+$MESS["SPOD_ORDER"] = "Р—Р°РєР°Р·";
+$MESS["SPOD_FROM"] = "РѕС‚";
+$MESS["SPOD_ORDER_STATUS"] = "РўРµРєСѓС‰РёР№ СЃС‚Р°С‚СѓСЃ";
+$MESS["SPOD_ORDER_PRICE"] = "РЎСѓРјРјР°";
+$MESS["SPOD_ORDER_SUM_REST"] = "РЎСѓРјРјР° Рє РѕРїР»Р°С‚Рµ";
+$MESS["SPOD_ORDER_CANCELED"] = "РћС‚РјРµРЅРµРЅ";
+$MESS["SPOD_ORDER_CANCEL"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["SPOD_ACCOUNT_DATA"] = "Р”Р°РЅРЅС‹Рµ РІР°С€РµР№ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё";
+$MESS["SPOD_LOGIN"] = "Р›РѕРіРёРЅ";
+$MESS["SPOD_EMAIL"] = "E-Mail Р°РґСЂРµСЃ";
+$MESS["SPOD_ACCOUNT"] = "РЈС‡РµС‚РЅР°СЏ Р·Р°РїРёСЃСЊ";
+$MESS["SPOD_ORDER_PERS_TYPE"] = "РўРёРї РїР»Р°С‚РµР»СЊС‰РёРєР°";
+$MESS["SPOD_ORDER_PROPERTIES"] = "РџР°СЂР°РјРµС‚СЂС‹ Р·Р°РєР°Р·Р°";
+$MESS["SPOD_ORDER_USER_COMMENT"] = "РљРѕРјРјРµРЅС‚Р°СЂРёРё РїРѕРєСѓРїР°С‚РµР»СЏ";
+$MESS["SPOD_ORDER_PAYMENT"] = "РџР°СЂР°РјРµС‚СЂС‹ РґРѕСЃС‚Р°РІРєРё Рё РѕРїР»Р°С‚С‹";
+$MESS["SPOD_ORDER_PAYMENT_TITLE"] = "РЎС‡РµС‚ в„–#ACCOUNT_NUMBER# РѕС‚ #DATE_BILL#";
+$MESS["SPOD_ORDER_SHIPMENT_TITLE"] = "РћС‚РіСЂСѓР·РєР° в„–#ACCOUNT_NUMBER#, СЃС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё #DELIVERY_PRICE#";
+$MESS["SPOD_PAY_SYSTEM"] = "РџР»Р°С‚С‘Р¶РЅР°СЏ СЃРёСЃС‚РµРјР°";
+$MESS["SPOD_ORDER_PAYED"] = "РћРїР»Р°С‡РµРЅ";
+$MESS["SPOD_ORDER_DELIVERY"] = "РЎР»СѓР¶Р±Р° РґРѕСЃС‚Р°РІРєРё";
+$MESS["SPOD_ORDER_TRACKING_NUMBER"] = "Р

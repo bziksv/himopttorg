@@ -1,0 +1,11 @@
+<?
+$MESS ['PM_POST_FULLY'] = "Р—Р°РїРѕР»РЅРµРЅРёРµ СЏС‰РёРєР°:";
+$MESS ['F_FOLDER'] = "РџР°РїРєР°";
+$MESS ['F_MESSAGES'] = "РЎРѕРѕР±С‰РµРЅРёСЏ";
+$MESS ['PM_HEAD_NEW_FOLDER'] = "РќРѕРІР°СЏ РїР°РїРєР°";
+$MESS ['PM_FOLDER_TITLE'] = "РќР°Р·РІР°РЅРёРµ РїР°РїРєРё:";
+$MESS ['F_REMOVE'] = "РћС‡РёСЃС‚РёС‚СЊ";
+$MESS ['F_EDIT'] = "РёР·РјРµРЅРёС‚СЊ";
+$MESS ['F_DELETE'] = "РЈРґР°Р»РёС‚СЊ";
+$MESS ['PM_FOLDER_ID_1'] = "Р’С…РѕРґСЏС‰РёРµ";
+$MESS ['PM_FOLDER_ID_2'] = "Р

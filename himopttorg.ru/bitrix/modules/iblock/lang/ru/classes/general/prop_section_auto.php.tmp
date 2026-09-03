@@ -1,0 +1,12 @@
+<?
+$MESS["BT_UT_SAUTOCOMPLETE_DESCR"] = "РџСЂРёРІСЏР·РєР° Рє СЂР°Р·РґРµР»Р°Рј СЃ Р°РІС‚РѕР·Р°РїРѕР»РЅРµРЅРёРµРј";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_TITLE"] = "РќР°СЃС‚СЂРѕР№РєРё РїСЂРёРІСЏР·РєРё Рє СЂР°Р·РґРµР»Р°Рј СЃ Р°РІС‚РѕР·Р°РїРѕР»РЅРµРЅРёРµРј";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_SHOW_ADD"] = "РџРѕРєР°Р·С‹РІР°С‚СЊ РєРЅРѕРїРєСѓ РґРѕР±Р°РІР»РµРЅРёСЏ СЂР°Р·РґРµР»РѕРІ";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_IBLOCK_MESS"] = "Р‘СЂР°С‚СЊ РЅР°Р·РІР°РЅРёРµ РєРЅРѕРїРєРё РґРѕР±Р°РІР»РµРЅРёСЏ РёР· РЅР°СЃС‚СЂРѕРµРє СЃРІСЏР·Р°РЅРЅРѕРіРѕ РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_MAX_WIDTH"] = "РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° РїРѕР»СЏ РІРІРѕРґР° РІ РїРёРєСЃРµР»Р°С… (0 - РЅРµ РѕРіСЂР°РЅРёС‡РёРІР°С‚СЊ)";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_COMMENT_MAX_WIDTH"] = "px";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_MIN_HEIGHT"] = "РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹СЃРѕС‚Р° РїРѕР»СЏ РІРІРѕРґР° РІ РїРёРєСЃРµР»Р°С…, РµСЃР»Рё СЃРІРѕР№СЃС‚РІРѕ РјРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРµ";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_COMMENT_MIN_HEIGHT"] = "px";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_MAX_HEIGHT"] = "РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹СЃРѕС‚Р° РїРѕР»СЏ РІРІРѕРґР° РІ РїРёРєСЃРµР»Р°С…, РµСЃР»Рё СЃРІРѕР№СЃС‚РІРѕ РјРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРµ";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_COMMENT_MAX_HEIGHT"] = "px";
+$MESS["BT_UT_SAUTOCOMPLETE_SETTING_VIEW"] = "Р

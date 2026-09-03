@@ -1,0 +1,37 @@
+<?
+$MESS ['IBLOCK_PROP_MAP_GOOGLE'] = "РџСЂРёРІСЏР·РєР° Рє РєР°СЂС‚Рµ Google Maps";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_INSTR'] = "Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РЅР° РєР°СЂС‚Рµ РґРІРѕР№РЅС‹Рј С‰РµР»С‡РєРѕРј РјС‹С€Рё.";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_INSTR_VALUE'] = "РџРµСЂРµС‚Р°С‰РёС‚Рµ С‚РѕС‡РєСѓ РїРѕ РєР°СЂС‚Рµ РёР»Рё РІС‹Р±РµСЂРёС‚Рµ РЅРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ РґРІРѕР№РЅС‹Рј С‰РµР»С‡РєРѕРј РјС‹С€Рё.";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_SEARCH'] = "РџРѕРёСЃРє РїРѕ РєР°СЂС‚Рµ: ";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_NOTHING_FOUND'] = "(РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ)";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_INIT_LAT'] = "55.76";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_INIT_LON'] = "37.64";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_GOTO_POINT'] = "РџРµСЂРµР№С‚Рё Рє С‚РѕС‡РєРµ";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_REMOVE_POINT'] = "РћС‡РёСЃС‚РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_REMOVE_POINT_CONFIRM'] = "Р’С‹ С‚РѕС‡РЅРѕ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ РѕС‡РёСЃС‚РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ?";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_NO_KEY_MESSAGE'] = "РЈРєР°Р¶РёС‚Рµ РєР»СЋС‡ РєР°СЂС‚С‹ РґР»СЏ РґРѕРјРµРЅР° #DOMAIN#. Р•СЃР»Рё Сѓ РІР°СЃ РЅРµС‚ С‚Р°РєРѕРіРѕ РєР»СЋС‡Р°, РїРѕР»СѓС‡РёС‚СЊ РµРіРѕ РјРѕР¶РЅРѕ РЅР° <a href=\"http://code.google.com/intl/ru_ALL/apis/maps/signup.html\" target=\"_blank\">СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ</a>.";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_NO_KEY_BUTTON'] = "Р“РѕС‚РѕРІРѕ";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_SAVE_KEY_BUTTON'] = "РЎРѕС…СЂР°РЅРёС‚СЊ РєР»СЋС‡";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_NO_KEY'] = "РљР»СЋС‡ РєР°СЂС‚С‹: ";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_NO_KEY_OKMESSAGE'] = "РљР»СЋС‡ РєР°СЂС‚С‹ СЃРѕС…СЂР°РЅРµРЅ. Р’С‹ РјРѕР¶РµС‚Рµ РёР·РјРµРЅРёС‚СЊ РµРіРѕ РёР»Рё РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ СЃРїРёСЃРѕРє СЃРѕС…СЂР°РЅРµРЅРЅС‹С… РєР»СЋС‡РµР№  РЅР° <a href=\"/bitrix/admin/settings.php?lang=ru&mid=fileman&tabControl_active_tab=edit4\">СЃС‚СЂР°РЅРёС†Рµ РЅР°СЃС‚СЂРѕРµРє РјРѕРґСѓР»СЏ \"РЈРїСЂР°РІР»РµРЅРёРµ СЃС‚СЂСѓРєС‚СѓСЂРѕР№\"</a>.";
+$MESS ['IBLOCK_PROP_MAP_GOOGLE_NO_KEY_ERRORMESSAGE'] = "РџСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё РєР»СЋС‡Р° РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°! РџРѕРїСЂРѕР±СѓР№С‚Рµ РїРѕР·Р¶Рµ.";
+$MESS ['IBLOCK_PROP_MAP_YANDEX'] = "РџСЂРёРІСЏР·РєР° Рє РЇРЅРґРµРєСЃ.РљР°СЂС‚Рµ";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_INIT_LAT'] = "55.76";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_INIT_LON'] = "37.64";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_NO_KEY_MESSAGE'] = "РЈРєР°Р¶РёС‚Рµ РєР»СЋС‡ РєР°СЂС‚С‹ РґР»СЏ РґРѕРјРµРЅР° #DOMAIN#. Р•СЃР»Рё Сѓ РІР°СЃ РЅРµС‚ С‚Р°РєРѕРіРѕ РєР»СЋС‡Р°, РїРѕР»СѓС‡РёС‚СЊ РµРіРѕ РјРѕР¶РЅРѕ РЅР° <a href=\"http://api.yandex.ru/maps/form.xml\" target=\"_blank\">СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ</a>.";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_NO_KEY'] = "РљР»СЋС‡ РєР°СЂС‚С‹: ";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_NO_KEY_BUTTON'] = "Р“РѕС‚РѕРІРѕ";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_SAVE_KEY_BUTTON'] = "РЎРѕС…СЂР°РЅРёС‚СЊ РєР»СЋС‡";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_NO_KEY_OKMESSAGE'] = "РљР»СЋС‡ РєР°СЂС‚С‹ СЃРѕС…СЂР°РЅРµРЅ. Р’С‹ РјРѕР¶РµС‚Рµ РёР·РјРµРЅРёС‚СЊ РµРіРѕ РёР»Рё РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ СЃРїРёСЃРѕРє СЃРѕС…СЂР°РЅРµРЅРЅС‹С… РєР»СЋС‡РµР№  РЅР° <a href=\"/bitrix/admin/settings.php?lang=ru&mid=fileman&tabControl_active_tab=edit4\">СЃС‚СЂР°РЅРёС†Рµ РЅР°СЃС‚СЂРѕРµРє РјРѕРґСѓР»СЏ \"РЈРїСЂР°РІР»РµРЅРёРµ СЃС‚СЂСѓРєС‚СѓСЂРѕР№\"</a>.";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_INSTR'] = "Р’С‹Р±РµСЂРёС‚Рµ С‚РѕС‡РєСѓ РЅР° РєР°СЂС‚Рµ РґРІРѕР№РЅС‹Рј С‰РµР»С‡РєРѕРј РјС‹С€Рё.";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_INSTR_VALUE'] = "РџРµСЂРµС‚Р°С‰РёС‚Рµ С‚РѕС‡РєСѓ РїРѕ РєР°СЂС‚Рµ РёР»Рё РІС‹Р±РµСЂРёС‚Рµ РЅРѕРІРѕРµ РїРѕР»РѕР¶РµРЅРёРµ РґРІРѕР№РЅС‹Рј С‰РµР»С‡РєРѕРј РјС‹С€Рё.";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_SEARCH'] = "РџРѕРёСЃРє РїРѕ РєР°СЂС‚Рµ: ";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_NOTHING_FOUND'] = "(РЅРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ)";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_NO_KEY_ERRORMESSAGE'] = "РџСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё РєР»СЋС‡Р° РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°! РџРѕРїСЂРѕР±СѓР№С‚Рµ РїРѕР·Р¶Рµ.";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_GOTO_POINT'] = "РџРµСЂРµР№С‚Рё Рє С‚РѕС‡РєРµ";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_REMOVE_POINT'] = "РћС‡РёСЃС‚РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ";
+$MESS ['IBLOCK_PROP_MAP_YANDEX_REMOVE_POINT_CONFIRM'] = "Р’С‹ С‚РѕС‡РЅРѕ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ РѕС‡РёСЃС‚РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ?";
+$MESS ['IBLOCK_PROP_VIDEO_PARAMS_TITLE'] = "РџР°СЂР°РјРµС‚СЂС‹ РІРёРґРµРѕ";
+$MESS ['IBLOCK_PROP_VIDEO_PARAMS_TITLE_VIEW'] = "РџСЂРѕСЃРјРѕС‚СЂ СЂРѕР»РёРєР°";
+$MESS ['IBLOCK_PROP_VIDEO_PARAMS_TITLE_MAIN'] = "РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹";
+$MESS ['IBLOCK_PROP_VIDEO_PARAMS_TITLE_INFO'] = "Р

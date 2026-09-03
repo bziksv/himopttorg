@@ -1,0 +1,6 @@
+<?
+$MESS["PERFMON_HIT_TITLE"] = "РњРѕРЅРёС‚РѕСЂ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊРЅРѕСЃС‚Рё: С…РёС‚С‹";
+$MESS["PERFMON_HIT_PAGE"] = "РҐРёС‚С‹";
+$MESS["PERFMON_HIT_ID"] = "ID";
+$MESS["PERFMON_HIT_DATE_HIT"] = "Р’СЂРµРјСЏ С…РёС‚Р°";
+$MESS["PERFMON_HIT_SERVER_NAME"] = "Р

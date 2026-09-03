@@ -1,0 +1,15 @@
+<?php
+$MESS['SALE_CASHBOX_BITRIX_V2_TITLE'] = '1РЎ-Р‘РёС‚СЂРёРєСЃ.РљР°СЃСЃС‹ (Р¤Р¤Р” 1.05)';
+$MESS['SALE_CASHBOX_BITRIX_SETTINGS_P_TYPE_LABEL_CASH'] = 'РќР°Р»РёС‡РЅС‹Р№';
+$MESS['SALE_CASHBOX_BITRIX_SETTINGS_P_TYPE_LABEL_CASHLESS'] = 'Р‘РµР·РЅР°Р»РёС‡РЅС‹Р№';
+$MESS['SALE_CASHBOX_BITRIX_SETTINGS_P_TYPE_LABEL_ADVANCE'] = 'РђРІР°РЅСЃ';
+$MESS['SALE_CASHBOX_BITRIX_SETTINGS_P_TYPE_LABEL_CREDIT'] = 'РљСЂРµРґРёС‚';
+$MESS["SALE_CASHBOX_BITRIX_V2_SETTINGS_SNO"] = "РќР°Р»РѕРіРѕРѕР±Р»РѕР¶РµРЅРёРµ";
+$MESS["SALE_CASHBOX_BITRIX_V2_SETTINGS_SNO_LABEL"] = "РЎРёСЃС‚РµРјР° РЅР°Р»РѕРіРѕРѕР±Р»РѕР¶РµРЅРёСЏ";
+$MESS["SALE_CASHBOX_BITRIX_V2_SNO_OSN"] = "РѕР±С‰Р°СЏ";
+$MESS["SALE_CASHBOX_BITRIX_V2_SNO_UI"] = "СѓРїСЂРѕС‰РµРЅРЅР°СЏ";
+$MESS["SALE_CASHBOX_BITRIX_V2_SNO_UIO"] = "СѓРїСЂРѕС‰РµРЅРЅР°СЏ (РґРѕС…РѕРґС‹ РјРёРЅСѓСЃ СЂР°СЃС…РѕРґС‹)";
+$MESS["SALE_CASHBOX_BITRIX_V2_SNO_ENVD"] = "РµРґРёРЅС‹Р№ РЅР°Р»РѕРі РЅР° РІРјРµРЅРµРЅРЅС‹Р№ РґРѕС…РѕРґ";
+$MESS["SALE_CASHBOX_BITRIX_V2_SNO_ESN"] = "РµРґРёРЅС‹Р№ СЃРµР»СЊСЃРєРѕС…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹Р№ РЅР°Р»РѕРі";
+$MESS["SALE_CASHBOX_BITRIX_V2_SNO_PATENT"] = "РїР°С‚РµРЅС‚РЅР°СЏ";
+$MESS["SALE_CASHBOX_BITRIX_V2_SETTINGS_CLIENT"] = "Р

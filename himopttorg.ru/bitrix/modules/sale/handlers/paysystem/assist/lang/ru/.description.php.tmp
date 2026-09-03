@@ -1,0 +1,7 @@
+<?php
+$MESS['SALE_HPS_ASSIST'] = 'РђСЃСЃРёСЃС‚';
+$MESS["SALE_HPS_ASSIST_SHOP_IDP"]="РљРѕРґ РјР°РіР°Р·РёРЅР°";
+$MESS["SALE_HPS_ASSIST_SHOP_LOGIN"]="Р›РѕРіРёРЅ";
+$MESS["SALE_HPS_ASSIST_SHOP_PASSWORD"]="РџР°СЂРѕР»СЊ";
+$MESS["SALE_HPS_ASSIST_SERVER_URL"]="Р”РѕРјРµРЅРЅРѕРµ РёРјСЏ, РїРѕР»СѓС‡РµРЅРЅРѕРµ РѕС‚ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ СЃР»СѓР¶Р±С‹ РїРѕРґРґРµСЂР¶РєРё ASSIST";
+$MESS["SALE_HPS_ASSIST_FIRST_NAME"]="Р

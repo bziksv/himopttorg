@@ -1,0 +1,6 @@
+<?
+$MESS["BX_SALE_DISCOUNT_PRESET_FORM_EDIT_TAB_NAME_COMMON"] = "РџР°СЂР°РјРµС‚СЂС‹";
+$MESS["BX_SALE_DISCOUNT_PRESET_FORM_EDIT_TAB_TITLE_COMMON"] = "РџР°СЂР°РјРµС‚СЂС‹ РїСЂР°РІРёР»Р°";
+$MESS["BX_SALE_DISCOUNT_PRESET_ABSENT"] = "РќРµ РЅР°Р№РґРµРЅ РїСЂРµСЃРµС‚";
+$MESS["BX_SALE_DISCOUNT_PRESET_TITLE_ADD_DISCOUNT"] = "РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РїСЂР°РІРёР»Р°";
+$MESS["BX_SALE_DISCOUNT_PRESET_TITLE_EDIT_DISCOUNT"] = "Р

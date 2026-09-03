@@ -1,0 +1,21 @@
+<?
+$global_path = $_SERVER ['DOCUMENT_ROOT'] . "/";
+$path_modules = $global_path . 'modules/';
+$path_img = $global_path . 'img/';
+$path_banners = $global_path . 'upload/banners/'; //Р‘Р°РЅРЅРµСЂС‹
+$path_banners_view = '/upload/banners/'; //Р‘Р°РЅРЅРµСЂС‹ СЃ Р±СЂР°СѓР·РµСЂР°
+$path_conf = $global_path . 'classes/';
+$path_templates = $global_path . 'templates/';
+
+/**
+ * Р”РѕСЃС‚СѓРї Рє Р±Р°Р·Рµ РґР°РЅРЅС‹С… MYSQL
+ */
+$dbhost = "localhost";
+$dbuser = "u472_him";
+$dbpass = "pZSJxqB8";
+$dbname = "u472_him";
+
+/**
+ * РћС‚СЃС‹Р»РєР° E-mail
+ */
+$_conf ['sendmail'] ['from_name'] = 'РЎРџРЈРўРќР

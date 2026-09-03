@@ -1,0 +1,8 @@
+<?
+$MESS["CONVERSION_CALC_TITLE"] = "РњРѕРґРµР»СЊ РѕРєСѓРїР°РµРјРѕСЃС‚Рё РёРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅР°";
+$MESS["CONVERSION_CALC_TITLE2"] = "Р РµРЅС‚Р°Р±РµР»СЊРЅРѕСЃС‚СЊ РјР°РіР°Р·РёРЅР°";
+$MESS["CONVERSION_CALC_INDICATORS"] = "РџРѕРєР°Р·Р°С‚РµР»Рё СЂРµРЅС‚Р°Р±РµР»СЊРЅРѕСЃС‚Рё";
+$MESS["CONVERSION_CALC_GROSS_INCOME"] = "Р’Р°Р»РѕРІС‹Р№ РґРѕС…РѕРґ";
+$MESS["CONVERSION_CALC_ADVERT_BUDGET"] = "Р РµРєР»Р°РјРЅС‹Р№ Р±СЋРґР¶РµС‚";
+$MESS["CONVERSION_CALC_OTHER_EXPENSES"] = "РџСЂРѕС‡РёРµ СЂР°СЃС…РѕРґС‹";
+$MESS["CONVERSION_CALC_PROFIT"] = "Р

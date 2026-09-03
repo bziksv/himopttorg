@@ -1,0 +1,8 @@
+<?
+$MESS ['FILEMAN_FILEEDIT_FILE_EXISTS'] = "Р¤Р°Р№Р» СЃ С‚Р°РєРёРј РёРјРµРЅРµРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!";
+$MESS ['FILEMAN_FILEEDIT_FOLDER_EXISTS'] = "РЎ С‚Р°РєРёРј РёРјРµРЅРµРј РѕРїСЂРµРґРµР»РµРЅР° РїР°РїРєР°!";
+$MESS ['FILEMAN_FILEEDIT_AS_MENU'] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє РјРµРЅСЋ";
+$MESS ['FILEMAN_FILEEDIT_AS_HTML'] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє HTML";
+$MESS ['FILEMAN_FILEEDIT_RENAME'] = "РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ";
+$MESS ['FILEMAN_FILEEDIT_DOWNLOAD'] = "РЎРєР°С‡Р°С‚СЊ С„Р°Р№Р»";
+$MESS ['FILEMAN_FILEEDIT_NAME'] = "Р

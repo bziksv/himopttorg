@@ -1,0 +1,9 @@
+<?
+$MESS["CP_SBB_TPL_COLUMNS_LIST_MOBILE"] = "РљРѕР»РѕРЅРєРё, РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹Рµ РЅР° РјРѕР±РёР»СЊРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІР°С…";
+$MESS["CP_SBB_TPL_PROPERTIES_RECALCULATE_BASKET"] = "РЎРІРѕР№СЃС‚РІР°, РІР»РёСЏСЋС‰РёРµ РЅР° РїРµСЂРµСЃС‡РµС‚ РєРѕСЂР·РёРЅС‹";
+$MESS["CP_SBB_TPL_THEME_SITE"] = "Р‘СЂР°С‚СЊ С‚РµРјСѓ РёР· РЅР°СЃС‚СЂРѕРµРє СЃР°Р№С‚Р° (РґР»СЏ СЂРµС€РµРЅРёСЏ bitrix.eshop)";
+$MESS["CP_SBB_TPL_THEME_BLUE"] = "РЎРёРЅСЏСЏ (С‚РµРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ)";
+$MESS["CP_SBB_TPL_THEME_GREEN"] = "Р—РµР»РµРЅР°СЏ";
+$MESS["CP_SBB_TPL_THEME_RED"] = "РљСЂР°СЃРЅР°СЏ";
+$MESS["CP_SBB_TPL_THEME_YELLOW"] = "Р–РµР»С‚Р°СЏ";
+$MESS["CP_SBB_TPL_DEFERRED_REFRESH"] = "Р

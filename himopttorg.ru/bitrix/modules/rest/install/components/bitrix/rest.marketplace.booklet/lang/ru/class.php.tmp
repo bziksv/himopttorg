@@ -1,0 +1,7 @@
+<?
+$MESS["REST_MARKETPLACE_BOOKLET_ERROR_NOT_FOUND"] = "РЎС‚СЂР°РЅРёС†Р° РЅРµ РЅР°Р№РґРµРЅР°";
+$MESS["REST_MARKETPLACE_BOOKLET_DEFAULT_TITLE_2"] = "Р‘РёС‚СЂРёРєСЃ24.РњР°СЂРєРµС‚";
+$MESS["REST_MARKETPLACE_BOOKLET_DEFAULT_ACTION_TITLE"] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS["REST_BOOKLET_CRM_FIELD_TITLE"] = "РЎРѕР·РґР°С‚СЊ СЃРІРѕС‘ РїРѕР»Рµ";
+$MESS["REST_BOOKLET_CRM_FIELD_DESCRIPTION_TITLE"] = "РџРѕР»СѓС‡РёС‚Рµ РіРѕС‚РѕРІСѓСЋ CRM РґР»СЏ РІР°С€РµРіРѕ Р±РёР·РЅРµСЃР°!";
+$MESS["REST_BOOKLET_CRM_FIELD_DESCRIPTION"] = "Р

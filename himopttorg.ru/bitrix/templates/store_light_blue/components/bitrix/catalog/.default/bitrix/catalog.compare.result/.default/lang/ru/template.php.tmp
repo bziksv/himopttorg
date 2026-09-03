@@ -1,0 +1,16 @@
+<?
+$MESS ['CATALOG_COMPARE_BUY'] = "РљСѓРїРёС‚СЊ";
+$MESS ['CATALOG_NOT_AVAILABLE'] = "(РЅРµС‚ РЅР° СЃРєР»Р°РґРµ)";
+$MESS ['CATALOG_CHARACTERISTICS_LABEL'] = "РџРѕРєР°Р·Р°РЅС‹";
+$MESS ['CATALOG_ONLY_DIFFERENT'] = "С‚РѕР»СЊРєРѕ СЂР°Р·Р»РёС‡Р°СЋС‰РёРµСЃСЏ";
+$MESS ['CATALOG_ALL_CHARACTERISTICS'] = "РІСЃРµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё";
+$MESS ['CATALOG_REMOVE_PRODUCTS'] = "РЈРґР°Р»РёС‚СЊ С‚РѕРІР°СЂС‹";
+$MESS ['CATALOG_REMOVE_FEATURES'] = "РЈРґР°Р»РёС‚СЊ СЃРІРѕР№СЃС‚РІР°";
+$MESS ['CATALOG_REMOVED_FEATURES'] = "РЈРґР°Р»РµРЅРЅС‹Рµ СЃРІРѕР№СЃС‚РІР°";
+$MESS ['CATALOG_ADD_TO_COMPARE_LIST'] = "Р”РѕР±Р°РІРёС‚СЊ РІ СЃРїРёСЃРѕРє СЃСЂР°РІРЅРµРЅРёСЏ";
+$MESS ['CATALOG_REMOVE_FEATURES_NEW'] = "РџРѕРјРµРЅСЏС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ СЃСЂР°РІРЅРµРЅРёСЏ";
+$MESS ['CATALOG_NAME'] = "РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР°";
+$MESS ['CATALOG_DELETE_ALL'] = "РЈР±СЂР°С‚СЊ РІСЃРµ С‚РѕРІР°СЂС‹ РёР· СЃСЂР°РІРЅРµРЅРёСЏ";
+$MESS ['CATALOG_REMOVE_PRODUCT'] = "РЈРґР°Р»РёС‚СЊ С‚РѕРІР°СЂ";
+$MESS ['IBLOCK_FIELD_PREVIEW_TEXT'] = 'РћРїРёСЃР°РЅРёРµ';
+$MESS ['IBLOCK_FIELD_DETAIL_PICTURE'] = 'Р

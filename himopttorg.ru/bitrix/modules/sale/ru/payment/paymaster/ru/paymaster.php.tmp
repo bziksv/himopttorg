@@ -1,0 +1,7 @@
+<?
+global $MESS;
+
+$MESS["SWMWP_DTITLE"] = "PayMaster";
+$MESS["SWMWP_DDESCR"] = "РћРїР»Р°С‚Р° С‡РµСЂРµР· <b><a href=\"https://paymaster.ru\">PayMaster</a></b>";
+
+$MESS["SWMWP_ID"] = "Р

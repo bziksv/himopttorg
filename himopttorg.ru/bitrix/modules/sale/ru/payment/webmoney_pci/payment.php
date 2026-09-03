@@ -1,0 +1,30 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><?
+$strPAYEE_PURSE = CSalePaySystemAction::GetParamValue("ACC_NUMBER");
+
+$SERVER_NAME_tmp = "";
+if (defined("SITE_SERVER_NAME"))
+	$SERVER_NAME_tmp = SITE_SERVER_NAME;
+if ($SERVER_NAME_tmp == '')
+	$SERVER_NAME_tmp = COption::GetOptionString("main", "server_name", "");
+
+$strPayPath  = "";
+$strPayPath .= "url=".urlencode("http://".$SERVER_NAME_tmp.(CSalePaySystemAction::GetParamValue("PATH_TO_RESULT"))."?ORDER_ID=".intval(CSalePaySystemAction::GetParamValue("ORDER_ID")));
+$strPayPath .= "&purse=".$strPAYEE_PURSE;
+$strPayPath .= "&amount=".round(CSalePaySystemAction::GetParamValue("SHOULD_PAY"), 2);
+$strPayPath .= "&method=POST";
+$strPayPath .= "&desc=Order_".intval(CSalePaySystemAction::GetParamValue("ORDER_ID"));
+$strPayPath .= "&mode=".CSalePaySystemAction::GetParamValue("TEST_MODE");
+?>
+<div class="container-fluid">
+	<div class="row mb-3">
+		<div class="col">
+			Р•СЃР»Рё Р’С‹ РїРѕР»СЊР·СѓРµС‚РµСЃСЊ <strong>WMKeeper Classic</strong>, РїРµСЂРµР№РґРёС‚Рµ РґР»СЏ РѕРїР»Р°С‚С‹ Р·Р°РєР°Р·Р° РїРѕ СЃР»РµРґСѓСЋС‰РµР№ СЃСЃС‹Р»РєРµ: <a class="" href="wmk:paylink?<?= $strPayPath ?>"><strong>РћРїР»Р°С‚РёС‚СЊ Р·Р°РєР°Р·</strong></a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			Р•СЃР»Рё Р’С‹ РїРѕР»СЊР·СѓРµС‚РµСЃСЊ <strong>WMKeeper Light</strong>, РїРµСЂРµР№РґРёС‚Рµ РґР»СЏ РѕРїР»Р°С‚С‹ Р·Р°РєР°Р·Р° РїРѕ СЃР»РµРґСѓСЋС‰РµР№ СЃСЃС‹Р»РєРµ: <a class="" href="https://light.webmoney.ru/pci.aspx?<?= $strPayPath ?>"><strong>РћРїР»Р°С‚РёС‚СЊ Р·Р°РєР°Р·</strong></a>
+		</div>
+	</div>
+</div>

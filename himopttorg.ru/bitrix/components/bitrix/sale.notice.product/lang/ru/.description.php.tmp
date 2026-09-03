@@ -1,0 +1,5 @@
+<?
+$MESS["SALE_NOTICE_NAME"] = "РџРѕРґРїРёСЃРєР° РЅР° С‚РѕРІР°СЂС‹";
+$MESS["SALE_NOTICE_DESCRIPTION"] = "Р¤РѕСЂРјР° РїРѕРґРїРёСЃРєРё РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё Рѕ С‚РѕРІР°СЂРµ";
+$MESS["CP_CATALOG_SERVICES_MAIN_SECTION"] = "РњР°РіР°Р·РёРЅ";
+$MESS["CP_CATALOG_SERVICES_PARENT_SECTION"] = "Р

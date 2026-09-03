@@ -1,0 +1,7 @@
+<?php
+$MESS['LANDING_DEMO_STORE_CLOTHES-FAQ--NAME'] = 'РљР°Рє РєСѓРїРёС‚СЊ';
+$MESS["LANDING_DEMO_STORE_CLOTHES-FAQ--TEXT_1"] = "РљР°Рє РєСѓРїРёС‚СЊ";
+$MESS["LANDING_DEMO_STORE_CLOTHES-FAQ--TEXT_2"] = "РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р°";
+$MESS["LANDING_DEMO_STORE_CLOTHES-FAQ--TEXT_3"] = "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ Р·Р°РєР°Р·Р°";
+$MESS["LANDING_DEMO_STORE_CLOTHES-FAQ--TEXT_4"] = "РћРїР»Р°С‚Р° Рё С†РµРЅС‹";
+$MESS["NOTTRANSLATE--LANDING_DEMO_STORE_CLOTHES-FAQ--TEXT_1"] = "<p>РџСЂРѕС†РµРґСѓСЂР° РїРѕРєСѓРїРєРё С‚РѕРІР°СЂР° РІ РЅР°С€РµРј Р

@@ -1,0 +1,7 @@
+<?
+$MESS ['PM_TITLE'] = "#SUBJECT# (С‡С‚РµРЅРёРµ)";
+$MESS ['PM_TITLE_NAV'] = "РџРµСЂСЃРѕРЅР°Р»СЊРЅС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ";
+$MESS ['PM_ERR_NO_DATA'] = "РќРµС‚ РґР°РЅРЅС‹С….";
+$MESS ['PM_FOLDER_ID_0'] = "Р’С…РѕРґСЏС‰РёРµ";
+$MESS ['PM_FOLDER_ID_1'] = "Р’С…РѕРґСЏС‰РёРµ";
+$MESS ['PM_FOLDER_ID_2'] = "Р

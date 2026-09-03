@@ -1,0 +1,5 @@
+<?
+$MESS["IBLOCK_OPTION_SECTION_SYSTEM"] = "РЎРёСЃС‚РµРјРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["IBLOCK_OPTION_SECTION_LIST_AND_FORM"] = "РЎРїРёСЃРєРё Рё С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ";
+$MESS["IBLOCK_OPTION_SECTION_CUSTOM_FORM"] = "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ";
+$MESS["IBLOCK_OPTION_SECTION_IMPORT_EXPORT"] = "Р

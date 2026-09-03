@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Georgian PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author Avtandil Kikabidze aka LONGMAN <akalongman@gmail.com>
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'SMTP бѓЁбѓ”бѓЄбѓ“бѓќбѓ›бѓђ: бѓђбѓ•бѓўбѓќбѓ бѓ

@@ -1,0 +1,12 @@
+<?
+$MESS ['ASKARON_PRO1C_MENU_MAIN'] = "РџСЂРѕРґРІРёРЅСѓС‚С‹Р№ РѕР±РјРµРЅ СЃ 1РЎ";
+$MESS ['ASKARON_PRO1C_MENU_MAIN_TITLE'] = "РџСЂРѕРґРІРёРЅСѓС‚С‹Р№ РѕР±РјРµРЅ СЃ 1РЎ";
+
+$MESS ['ASKARON_PRO1C_MENU_LIVE_LOG'] = "Р–РёРІРѕР№ Р»РѕРі";
+$MESS ['ASKARON_PRO1C_MENU_LIVE_LOG_TITLE'] = "Р–РёРІРѕР№ Р»РѕРі";
+
+$MESS ['ASKARON_PRO1C_LOG_VIEW_PAGE'] = "Р›РѕРі-С„Р°Р№Р»";
+$MESS ['ASKARON_PRO1C_LOG_VIEW_PAGE_TITLE'] = "Р›РѕРі-С„Р°Р№Р»";
+
+$MESS ['ASKARON_PRO1C_MENU_LAST'] = "РџРѕСЃР»РµРґРЅРёР№ РѕР±РјРµРЅ";
+$MESS ['ASKARON_PRO1C_MENU_LAST_TITLE'] = "Р

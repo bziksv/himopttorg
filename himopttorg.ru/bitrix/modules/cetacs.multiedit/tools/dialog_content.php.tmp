@@ -1,0 +1,41 @@
+<?
+define("STOP_STATISTICS", true);
+define("PUBLIC_AJAX_MODE", true);
+require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_before.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/iblock/admin_tools.php");
+
+use \Bitrix\Main\Localization\Loc;
+use \Bitrix\Main\Loader;
+use Cetacs\MultiEdit\Core;
+
+Loc::loadMessages(dirname(__FILE__) . "/../lib/core.php");
+
+if (!Loader::includeModule("fileman"))
+    exit;
+if (!Loader::includeModule("iblock"))
+    exit;
+if (!Loader::includeModule("cetacs.multiedit"))
+    exit;
+
+$propertyId = htmlspecialcharsbx($_POST["PROPERTY_ID"]);
+if (intval($propertyId) > 0) {
+    $prop = CIBlockProperty::GetPropertyArray($propertyId, intval($_POST["IBLOCK_ID"]));
+    if (strlen($prop["USER_TYPE_SETTINGS"]) > 0) {
+        $prop["USER_TYPE_SETTINGS"] = unserialize($prop["USER_TYPE_SETTINGS"]);
+    }
+}
+
+$tableId = htmlspecialcharsbx($_POST["TABLE_ID"]);
+$checkInputName = htmlspecialcharsbx($_POST["CHECK_INPUT_NAME"]);
+
+
+$props = [
+    ["ID" => "PREVIEW_PICTURE"],
+    ["ID" => "DETAIL_PICTURE"],
+    ["ID" => "SORT"],
+];
+
+$props = array_merge($props, Core::getPropertyList(intval($_POST["IBLOCK_ID"])));
+
+?>
+    <?// Р В­РЎвЂљР С• Р Т‘Р В»РЎРЏ РЎРѓР Р†Р С•Р в„–РЎРѓРЎвЂљР Р†Р В° Р С—РЎР‚Р С‘Р Р†РЎРЏР В·Р С”Р В° Р С” РЎРЊР В»Р ВµР С

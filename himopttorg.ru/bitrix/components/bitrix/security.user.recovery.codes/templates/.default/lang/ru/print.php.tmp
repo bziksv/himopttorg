@@ -1,0 +1,5 @@
+<?
+$MESS['SECURITY_USER_RECOVERY_CODES_PRINT_TITLE'] = 'Р РµР·РµСЂРІРЅС‹Рµ РєРѕРґС‹ РґР»СЏ Р°РІС‚РѕСЂРёР·Р°С†РёРё ';
+$MESS['SECURITY_USER_RECOVERY_CODES_PRINT_CREATED'] = 'Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ: #DATE#';
+$MESS['SECURITY_USER_RECOVERY_CODES_PRINT_NOTE'] = 'РљР°Р¶РґС‹Р№ РєРѕРґ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РѕР»СЊРєРѕ РѕРґРёРЅ СЂР°Р·. РЎРѕРІРµС‚: РІС‹С‡РµСЂРєРёРІР°Р№С‚Рµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹Рµ РєРѕРґС‹.';
+$MESS['SECURITY_USER_RECOVERY_CODES_PRINT_ISSUER'] = 'Р

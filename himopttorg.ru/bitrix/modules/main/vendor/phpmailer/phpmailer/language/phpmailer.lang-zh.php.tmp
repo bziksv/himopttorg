@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Traditional Chinese PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author liqwei <liqwei@liqwei.com>
+ * @author Peter Dave Hello <@PeterDaveHello/>
+ * @author Jason Chiang <xcojad@gmail.com>
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'SMTP йЊЇиЄ¤пјљз™»е…Ґе¤±ж•—гЂ‚';
+$PHPMAILER_LANG['connect_host']         = 'SMTP йЊЇиЄ¤пјљз„Ўжі•йЂЈз·ље€° SMTP дё»ж©џгЂ‚';
+$PHPMAILER_LANG['data_not_accepted']    = 'SMTP йЊЇиЄ¤пјљз„Ўжі•жЋҐеЏ—зљ„иі‡ж–™гЂ‚';
+$PHPMAILER_LANG['empty_message']        = 'йѓµд»¶е…§е®№з‚єз©є';
+$PHPMAILER_LANG['encoding']             = 'жњЄзџҐз·Ёзўј: ';
+$PHPMAILER_LANG['execute']              = 'з„Ўжі•еџ·иЎЊпјљ';
+$PHPMAILER_LANG['file_access']          = 'з„Ўжі•е­

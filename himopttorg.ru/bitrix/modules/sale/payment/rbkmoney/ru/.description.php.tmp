@@ -1,0 +1,10 @@
+<?
+global $MESS;
+$MESS["SALE_RBK_SHOULD_PAY"] = "РЎСѓРјРјР° Рє РѕРїР»Р°С‚Рµ";
+$MESS["SALE_RBK_DESC_SHOULD_PAY"] = "";
+$MESS["SALE_RBK_CURRENCY"] = "Р’Р°Р»СЋС‚Р° РѕРїР»Р°С‚С‹";
+$MESS["SALE_RBK_DESC_CURRENCY"] = "";
+$MESS["SALE_RBK_SERVICE_NAME"] = "РћРїРёСЃР°РЅРёРµ С‚РѕРІР°СЂР°";
+$MESS["SALE_RBK_DESC_SERVICE_NAME"] = "РћРїРёСЃР°РЅРёРµ С‚РѕРІР°СЂР° Рє РѕРїР»Р°С‚Рµ";
+$MESS["SALE_RBK_ORDER_ID"] = "РќРѕРјРµСЂ Р·Р°РєР°Р·Р°";
+$MESS["SALE_RBK_DESC_ORDER_ID"] = "РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ РІР°С€РµРј Р

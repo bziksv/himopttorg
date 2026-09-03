@@ -1,0 +1,13 @@
+<?php
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_ID'] = 'ID';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_NAME'] = 'РќР°Р·РІР°РЅРёРµ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_CODE'] = 'РЎРёРјРІРѕР»СЊРЅС‹Р№ РєРѕРґ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_PROPERTY_TYPE'] = 'РўРёРї';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_SORT'] = 'РЎРѕСЂС‚РёСЂРѕРІРєР°';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_ACTIVE'] = 'РђРєС‚РёРІРЅРѕСЃС‚СЊ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_IS_REQUIRED'] = 'РћР±СЏР·Р°С‚РµР»СЊРЅРѕРµ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_MULTIPLE'] = 'РњРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРµ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_SEARCHABLE'] = 'Р—РЅР°С‡РµРЅРёСЏ СѓС‡Р°СЃС‚РІСѓСЋС‚ РІ РїРѕРёСЃРєРµ ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_FILTRABLE'] = 'РџРѕРєР°Р·С‹РІР°С‚СЊ РІ С„РёР»СЊС‚СЂРµ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_XML_ID'] = 'Р’РЅРµС€РЅРёР№ РєРѕРґ';
+$MESS['IBLOCK_UI_GRID_PROPERTY_PROVIDER_WITH_DESCRIPTION'] = 'Р

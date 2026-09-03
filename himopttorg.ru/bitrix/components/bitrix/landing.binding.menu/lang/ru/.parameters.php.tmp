@@ -1,0 +1,6 @@
+<?php
+$MESS['LANDING_CMP_PAR_LANDING_TYPE'] = 'РўРёРї';
+$MESS['LANDING_CMP_PAR_LANDING_MODE'] = 'Р РµР¶РёРј';
+$MESS['LANDING_CMP_PAR_LANDING_MODE_LIST'] = 'РЎРїРёСЃРѕРє';
+$MESS['LANDING_CMP_PAR_LANDING_MODE_CREATE'] = 'РЎРѕР·РґР°РЅРёРµ';
+$MESS['LANDING_CMP_PAR_MENU_ID'] = 'Р

@@ -1,0 +1,12 @@
+<?
+$MESS["SALE_VK_TITLE"] = "РћР±РјРµРЅ С‚РѕРІР°СЂРѕРІ СЃ Р’РљРѕРЅС‚Р°РєС‚Рµ - СЃРїРёСЃРѕРє РїСЂРѕС„РёР»РµР№";
+
+$MESS["SALE_VK_TABLE__ID"] = "ID";
+$MESS["SALE_VK_TABLE__DESCRIPTION"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["SALE_VK_TABLE__INTERVAL"] = "РџРµСЂРёРѕРґРёС‡РЅРѕСЃС‚СЊ (С‡Р°СЃС‹)";
+$MESS["SALE_VK_TABLE__ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ";
+$MESS["SALE_VK_TABLE__ACTIVE_NO"] = "РќРµ РЅР°СЃС‚СЂРѕРµРЅ";
+$MESS["SALE_VK_TABLE__NEW_EXPORT"] = "РќРѕРІС‹Р№ СЌРєСЃРїРѕСЂС‚";
+$MESS["SALE_VK_TABLE__NEW_EXPORT_ALT"] = "Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІС‹Р№ РїСЂРѕС„РёР»СЊ СЌРєСЃРїРѕСЂС‚Р°";
+
+$MESS["SALE_VK_TABLE__EDIT"] = "Р

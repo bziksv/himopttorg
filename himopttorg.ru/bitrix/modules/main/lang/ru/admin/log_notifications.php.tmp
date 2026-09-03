@@ -1,0 +1,7 @@
+<?
+$MESS["log_notifications_title"] = "РћРїРѕРІРµС‰РµРЅРёСЏ Р¶СѓСЂРЅР°Р»Р° СЃРѕР±С‹С‚РёР№";
+$MESS["log_notifications_active"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ";
+$MESS["log_notifications_type"] = "РўРёРї СЃРѕР±С‹С‚РёСЏ";
+$MESS["log_notifications_object"] = "РћР±СЉРµРєС‚";
+$MESS["log_notifications_user"] = "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ";
+$MESS["log_notifications_interval"] = "Р

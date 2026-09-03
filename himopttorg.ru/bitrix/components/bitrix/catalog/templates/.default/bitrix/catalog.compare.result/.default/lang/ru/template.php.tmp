@@ -1,0 +1,19 @@
+<?
+$MESS["CATALOG_COMPARE_BUY"] = "РљСѓРїРёС‚СЊ";
+$MESS["CATALOG_NOT_AVAILABLE"] = "(РЅРµС‚ РЅР° СЃРєР»Р°РґРµ)";
+$MESS["CATALOG_SHOWN_CHARACTERISTICS"] = "РџРѕРєР°Р·Р°РЅС‹";
+$MESS["CATALOG_ONLY_DIFFERENT"] = "РўРѕР»СЊРєРѕ СЂР°Р·Р»РёС‡Р°СЋС‰РёРµСЃСЏ";
+$MESS["CATALOG_ALL_CHARACTERISTICS"] = "Р’СЃРµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё";
+$MESS["CATALOG_REMOVE_PRODUCT"] = "РЈРґР°Р»РёС‚СЊ";
+$MESS["CATALOG_ADD_TO_COMPARE_LIST"] = "Р”РѕР±Р°РІРёС‚СЊ РІ СЃРїРёСЃРѕРє СЃСЂР°РІРЅРµРЅРёСЏ";
+$MESS["CATALOG_COMPARE_PARAMS"] = "РџР°СЂР°РјРµС‚СЂС‹ СЃСЂР°РІРЅРµРЅРёСЏ";
+$MESS["CATALOG_COMPARE_PRICE"] = "Р¦РµРЅР°";
+$MESS["IBLOCK_OFFER_FIELD_ID"] = "ID РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_CODE"] = "РЎРёРјРІРѕР»СЊРЅС‹Р№ РєРѕРґ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_XML_ID"] = "Р’РЅРµС€РЅРёР№ РєРѕРґ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_NAME"] = "РќР°Р·РІР°РЅРёРµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_TAGS"] = "РўРµРіРё РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_SORT"] = "РЎРѕСЂС‚РёСЂРѕРІРєР° РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_DESCRIPTION"] = "РћРїРёСЃР°РЅРёРµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_DESCRIPTION_TYPE"] = "РўРёРї РѕРїРёСЃР°РЅРёСЏ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["IBLOCK_OFFER_FIELD_PICTURE"] = "Р

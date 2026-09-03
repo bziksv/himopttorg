@@ -1,0 +1,12 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>РљРІРёС‚Р°РЅС†РёСЏ</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=<?= LANG_CHARSET ?>">
+		<style type="text/css">
+		H1 {font-size: 14pt;}
+		</style>
+	</head>
+	<body bgColor="#ffffff">
+		<TABLE height="538" bgColor="#ffffff" border=1 borderColor="#000000" cellPadding=3 cellSpacing=0 width="515">
+		<!-- Р

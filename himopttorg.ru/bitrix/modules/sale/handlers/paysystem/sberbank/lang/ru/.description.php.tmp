@@ -1,0 +1,4 @@
+<?php
+$MESS["SALE_HPS_SBERBANK_TITLE"] = "РљРІРёС‚Р°РЅС†РёСЏ РЎР±РµСЂР±Р°РЅРєР°";
+$MESS["SALE_HPS_SBERBANK_COMPANY_NAME_DESC"] = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР»СѓС‡Р°С‚РµР»СЏ РїР»Р°С‚РµР¶Р°";
+$MESS["SALE_HPS_SBERBANK_INN_DESC"] = "Р

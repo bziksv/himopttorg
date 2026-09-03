@@ -1,0 +1,18 @@
+<?
+$MESS["SALE_ORDER_STATUS_CREATED"] = "РЎРѕР·РґР°РЅ";
+$MESS["SALE_ORDER_STATUS_LAST_MODIF"] = "РџРѕСЃР»РµРґРЅРµРµ РёР·РјРµРЅРµРЅРёРµ";
+$MESS["SALE_ORDER_STATUS"] = "РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р°";
+$MESS["SALE_ORDER_STATUS_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["SALE_ORDER_STATUS_CANCEL"] = "РћС‚РјРµРЅРёС‚СЊ Р·Р°РєР°Р·";
+$MESS["SALE_ORDER_STATUS_CANCEL_CANCEL"] = "РћС‚РјРµРЅРёС‚СЊ РѕС‚РјРµРЅСѓ Р·Р°РєР°Р·Р°";
+$MESS["SALE_ORDER_STATUS_CANCEL_ERROR"] = "РћС€РёР±РєР° РѕС‚РјРµРЅС‹ Р·Р°РєР°Р·Р°";
+$MESS["SALE_ORDER_STATUS_CHANGED_SUCCESS"] = "РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р° СѓСЃРїРµС€РЅРѕ РёР·РјРµРЅС‘РЅ";
+$MESS["SALE_ORDER_STATUS_CHANGE_ERROR"] = "РћС€РёР±РєР° РёР·РјРµРЅРµРЅРёСЏ СЃС‚Р°С‚СѓСЃР° Р·Р°РєР°Р·Р°";
+$MESS["SALE_ORDER_STATUS_CANCELED"] = "Р—Р°РєР°Р· РѕС‚РјРµРЅРµРЅ";
+$MESS["SALE_ORDER_STATUS_CANCELING"] = "РћС‚РјРµРЅР° Р·Р°РєР°Р·Р°";
+$MESS["SALE_ORDER_STATUS_COMMENT"] = "РљРѕРјРјРµРЅС‚Р°СЂРёР№";
+$MESS["SALE_ORDER_STATUS_CANCELING_REASON"] = "РџСЂРёС‡РёРЅР° РѕС‚РјРµРЅС‹";
+$MESS["SALE_ORDER_STATUS_USER_CAN_VIEW"] = "РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° РїРѕРєСѓРїР°С‚РµР»РµРј";
+$MESS["SALE_ORDER_STATUS_TOGGLE"] = "СЃРІРµСЂРЅСѓС‚СЊ";
+$MESS["SALE_ORDER_STATUS_SITE"] = "РЎР°Р№С‚";
+$MESS["SALE_ORDER_STATUS_SOURCE"] = "Р

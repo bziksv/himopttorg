@@ -1,0 +1,4 @@
+<?php
+$MESS['REST_CONFIGURATION_IMPORT_APP_ERROR_TYPE'] = 'Р”Р°РЅРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РєРѕРЅС„РёРіСѓСЂР°С†РёРѕРЅРЅС‹Рј';
+$MESS['REST_CONFIGURATION_IMPORT_SAVE_FILE_BTN'] = 'Р—Р°РіСЂСѓР·РёС‚СЊ';
+$MESS['REST_CONFIGURATION_IMPORT_TITLE_BLOCK'] = 'Р

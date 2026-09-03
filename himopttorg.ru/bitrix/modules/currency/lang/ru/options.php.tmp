@@ -1,0 +1,20 @@
+<?
+$MESS["CURRENCY_SETTINGS"] = "РћСЃРЅРѕРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["CURRENCY_SETTINGS_TITLE"] = "РћСЃРЅРѕРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РјРѕРґСѓР»СЏ";
+$MESS["BASE_CURRENCY"] = "Р‘Р°Р·РѕРІР°СЏ РІР°Р»СЋС‚Р°:";
+$MESS["CO_TAB_RIGHTS"] = "Р”РѕСЃС‚СѓРї";
+$MESS["CO_TAB_RIGHTS_TITLE"] = "РЈСЂРѕРІРµРЅСЊ РґРѕСЃС‚СѓРїР° Рє РјРѕРґСѓР»СЋ";
+$MESS["COP_SYS_ROU"] = "РЎР»СѓР¶РµР±РЅС‹Рµ РїСЂРѕС†РµРґСѓСЂС‹";
+$MESS["CUR_OPTIONS_BTN_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["CUR_OPTIONS_BTN_SAVE_TITLE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["CUR_OPTIONS_BTN_RESET"] = "РЎР±СЂРѕСЃРёС‚СЊ";
+$MESS["CUR_OPTIONS_BTN_RESET_TITLE"] = "РћС‚РјРµРЅРёС‚СЊ РІСЃРµ РЅРµСЃРѕС…СЂР°РЅРµРЅРЅС‹Рµ РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["CUR_OPTIONS_BTN_RESTORE_DEFAULT"] = "РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["CUR_OPTIONS_BTN_HINT_RESTORE_DEFAULT"] = "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["CUR_OPTIONS_BTN_HINT_RESTORE_DEFAULT_WARNING"] = "Р’РЅРёРјР°РЅРёРµ! Р’СЃРµ РЅР°СЃС‚СЂРѕР№РєРё Р±СѓРґСѓС‚ РїРµСЂРµР·Р°РїРёСЃР°РЅС‹ Р·РЅР°С‡РµРЅРёСЏРјРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ. РџСЂРѕРґРѕР»Р¶РёС‚СЊ?";
+$MESS["CURRENCY_PROCEDURES"] = "РЎР»СѓР¶РµР±РЅС‹Рµ РїСЂРѕС†РµРґСѓСЂС‹";
+$MESS["CURRENCY_BASE_RATE"] = "РўРµРєСѓС‰РёРµ Р±Р°Р·РѕРІС‹Рµ РєСѓСЂСЃС‹";
+$MESS["CURRENCY_BASE_RATE_TITLE"] = "РўРµРєСѓС‰РёРµ РєСѓСЂСЃС‹ РІР°Р»СЋС‚ РїРѕ РѕС‚РЅРѕС€РµРЅРёСЋ Рє Р±Р°Р·РѕРІРѕР№";
+$MESS["CUR_PROCEDURES_BTN_RECALC"] = "РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ";
+$MESS["CURRENCY_AGENTS"] = "РђРіРµРЅС‚С‹";
+$MESS["CURRENCY_AGENTS_TITLE"] = "Р

@@ -1,0 +1,46 @@
+<?php
+
+$MESS['REPORT_LIST'] = 'РЎРїРёСЃРѕРє РѕС‚С‡РµС‚РѕРІ';
+
+$MESS["TASKS_REPORT_REPORTS"] = "РћС‚С‡РµС‚С‹";
+$MESS["TASKS_REPORT_TASKS"] = "Р—Р°РґР°С‡Рё";
+$MESS["TASKS_REPORT_TEMPLATES"] = "РЁР°Р±Р»РѕРЅС‹";
+
+$MESS['REPORT_TABLE_TITLE'] = 'РќР°Р·РІР°РЅРёРµ РѕС‚С‡РµС‚Р°';
+$MESS['REPORT_TABLE_CREATE_BY'] = 'РђРІС‚РѕСЂ';
+$MESS['REPORT_TABLE_CREATE_DATE'] = 'Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ';
+
+$MESS['REPORT_EDIT_SHORT'] = 'Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ';
+$MESS['REPORT_EDIT_FULL'] = 'Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РѕС‚С‡РµС‚';
+$MESS['REPORT_SHARING_SHORT'] = 'РћР±С‰РёР№ РґРѕСЃС‚СѓРї';
+$MESS['REPORT_SHARING_FULL'] = 'РќР°СЃС‚СЂРѕРёС‚СЊ РѕР±С‰РёР№ РґРѕСЃС‚СѓРї';
+$MESS['REPORT_COPY_SHORT'] = 'РљРѕРїРёСЂРѕРІР°С‚СЊ';
+$MESS['REPORT_COPY_FULL'] = 'РљРѕРїРёСЂРѕРІР°С‚СЊ РѕС‚С‡РµС‚';
+$MESS['REPORT_EXPORT_SHORT'] = 'Р­РєСЃРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ';
+$MESS['REPORT_EXPORT_FULL'] = 'Р­РєСЃРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ РѕС‚С‡РµС‚';
+$MESS['REPORT_DELETE_SHORT'] = 'РЈРґР°Р»РёС‚СЊ';
+$MESS['REPORT_DELETE_FULL'] = 'РЈРґР°Р»РёС‚СЊ РѕС‚С‡РµС‚';
+
+$MESS['REPORT_ADD'] = 'Р”РѕР±Р°РІРёС‚СЊ РѕС‚С‡РµС‚';
+
+$MESS['REPORT_EMPTY_LIST'] = 'РЈ Р’Р°СЃ РЅРµС‚ РЅРё РѕРґРЅРѕРіРѕ СЃРєРѕРЅСЃС‚СЂСѓРёСЂРѕРІР°РЅРЅРѕРіРѕ РѕС‚С‡РµС‚Р°.';
+$MESS['REPORT_CREATE_DEFAULT'] = 'РЎРѕР·РґР°С‚СЊ С‚РёРїРѕРІС‹Рµ РѕС‚С‡РµС‚С‹';
+
+$MESS['REPORT_DELETE_CONFIRM'] = 'Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ СѓРґР°Р»РёС‚СЊ?';
+
+$MESS['REPORT_UPDATE_14_5_2_MESSAGE'] = 'РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ, С‡С‚Рѕ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ С€Р°Р±Р»РѕРЅС‹ РЅРµР»СЊР·СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ, РЅРѕ РїСЂРё '.
+	'РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё, РІС‹ РјРѕР¶РµС‚Рµ СЃРѕР·РґР°С‚СЊ СЃРІРѕР№ С€Р°Р±Р»РѕРЅ РѕС‚С‡РµС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё РїСЂРµРґР»РѕР¶РµРЅРЅС‹С…, СЃ РїРѕРјРѕС‰СЊСЋ РєРЅРѕРїРєРё "РљРѕРїРёСЂРѕРІР°С‚СЊ" РёР»Рё '.
+	'СЃРѕР·РґР°С‚СЊ РїРѕР»РЅРѕСЃС‚СЊСЋ СЃРІРѕР№ РѕС‚С‡РµС‚.';
+
+$MESS["REPORT_LIST_SHARING_TITLE_POPUP"] = "РћР±С‰РёР№ РґРѕСЃС‚СѓРї";
+$MESS["REPORT_LIST_BTN_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["REPORT_LIST_BTN_CLOSE"] = "Р—Р°РєСЂС‹С‚СЊ";
+$MESS["REPORT_LIST_SHARING_OWNER"] = "Р’Р»Р°РґРµР»РµС†";
+$MESS["REPORT_LIST_SHARING_NAME_RIGHTS_USER"] = "РџРѕР»СЊР·РѕРІР°С‚РµР»Рё";
+$MESS["REPORT_LIST_SHARING_NAME_RIGHTS"] = "РџСЂР°РІР° РґРѕСЃС‚СѓРїР°";
+$MESS["REPORT_LIST_SHARING_NAME_ADD_RIGHTS_USER"] = "Р”РѕР±Р°РІРёС‚СЊ РµС‰С‘";
+
+$MESS["REPORT_COMPANY_TITLE"] = "РћС‚С‡С‘С‚С‹ РєРѕРјРїР°РЅРёРё";
+$MESS["REPORT_PERSONAL_TITLE"] = "Р›РёС‡РЅС‹Рµ РѕС‚С‡С‘С‚С‹";
+$MESS["REPORT_DEFAULT_TITLE"] = "РЎС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РѕС‚С‡С‘С‚С‹";
+$MESS["REPORT_IMPORT_TITLE"] = "Р

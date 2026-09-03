@@ -1,0 +1,18 @@
+<?
+/**
+ * @global \CUser $USER
+ * @global \CMain $APPLICATION
+ * @global \CDatabase $DB
+ */
+
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php");
+
+$filemanPerms = $APPLICATION->GetGroupRight("fileman");
+if ($filemanPerms == "D")
+	$APPLICATION->AuthForm(GetMessage("ACCESS_DENIED"));
+
+IncludeModuleLangFile(__FILE__);
+
+$action = (($action == "uninstall") ? "uninstall" : "install");
+
+$APPLICATION->SetTitle(str_replace("#NAME#", $component, (($action == "install") ? "Р

@@ -1,0 +1,16 @@
+<?
+$MESS ['BLOG_BLOG_CLNDR_P_M'] = "РџСЂРµРґС‹РґСѓС‰РёР№ РјРµСЃСЏС†";
+$MESS ['BLOG_BLOG_CLNDR_N_M'] = "РЎР»РµРґСѓСЋС‰РёР№ РјРµСЃСЏС†";
+$MESS ['BLOG_BLOG_CLNDR_D_1'] = "РџРЅ";
+$MESS ['BLOG_BLOG_CLNDR_D_2'] = "Р’С‚";
+$MESS ['BLOG_BLOG_CLNDR_D_3'] = "РЎСЂ";
+$MESS ['BLOG_BLOG_CLNDR_D_4'] = "Р§С‚";
+$MESS ['BLOG_BLOG_CLNDR_D_5'] = "РџС‚";
+$MESS ['BLOG_BLOG_CLNDR_D_6'] = "РЎР±";
+$MESS ['BLOG_BLOG_CLNDR_D_7'] = "Р’СЃ";
+$MESS ['BLOG_BLOG_CLNDR_M_1'] = "РЇРЅРІР°СЂСЊ";
+$MESS ['BLOG_BLOG_CLNDR_M_2'] = "Р¤РµРІСЂР°Р»СЊ";
+$MESS ['BLOG_BLOG_CLNDR_M_3'] = "РњР°СЂС‚";
+$MESS ['BLOG_BLOG_CLNDR_M_4'] = "РђРїСЂРµР»СЊ";
+$MESS ['BLOG_BLOG_CLNDR_M_5'] = "РњР°Р№";
+$MESS ['BLOG_BLOG_CLNDR_M_6'] = "Р

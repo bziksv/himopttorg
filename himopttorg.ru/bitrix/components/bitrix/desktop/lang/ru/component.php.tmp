@@ -1,0 +1,12 @@
+<?
+$MESS["CMDESKTOP_AUTH_ERR"] = "РћС€РёР±РєР° Р°РІС‚РѕСЂРёР·Р°С†РёРё";
+$MESS["CMDESKTOP_GROUP_PERSONAL"] = "Р›РёС‡РЅРѕРµ";
+$MESS["CMDESKTOP_GROUP_PERSONAL_DESCR"] = "Р“Р°РґР¶РµС‚С‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹РјРё РёРЅСЃС‚СЂСѓРјРµРЅС‚Р°РјРё";
+$MESS["CMDESKTOP_GROUP_EMPL"] = "РџРµСЂСЃРѕРЅР°Р»";
+$MESS["CMDESKTOP_GROUP_EMPL_DESCR"] = "РЎС‚СЂСѓРєС‚СѓСЂР° РєРѕРјРїР°РЅРёРё, СЃРѕС‚СЂСѓРґРЅРёРєРё";
+$MESS["CMDESKTOP_GROUP_COMMUN"] = "РљРѕРјРјСѓРЅРёРєР°С†РёРё";
+$MESS["CMDESKTOP_GROUP_COMMUN_DESCR"] = "Р‘Р»РѕРіРё, С„РѕСЂСѓРјС‹, РѕР±С‰РёРµ РґРѕРєСѓРјРµРЅС‚С‹";
+$MESS["CMDESKTOP_GROUP_COMPANY"] = "РљРѕРјРїР°РЅРёСЏ";
+$MESS["CMDESKTOP_GROUP_COMPANY_DESCR"] = "Р–РёР·РЅСЊ РєРѕРјРїР°РЅРёРё";
+$MESS["CMDESKTOP_GROUP_SERVICES"] = "Р’РЅРµС€РЅРёРµ СЃРµСЂРІРёСЃС‹";
+$MESS["CMDESKTOP_GROUP_SERVICES_DESCR"] = "РЎРµСЂРІРёСЃС‹ РїРѕР»СѓС‡РµРЅРёСЏ РёРЅС„РѕСЂРјР°С†РёРё РёР· Р

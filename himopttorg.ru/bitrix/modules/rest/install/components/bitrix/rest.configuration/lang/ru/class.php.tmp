@@ -1,0 +1,4 @@
+<?php
+$MESS['REST_CONFIGURATION_TITLE_PAGE_INDEX'] = 'РћС‚СЂР°СЃР»РµРІС‹Рµ СЂРµС€РµРЅРёСЏ';
+$MESS['REST_CONFIGURATION_TITLE_PAGE_EXPORT'] = 'Р­РєСЃРїРѕСЂС‚ РѕС‚СЂР°СЃР»РµРІС‹С… СЂРµС€РµРЅРёР№';
+$MESS['REST_CONFIGURATION_TITLE_PAGE_IMPORT'] = 'Р

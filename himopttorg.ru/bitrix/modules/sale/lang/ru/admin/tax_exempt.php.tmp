@@ -1,0 +1,12 @@
+<?
+$MESS ['TAX_TITLE'] = "РќР°Р»РѕРіРё";
+$MESS ['ERROR_DEL_TAX'] = "РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ РЅР°Р»РѕРіР°";
+$MESS ['SALE_ADD_TAX'] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS ['TAX_NAV'] = "РќР°Р»РѕРіРё";
+$MESS ['TAX_ID'] = "РљРѕРґ";
+$MESS ['TAX_TIMESTAMP'] = "Р”Р°С‚Р° РёР·РјРµРЅРµРЅРёСЏ";
+$MESS ['TAX_LID'] = "РЎР°Р№С‚";
+$MESS ['TAX_NAME'] = "РќР°Р·РІР°РЅРёРµ";
+$MESS ['TAX_DESCRIPTION'] = "РћРїРёСЃР°РЅРёРµ";
+$MESS ['TAX_ACTIONS'] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS ['TAX_EDIT_DESCR'] = "Р

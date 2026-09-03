@@ -1,0 +1,9 @@
+<?
+namespace Sale\Handlers\Delivery\Additional\Location;
+
+class Replacement
+{
+	public static function getLocalityTypes()
+	{
+		return array(
+			'РџРћРЎРЃР›РћРљ Р“РћР РћР”РЎРљРћР“Рћ РўР

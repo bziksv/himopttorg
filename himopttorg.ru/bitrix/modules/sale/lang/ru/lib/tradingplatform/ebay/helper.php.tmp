@@ -1,0 +1,10 @@
+<?
+$MESS["SALE_EBAY_HLP_CHECK_ERROR_SSH2"] = "РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РЅРµРѕР±С…РѕРґРёРјРѕРµ СЂР°СЃС€РёСЂРµРЅРёРµ SSH2!";
+$MESS["SALE_EBAY_HLP_CHECK_ERROR_SIMPLEXML"] = "РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РЅРµРѕР±С…РѕРґРёРјРѕРµ СЂР°СЃС€РёСЂРµРЅРёРµ SimpleXML!";
+$MESS["SALE_EBAY_HLP_EVNT_TYPE_ERROR"] = "Ebay РѕС€РёР±РєР°";
+$MESS["SALE_EBAY_HLP_EVNT_TYPE_ERROR_TYPE"] = "РўРёРї РѕС€РёР±РєРё";
+$MESS["SALE_EBAY_HLP_EVNT_TYPE_ERROR_DETAIL"] = "РћРїРёСЃР°РЅРёРµ РѕС€РёР±РєРё";
+$MESS["SALE_EBAY_HLP_EVNT_TYPE_FROM"] = "Email РѕС‚РїСЂР°РІРёС‚РµР»СЏ";
+$MESS["SALE_EBAY_HLP_EVNT_TYPE_TO"] = "Email РїРѕР»СѓС‡Р°С‚РµР»СЏ";
+$MESS["SALE_EBAY_HLP_EVNT_TYPE_BCC"] = "Email РґР»СЏ СЃРєСЂС‹С‚РѕР№ РєРѕРїРёРё";
+$MESS["SALE_EBAY_HLP_EVNT_MSG_INFO_SITE"] = "Р

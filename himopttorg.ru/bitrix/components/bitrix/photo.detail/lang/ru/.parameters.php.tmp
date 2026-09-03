@@ -1,0 +1,12 @@
+<?
+$MESS["IBLOCK_SORT_SHOWS"] = "РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕСЃРјРѕС‚СЂРѕРІ РІ СЃСЂРµРґРЅРµРј";
+$MESS["IBLOCK_SORT_SORT"] = "РёРЅРґРµРєСЃ СЃРѕСЂС‚РёСЂРѕРІРєРё";
+$MESS["IBLOCK_SORT_TIMESTAMP"] = "РґР°С‚Р° РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["IBLOCK_SORT_NAME"] = "РЅР°Р·РІР°РЅРёРµ";
+$MESS["IBLOCK_SORT_ID"] = "ID";
+$MESS["IBLOCK_SORT_ACTIVE_FROM"] = "РґР°С‚Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё (СЃ)";
+$MESS["IBLOCK_SORT_ACTIVE_TO"] = "РґР°С‚Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё (РїРѕ)";
+$MESS["IBLOCK_SORT_ASC"] = "РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ";
+$MESS["IBLOCK_SORT_DESC"] = "РїРѕ СѓР±С‹РІР°РЅРёСЋ";
+$MESS["IBLOCK_TYPE"] = "РўРёРї РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["IBLOCK_IBLOCK"] = "Р

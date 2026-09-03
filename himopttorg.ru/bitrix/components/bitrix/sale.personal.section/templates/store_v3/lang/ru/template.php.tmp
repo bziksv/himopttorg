@@ -1,0 +1,6 @@
+<?php
+$MESS["SPS_ACCOUNT_PAGE_NAME"] = "Р›РёС‡РЅС‹Р№ СЃС‡РµС‚";
+$MESS["SPS_PERSONAL_PAGE_NAME"] = "Р›РёС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ";
+$MESS["SPS_PROFILE_PAGE_NAME"] = "РџСЂРѕС„РёР»Рё Р·Р°РєР°Р·РѕРІ";
+$MESS["SPS_ORDER_PAGE_NAME"] = "РўРµРєСѓС‰РёРµ Р·Р°РєР°Р·С‹";
+$MESS["SPS_ORDER_PAGE_HISTORY"] = "Р

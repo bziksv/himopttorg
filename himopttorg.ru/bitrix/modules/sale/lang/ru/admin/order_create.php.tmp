@@ -1,0 +1,13 @@
+<?
+$MESS["SALE_OK_TITLE_SITE"] = "РЎРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·Р°. РЎР°Р№С‚: ##SITE##";
+$MESS["SALE_OK_TITLE_NO_SITE"] = "РЎРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·Р°.";
+$MESS["SALE_OK_ACCESS_DENIED"] = "Р”РѕСЃС‚СѓРї Р·Р°РїСЂРµС‰РµРЅ";
+$MESS["SALE_OK_LIST"] = "РЎРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ";
+$MESS["SALE_OK_ARCHIVE_LIST"] = "РђСЂС…РёРІ Р·Р°РєР°Р·РѕРІ";
+$MESS["SALE_OK_LIST_TITLE"] = "РџРµСЂРµР№С‚Рё Рє СЃРїРёСЃРєСѓ Р·Р°РєР°Р·РѕРІ";
+$MESS["SALE_OK_ARCHIVE_LIST_TITLE"] = "РџРµСЂРµР№С‚Рё Рє Р°СЂС…РёРІСѓ Р·Р°РєР°Р·РѕРІ";
+$MESS["SALE_OK_STATUS"] = "РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р°";
+$MESS["SALE_OK_TAB_ORDER"] = "Р—Р°РєР°Р·";
+$MESS["SALE_OK_BLOCK_TITLE_STATUSORDER"] = "РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р°";
+$MESS["SALE_OK_BLOCK_TITLE_BUYER"] = "РџРѕРєСѓРїР°С‚РµР»СЊ";
+$MESS["SALE_OK_BLOCK_TITLE_BIGDATA"] = "Р

@@ -1,0 +1,17 @@
+<?
+$MESS["STOREAS_TITLE"] = "РњР°СЃС‚РµСЂ РјР°РіР°Р·РёРЅР°";
+$MESS["STOREAS_PROGRESS"] = "РћР±С‰РёР№ РїСЂРѕРіСЂРµСЃСЃ";
+$MESS["STOREAS_FIRST_SETTINGS"] = "Р‘РµР· РЅР°СЃС‚СЂРѕРµРє, СѓРІС‹, РЅРёРєР°Рє!";
+$MESS["STOREAS_SECOND_SETTINGS"] = "РќРµРїР»РѕС…Рѕ, РЅРѕ РЅСѓР¶РЅРѕ Р±РѕР»СЊС€Рµ РЅР°СЃС‚СЂРѕРµРє!";
+$MESS["STOREAS_THIRD_SETTINGS"] = "Р‘Р°Р·РѕРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["STOREAS_FORTH_SETTINGS"] = "РҐРѕСЂРѕС€Рѕ, РЅРѕ РјРѕР¶РЅРѕ Р±РѕР»СЊС€Рµ РЅР°СЃС‚СЂРѕРµРє!";
+$MESS["STOREAS_FIFTH_SETTINGS"] = "Р’С‹ - РјР°СЃС‚РµСЂ!";
+$MESS["STOREAS_SIXTH_SETTINGS"] = "РџСЂРѕРіСЂРµСЃСЃ Р·Р°РєР°Р·РѕРІ";
+
+$MESS["STOREAS_HIDE"] = "РЎРІРµСЂРЅСѓС‚СЊ";
+$MESS["STOREAS_SHOW"] = "Р Р°Р·РІРµСЂРЅСѓС‚СЊ";
+$MESS["STOREAS_TASKS_READY"] = "Р·Р°РґР°РЅРёР№ РІС‹РїРѕР»РЅРµРЅРѕ";
+$MESS["STOREAS_ADDITIONAL_TASKS"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ Р·Р°РґР°РЅРёСЏ";
+
+$MESS["STOREAS_STEPS_MAIN"] = "РќР°СЃС‚СЂРѕР№РєРё РёРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅР°, Р±РµР· РєРѕС‚РѕСЂС‹С… РѕРЅ РЅРµ СЃРјРѕР¶РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ";
+$MESS["STOREAS_STEPS_WORK"] = "Р

@@ -1,0 +1,9 @@
+<?
+$MESS["SENDER_INTEGRATION_YANDEX_TOLOKA"] = "РЇРЅРґРµРєСЃ.РўРѕР»РѕРєР°";
+$MESS["SENDER_INTEGRATION_SEO_MESSAGE_CONFIG_PROJECT"] = "РџСЂРѕРµРєС‚";
+$MESS["SENDER_INTEGRATION_SEO_MESSAGE_CONFIG_POOL"] = "РџСѓР»";
+$MESS["SEDNER_INTEGRATION_TOLOKA_FILTER_REGION_PHONE"] = "Р РµРіРёРѕРЅ РїРѕ РЅРѕРјРµСЂСѓ С‚РµР»РµС„РѕРЅР°";
+$MESS["SEDNER_INTEGRATION_TOLOKA_FILTER_REGION_IP"] = "Р РµРіРёРѕРЅ РїРѕ IP";
+
+$MESS["SENDER_TOLOKA_PROJECT_DESCRIPTION"] = "РћРїРёСЃР°РЅРёРµ РґР»СЏ СЃРїРёСЃРєР° Р·Р°РґР°РЅРёР№ РІ РЇРЅРґРµРєСЃ.РўРѕР»РѕРєР°";
+$MESS["SENDER_TOLOKA_PROJECT_INSTRUCTION"] = "Р

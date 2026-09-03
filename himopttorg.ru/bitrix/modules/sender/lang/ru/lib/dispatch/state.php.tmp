@@ -1,0 +1,9 @@
+<?
+$MESS["SENDER_DISPATCH_STATE_N"] = "РќРѕРІР°СЏ";
+$MESS["SENDER_DISPATCH_STATE_I"] = "РџРѕРґРіРѕС‚РѕРІРєР°";
+$MESS["SENDER_DISPATCH_STATE_R"] = "Р“РѕС‚РѕРІР° Рє РѕС‚РїСЂР°РІРєРµ";
+$MESS["SENDER_DISPATCH_STATE_S"] = "РћС‚РїСЂР°РІР»СЏРµС‚СЃСЏ";
+$MESS["SENDER_DISPATCH_STATE1_W"] = "Р’ СЂР°Р±РѕС‚Рµ";
+$MESS["SENDER_DISPATCH_STATE_P"] = "РќР° РїР°СѓР·Рµ";
+$MESS["SENDER_DISPATCH_STATE_Y"] = "РћС‚РїСЂР°РІР»РµРЅР°";
+$MESS["SENDER_DISPATCH_STATE_M"] = "Р

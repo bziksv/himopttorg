@@ -1,0 +1,19 @@
+<?php
+$MESS["LOGGER_CLIENT_CALL_CLIENT_ID_EMPTY"] = "РЈС‡РµС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ РєР»РёРµРЅС‚Р° РґР»СЏ С‚РѕРєРµРЅР° РѕР±РЅРѕРІР»РµРЅРёСЏ - РѕС€РёР±РєР°";
+$MESS["LOGGER_CLIENT_CALL_PROCESS_RESULT_ERROR"] = "РћР±СЂР°Р±РѕС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚Р° - РѕС€РёР±РєР°";
+$MESS["LOGGER_CLIENT_CALL_RESULT_SUCCESS"] = "РЎРѕРґРµСЂР¶РёРјРѕРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° - СѓСЃРїРµС€РЅРѕ";
+$MESS["LOGGER_CLIENT_CALL_RESULT_ERROR"] = "РЎРѕРґРµСЂР¶РёРјРѕРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° - РѕС€РёР±РєР°";
+$MESS["LOGGER_CLIENT_CALL_PROCESS_RESULT_SUCCESS"] = "РћР±СЂР°Р±РѕС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚Р° - СѓСЃРїРµС€РЅРѕ";
+$MESS["LOGGER_CLIENT_CALL_PROCESS_RESULT"] = "РћР±СЂР°Р±РѕС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚Р°";
+$MESS["LOGGER_CLIENT_CALL_REQUEST"] = "РћС‚РїСЂР°РІРєР° Р·Р°РїСЂРѕСЃР°";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_EMPTY"] = "РўРѕРєРµРЅ РґР»СЏ РїСЂРѕРґР»РµРЅСЏ - РѕС€РёР±РєР°";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_CLIENT_ID_EMPTY"] = "РЈС‡РµС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ РєР»РёРµРЅС‚Р° РґР»СЏ С‚РѕРєРµРЅР° РѕР±РЅРѕРІР»РµРЅРёСЏ - РѕС€РёР±РєР°";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_REQUEST"] = "РћС‚РїСЂР°РІРєР° Р·Р°РїСЂРѕСЃР°";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_PROCESS_RESULT"] = "РћР±СЂР°Р±РѕС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚Р°";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_PROCESS_RESULT_SUCCESS"] = "РћР±СЂР°Р±РѕС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚Р° - СѓСЃРїРµС€РЅРѕ";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_RESULT_ERROR"] = "РЎРѕРґРµСЂР¶РёРјРѕРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° - РѕС€РёР±РєР°";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_RESULT_SUCCESS"] = "РЎРѕРґРµСЂР¶РёРјРѕРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° - СѓСЃРїРµС€РЅРѕ";
+$MESS["LOGGER_CLIENT_REFRESH_TOKEN_PROCESS_RESULT_ERROR"] = "РћР±СЂР°Р±РѕС‚РєР° СЂРµР·СѓР»СЊС‚Р°С‚Р° - РѕС€РёР±РєР°";
+$MESS["LOGGER_INTERNALIZER_RESOLVE_PARAMS_CAMEL2SNAKE_FIELDS_BEFORE"] = "РџСЂРёРІРµРґРµРЅРёРµ РїРѕР»РµР№ Рє Р·РјРµРёРЅРѕР№ РЅРѕС‚Р°С†РёРё. Р”Рѕ";
+$MESS["LOGGER_INTERNALIZER_RESOLVE_PARAMS_CAMEL2SNAKE_FIELDS_AFTER"] = "РџСЂРёРІРµРґРµРЅРёРµ РїРѕР»РµР№ Рє Р·РјРµРёРЅРѕР№ РЅРѕС‚Р°С†РёРё. РџРѕСЃР»Рµ";
+$MESS["LOGGER_INTERNALIZER_RESOLVE_PARAMS_PREPARE_FIELDS_BEFORE"] = "Р

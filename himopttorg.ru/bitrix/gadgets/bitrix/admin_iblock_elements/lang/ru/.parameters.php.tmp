@@ -1,0 +1,5 @@
+<?
+$MESS["GD_IBEL_EMPTY"] = "-- РІС‹Р±СЂР°С‚СЊ --";
+$MESS["GD_IBEL_DONOTUSE"] = "-- РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ --";
+$MESS["GD_IBEL_IBLOCK_TYPE"] = "РўРёРї РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["GD_IBEL_IBLOCK_ID"] = "Р

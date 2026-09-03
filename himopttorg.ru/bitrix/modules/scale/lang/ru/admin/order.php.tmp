@@ -1,0 +1,6 @@
+<?
+$MESS ['SCALE_ORDER_TITLE'] = "РЎРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ VPS";
+$MESS ['SCALE_ORDER_ACCESS_DENIED'] = "Р”РѕСЃС‚СѓРї Р·Р°РїСЂРµС‰РµРЅ";
+$MESS ['SCALE_ORDER_MODULE_NOT_INSTALLED'] = "РћС€РёР±РєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ РјРѕРґСѓР»СЏ \"РЈРїСЂР°РІР»РµРЅРёРµ РјР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРёРµРј\"";
+$MESS ['SCALE_ORDER_PROVIDER'] = "РџСЂРѕРІР°Р№РґРµСЂ";
+$MESS ['SCALE_ORDER_ID'] = "Р

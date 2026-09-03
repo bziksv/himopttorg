@@ -1,0 +1,51 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><?
+set_time_limit(0);
+
+$issuer_email = CSalePaySystemAction::GetParamValue("ShopEmail");
+$pass = CSalePaySystemAction::GetParamValue("PASS");
+$ORDER_ID = intval($GLOBALS["SALE_INPUT_PARAMS"]["ORDER"]["ID"]);
+
+
+$sHost = "www.moneymail.ru";
+$sUrl = "/";
+$sVars = "check_bill:issuer_email=".$issuer_email."&invoice_number=&issuer_id=".$ORDER_ID."&hash=".md5($pass.$issuer_email.$ORDER_ID);
+
+$sResult = QueryGetData($sHost, 443, $sUrl, $sVars, $errno, $errstr, "GET", "ssl://");
+
+if($sResult <> "")
+{
+	$aResult = explode("\n", $sResult);
+	if($aResult[0] == "OK")
+	{
+		$bWasSuccess = false;
+		foreach($aResult as $val)
+		{
+			if($val == "OK")
+			{
+				//new result within results set 
+				//only success result is nedded
+				if($bWasSuccess == true)
+					break;
+				$aFields = array();
+			}
+			$aVal = explode("=", $val);
+			if(count($aVal) == 2)
+			{
+				$aFields[$aVal[0]] = $aVal[1];
+				if($aVal[0] == "status" && $aFields["status"] == "PAID")
+					$bWasSuccess = true;
+			}
+		}
+
+		if(intval($aFields["issuer_id"]) == $ORDER_ID)
+		{
+			$str_PS_STATUS_CODE = $aFields["status"];
+			$str_PS_STATUS = ($aFields["status"] == "PAID"? "Y":"N");
+			if($aFields["status"] == "PAID")
+				$str_PS_STATUS_DESCRIPTION = "РЎС‡РµС‚ РѕРїР»Р°С‡РµРЅ";
+			elseif($aFields["status"] == "NEW")
+				$str_PS_STATUS_DESCRIPTION = "РќРѕРІС‹Р№ СЃС‡РµС‚";
+			elseif($aFields["status"] == "REJECTED")
+				$str_PS_STATUS_DESCRIPTION = "РћС‚РєР°Р· РѕС‚ РѕРїР»Р°С‚С‹ СЃС‡РµС‚Р°";
+			elseif($aFields["status"] == "EXPIRED")
+				$str_PS_STATUS_DESCRIPTION = "Р

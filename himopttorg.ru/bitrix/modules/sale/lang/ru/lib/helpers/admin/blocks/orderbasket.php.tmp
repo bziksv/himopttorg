@@ -1,0 +1,6 @@
+<?
+$MESS["SALE_ORDER_BASKET_COMPOSITION"] = "РЎРѕСЃС‚Р°РІ Р·Р°РєР°Р·Р°";
+$MESS["SALE_ORDER_BASKET_PRODUCT_ADD"] = "Р”РѕР±Р°РІРёС‚СЊ С‚РѕРІР°СЂ";
+$MESS["SALE_ORDER_BASKET_PRODUCT_NEW"] = "РќРѕРІС‹Р№ С‚РѕРІР°СЂ";
+$MESS["SALE_ORDER_BASKET_SETTINGS_BUTTON_TITLE"] = "РќР°СЃС‚СЂРѕР№РєР°";
+$MESS["SALE_ORDER_BASKET_COL_PICTURE"] = "Р

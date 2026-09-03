@@ -1,0 +1,7 @@
+<?
+$MESS["FILEMAN_FILEVIEW_EDIT_AS_TEXT"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє С‚РµРєСЃС‚";
+$MESS["FILEMAN_FILEVIEW_EDIT_AS_PHP"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє PHP";
+$MESS["FILEMAN_FILEVIEW_EDIT_AS_HTML"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РєР°Рє HTML";
+$MESS["FILEMAN_FILEVIEW_RENAME"] = "РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ";
+$MESS["FILEMAN_FILEVIEW_DOWNLOAD"] = "РЎРєР°С‡Р°С‚СЊ С„Р°Р№Р»";
+$MESS["FILEMAN_FILEVIEW_NAME"] = "Р

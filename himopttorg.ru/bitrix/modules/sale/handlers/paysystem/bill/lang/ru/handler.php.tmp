@@ -1,0 +1,15 @@
+<?php
+$MESS['SALE_HPS_BILL_TAX'] = 'РќР°Р»РѕРі';
+$MESS['SALE_HPS_BILL_BASKET_ITEM_NAME'] = 'РўРµСЃС‚';
+$MESS['SALE_HPS_BILL_BASKET_ITEM_MEASURE'] = 'С€С‚.';
+$MESS['SALE_HPS_BILL_BANK_CITY'] = 'РњРѕСЃРєРІР°';
+$MESS['SALE_HPS_BILL_BANK_ADDRESS'] = 'Р РѕСЃСЃРёСЏ';
+$MESS['SALE_HPS_BILL_BANK_NAME'] = 'РђРћ Р‘РёС‚СЂРёРєСЃ';
+$MESS['SALE_HPS_BILL_COMPANY_NAME'] = 'Р‘РёС‚СЂРёРєСЃ';
+$MESS['SALE_HPS_BILL_BUYER_COMPANY_NAME'] = 'РљРѕРјРїР°РЅРёСЏ';
+$MESS['SALE_HPS_BILL_BUYER_COMPANY_ADDRESS'] = 'РњРѕСЃРєРІР°';
+$MESS['SALE_HPS_BILL_BUYER_NAME_CONTACT'] = 'РљРѕРјРїР°РЅРёСЏ';
+$MESS['SALE_HPS_BILL_DIRECTOR_POSITION'] = 'Р”РёСЂРµРєС‚РѕСЂ';
+$MESS['SALE_HPS_BILL_DIRECTOR_NAME'] = 'РџРµС‚СЂРѕРІ Р’.Р’.';
+$MESS['SALE_HPS_BILL_ACCOUNTANT_POSITION'] = 'Р‘СѓС…РіР°Р»С‚РµСЂ';
+$MESS['SALE_HPS_BILL_ACCOUNTANT_NAME'] = 'Р

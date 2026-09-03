@@ -1,0 +1,41 @@
+<?
+$MESS["MAIN_ADMIN_GROUP_NAME"] = "РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂС‹";
+$MESS["MAIN_ADMIN_GROUP_DESC"] = "РџРѕР»РЅС‹Р№ РґРѕСЃС‚СѓРї Рє СѓРїСЂР°РІР»РµРЅРёСЋ СЃР°Р№С‚РѕРј.";
+$MESS["MAIN_EVERYONE_GROUP_NAME"] = "Р’СЃРµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё (РІ С‚РѕРј С‡РёСЃР»Рµ РЅРµР°РІС‚РѕСЂРёР·РѕРІР°РЅРЅС‹Рµ)";
+$MESS["MAIN_EVERYONE_GROUP_DESC"] = "Р’СЃРµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё, РІРєР»СЋС‡Р°СЏ РЅРµР°РІС‚РѕСЂРёР·РѕРІР°РЅРЅС‹С….";
+$MESS["MAIN_VOTE_RATING_GROUP_NAME"] = "РџРѕР»СЊР·РѕРІР°С‚РµР»Рё, РёРјРµСЋС‰РёРµ РїСЂР°РІРѕ РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р° СЂРµР№С‚РёРЅРі";
+$MESS["MAIN_VOTE_RATING_GROUP_DESC"] = "Р’ СЌС‚Сѓ РіСЂСѓРїРїСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё РґРѕР±Р°РІР»СЏСЋС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё.";
+$MESS["MAIN_VOTE_AUTHORITY_GROUP_NAME"] = "РџРѕР»СЊР·РѕРІР°С‚РµР»Рё РёРјРµСЋС‰РёРµ РїСЂР°РІРѕ РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р° Р°РІС‚РѕСЂРёС‚РµС‚";
+$MESS["MAIN_VOTE_AUTHORITY_GROUP_DESC"] = "Р’ СЌС‚Сѓ РіСЂСѓРїРїСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё РґРѕР±Р°РІР»СЏСЋС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё.";
+$MESS["MAIN_RULE_ADD_GROUP_AUTHORITY_NAME"] = "Р”РѕР±Р°РІР»РµРЅРёРµ РІ РіСЂСѓРїРїСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РёРјРµСЋС‰РёС… РїСЂР°РІРѕ РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р° Р°РІС‚РѕСЂРёС‚РµС‚";
+$MESS["MAIN_RULE_ADD_GROUP_RATING_NAME"] = "Р”РѕР±Р°РІР»РµРЅРёРµ РІ РіСЂСѓРїРїСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РёРјРµСЋС‰РёС… РїСЂР°РІРѕ РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р° СЂРµР№С‚РёРЅРі";
+$MESS["MAIN_RULE_REM_GROUP_AUTHORITY_NAME"] = "РЈРґР°Р»РµРЅРёРµ РёР· РіСЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РЅРµ РёРјРµСЋС‰РёС… РїСЂР°РІР° РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р° Р°РІС‚РѕСЂРёС‚РµС‚";
+$MESS["MAIN_RULE_REM_GROUP_RATING_NAME"] = "РЈРґР°Р»РµРЅРёРµ РёР· РіСЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РЅРµ РёРјРµСЋС‰РёС… РїСЂР°РІР° РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р° СЂРµР№С‚РёРЅРі";
+$MESS["MAIN_RULE_AUTO_AUTHORITY_VOTE_NAME"] = "РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РіРѕР»РѕСЃРѕРІР°РЅРёРµ Р·Р° Р°РІС‚РѕСЂРёС‚РµС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ";
+$MESS["MAIN_RATING_NAME"] = "Р РµР№С‚РёРЅРі";
+$MESS["MAIN_RATING_AUTHORITY_NAME"] = "РђРІС‚РѕСЂРёС‚РµС‚";
+$MESS["MAIN_RATING_TEXT_LIKE_Y"] = "РќСЂР°РІРёС‚СЃСЏ";
+$MESS["MAIN_RATING_TEXT_LIKE_N"] = "РќРµ РЅСЂР°РІРёС‚СЃСЏ";
+$MESS["MAIN_RATING_TEXT_LIKE_D"] = "Р­С‚Рѕ РЅСЂР°РІРёС‚СЃСЏ";
+$MESS["MAIN_DEFAULT_SITE_NAME"] = "РЎР°Р№С‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["MAIN_DEFAULT_LANGUAGE_NAME"] = "Russian";
+$MESS["MAIN_DEFAULT_LANGUAGE_CODE"] = "ru";
+$MESS["MAIN_DEFAULT_LANGUAGE_FORMAT_DATE"] = "DD.MM.YYYY";
+$MESS["MAIN_DEFAULT_LANGUAGE_FORMAT_DATETIME"] = "DD.MM.YYYY HH:MI:SS";
+$MESS["MAIN_DEFAULT_LANGUAGE_FORMAT_NAME"] = "#NAME# #LAST_NAME#";
+$MESS["MAIN_DEFAULT_LANGUAGE_FORMAT_CHARSET"] = "windows-1251";
+$MESS["MAIN_DEFAULT_SITE_FORMAT_DATE"] = "DD.MM.YYYY";
+$MESS["MAIN_DEFAULT_SITE_FORMAT_DATETIME"] = "DD.MM.YYYY HH:MI:SS";
+$MESS["MAIN_DEFAULT_SITE_FORMAT_NAME"] = "#NAME# #LAST_NAME#";
+$MESS["MAIN_DEFAULT_SITE_FORMAT_CHARSET"] = "windows-1251";
+$MESS["MAIN_SMILE_DEF_SET_NAME"] = "РћСЃРЅРѕРІРЅРѕР№ РЅР°Р±РѕСЂ";
+$MESS["MAIN_MODULE_NAME"] = "Р“Р»Р°РІРЅС‹Р№ РјРѕРґСѓР»СЊ";
+$MESS["MAIN_MODULE_DESC"] = "РЇРґСЂРѕ СЃРёСЃС‚РµРјС‹";
+$MESS["MAIN_INSTALL_DB_ERROR"] = "РќРµ РјРѕРіСѓ СЃРѕРµРґРёРЅРёС‚СЊСЃСЏ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С…. РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРµРґРµРЅРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ";
+$MESS["MAIN_NEW_USER_TYPE_NAME"] = "Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°Р»СЃСЏ РЅРѕРІС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ";
+$MESS["MAIN_NEW_USER_TYPE_DESC"] = "
+
+#USER_ID# - ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+#LOGIN# - Р›РѕРіРёРЅ
+#EMAIL# - EMail
+#NAME# - Р

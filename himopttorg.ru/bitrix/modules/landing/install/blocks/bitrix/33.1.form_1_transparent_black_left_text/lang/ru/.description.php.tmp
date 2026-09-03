@@ -1,0 +1,8 @@
+<?php
+$MESS['LANDING_BLOCK_FORM_33_1'] = 'Р¤РѕСЂРјР° СЃ Р·Р°С‚РµРјРЅРµРЅРЅРѕР№ С„РѕРЅРѕРІРѕР№ РєР°СЂС‚РёРЅРєРѕР№ Рё С‚РµРєСЃС‚РѕРј СЃР»РµРІР°';
+$MESS['LANDING_BLOCK_FORM_33.1_NODE_CARD_CONTACT'] = 'РљРѕРЅС‚Р°РєС‚';
+$MESS['LANDING_BLOCK_FORM_33.1_NODE_BGIMG'] = 'Р¤РѕРЅРѕРІР°СЏ РєР°СЂС‚РёРЅРєР°';
+$MESS['LANDING_BLOCK_FORM_33.1_NODE_TEXT'] = 'РўРµРєСЃС‚';
+$MESS['LANDING_BLOCK_FORM_33.1_NODE_TITLE'] = 'Р—Р°РіРѕР»РѕРІРѕРє';
+$MESS['LANDING_BLOCK_FORM_33.1_NODE_SUBTITLE'] = 'РџРѕРґР·Р°РіРѕР»РѕРІРѕРє';
+$MESS['LANDING_BLOCK_FORM_33.1_NODE_CONTACT_ICON'] = 'Р

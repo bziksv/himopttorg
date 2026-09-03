@@ -1,0 +1,5 @@
+<?
+$MESS["CPLSD_NAME"] = "РЎРїРёСЃРѕРє С‚РѕРІР°СЂРѕРІ РЅР° РєРѕС‚РѕСЂС‹Рµ РІС‹ РїРѕРґРїРёСЃР°РЅС‹";
+$MESS["CPLSD_DESCRIPTION"] = "РЎРїРёСЃРѕРє С‚РѕРІР°СЂРѕРІ РЅР° РєРѕС‚РѕСЂС‹Рµ РІС‹ РїРѕРґРїРёСЃР°РЅС‹";
+$MESS["CP_CATALOG_SERVICES_MAIN_SECTION"] = "РњР°РіР°Р·РёРЅ";
+$MESS["CP_CATALOG_SERVICES_PARENT_SECTION"] = "Р

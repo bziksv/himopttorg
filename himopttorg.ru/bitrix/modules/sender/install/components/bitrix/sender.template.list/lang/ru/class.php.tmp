@@ -1,0 +1,6 @@
+<?
+$MESS["SENDER_TEMPLATE_LIST_COMP_TITLE"] = "РњРѕРё РїРѕС‡С‚РѕРІС‹Рµ С€Р°Р±Р»РѕРЅС‹";
+$MESS["SENDER_TEMPLATE_LIST_COMP_UI_COLUMN_DATE_INSERT"] = "Р”Р°С‚Р°";
+$MESS["SENDER_TEMPLATE_LIST_COMP_UI_COLUMN_DATE_USE"] = "Р”Р°С‚Р° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ";
+$MESS["SENDER_TEMPLATE_LIST_COMP_UI_COLUMN_TITLE"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["SENDER_TEMPLATE_LIST_COMP_UI_COLUMN_USE_COUNT"] = "Р

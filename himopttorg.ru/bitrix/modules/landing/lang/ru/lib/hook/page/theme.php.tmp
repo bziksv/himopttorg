@@ -1,0 +1,4 @@
+<?php
+$MESS['LANDING_HOOK_THEMECODE_NEW'] = 'Р¦РІРµС‚РѕРІР°СЏ РїР°Р»РёС‚СЂР°';
+$MESS['LANDING_HOOK_THEME_CUSTOM_COLOR'] = 'Р¦РІРµС‚ С‚РµРјС‹ СЃР°Р№С‚Р°';
+$MESS['LANDING_HOOK_THEME_CUSTOM_USE'] = 'Р

@@ -1,0 +1,6 @@
+<?
+$MESS["COMPANY_TITLE_UPDATE"] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РєРѕРјРїР°РЅРёРё: \"#NAME#\"";
+$MESS["COMPANY_TITLE_ADD"] = "РќРѕРІР°СЏ РєРѕРјРїР°РЅРёСЏ";
+$MESS["COMPANY_SECTION_TITLE"] = "РљРѕРјРїР°РЅРёРё";
+$MESS["COMPANY_TAB"] = "РћСЃРЅРѕРІРЅР°СЏ";
+$MESS["COMPANY_TAB_DESCR"] = "Р

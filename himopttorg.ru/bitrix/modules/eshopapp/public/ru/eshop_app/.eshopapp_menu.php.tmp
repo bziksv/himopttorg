@@ -1,0 +1,36 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+IncludeModuleLangFile(__FILE__);
+
+$arMobileMenuItems = array(
+	array(
+		"type" => "section",
+		"text" =>"РљР°С‚Р°Р»РѕРі С‚РѕРІР°СЂРѕРІ",
+		"sort" => "100",
+		"items" =>	array(
+			array(
+				"text" => "Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°",
+				"data-url" => SITE_DIR."eshop_app/",
+				"class" => "menu-item",
+				"data-pageid" => "main",
+				"id" => "main"
+			),
+			array(
+				"text" => "РљР°С‚Р°Р»РѕРі",
+				"class" => "menu-item",
+				"onclick" => "openSectionList();",
+				"data-pageid" => "catalog",
+				"id" => "catalog"
+			),
+			array(
+				"text" => "РљРѕСЂР·РёРЅР°",
+				"class" => "menu-item",
+				"data-url" => SITE_DIR."eshop_app/personal/cart/",
+				"id" => "cart",
+				"data-pageid" => "cart",
+			),
+		)
+	),
+	array(
+		"type" => "section",
+		"text" =>"Р

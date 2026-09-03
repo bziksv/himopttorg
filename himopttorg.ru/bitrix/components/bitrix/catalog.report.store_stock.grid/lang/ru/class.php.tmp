@@ -1,0 +1,10 @@
+<?php
+$MESS['STORE_STOCK_REPORT_GRID_NO_READ_RIGHTS_ERROR'] = 'РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°';
+$MESS['STORE_STOCK_REPORT_GRID_TITLE_COLUMN'] = 'РЎРєР»Р°Рґ';
+$MESS['STORE_STOCK_REPORT_GRID_AMOUNT_SUM_COLUMN'] = 'РљРѕР»РёС‡РµСЃС‚РІРѕ';
+$MESS['STORE_STOCK_REPORT_GRID_AMOUNT_SUM_COLUMN_HINT'] = 'РўРµРєСѓС‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР°';
+$MESS['STORE_STOCK_REPORT_GRID_QUANTITY_RESERVED_SUM_COLUMN'] = 'Р РµР·РµСЂРІ';
+$MESS['STORE_STOCK_REPORT_GRID_QUANTITY_RESERVED_SUM_COLUMN_HINT'] = 'РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРЅРѕРіРѕ С‚РѕРІР°СЂР° РЅР° РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚';
+$MESS['STORE_STOCK_REPORT_GRID_QUANTITY_COLUMN'] = 'Р”РѕСЃС‚СѓРїРЅС‹Р№ РѕСЃС‚Р°С‚РѕРє';
+$MESS['STORE_STOCK_REPORT_GRID_QUANTITY_COLUMN_HINT'] = 'Р”РѕСЃС‚СѓРїРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР° РґР»СЏ РїСЂРѕРґР°Р¶Рё';
+$MESS['STORE_STOCK_REPORT_GRID_OVERALL_TOTAL'] = 'Р

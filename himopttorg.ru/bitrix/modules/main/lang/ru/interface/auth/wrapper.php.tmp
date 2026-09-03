@@ -1,0 +1,5 @@
+<?
+$MESS["admin_authorize_error"] = "РћС€РёР±РєР° Р°РІС‚РѕСЂРёР·Р°С†РёРё!";
+$MESS["admin_forgot_password_error"] = "РћС€РёР±РєР° РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РїР°СЂРѕР»СЏ!";
+$MESS["admin_change_password_error"] = "РћС€РёР±РєР° СЃРјРµРЅС‹ РїР°СЂРѕР»СЏ!";
+$MESS["admin_authorize_info"] = "Р

@@ -1,0 +1,14 @@
+<?
+$MESS["MAIN_RATING_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё СЂРµР№С‚РёРЅРіРѕРІ";
+$MESS["MAIN_RATING_SETTINGS_ALT"] = "РќР°СЃС‚СЂРѕР№РєР° РІРµСЃР° РіРѕР»РѕСЃР°, СЃРёСЃС‚РµРјС‹ СЂР°СЃС‡РµС‚РѕРІ Рё РїСЂР°РІ РЅР° РіРѕР»РѕСЃРѕРІР°РЅРёРµ";
+$MESS["RATING_SETTINGS_TAB_MAIN"] = "РџСЂР°РІРѕ РЅР° РіРѕР»РѕСЃРѕРІР°РЅРёРµ";
+$MESS["RATING_SETTINGS_TAB_WEIGHT"] = "РќР°СЃС‚СЂРѕР№РєРё СЂРµР№С‚РёРЅРіРѕРІ";
+$MESS["RATING_SETTINGS_TAB_START_VALUE"] = "РќР°С‡Р°Р»СЊРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ";
+$MESS["RATING_SETTINGS_BUTTON_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["RATING_SETTINGS_BUTTON_RESET"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["RATING_SETTINGS_BUTTON_RESET_TITLE"] = "РќРµ СЃРѕС…СЂР°РЅСЏС‚СЊ Рё РІРµСЂРЅСѓС‚СЊСЃСЏ";
+$MESS["RATING_CONFIG_SUCCESS"] = "Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅС‹.";
+$MESS["RATING_SETTINGS_FRM_SELF_VOTE"] = "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РјРѕР¶РµС‚ РіРѕР»РѕСЃРѕРІР°С‚СЊ Р·Р° СЃРІРѕР№ РєРѕРЅС‚РµРЅС‚";
+$MESS["RATING_SETTINGS_FRM_BUTTON_TYPE"] = "РљРЅРѕРїРєРё РіРѕР»РѕСЃРѕРІР°РЅРёСЏ";
+$MESS["RATING_SETTINGS_FRM_RATING_ID"] = "Р”Р»СЏ СЂР°СЃС‡РµС‚Р° Р°РІС‚РѕСЂРёС‚РµС‚Р° РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЂРµР№С‚РёРЅРі";
+$MESS["RATING_SETTINGS_CAT_RATING_INFO"] = "Р

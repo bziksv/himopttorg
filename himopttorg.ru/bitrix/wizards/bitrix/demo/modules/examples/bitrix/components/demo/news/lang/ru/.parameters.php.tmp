@@ -1,0 +1,5 @@
+<?
+$MESS ['BN_P_SORT_ASC'] = "РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ";
+$MESS ['BN_P_SORT_DESC'] = "РїРѕ СѓР±С‹РІР°РЅРёСЋ";
+$MESS ['BN_P_IBLOCK_TYPE'] = "РўРёРї РёРЅС„Рѕ-Р±Р»РѕРєР°";
+$MESS ['BN_P_IBLOCK'] = "Р

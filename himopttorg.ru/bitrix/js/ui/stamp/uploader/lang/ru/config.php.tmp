@@ -1,0 +1,15 @@
+<?php
+$MESS['UI_STAMP_UPLOADER_HEADER_TITLE'] = 'РџРµС‡Р°С‚СЊ РґР»СЏ:';
+$MESS['UI_STAMP_UPLOADER_HEADER_CHANGE_CONTACT_BUTTON_LABEL'] = 'РЎРјРµРЅРёС‚СЊ';
+$MESS['UI_STAMP_UPLOADER_DROPZONE_HEADER'] = 'Р—Р°РіСЂСѓР·РёС‚Рµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ РїРµС‡Р°С‚Рё';
+$MESS['UI_STAMP_UPLOADER_DROPZONE_TEXT'] = 'РњРѕР¶РЅРѕ РїСЂРѕСЃС‚Рѕ РїРµСЂРµС‚Р°С‰РёС‚СЊ С„Р°Р№Р»С‹ СЃСЋРґР°';
+$MESS['UI_STAMP_UPLOADER_CROP_BUTTON_LABEL'] = 'РћР±СЂРµР·Р°С‚СЊ';
+$MESS['UI_STAMP_UPLOADER_UPLOAD_STATUS_TEXT'] = 'Р—Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р°';
+$MESS['UI_STAMP_UPLOADER_UPLOAD_STATUS_PERCENT'] = '{{number}} %';
+$MESS['UI_STAMP_UPLOADER_UPLOAD_STATUS_SIZE'] = '{{number}} {{text}}';
+$MESS['UI_STAMP_UPLOADER_UPLOAD_STATUS_SIZE_B'] = 'Р‘';
+$MESS['UI_STAMP_UPLOADER_UPLOAD_STATUS_SIZE_KB'] = 'РљР±';
+$MESS['UI_STAMP_UPLOADER_UPLOAD_STATUS_SIZE_MB'] = 'РњР±';
+$MESS['UI_STAMP_UPLOADER_PREPARING_STATUS'] = 'РћР±СЂР°Р±Р°С‚С‹РІР°РµРј';
+$MESS['UI_STAMP_UPLOADER_SLIDER_MESSAGE_TITLE'] = 'РџРµС‡Р°С‚СЊ';
+$MESS['UI_STAMP_UPLOADER_SLIDER_MESSAGE_DESCRIPTION'] = 'Р—Р°РіСЂСѓР·РёС‚Рµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ РїРµС‡Р°С‚Рё РѕРґРёРЅ СЂР°Р· Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РїСЂРё РїРѕРґРїРёСЃР°РЅРёРё РґСЂСѓРіРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ. Р

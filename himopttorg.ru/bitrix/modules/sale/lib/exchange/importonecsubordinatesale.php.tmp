@@ -1,0 +1,180 @@
+<?php
+namespace Bitrix\Sale\Exchange;
+
+
+use Bitrix\Sale\Exchange\Entity\OrderImport;
+use Bitrix\Sale\Exchange\Entity\SubordinateSale\EntityImportFactory;
+use Bitrix\Sale\Exchange\OneC\DocumentBase;
+use Bitrix\Sale\Exchange\OneC\DocumentType;
+use Bitrix\Sale\Exchange\OneC\PaymentCardDocument;
+use Bitrix\Sale\Exchange\OneC\SubordinateSale\ConverterFactory;
+use Bitrix\Sale\Exchange\OneC\SubordinateSale\CriterionShipment;
+use Bitrix\Sale\Exchange\OneC\SubordinateSale\DocumentFactory;
+use Bitrix\Sale\Exchange\OneC\SubordinateSale\ShipmentDocument;
+use Bitrix\Sale\Order;
+use Bitrix\Sale\Payment;
+use Bitrix\Sale\Result;
+use Bitrix\Sale\Shipment;
+
+final class ImportOneCSubordinateSale extends ImportOneCPackage
+{
+	public static function configuration()
+	{
+		ManagerImport::registerInstance(static::getShipmentEntityTypeId(), OneC\ImportSettings::getCurrent(), new OneC\CollisionShipment(), new CriterionShipment());
+
+		parent::configuration();
+	}
+
+	/**
+	 * @param DocumentBase[] $documents
+	 * @return \Bitrix\Sale\Result
+	 */
+	protected function convert(array $documents)
+	{
+		$documentOrder = $this->getDocumentByTypeId(EntityType::ORDER, $documents);
+
+		if($documentOrder instanceof OneC\OrderDocument)
+		{
+			$fieldsOrder = $documentOrder->getFieldValues();
+			$itemsOrder = $this->getProductsItems($fieldsOrder);
+
+			if(is_array($fieldsOrder['SUBORDINATES']))
+			{
+				foreach ($fieldsOrder['SUBORDINATES'] as $subordinateDocumentFields)
+				{
+					$typeId = $this->resolveSubordinateDocumentTypeId($subordinateDocumentFields);
+
+					if($typeId == static::getShipmentEntityTypeId())
+					{
+						$subordinateDocumentItems = array();
+						$itemsSubordinate = $this->getProductsItems($subordinateDocumentFields);
+
+						foreach ($itemsSubordinate as $itemSubordinate)
+						{
+							$xmlId = key($itemSubordinate);
+
+							if($xmlId == self::DELIVERY_SERVICE_XMLID)
+							{
+								$itemSubordinate[$xmlId]['TYPE'] = ImportBase::ITEM_SERVICE;
+								$subordinateDocumentItems[] = $itemSubordinate;
+							}
+							else
+							{
+								$item = $this->getItemByParam($xmlId, $itemsOrder);
+
+								if($item !== null)
+								{
+									$item[$xmlId]['QUANTITY'] = $itemSubordinate[$xmlId]['QUANTITY'];
+									$subordinateDocumentItems[] = $item;
+								}
+							}
+						}
+
+						unset($subordinateDocumentFields['ITEMS']);
+						unset($subordinateDocumentFields['ITEMS_FIELDS']);
+
+						if(count($subordinateDocumentItems)>0)
+						{
+							$subordinateDocumentFields['ITEMS'] = $subordinateDocumentItems;
+						}
+					}
+
+					$document = OneC\DocumentImportFactory::create($typeId);
+					$document->setFields($subordinateDocumentFields);
+					$documents[] = $document;
+				}
+				$documentOrder->setField('SUBORDINATES', '');
+			}
+
+			//region Presset - РіРµРЅРµСЂРёСЂСѓРµРј С„СЌР№РєРѕРІСѓСЋ РѕС‚РіСЂСѓР·РєСѓ
+			/*
+			 * РіРµРЅРµСЂРёСЂСѓРµРј С„СЌР№РєРѕРІСѓСЋ РѕС‚РіСЂСѓР·РєСѓ, РµСЃР»Рё РІС‹РїРѕР»РЅРµРЅС‹ СѓСЃР»РѕРІРёСЏ
+			 * 1 РѕР±РјРµРЅ СЃ РЅРѕРІС‹Рј РјРѕРґСѓР»РµРј РѕС‚ 1РЎ,
+			 * 2 РѕС‚РіСЂСѓР·РєРё РЅРµ РїРµСЂРµРґР°РЅС‹ РІ РїРѕРґС‡РёРЅРµРЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚Р°С…
+			 * 3 РІСЃРµ РѕС‚РіСЂСѓР·РєРё РїРѕ Р·Р°РєР°Р·Сѓ РІ Р‘РЈРЎ РІ СЃС‚Р°С‚СѓСЃРµ РЅРµ РѕС‚РіСЂСѓР¶РµРЅРѕ
+			 * 4 Рё РѕС‚ 1РЎ РІ С‚Р°Р±Р»РёС‡РЅРѕР№ С‡Р°СЃС‚Рё Р·Р°РєР°Р·Р° РїРµСЂРµРґР°РЅР° ORDER_DELIVERY
+			 * */
+			if(!$this->hasDocumentByTypeId(static::getShipmentEntityTypeId(), $documents))
+			{
+				if($this->deliveryServiceExists($itemsOrder))
+				{
+					//$deliveryItem
+					$entityOrder = $this->convertDocument($documentOrder);
+					if($entityOrder->getFieldValues()['TRAITS']['ID']>0)
+					{
+						self::load($entityOrder, ['ID'=>$entityOrder->getFieldValues()['TRAITS']['ID']]);
+						/** @var Order $order */
+						$order = $entityOrder->getEntity();
+						if(!$order->isShipped())
+						{
+							$shipmentList = [];
+							$shipmentIsShipped = false;
+							/** @var Shipment $shipment */
+							foreach ($order->getShipmentCollection() as $shipment)
+							{
+								if($shipment->isShipped())
+								{
+									$shipmentIsShipped = true;
+									break;
+								}
+
+								if(!$shipment->isSystem())
+								{
+									$shipmentList[] = $shipment->getFieldValues();
+								}
+							}
+
+							if(!$shipmentIsShipped)
+							{
+								if(count($shipmentList)>0)
+								{
+									//СЃРёСЃС‚РµРјРЅР°СЏ Рё СЂРµР°Р»СЊРЅР°СЏ РѕС‚РіСЂСѓР·РєР°
+									$externalId = current($shipmentList)['ID_1C'];
+									$shipmentFields['ID_1C'] = $externalId == ''? $documentOrder->getField('ID_1C'):$externalId;
+									$shipmentFields['ID'] = current($shipmentList)['ID'];
+								}
+								else
+								{
+									//С‚РѕР»СЊРєРѕ СЃРёСЃС‚РµРјРЅР°СЏ РѕС‚РіСЂСѓР·РєР°
+									$shipmentFields['ID_1C'] = $documentOrder->getField('ID_1C');
+								}
+								// РєРѕР»Р»РёС‡РµСЃС‚РІРѕ Рё РІСЃСЏ С‚Р°Р±Р»РёС‡РЅР°СЏ С‡Р°СЃС‚СЊ РІСЃРµРіРґР° Р±РµСЂРµС‚СЊСЃСЏ РёР· Р·Р°РєР°Р·Р° С‚.Рє. РІСЃРµ РѕС‚РіСЂСѓР·РєРё РІРІРѕРґСЏС‚СЃСЏ РІ 1РЎ Рё РЅР° СЃР°Р№С‚Рµ РІРѕРѕР±С‰Рµ РЅРµ РјРѕР¶РµС‚ РёР·РјРµРЅРёС‚СЊСЃСЏ С‡С‚Рѕ-С‚Рѕ РІ РѕС‚РіСЂСѓР·РєРµ. (С‚СЂРµР±РѕРІР°РЅРёСЏ 1РЎ)
+								$shipmentFields['ITEMS'] = $itemsOrder;
+
+								$documentShipment = new ShipmentDocument();
+								$documentShipment->setFields($shipmentFields);
+								$documents[] = $documentShipment;
+							}
+						}
+					}
+				}
+			}
+			//endregion
+
+			//region - РѕРїР»Р°С‚С‹
+
+			// РѕС‚ 1РЎ РјРѕР¶РµС‚ РїСЂРёС…РѕРґРёС‚СЊ С‚РѕР»СЊРєРѕ РѕРїР»Р°С‡РµРЅРЅС‹Рµ РѕРїР»Р°С‚С‹, С€Р°Р±Р»РѕРЅС‹ РїСЂРёС…РѕРґРёС‚СЊ РЅРµ РјРѕРіСѓС‚.
+			// РЈРґР°Р»СЏРµРј РІСЃРµ РЅРµ РѕРїР»Р°С‡РµРЅРЅС‹Рµ РѕРїР»Р°С‚С‹ РёР· РєРѕР»Р»РµРєС†РёРё РґРѕРєСѓРјРµРЅС‚РѕРІ РѕРїР»Р°С‚
+
+			$documents = $this->deletePaymentDocumentNotPaid($documents);
+
+			/** @var OrderImport $entityOrder */
+			$entityOrder = $this->convertDocument($documentOrder);
+			if($entityOrder->getFieldValues()['TRAITS']['ID']>0)
+			{
+				self::load($entityOrder, ['ID'=>$entityOrder->getFieldValues()['TRAITS']['ID']]);
+				/** @var Order $order */
+				$order = $entityOrder->getEntity();
+
+				if(!empty($order))
+				{
+					$hasPayment = $order->isPaid() || $this->orderPartiallyIsPaid($order);
+
+					if($this->hasPaymentDocuments($documents))
+					{
+						// РѕРїР»Р°С‡РµРЅРЅС‹С… РѕРїР»Р°С‚ - РЅРµС‚
+						if(!$hasPayment)
+						{
+							if($order->getPrice() <= $this->getPaymentDocumentsPaidSum($documents))
+							{
+								//region 2. Р

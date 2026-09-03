@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Azerbaijani PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author @mirjalal
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'SMTP xР™в„ўtasР”В±: GiriР•Сџ uР”Сџursuz oldu.';
+$PHPMAILER_LANG['connect_host']         = 'SMTP xР™в„ўtasР”В±: SMTP serverinР™в„ў qoР•Сџulma uР”Сџursuz oldu.';
+$PHPMAILER_LANG['data_not_accepted']    = 'SMTP xР™в„ўtasР”В±: VerilР™в„ўnlР™в„ўr qР™в„ўbul edilmР™в„ўyib.';
+$PHPMAILER_LANG['empty_message']        = 'BoР•Сџ mesaj gР“В¶ndР™в„ўrilР™в„ў bilmР™в„ўz.';
+$PHPMAILER_LANG['encoding']             = 'Qeyri-mР“С

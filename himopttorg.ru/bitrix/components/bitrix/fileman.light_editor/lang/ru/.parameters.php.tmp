@@ -1,0 +1,7 @@
+<?
+$MESS["LHE_GROUP_BASE_SETTINGS"] = "РћСЃРЅРѕРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["LHE_GROUP_VIDEO_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё РІСЃС‚Р°РІРєРё РІРёРґРµРѕ";
+$MESS["LHE_GROUP_ADDITIONAL_SETTINGS"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["LHE_PAR_ID"] = "РЎР»СѓР¶РµР±РЅС‹Р№ ID СЌР»РµРјРµРЅС‚Р° СѓРїСЂР°РІР»РµРЅРёСЏ";
+$MESS["LHE_PAR_CONTENT"] = "РЎРѕРґРµСЂР¶РёРјРѕРµ";
+$MESS["LHE_PAR_INPUT_NAME"] = "Р

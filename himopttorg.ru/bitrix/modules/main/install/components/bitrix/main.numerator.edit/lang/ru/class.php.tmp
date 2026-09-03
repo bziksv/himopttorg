@@ -1,0 +1,8 @@
+<?
+$MESS["NUMERATOR_EDIT_CREATE_PAGE_TITLE"] = "РЎРѕР·РґР°РЅРёРµ РЅСѓРјРµСЂР°С‚РѕСЂР°";
+$MESS["NUMERATOR_EDIT_UPDATE_PAGE_TITLE"] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РЅСѓРјРµСЂР°С‚РѕСЂР°";
+$MESS["NUMERATOR_EDIT_BTN_CANCEL"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["NUMERATOR_EDIT_BTN_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["NUMERATOR_EDIT_TIMEZONE_LINK"] = "Р§Р°СЃРѕРІРѕР№ РїРѕСЏСЃ";
+
+$MESS["NUMERATOR_EDIT_TITLE_BITRIX_MAIN_SEQUENTNUMBERGENERATOR_SET_NUMBER_TOGGLE_S"] = "Р

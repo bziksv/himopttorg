@@ -1,0 +1,4 @@
+<?php
+$MESS["LANDING_COPILOT_DEFAULT_PAGE_DESCRIPTION"] = "Descrizione pagina";
+$MESS["LANDING_COPILOT_DEFAULT_PAGE_TITLE"] = "Pagina creata da CoPilot";
+$MESS["LANDING_COPILOT_DEFAULT_SITE_TITLE"] = "Sito creato da CoPilot";

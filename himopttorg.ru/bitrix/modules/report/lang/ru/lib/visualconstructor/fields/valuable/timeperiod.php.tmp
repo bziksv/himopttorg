@@ -1,0 +1,26 @@
+<?php
+/**
+ * Types list
+ */
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_FILTER'] = 'РџРѕ С„РёР»СЊС‚СЂСѓ';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_YEAR'] = 'Р“РѕРґ';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_QUARTER'] = 'РљРІР°СЂС‚Р°Р»';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_MONTH'] = 'РњРµСЃСЏС†';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_THIS_YEAR'] = 'РўРµРєСѓС‰РёР№ РіРѕРґ';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_THIS_QUARTER'] = 'РўРµРєСѓС‰РёР№ РєРІР°СЂС‚Р°Р»';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_THIS_MONTH'] = 'РўРµРєСѓС‰РёР№ РјРµСЃСЏС†';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_THIS_DAY'] = 'РўРµРєСѓС‰РёР№ РґРµРЅСЊ';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_LAST_90_DAYS'] = 'РџРѕСЃР»РµРґРЅРёРµ 90 РґРЅРµР№';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_LAST_60_DAYS'] = 'РџРѕСЃР»РµРґРЅРёРµ 60 РґРЅРµР№';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_LAST_30_DAYS'] = 'РџРѕСЃР»РµРґРЅРёРµ 30 РґРЅРµР№';
+$MESS['REPORT_TIME_PERIOD_FIELD_TYPE_LAST_7_DAYS'] = 'РџРѕСЃР»РµРґРЅРёРµ 7 РґРЅРµР№';
+
+/**
+ * Month list
+ */
+$MESS['REPORT_TIME_PERIOD_MONTH_JANUARY'] = 'РЇРЅРІР°СЂСЊ';
+$MESS['REPORT_TIME_PERIOD_MONTH_FEBRUARY'] = 'Р¤РµРІСЂР°Р»СЊ';
+$MESS['REPORT_TIME_PERIOD_MONTH_MARCH'] =  'РњР°СЂС‚';
+$MESS['REPORT_TIME_PERIOD_MONTH_APRIL'] = 'РђРїСЂРµР»СЊ';
+$MESS['REPORT_TIME_PERIOD_MONTH_MAY'] = 'РњР°Р№';
+$MESS['REPORT_TIME_PERIOD_MONTH_JUNE'] = 'Р

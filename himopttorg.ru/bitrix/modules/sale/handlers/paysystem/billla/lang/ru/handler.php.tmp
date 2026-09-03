@@ -1,0 +1,5 @@
+<?
+$MESS["SALE_HPS_BILL_LA_COMMENT"] = "РљРѕРјРјРµРЅС‚Р°СЂРёР№ Рє СЃС‡РµС‚Сѓ";
+$MESS["SALE_HPS_BILL_LA_COMMENT_ADD"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РєРѕРјРјРµРЅС‚Р°СЂРёР№ Рє СЃС‡РµС‚Сѓ";
+$MESS['SALE_HPS_BILL_LA_BANK_CITY'] = 'Р‘Р°СЂСЃРµР»РѕРЅР°';
+$MESS['SALE_HPS_BILL_LA_BANK_ADDRESS'] = 'Р

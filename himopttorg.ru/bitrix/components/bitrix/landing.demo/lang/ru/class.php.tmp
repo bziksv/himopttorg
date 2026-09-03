@@ -1,0 +1,5 @@
+<?php
+$MESS['LANDING_CMP_ERROR_MASTER_NO_SERVICE'] = 'РЎРµСЂРІРёСЃ РёРјРїРѕСЂС‚Р° РІ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ РЅРµРґРѕСЃС‚СѓРїРµРЅ';
+$MESS["LANDING_CMP_LD_ERROR_UNKNOWN_STEP_ID"] = "РќРµРёР·РІРµСЃС‚РЅС‹Р№ С€Р°Рі СЃРѕР·РґР°РЅРёСЏ РєР°С‚Р°Р»РѕРіР°";
+$MESS["LANDING_CMP_LD_MESS_IMPORT_COMPLETE"] = "РЎРѕР·РґР°РЅРёРµ РєР°С‚Р°Р»РѕРіР° С‚РѕРІР°СЂРѕРІ СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ";
+$MESS["LANDING_CMP_LD_MESS_XML_IMPORT_CATALOG_COMPLETE"] = "Р

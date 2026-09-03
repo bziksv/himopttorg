@@ -1,0 +1,4 @@
+<?
+$MESS["SALE_EXPORT_NO_PERSON_TYPE_ID"] = "РќРµ Р·Р°РґР°РЅ С‚РёРї РїР»Р°С‚РµР»СЊС‰РёРєР°";
+$MESS["SALE_EXPORT_ERROR_PERSON_TYPE_ID"] = "РўРёРї РїР»Р°С‚РµР»СЊС‰РёРєР° РЅРµ РЅР°Р№РґРµРЅ";
+$MESS["SALE_EXPORT_COM_INFORMATION"] = "РљРѕРјРјРµСЂС‡РµСЃРєР°СЏР

@@ -1,0 +1,26 @@
+<?php
+$MESS["LANDING_BLOCK_STYLE_TEXT_ALIGN"] = "Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ С‚РµРєСЃС‚Р°";
+$MESS["LANDING_BLOCK_STYLE_WORD_BREAK"] = "РџРµСЂРµРЅРѕСЃ С‚РµРєСЃС‚Р° РЅР° РЅРѕРІСѓСЋ СЃС‚СЂРѕРєСѓ";
+$MESS["LANDING_BLOCK_STYLE_WORD_BREAK_HELP"] = "<li> РџРµСЂРµРЅРѕСЃРёС‚СЊ СЃР»РѕРІР° РїРѕР»РЅРѕСЃС‚СЊСЋ вЂ” РїРµСЂРµРЅРѕСЃ С†РµР»РѕРіРѕ СЃР»РѕРІР° РЅР° СЃР»РµРґСѓСЋС‰СѓСЋ СЃС‚СЂРѕРєСѓ, РµСЃР»Рё РѕРЅРѕ РЅРµ РїРѕРјРµС‰Р°РµС‚СЃСЏ РЅР° С‚РµРєСѓС‰РµР№<li> Р Р°Р·РґРµР»СЏС‚СЊ СЃР»РѕРІР° РЅР° С‡Р°СЃС‚Рё вЂ” РїРµСЂРµРЅРѕСЃ С‡Р°СЃС‚Рё СЃР»РѕРІР° РЅР° СЃР»РµРґСѓСЋС‰СѓСЋ СЃС‚СЂРѕРєСѓ РїСЂРё РґРѕСЃС‚РёР¶РµРЅРёРё РіСЂР°РЅРёС† СЂРµРґР°РєС‚РѕСЂР°";
+$MESS["LANDING_BLOCK_STYLE_WORD_BREAK_NORMAL"] = "РџРµСЂРµРЅРѕСЃРёС‚СЊ СЃР»РѕРІР° РїРѕР»РЅРѕСЃС‚СЊСЋ";
+$MESS["LANDING_BLOCK_STYLE_WORD_BREAK_BREAK_ALL"] = "Р Р°Р·РґРµР»СЏС‚СЊ СЃР»РѕРІР° РЅР° С‡Р°СЃС‚Рё";
+$MESS["LANDING_BLOCK_STYLE_TEXT_ALIGN_SHORT"] = "Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ";
+$MESS["LANDING_BLOCK_STYLE_ROW_ALIGN"] = "Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ";
+$MESS["LANDING_BLOCK_STYLE_TEXT_COLOR"] = "Р¦РІРµС‚ С‚РµРєСЃС‚Р°";
+$MESS["LANDING_BLOCK_STYLE_BACKGROUND_COLOR"] = "Р¦РІРµС‚ С„РѕРЅР°";
+$MESS["LANDING_BLOCK_STYLE_BACKGROUND_COLOR_NEW"] = "Р¤РѕРЅ";
+$MESS["LANDING_BLOCK_STYLE_BACKGROUND_GRADIENT"] = "Р¦РІРµС‚ С„РѕРЅР° (РіСЂР°РґРёРµРЅС‚)";
+$MESS["LANDING_BLOCK_STYLE_BORDER_COLOR"] = "Р¦РІРµС‚ СЂР°РјРєРё";
+$MESS["LANDING_BLOCK_STYLE_BORDER_COLOR_HOVER"] = "Р¦РІРµС‚ СЂР°РјРєРё РїСЂРё РЅР°РІРµРґРµРЅРёРё";
+$MESS["LANDING_BLOCK_STYLE_BORDER_TOP_COLOR"] = "Р¦РІРµС‚ РІРµСЂС…РЅРµР№ СЂР°РјРєРё";
+$MESS["LANDING_BLOCK_STYLE_BORDER_BOTTOM_COLOR"] = "Р¦РІРµС‚ РЅРёР¶РЅРµР№ СЂР°РјРєРё";
+$MESS["LANDING_BLOCK_STYLE_BORDER_SIDES_COLOR"] = "Р¦РІРµС‚ Р±РѕРєРѕРІС‹С… СЂР°РјРѕРє";
+$MESS["LANDING_BLOCK_STYLE_ELEMENT_COLOR"] = "Р¦РІРµС‚ СѓРєР°Р·Р°С‚РµР»РµР№";
+$MESS["LANDING_BLOCK_STYLE_FONT_SIZE"] = "Р Р°Р·РјРµСЂ С€СЂРёС„С‚Р°";
+$MESS["LANDING_BLOCK_STYLE_FONT_FAMILY"] = "РЁСЂРёС„С‚";
+$MESS["LANDING_BLOCK_STYLE_TEXT_WEIGHT"] = "РќР°С‡РµСЂС‚Р°РЅРёРµ";
+$MESS["LANDING_BLOCK_STYLE_TEXT_TRANSFORM2"] = "Р РµРіРёСЃС‚СЂ";
+$MESS["LANDING_BLOCK_STYLE_TEXT_FONT_WEIGHT"] = "РќР°СЃС‹С‰РµРЅРЅРѕСЃС‚СЊ С€СЂРёС„С‚Р°";
+$MESS["LANDING_BLOCK_STYLE_TEXT_FONT_WEIGHT_HELP"] = "Р§РµРј Р±РѕР»СЊС€Рµ Р·РЅР°С‡РµРЅРёРµ, С‚РµРј РЅР°СЃС‹С‰РµРЅРЅРµРµ С‚РµРєСЃС‚. РќРµ РІСЃРµ С€СЂРёС„С‚С‹ РјРѕРіСѓС‚ РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ РІСЃРµ Р·РЅР°С‡РµРЅРёСЏ Р¶РёСЂРЅРѕСЃС‚Рё. Р•СЃР»Рё РЅСѓР¶РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚, Р±СѓРґРµС‚ РІС‹Р±СЂР°РЅРѕ Р±Р»РёР¶Р°Р№С€РµРµ.";
+$MESS["LANDING_BLOCK_STYLE_TEXT_DECORATION"] = "РћС„РѕСЂРјР»РµРЅРёРµ";
+$MESS["LANDING_BLOCK_STYLE_LINE_HEIGHT"] = "Р

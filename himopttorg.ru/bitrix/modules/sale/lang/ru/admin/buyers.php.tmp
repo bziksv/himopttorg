@@ -1,0 +1,9 @@
+<?
+$MESS["BUYER_TITLE"] = "РџРѕРєСѓРїР°С‚РµР»Рё";
+$MESS["BUYER_PRLIST"] = "РџРѕРєСѓРїР°С‚РµР»Рё";
+$MESS["BUYER_PROFILE"] = "РџСЂРѕС„Р°Р№Р» РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ";
+$MESS["BUYER_ROW_BUYER"] = "РџРѕРєСѓРїР°С‚РµР»СЊ";
+$MESS["BUYER_ROW_LID"] = "РЎР°Р№С‚";
+$MESS["BUYER_ROW_LOGIN"] = "Р›РѕРіРёРЅ";
+$MESS["BUYER_ROW_LAST"] = "Р¤Р°РјРёР»РёСЏ";
+$MESS["BUYER_ROW_NAME"] = "Р

@@ -1,0 +1,13 @@
+<?
+$MESS ['USMP_NO_MODULE'] = "РњРѕРґСѓР»СЊ РЅРµ РЅР°Р№РґРµРЅ";
+$MESS ['USMP_BACK'] = "Р’РµСЂРЅСѓС‚СЊСЃСЏ";
+$MESS ['USMP_TITLE'] = "РњРѕРґСѓР»СЊ #ID#";
+$MESS ['USMP_TAB_1'] = "РњРѕРґСѓР»СЊ";
+$MESS ['USMP_TAB_2'] = "РњРѕРґСѓР»СЊ '#NAME#'";
+$MESS ['USMP_ID'] = "РљРѕРґ РјРѕРґСѓР»СЏ";
+$MESS ['USMP_LOAD'] = "Р—Р°РіСЂСѓР¶РµРЅ";
+$MESS ['USMP_YES'] = "Р”Р°";
+$MESS ['USMP_NO'] = "РќРµС‚";
+$MESS ['USMP_NAME'] = "РќР°Р·РІР°РЅРёРµ РјРѕРґСѓР»СЏ";
+$MESS ['USMP_DESCR'] = "РћРїРёСЃР°РЅРёРµ";
+$MESS ['USMP_IMAGE'] = "Р

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Simplified Chinese PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author liqwei <liqwei@liqwei.com>
+ * @author young <masxy@foxmail.com>
+ * @author Teddysun <i@teddysun.com>
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'SMTP й”™иЇЇпјљз™»еЅ•е¤±иґҐгЂ‚';
+$PHPMAILER_LANG['connect_host']         = 'SMTP й”™иЇЇпјљж— жі•иїћжЋҐе€° SMTP дё»жњєгЂ‚';
+$PHPMAILER_LANG['data_not_accepted']    = 'SMTP й”™иЇЇпјљж•°жЌ®дёЌиў«жЋҐеЏ—гЂ‚';
+$PHPMAILER_LANG['empty_message']        = 'й‚®д»¶ж­Јж–‡дёєз©єгЂ‚';
+$PHPMAILER_LANG['encoding']             = 'жњЄзџҐзј–з Ѓпјљ';
+$PHPMAILER_LANG['execute']              = 'ж— жі•ж‰§иЎЊпјљ';
+$PHPMAILER_LANG['file_access']          = 'ж— жі•и®їй—®ж–‡д»¶пјљ';
+$PHPMAILER_LANG['file_open']            = 'ж–‡д»¶й”™иЇЇпјљж— жі•ж‰“ејЂж–‡д»¶пјљ';
+$PHPMAILER_LANG['from_failed']          = 'еЏ‘йЂЃењ°еќЂй”™иЇЇпјљ';
+$PHPMAILER_LANG['instantiate']          = 'жњЄзџҐе‡Ѕж•°и°ѓз”ЁгЂ‚';
+$PHPMAILER_LANG['invalid_address']      = 'еЏ‘йЂЃе¤±иґҐпјЊз”µе­ђй‚®з®±ењ°еќЂж

@@ -1,0 +1,55 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><?
+////////////////////////////////////////////////////////////////
+//              РњРѕРґСѓР»СЊ Z-PAYMENT РґР»СЏ 1C-Bitrix                //
+////////////////////////////////////////////////////////////////
+//      Z-PAYMENT, СЃРёСЃС‚РµРјР° РїСЂРёРµРјР° Рё РѕР±СЂР°Р±РѕС‚РєРё РїР»Р°С‚РµР¶РµР№        //
+//      All rights reserved В© 2002-2007, TRANSACTOR LLC       //
+////////////////////////////////////////////////////////////////
+
+define("NO_KEEP_STATISTIC", true);
+define("NOT_CHECK_PERMISSIONS", true);
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
+
+$lmi_prerequest = $_REQUEST['LMI_PREREQUEST'];
+$lmi_payee_purse = $_REQUEST['LMI_PAYEE_PURSE'];
+$lmi_payment_amount = $_REQUEST['LMI_PAYMENT_AMOUNT'];
+$lmi_payer_purse = $_REQUEST['LMI_PAYER_PURSE'];
+$lmi_payer_wm = $_REQUEST['LMI_PAYER_WM'];
+$lmi_payment_no = $_REQUEST['LMI_PAYMENT_NO'];
+$lmi_mode = $_REQUEST['LMI_MODE'];
+$id_pay = $_REQUEST['ID_PAY'];
+$client_mail = $_REQUEST['CLIENT_MAIL'];
+$custom = $_REQUEST['custom'];
+$lmi_sys_trans_no = $_REQUEST['LMI_SYS_TRANS_NO'];
+$lmi_sys_invs_no = $_REQUEST['LMI_SYS_INVS_NO'];
+$lmi_sys_trans_date = $_REQUEST['LMI_SYS_TRANS_DATE'];
+$lmi_hash = $_REQUEST['LMI_HASH'];
+$lmi_secret_key = $_REQUEST['LMI_SECRET_KEY'];
+
+
+if (CModule::IncludeModule("sale"))
+{
+	$bCorrectPayment = True;
+
+	$err=0;
+	$err_text= '';
+
+	if ($arOrder = CSaleOrder::GetByID(intval($lmi_payment_no)))
+	{
+		$bCorrectPayment = False;
+		$err=1;
+		$err_text= 'ERR: РќР•Рў РўРђРљРћР“Рћ Р—РђРљРђР—Рђ';
+	}
+
+	if ($bCorrectPayment) 
+		CSalePaySystemAction::InitParamArrays($arOrder, $arOrder["ID"]);
+
+	$IdM = CSalePaySystemAction::GetParamValue("ZP_SHOP_ID");
+	$sk  = CSalePaySystemAction::GetParamValue("ZP_MERCHANT_KEY");
+	$CruR  = CSalePaySystemAction::GetParamValue("ZP_CODE_RUR");
+
+	if($sk == '')
+	{
+		$bCorrectPayment = False;
+		$err=4;
+		$err_text='ERR: РћРЁР

@@ -1,0 +1,22 @@
+<?php
+$MESS['LANDING_TABLE_FIELD_LANDING_CODE'] = 'РђРґСЂРµСЃ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃР°Р№С‚Р°';
+$MESS['LANDING_TABLE_FIELD_LANDING_INITIATOR_APP_CODE'] = 'РљРѕРґ РїСЂРёР»РѕР¶РµРЅРёСЏ-РёРЅРёС†РёР°С‚РѕСЂР°';
+$MESS['LANDING_TABLE_FIELD_RULE'] = 'РџСЂР°РІРёР»Рѕ РѕР±СЂР°Р±РѕС‚РєРё';
+$MESS['LANDING_TABLE_FIELD_LANDING_ACTIVE'] = 'РЎС‚Р°С‚СѓСЃ СЃС‚СЂР°РЅРёС†С‹';
+$MESS['LANDING_TABLE_FIELD_LANDING_DELETED'] = 'РЎС‚СЂР°РЅРёС†Р° СѓРґР°Р»РµРЅР°';
+$MESS['LANDING_TABLE_FIELD_LANDING_PUBLIC'] = 'РџСѓР±Р»РёС‡РЅРѕСЃС‚СЊ';
+$MESS['LANDING_TABLE_FIELD_LANDING_SYSTEM'] = 'РЎРёСЃС‚РµРјРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°';
+$MESS['LANDING_TABLE_FIELD_LANDING_VIEWS'] = 'РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕСЃРјРѕС‚СЂРѕРІ';
+$MESS['LANDING_TABLE_FIELD_LANDING_TITLE'] = 'РќР°Р·РІР°РЅРёРµ СЃС‚СЂР°РЅРёС†С‹';
+$MESS['LANDING_TABLE_FIELD_XML_ID'] = 'Р’РЅРµС€РёР№ РєРѕРґ';
+$MESS['LANDING_TABLE_FIELD_DESCRIPTION'] = 'РљСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ';
+$MESS['LANDING_TABLE_FIELD_TPL_ID'] = 'РЁР°Р±Р»РѕРЅ';
+$MESS['LANDING_TABLE_FIELD_TPL_CODE'] = 'РљРѕРґ С€Р°Р±Р»РѕРЅР° С‚РёРїРѕРІРѕРіРѕ СЂРµС€РµРЅРёСЏ';
+$MESS['LANDING_TABLE_FIELD_SITE_ID'] = 'РЎР°Р№С‚';
+$MESS['LANDING_TABLE_FIELD_LANDING_SITEMAP'] = 'РљР°СЂС‚Р° СЃР°Р№С‚Р°';
+$MESS['LANDING_TABLE_FIELD_FOLDER'] = 'РЇРІР»СЏРµС‚СЃСЏ РїР°РїРєРѕР№';
+$MESS['LANDING_TABLE_FIELD_FOLDER_ID'] = 'РџСЂРёРІСЏР·РєР° Рє РїР°РїРєРµ';
+$MESS['LANDING_TABLE_FIELD_SEARCH_CONTENT'] = 'РџРѕРёСЃРєРѕРІРѕРµ СЃРѕРґРµСЂР¶РёРјРѕРµ';
+$MESS['LANDING_TABLE_FIELD_VERSION'] = 'Р’РµСЂСЃРёСЏ СЃС‚СЂР°РЅРёС†С‹';
+$MESS['LANDING_TABLE_FIELD_HISTORY_STEP'] = 'РЁР°Рі РёСЃС‚РѕСЂРёРё';
+$MESS['LANDING_TABLE_FIELD_CREATED_BY_ID'] = 'Р

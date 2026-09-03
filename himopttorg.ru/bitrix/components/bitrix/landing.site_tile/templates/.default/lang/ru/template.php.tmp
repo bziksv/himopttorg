@@ -1,0 +1,16 @@
+<?php
+$MESS['LANDING_SITE_TILE_STATUS_PUBLISHED'] = 'РћРїСѓР±Р»РёРєРѕРІР°РЅ';
+$MESS['LANDING_SITE_TILE_STATUS_NOT_PUBLISHED'] = 'РќРµ РѕРїСѓР±Р»РёРєРѕРІР°РЅ';
+$MESS['LANDING_SITE_TILE_OPEN'] = 'РћС‚РєСЂС‹С‚СЊ';
+$MESS['LANDING_SITE_TILE_INSTRUCTION'] = 'Р СѓРєРѕРІРѕРґСЃС‚РІРѕ';
+$MESS['LANDING_SITE_TILE_CREATE_DOMAIN_NAME'] = 'РџСЂРёРґСѓРјР°Р№С‚Рµ РєСЂР°СЃРёРІС‹Р№ Р°РґСЂРµСЃ СЃР°Р№С‚Р°';
+$MESS['LANDING_SITE_TILE_SHOW_PAGES'] = 'РџРѕСЃРјРѕС‚СЂРµС‚СЊ СЃС‚СЂР°РЅРёС†С‹';
+$MESS['LANDING_SITE_TILE_HIDE'] = 'РЎРєСЂС‹С‚СЊ';
+$MESS['LANDING_SITE_TILE_UNPUBLISH'] = 'РЎРЅСЏС‚СЊ СЃ РїСѓР±Р»РёРєР°С†РёРё';
+$MESS['LANDING_SITE_TILE_PUBLISH'] = 'РћРїСѓР±Р»РёРєРѕРІР°С‚СЊ';
+$MESS['LANDING_SITE_TILE_REMOVE'] = 'РЈРґР°Р»РёС‚СЊ';
+$MESS['LANDING_SITE_TILE_RESTORE'] = 'Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ';
+$MESS['LANDING_SITE_TILE_LEADERSHIP_TITLE'] = 'Р‘РёР·РЅРµСЃ-СЂСѓРєРѕРІРѕРґСЃС‚РІРѕ';
+$MESS['LANDING_SITE_TILE_POPUP_CREATE_TEST_ORDER'] = 'РЎРґРµР»Р°Р№С‚Рµ С‚РµСЃС‚РѕРІС‹Р№ Р·Р°РєР°Р·';
+$MESS['LANDING_SITE_TILE_POPUP_OPEN_CRM'] = 'РћС‚РєСЂС‹С‚СЊ CRM СЃ Р·Р°РєР°Р·Р°РјРё';
+$MESS['LANDING_SITE_TILE_POPUP_TEST_ORDER_TEXT'] = 'Р

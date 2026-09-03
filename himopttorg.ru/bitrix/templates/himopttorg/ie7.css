@@ -1,0 +1,21 @@
+#container,#footer,.sub,.mainnav,.basket p.offer,.search,.log_passw,.in_content,.block, .bn3,ul.addnav li a{
+	zoom:1;
+}
+ul.partner li{		
+    display: inline;    
+}
+ul.addnav li.hover {
+	background:url(images/nav_r1.gif) 100% 50% no-repeat;  	
+}
+i.nav_l{	
+	background:url(images/nav_l1.gif) 0 50% no-repeat; 		
+}
+ul.addnav li.active{
+	background:url(images/nav_r2.png) 100% 50% no-repeat;  	
+}
+ul.addnav li.active i.nav_l{
+	background:url(images/nav_l3.png) 0 50% no-repeat;  	
+}
+.btn input{		
+	margin-top:1px;
+}

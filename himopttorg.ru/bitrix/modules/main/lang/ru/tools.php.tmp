@@ -1,0 +1,10 @@
+<?php
+$MESS["TOOLS_DN"] = "РґРЅ.";
+$MESS["TOOLS_DAYS"] = "РґРЅРµР№";
+$MESS["TOOLS_CALENDAR"] = "РљР°Р»РµРЅРґР°СЂСЊ";
+$MESS["TOOLS_HELP"] = "РџРѕРјРѕС‰СЊ";
+$MESS["MAIN_QUOTE"] = "Р¦РёС‚Р°С‚Р°";
+$MESS["MAIN_QUOTE_S"] = "С†РёС‚Р°С‚Р°";
+$MESS["WHOIS_SERVICE"] = "РџРѕСЃРјРѕС‚СЂРµС‚СЊ РґР°РЅРЅС‹Рµ РїРѕ IP РІ СЃР»СѓР¶Р±Рµ whois";
+$MESS["MAIN_TOTAL"] = "Р’СЃРµРіРѕ:";
+$MESS["MAIN_EDIT"] = "Р

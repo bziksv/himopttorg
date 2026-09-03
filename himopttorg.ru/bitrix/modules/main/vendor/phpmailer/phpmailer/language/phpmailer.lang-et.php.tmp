@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Estonian PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author Indrek PР“В¤ri
+ * @author Elan RuusamР“В¤e <glen@delfi.ee>
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'SMTP Viga: Autoriseerimise viga.';
+$PHPMAILER_LANG['connect_host']         = 'SMTP Viga: Ei Р“Вµnnestunud luua Р“С

@@ -1,0 +1,15 @@
+<?
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FORM_TITLE"] = "Р”РѕР±Р°РІРёС‚СЊ РІР°Р»СЋС‚Сѓ РёР· РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР°";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FORM_TAB_SEARCH_AND_SETTINGS"] = "РџРѕРёСЃРє Рё РѕСЃРЅРѕРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FORM_TAB_SEARCH_AND_SETTINGS_TITLE"] = "РџРѕРёСЃРє Рё РѕСЃРЅРѕРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РІР°Р»СЋС‚С‹";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FORM_TAB_LANGUAGE_SETTINGS"] = "РЇР·С‹РєРѕРІС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FORM_TAB_LANGUAGE_SETTINGS_TITLE"] = "РќР°СЃС‚СЂРѕР№РєРё РІР°Р»СЋС‚С‹ РґР»СЏ РїРѕРєР°Р·Р°";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FORM_SECTION_SEARCH_AND_CHOICE"] = "РџРѕРёСЃРє Рё РІС‹Р±РѕСЂ РІР°Р»СЋС‚С‹";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FORM_SECTION_MAIN_SETTINGS"] = "РћСЃРЅРѕРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РІР°Р»СЋС‚С‹";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FIELD_SEARCH"] = "РџРѕРёСЃРє РІР°Р»СЋС‚С‹";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FIELD_SEARCH_PLACEHOLDER"] = "РќР°С‡РЅРёС‚Рµ РІРІРѕРґ РІР°Р»СЋС‚С‹...";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FIELD_CHOICE"] = "Р’С‹Р±РѕСЂ РІР°Р»СЋС‚С‹";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FIELD_NUM_CODE"] = "Р¦РёС„СЂРѕРІРѕР№ РєРѕРґ";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FIELD_SYM_CODE"] = "РЎРёРјРІРѕР»СЊРЅС‹Р№ РєРѕРґ";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FIELD_EXCHANGE_RATE"] = "РљСѓСЂСЃ РѕР±РјРµРЅР° (РїРѕ СѓРјРѕР»С‡.)";
+$MESS["ADMIN_CURRENCY_CLASSIFIER_FIELD_SORT_INDEX"] = "Р

@@ -1,0 +1,5 @@
+<?
+$MESS["JS_UI_ACCESSRIGHTS_ADD"] = "Р”РѕРґР°С‚Рё";
+$MESS["JS_UI_ACCESSRIGHTS_COPY_ROLE"] = "РљРѕРїС–СЋРІР°С‚Рё Р· СЂРѕР»С–";
+$MESS["JS_UI_ACCESSRIGHTS_CREATE_ROLE"] = "РЎС‚РІРѕСЂРёС‚Рё СЂРѕР»СЊ";
+$MESS["JS_UI_ACCESSRIGHTS_DEPARTMENTS"] = "Р’Р†Р”Р”Р†Р›Р

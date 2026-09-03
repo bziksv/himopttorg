@@ -1,0 +1,11 @@
+<?
+global $MESS;
+
+$MESS["CHRP_SHOULD_PAY"] = "РЎСѓРјРјР° Рє РѕРїР»Р°С‚Рµ";
+$MESS["CHRP_DESC_SHOULD_PAY"] = "";
+$MESS["CHRP_PRODUCT_ID"] = "РљРѕРґ С‚РѕРІР°СЂР°";
+$MESS["CHRP_DESC_PRODUCT_ID"] = "РЈРЅРёРєР°Р»СЊРЅС‹Р№ РєРѕРґ С‚РѕРІР°СЂР° РёР»Рё СѓСЃР»СѓРіРё РЅР° СЃР°Р№С‚Рµ Chronopay";
+$MESS["CHRP_PRODUCT_NAME"] = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РѕРІР°СЂР°";
+$MESS["CHRP_DESC_PRODUCT_NAME"] = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РѕРІР°СЂР°  Рє РѕРїР»Р°С‚Рµ";
+$MESS["CHRP_ORDER_ID"] = "РќРѕРјРµСЂ Р·Р°РєР°Р·Р°";
+$MESS["CHRP_DESC_ORDER_ID"] = "РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ РІР°С€РµРј Р

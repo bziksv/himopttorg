@@ -1,0 +1,18 @@
+<?
+$MESS["ARCHIVE_TITLE"] = "РђСЂС…РёРІРёСЂРѕРІР°РЅРёРµ Р·Р°РєР°Р·РѕРІ";
+$MESS["ARCHIVE_TAB"] = "РђСЂС…РёРІРёСЂРѕРІР°РЅРёРµ Р·Р°РєР°Р·РѕРІ";
+$MESS["ARCHIVE_STEP"] = "РЁР°Рі";
+$MESS["ARCHIVE_STEP_ORDER"] = "СЃРµРєСѓРЅРґ";
+$MESS["ARCHIVE_PERIOD"] = "Р§РµСЂРµР· РєР°РєРѕРµ РІСЂРµРјСЏ РѕС‚РїСЂР°РІР»СЏС‚СЊ РІ Р°СЂС…РёРІ (РґРЅРё)";
+$MESS["ARCHIVE_STATUS"] = "РЎС‚Р°С‚СѓСЃС‹ Р·Р°РєР°Р·Р°";
+$MESS["ARCHIVE_PAYED"] = "РЎРѕСЃС‚РѕСЏРЅРёРµ Р·Р°РєР°Р·Р° \"РћРїР»Р°С‡РµРЅ\"";
+$MESS["ARCHIVE_CANCELED"] = "РЎРѕСЃС‚РѕСЏРЅРёРµ Р·Р°РєР°Р·Р° \"РћС‚РјРµРЅРµРЅ\"";
+$MESS["ARCHIVE_DEDUCTED"] = "РЎРѕСЃС‚РѕСЏРЅРёРµ Р·Р°РєР°Р·Р° \"РћС‚РіСЂСѓР¶РµРЅ\"";
+$MESS["ARCHIVE_ALL"] = "(РІСЃРµ)";
+$MESS["ARCHIVE_YES"] = "РґР°";
+$MESS["ARCHIVE_NO"] = "РЅРµС‚";
+$MESS["ARCHIVE_ARCHIVE_BUTTON"] = "РђСЂС…РёРІРёСЂРѕРІР°С‚СЊ";
+$MESS["ARCHIVE_STOP"] = "РћСЃС‚Р°РЅРѕРІРёС‚СЊ";
+$MESS["ARCHIVE_CONTINUE"] = "РџСЂРѕРґРѕР»Р¶РёС‚СЊ";
+$MESS["ARCHIVE_SITE"] = "РЎР°Р№С‚";
+$MESS["ARCHIVE_IN_PROGRESS"] = "Р

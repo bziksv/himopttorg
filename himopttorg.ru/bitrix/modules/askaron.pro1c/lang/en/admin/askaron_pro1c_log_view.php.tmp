@@ -1,0 +1,11 @@
+<?
+$MESS["askaron_pro1c_log_view_title"] = "Р вЂєР С•Р С–-РЎвЂћР В°Р в„–Р В»";
+$MESS["askaron_pro1c_log_view_file_not_found"] = "Р В¤Р В°Р в„–Р В» Р Р…Р Вµ Р Р…Р В°Р в„–Р Т‘Р ВµР Р…";
+$MESS["ASKARON_PRO1C_OTKRYTQ_V_NOVOY_VKLA"] = "Р С›РЎвЂљР С”РЎР‚РЎвЂ№РЎвЂљРЎРЉ Р Р† Р Р…Р С•Р Р†Р С•Р в„– Р Р†Р С”Р В»Р В°Р Т‘Р С”Р Вµ";
+$MESS["ASKARON_PRO1C_POSLEDNIE"] = "Р С—Р С•РЎРѓР В»Р ВµР Т‘Р Р…Р С‘Р Вµ";
+$MESS["ASKARON_PRO1C_STROK1"] = "РЎРѓРЎвЂљРЎР‚Р С•Р С” Р С‘Р В·";
+$MESS["ASKARON_PRO1C_STROKA_SODERJIT_TEKS"] = "Р РЋРЎвЂљРЎР‚Р С•Р С”Р В° РЎРѓР С•Р Т‘Р ВµРЎР‚Р В¶Р С‘РЎвЂљ РЎвЂљР ВµР С”РЎРѓРЎвЂљ
+					";
+$MESS["askaron_pro1c_show"] = "Р СџР С•Р С”Р В°Р В·Р В°РЎвЂљРЎРЉ";
+$MESS["askaron_pro1c_clear"] = "Р С›РЎвЂЎР С‘РЎРѓРЎвЂљР С‘РЎвЂљРЎРЉ РЎвЂћР В°Р в„–Р В»";
+$MESS["askaron_pro1c_changed"] = "Р С‘Р В·Р С

@@ -1,0 +1,11 @@
+<?
+global $MESS;
+
+$MESS["SPCP_DTITLE"] = "РЈРєСЂСЌРєСЃРёРјР±Р°РЅРє";
+$MESS["SPCP_DDESCR"] = "<a href=\"http://www.eximb.com\" target=\"_blank\">РЈРєСЂСЌРєСЃРёРјР±Р°РЅРє</a>";
+
+$MESS["MERCH_NAME"] = "РќР°Р·РІР°РЅРёРµ РІР°С€РµРіРѕ РјР°РіР°Р·РёРЅР°";
+$MESS["MERCH_NAME_DESCR"] = "";
+$MESS["MERCH_URL"] = "РђРґСЂРµСЃ СЃР°Р№С‚Р° РІР°С€РµРіРѕ РјР°РіР°Р·РёРЅР°";
+$MESS["MERCH_URL_DESCR"] = "";
+$MESS["MERCHANT"] = "Р

@@ -1,0 +1,12 @@
+<?php
+$MESS["IBP_ADM_TO_ADD"] = "Р”РѕР±Р°РІРёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ";
+$MESS["IBP_ADM_TO_ADD_TITLE"] = "Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕРµ СЃРІРѕР№СЃС‚РІРѕ";
+$MESS["IBP_ADM_ID"] = "ID";
+$MESS["IBP_ADM_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["IBP_ADM_CODE"] = "РЎРёРјРІРѕР»СЊРЅС‹Р№ РєРѕРґ";
+$MESS["IBP_ADM_SORT"] = "РЎРѕСЂС‚РёСЂРѕРІРєР°";
+$MESS["IBP_ADM_ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ";
+$MESS["IBP_ADM_PROPERTY_TYPE"] = "РўРёРї";
+$MESS["IBP_ADM_MULTIPLE"] = "РњРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕРµ";
+$MESS["IBP_ADM_XML_ID"] = "Р’РЅРµС€РЅРёР№ РєРѕРґ";
+$MESS["IBP_ADM_WITH_DESCRIPTION"] = "Р

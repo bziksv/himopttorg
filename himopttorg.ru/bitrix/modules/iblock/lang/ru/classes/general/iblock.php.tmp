@@ -1,0 +1,10 @@
+<?
+$MESS["IBLOCK_BAD_SITE_ID_NA"] = "РќРµ РІРІРµРґРµРЅР° РїСЂРёРІСЏР·РєР° Рє СЃР°Р№С‚Сѓ.";
+$MESS["IBLOCK_BAD_SITE_ID"] = "РќРµРІРµСЂРЅС‹Р№ СЃР°Р№С‚!";
+$MESS["IBLOCK_BAD_NAME"] = "РќРµ РІРІРµРґРµРЅРѕ РЅР°Р·РІР°РЅРёРµ РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРіРѕ Р±Р»РѕРєР°.";
+$MESS["IBLOCK_BAD_BLOCK_TYPE"] = "РќРµ РІРІРµРґРµРЅ С‚РёРї Р±Р»РѕРєР°.";
+$MESS["IBLOCK_BAD_REST_ON_WO_API_CODE"] = "Р”Р»СЏ РІРєР»СЋС‡РµРЅРёСЏ REST РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРѕР»РЅРµРЅРѕ РїРѕР»Рµ API_CODE.";
+$MESS["IBLOCK_MESS_ELEMENT_NAME"] = "Р­Р»РµРјРµРЅС‚";
+$MESS["IBLOCK_MESS_ELEMENTS_NAME"] = "Р­Р»РµРјРµРЅС‚С‹";
+$MESS["IBLOCK_MESS_ELEMENT_ADD"] = "Р”РѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚";
+$MESS["IBLOCK_MESS_ELEMENT_EDIT"] = "Р

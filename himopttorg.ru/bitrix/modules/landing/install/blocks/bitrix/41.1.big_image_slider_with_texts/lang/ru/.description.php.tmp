@@ -1,0 +1,4 @@
+<?php
+$MESS['LANDING_BLOCK_41.BIG_IMAGE_SLIDER_WITH_TEXTS_NAME'] = 'РћР±Р»РѕР¶РєР° СЃ РјРµРЅСЏСЋС‰РёРјРёСЃСЏ РЅР° С„РѕРЅРµ Р·Р°С‚РµРјРЅРµРЅРЅС‹РјРё РєР°СЂС‚РёРЅРєР°РјРё Р±РµР· РєРЅРѕРїРєРё';
+$MESS['LANDING_BLOCK_41.BIG_IMAGE_SLIDER_WITH_TEXTS_CARDS_LANDINGBLOCKNODECARD'] = 'Р‘Р»РѕРє';
+$MESS['LANDING_BLOCK_41.BIG_IMAGE_SLIDER_WITH_TEXTS_NODES_LANDINGBLOCKNODECARD_ICON'] = 'Р

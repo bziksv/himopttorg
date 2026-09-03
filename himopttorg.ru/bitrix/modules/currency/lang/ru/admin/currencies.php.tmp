@@ -1,0 +1,28 @@
+<?
+$MESS["CURRENCY_SAVE_ERR"] = "РћС€РёР±РєР° РїСЂРё РёР·РјРµРЅРµРЅРёРё РІР°Р»СЋС‚С‹ #ID#: #ERROR_TEXT#";
+$MESS["CURRENCY_SAVE_ERR2"] = "РћС€РёР±РєР° РїСЂРё РёР·РјРµРЅРµРЅРёРё РІР°Р»СЋС‚С‹ #ID#";
+$MESS["currency_err1"] = "РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ РІР°Р»СЋС‚С‹.";
+$MESS["currency_err2"] = "РћС€РёР±РєР° Р·Р°РґР°РЅРёСЏ Р±Р°Р·РѕРІРѕР№ РІР°Р»СЋС‚С‹";
+$MESS["CURRENCY_TITLE"] = "Р’Р°Р»СЋС‚С‹";
+$MESS["currency_curr"] = "Р’Р°Р»СЋС‚Р°";
+$MESS["CURRENCY_FULL_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["currency_sort"] = "РЎРѕСЂС‚.";
+$MESS["currency_rate_cnt"] = "РќРѕРјРёРЅР°Р»";
+$MESS["currency_rate"] = "РљСѓСЂСЃ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["CURRENCY_A_EDIT"] = "СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РІР°Р»СЋС‚С‹";
+$MESS["CURRENCY_A_EDIT_TITLE"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РІР°Р»СЋС‚С‹";
+$MESS["currency_add"] = "Р”РѕР±Р°РІРёС‚СЊ РІР°Р»СЋС‚Сѓ";
+$MESS["currency_add_from_classifier"] = "Р”РѕР±Р°РІРёС‚СЊ РёР· РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР°";
+$MESS["currency_add_from_classifier_title"] = "Р”РѕР±Р°РІРёС‚СЊ РІР°Р»СЋС‚Сѓ РёР· РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР°";
+$MESS["currency_list"] = "РљСѓСЂСЃС‹ РІР°Р»СЋС‚";
+$MESS["CURRENCY_CODES_ISO_STANDART"] = "РџРµСЂРµС‡РµРЅСЊ РІРѕР·РјРѕР¶РЅС‹С… РєРѕРґРѕРІ РІР°Р»СЋС‚ РїСЂРёРІРµРґРµРЅ РІ РјРµР¶РґСѓРЅР°СЂРѕРґРЅРѕРј СЃС‚Р°РЅРґР°СЂС‚Рµ <a target=\"_blank\" href=\"#ISO_LINK#\">ISO 4217</a>";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_BASE"] = "Р‘Р°Р·РѕРІР°СЏ";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_NUMCODE"] = "Р¦РёС„СЂРѕРІРѕР№ РєРѕРґ";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_DATE_UPDATE"] = "Р”Р°С‚Р° РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_MODIFIED_BY"] = "РљРµРј РёР·РјРµРЅРµРЅР°";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_CREATED_BY"] = "РљРµРј СЃРѕР·РґР°РЅР°";
+$MESS["BT_MOD_CURRENCY_LIST_ADM_TITLE_DATE_CREATE"] = "Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ";
+$MESS["BASE_CURRENCY_YES"] = "РґР°";
+$MESS["BASE_CURRENCY_NO"] = "РЅРµС‚";
+$MESS["CURRENCY_SET_BASE"] = "РЎРґРµР»Р°С‚СЊ Р±Р°Р·РѕРІРѕР№";
+$MESS["CURRENCY_SET_BASE_TITLE"] = "Р

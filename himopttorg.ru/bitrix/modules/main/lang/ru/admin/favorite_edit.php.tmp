@@ -1,0 +1,11 @@
+<?
+$MESS ['MAIN_TOTAL'] = "Р’СЃРµРіРѕ:";
+$MESS ['MAIN_F_ID'] = "ID:";
+$MESS ['MAIN_F_SET_FILTER'] = "Р¤РёР»СЊС‚СЂ";
+$MESS ['MAIN_F_DEL_FILTER'] = "РћС‚РјРµРЅР°";
+$MESS ['MAIN_ACTION'] = "Р”РµР№СЃС‚РІРёРµ";
+$MESS ['MAIN_USER_PROFILE'] = "РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ";
+$MESS ['MAIN_DELETE'] = "РЈРґР°Р»РёС‚СЊ";
+$MESS ['MAIN_SAVE'] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS ['MAIN_RESET'] = "РЎР±СЂРѕСЃРёС‚СЊ";
+$MESS ['MAIN_EDIT'] = "Р

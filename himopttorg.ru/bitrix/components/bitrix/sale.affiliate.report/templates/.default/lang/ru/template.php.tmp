@@ -1,0 +1,9 @@
+<?
+$MESS["SPCAS1_FILTER"]="Р¤РёР»СЊС‚СЂ РїРѕ РїРµСЂРёРѕРґСѓ";
+$MESS["SPCAS1_PERIOD"]="РџРµСЂРёРѕРґ:";
+$MESS["SPCAS1_SET"]="РЈСЃС‚Р°РЅРѕРІРёС‚СЊ";
+$MESS["SPCAS1_UNSET"]="РЎР±СЂРѕСЃРёС‚СЊ";
+$MESS["SPCAS1_NAME"]="РќР°Р·РІР°РЅРёРµ";
+$MESS["SPCAS1_QUANTITY"]="РљРѕР»РёС‡РµСЃС‚РІРѕ";
+$MESS["SPCAS1_SUM"]="РќР° СЃСѓРјРјСѓ";
+$MESS["SPCAS1_ITOG"]="Р

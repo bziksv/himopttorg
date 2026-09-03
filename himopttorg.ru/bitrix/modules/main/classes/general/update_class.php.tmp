@@ -1,0 +1,2845 @@
+<?php
+/**********************************************************************/
+/**    DO NOT MODIFY THIS FILE                                       **/
+/**    MODIFICATION OF THIS FILE WILL ENTAIL SITE FAILURE            **/
+/**********************************************************************/
+
+if (!defined("BX_DIR_PERMISSIONS"))
+	define("BX_DIR_PERMISSIONS", 0755);
+
+if (!defined("US_SHARED_KERNEL_PATH"))
+	define("US_SHARED_KERNEL_PATH", "/bitrix");
+
+class CUpdateSystem
+{
+	public static function IsInCommonKernel()
+	{
+		return (!defined("US_BITRIX24_MODE") || !US_BITRIX24_MODE) && file_exists($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/update_db_updater.php");
+	}
+
+	/** РџРѕРґРїРёСЃРєР° РЅР° РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РѕР±РЅРѕРІР»РµРЅРёСЏС… **/
+	public static function SubscribeUpdates($strEmails, &$strError, $lang = false)
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::SubscribeUpdates");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$GLOBALS["DB"]->GetVersion();
+
+		$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+			"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+			"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+			"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+			"&SUBSCR_EMAIL=".urlencode($strEmails).
+			"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+			"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+			"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+			"&CLIENT_PHPVER=".urlencode(phpversion()).
+			"&lang=".urlencode($lang);
+
+		$content = CUpdateSystem::getHTTPPage("bit_syssubscr.php", $strVars, $strError_tmp);
+
+		if ($content == '')
+			$strError_tmp .= "[USU058] Empty server response.<br>";
+
+		$strError .= $strError_tmp;
+	}
+
+	/** РђРєС‚РёРІРёСЂСѓРµС‚ Р»РёС†РµРЅР·РёРѕРЅРЅС‹Р№ РєР»СЋС‡ **/
+	public static function AddSites($strCheck, &$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::AddSites");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if ($strCheck == '')
+		{
+			$strError_tmp .= "[UAS01] ".GetMessage("SUPP_AS_NO_CHECK").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&UTYPES=".urlencode("W").
+				"&COUNT_ONLY=".urlencode("Y").
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&CHECK=".urlencode($strCheck).
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&stable=".urlencode($stableVersionsOnly).
+				"&lang=".urlencode($lang);
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME AddSites.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+			if ($content == '')
+				$strError_tmp .= "[UAS02] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				for ($i = 0, $n = count($arRes["DATA"]["#"]["ERROR"]); $i < $n; $i++)
+				{
+					if ($arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"] <> '')
+						$strError_tmp .= "[".$arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"]."] ";
+
+					$strError_tmp .= $arRes["DATA"]["#"]["ERROR"][$i]["#"].".<br>";
+				}
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			CUpdateSystem::AddMessage2Log("Check applied successfully!", "CUAS");
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUAS");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+	/** РђРєС‚РёРІРёСЂСѓРµС‚ Р»РёС†РµРЅР·РёРѕРЅРЅС‹Р№ РєР»СЋС‡ **/
+	public static function ActivateLicenseKey($arFields, &$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::ActivateLicenseKey");
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$GLOBALS["DB"]->GetVersion();
+
+		$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+			"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+			"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+			"&UTYPES=".urlencode("A").
+			"&COUNT_ONLY=".urlencode("N").
+			"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+			"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+			"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+			"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+			"&CLIENT_PHPVER=".urlencode(phpversion()).
+			"&stable=".urlencode($stableVersionsOnly).
+			"&lang=".urlencode($lang);
+
+		foreach ($arFields as $key => $value)
+		{
+			$strVars .= "&".$key."=".urlencode($value);
+		}
+
+		CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+		$stime = CUpdateSystem::getmicrotime();
+		$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+		CUpdateSystem::AddMessage2Log("TIME ActivateLicenseKey.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+		if ($content == '')
+			$strError_tmp .= "[UALK01] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				for ($i = 0, $n = count($arRes["DATA"]["#"]["ERROR"]); $i < $n; $i++)
+				{
+					if ($arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"] <> '')
+						$strError_tmp .= "[".$arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"]."] ";
+
+					$strError_tmp .= $arRes["DATA"]["#"]["ERROR"][$i]["#"].".<br>";
+				}
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			CUpdateSystem::AddMessage2Log("License key activated successfully!", "CUALK");
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUALK");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+	// Р РµРіРёСЃС‚СЂРёСЂСѓРµС‚ РєРѕРїРёСЋ РїСЂРѕРґСѓРєС‚Р°, РµСЃР»Рё РјРѕР¶РЅРѕ
+	public static function RegisterVersion(&$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::RegisterVersion");
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$GLOBALS["DB"]->GetVersion();
+
+		$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+			"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+			"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+			"&UTYPES=".urlencode("R").
+			"&COUNT_ONLY=".urlencode("F").
+			"&VERSION=".urlencode(SM_VERSION).
+			"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+			"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+			"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+			"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+			"&CLIENT_PHPVER=".urlencode(phpversion()).
+			"&stable=".urlencode($stableVersionsOnly).
+			"&lang=".urlencode($lang);
+
+		CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+		$stime = CUpdateSystem::getmicrotime();
+		$fcontent = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+		CUpdateSystem::AddMessage2Log("TIME RegisterVersion.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+		if ($fcontent == '')
+			$strError_tmp .= "[URV01] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+
+		if ($strError_tmp == '')
+		{
+			if (!($fp1 = fopen($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", "wb")))
+				$strError_tmp .= "[URV02] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates", GetMessage("SUPP_RV_ER_TEMP_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!fwrite($fp1, $fcontent))
+				$strError_tmp .= "[URV03] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", GetMessage("SUPP_RV_WRT_TEMP_FILE")).".<br>";
+
+			@fclose($fp1);
+		}
+
+		if ($strError_tmp == '')
+		{
+			$temporary_updates_dir = "";
+			if (!CUpdateSystem::UnGzipArchive($temporary_updates_dir, $strError_tmp, "Y"))
+				$strError_tmp .= "[URV04] ".GetMessage("SUPP_RV_BREAK").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$temporary_updates_dir;
+			if (!file_exists($updates_dir_full."/update_info.xml") || !is_file($updates_dir_full."/update_info.xml"))
+			{
+				$strError_tmp .= "[URV05] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_ER_DESCR_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[URV06] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_READ_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$content = file_get_contents($updates_dir_full."/update_info.xml");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				for ($i = 0, $n = count($arRes["DATA"]["#"]["ERROR"]); $i < $n; $i++)
+				{
+					if ($arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"] <> '')
+						$strError_tmp .= "[".$arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"]."] ";
+
+					$strError_tmp .= $arRes["DATA"]["#"]["ERROR"][$i]["#"].".<br>";
+				}
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!file_exists($updates_dir_full."/include.php") || !is_file($updates_dir_full."/include.php"))
+			{
+				$strError_tmp .= "[URV07] ".GetMessage("SUPP_RV_NO_FILE").".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$newfilesize = @filesize($updates_dir_full."/include.php");
+			if (intval($newfilesize)!=intval($arRes["DATA"]["#"]["FILE"][0]["@"]["SIZE"]))
+			{
+				$strError_tmp .= "[URV08] ".GetMessage("SUPP_RV_ER_SIZE").".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_writeable($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include.php"))
+			{
+				$strError_tmp .= "[URV09] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include.php", GetMessage("SUPP_RV_NO_WRITE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!copy($updates_dir_full."/include.php", $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include.php"))
+				$strError_tmp .= "[URV10] ".GetMessage("SUPP_RV_ERR_COPY").".<br>";
+			@chmod($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include.php", BX_FILE_PERMISSIONS);
+		}
+
+		if ($strError_tmp == '')
+		{
+			$strongUpdateCheck = COption::GetOptionString("main", "strong_update_check", "Y");
+
+			if ($strongUpdateCheck == "Y")
+			{
+				$crc32_old = dechex(crc32(file_get_contents($updates_dir_full."/include.php")));
+				$crc32_new = dechex(crc32(file_get_contents($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include.php")));
+				if ($crc32_new != $crc32_old)
+					$strError_tmp .= "[URV1011] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include.php", GetMessage("SUPP_UGA_FILE_CRUSH")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			CUpdateSystem::AddMessage2Log("Product registered successfully!", "CURV");
+			CUpdateSystem::DeleteDirFilesEx($updates_dir_full);
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CURV");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// РћР±РЅРѕРІР»СЏРµС‚ СЃРёСЃС‚РµРјСѓ РѕР±РЅРѕРІР»РµРЅРёР№
+	public static function UpdateUpdate(&$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::UpdateUpdate");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		$GLOBALS["DB"]->GetVersion();
+
+		$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+			"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+			"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+			"&UTYPES=".urlencode("U").
+			"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+			"&COUNT_ONLY=".urlencode("F").
+			"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+			"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+			"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+			"&CLIENT_PHPVER=".urlencode(phpversion()).
+			"&stable=".urlencode($stableVersionsOnly).
+			"&lang=".urlencode($lang);
+
+		CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+		$fcontent = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+
+		if ($fcontent == '')
+			$strError_tmp .= "[UUU01] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+
+		if ($strError_tmp == '')
+		{
+			if (!($fp1 = fopen($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", "wb")))
+				$strError_tmp .= "[UUU02] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates", GetMessage("SUPP_RV_ER_TEMP_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!fwrite($fp1, $fcontent))
+				$strError_tmp .= "[UUU03] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", GetMessage("SUPP_RV_WRT_TEMP_FILE")).".<br>";
+
+			@fclose($fp1);
+		}
+
+		if ($strError_tmp == '')
+		{
+			$temporary_updates_dir = "";
+			if (!CUpdateSystem::UnGzipArchive($temporary_updates_dir, $strError_tmp, "Y"))
+				$strError_tmp .= "[UUU04] ".GetMessage("SUPP_UU_BREAK").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$temporary_updates_dir;
+			if (!file_exists($updates_dir_full."/update_info.xml") || !is_file($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[UUU05] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_ER_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[URV06] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_READ_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$content = file_get_contents($updates_dir_full."/update_info.xml");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				for ($i = 0, $n = count($arRes["DATA"]["#"]["ERROR"]); $i < $n; $i++)
+				{
+					if ($arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"] <> '')
+						$strError_tmp .= "[".$arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"]."] ";
+
+					$strError_tmp .= $arRes["DATA"]["#"]["ERROR"][$i]["#"].".<br>";
+				}
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$aFiles = array(
+				//"UUU071"=>"update_update.php",
+				"UUU072"=>"update_class.php",
+				"UUU073"=>"update_list.php",
+				//"UUU074"=>"update_update5.php",
+				"UUU075"=>"update_log.php",
+			);
+			foreach($aFiles as $err=>$file)
+				if(!file_exists($updates_dir_full."/main/classes/general/".$file) || !is_file($updates_dir_full."/main/classes/general/".$file))
+					$strError_tmp .= "[".$err."] ".str_replace("#FILE#", $file, GetMessage("SUPP_UU_NO_UFILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!CUpdateSystem::CheckUpdatability($temporary_updates_dir, $strError_tmp))
+			{
+				$strError_tmp .= "[UUU08] ".GetMessage("SUPP_UU_LOAD_BREAK").".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$new_updatesys_version = "";
+			if (isset($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& isset($arRes["DATA"]["#"]["UPDATE_SYSTEM"][0]["@"]["VERSION"]))
+			{
+				$new_updatesys_version = trim($arRes["DATA"]["#"]["UPDATE_SYSTEM"][0]["@"]["VERSION"]);
+			}
+
+			if ($new_updatesys_version == '')
+				$strError_tmp .= "[UUU080] ".GetMessage("SUPP_UU_NO_NEW_VER").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			CUpdateSystem::CopyDirFiles($updates_dir_full."/main", $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main", $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			CUpdateSystem::AddMessage2Log("Update updated successfully!", "CUUU");
+			CUpdateSystem::DeleteDirFilesEx($updates_dir_full);
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUUU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+	// Р—Р°РєР°С‡РёРІР°РµС‚ РёСЃС…РѕРґРЅРёРєРё РїСЂРѕРґСѓРєС‚Р°, РµСЃР»Рё РјРѕР¶РЅРѕ
+	public static function LoadSources(&$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::LoadSources");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		$arClientModules = CUpdateSystem::GetModules($strError_tmp);
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("S").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&COUNT_ONLY=".urlencode("F").
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientModules, "bitm_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$fcontent = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME LoadSources.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+			if ($fcontent == '')
+				$strError_tmp .= "[ULS01] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!($fp1 = fopen($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", "wb")))
+				$strError_tmp .= "[ULS02] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates", GetMessage("SUPP_RV_ER_TEMP_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!fwrite($fp1, $fcontent))
+				$strError_tmp .= "[ULS03] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", GetMessage("SUPP_RV_WRT_TEMP_FILE")).".<br>";
+
+			@fclose($fp1);
+		}
+
+		if ($strError_tmp == '')
+		{
+			$temporary_updates_dir = "";
+			if (!CUpdateSystem::UnGzipArchive($temporary_updates_dir, $strError_tmp, "Y"))
+				$strError_tmp .= "[ULS04] ".GetMessage("SUPP_LS_LOAD_BREAK").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$temporary_updates_dir;
+			if (!file_exists($updates_dir_full."/update_info.xml") || !is_file($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[ULS05] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_ER_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[ULS06] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_READ_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$content = file_get_contents($updates_dir_full."/update_info.xml");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				for ($i = 0, $n = count($arRes["DATA"]["#"]["ERROR"]); $i < $n; $i++)
+				{
+					if ($arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"] <> '')
+						$strError_tmp .= "[".$arRes["DATA"]["#"]["ERROR"][$i]["@"]["TYPE"]."] ";
+
+					$strError_tmp .= $arRes["DATA"]["#"]["ERROR"][$i]["#"].".<br>";
+				}
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!CUpdateSystem::CheckUpdatability($temporary_updates_dir, $strError_tmp))
+				$strError_tmp .= "[ULS07] ".GetMessage("SUPP_LS_LOAD_BREAK").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			foreach ($arClientModules as $module_id => $version)
+			{
+				$strError_tmp1 = "";
+
+				$from_dir = $updates_dir_full."/".$module_id;
+				$to_dir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$module_id;
+
+				if (!file_exists($to_dir) || !is_dir($to_dir))
+				{
+					$strError_tmp1 .= "[ULS08] ".str_replace("#MODULE#", $module_id, GetMessage("SUPP_LS_NO_MOD_CAT")).".<br>";
+				}
+				elseif (!is_writable($to_dir))
+				{
+					$strError_tmp1 .= "[ULS09] ".str_replace("#MODULE#", $module_id, GetMessage("SUPP_LS_WR_MOD_CAT")).".<br>";
+				}
+
+				if (!file_exists($from_dir) || !is_dir($from_dir))
+				{
+					$strError_tmp1 .= "[ULS10] ".str_replace("#MODULE#", $module_id, GetMessage("SUPP_LS_NO_SRC_MOD")).".<br>";
+				}
+				elseif (!is_readable($from_dir))
+				{
+					$strError_tmp1 .= "[ULS11] ".str_replace("#MODULE#", $module_id, GetMessage("SUPP_LS_RD_SRC_MOD")).".<br>";
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					CUpdateSystem::CopyDirFiles($from_dir, $to_dir, $strError_tmp1);
+				}
+
+				if ($strError_tmp1 <> '')
+				{
+					CUpdateSystem::AddMessage2Log("Error loading sources for ".$module_id."!", "CULS");
+					$strError_tmp .= $strError_tmp1;
+				}
+				else
+				{
+					CUpdateSystem::AddMessage2Log("Sources loaded for ".$module_id."!", "CULS");
+				}
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			CUpdateSystem::DeleteDirFilesEx($updates_dir_full);
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CULS");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚, С‡С‚Рѕ РѕР±РЅРѕРІРёР»РѕСЃСЊ
+	public static function GetAvailableUpdateTypes(&$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$arResult = array();
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::GetAvailableUpdateTypes");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		CUpdateSystem::CheckDirPath($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/", true);
+
+		$arClientModules = CUpdateSystem::GetModules($strError_tmp);
+		$arClientLanguages = CUpdateSystem::GetLanguages($strError_tmp);
+		$arClientHelps = CUpdateSystem::GetHelps($strError_tmp);
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("MLH").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&ALL_MODULES=".urlencode("Y").
+				"&TYPENC=".((defined("DEMO") && DEMO=="Y") ? "D" : ((defined("ENCODE") && ENCODE=="Y") ? "E" : "F" )).
+				"&COUNT_ONLY=".urlencode("Y").
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientModules, "bitm_").
+				"&".CUpdateSystem::ModulesArray2Query($arClientLanguages, "bitl_").
+				"&".CUpdateSystem::ModulesArray2Query($arClientHelps, "bith_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME GetAvailableUpdateTypes.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["UPDATE_SYSTEM"]))
+			{
+				$arResult["UPDATE_SYSTEM"] = $arRes["DATA"]["#"]["UPDATE_SYSTEM"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["MODULES"])
+				&& is_array($arRes["DATA"]["#"]["MODULES"])
+				&& !empty($arRes["DATA"]["#"]["MODULES"]))
+			{
+				$arResult["MODULES"] = $arRes["DATA"]["#"]["MODULES"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["LANGS"])
+				&& is_array($arRes["DATA"]["#"]["LANGS"])
+				&& !empty($arRes["DATA"]["#"]["LANGS"]))
+			{
+				$arResult["LANGS"] = $arRes["DATA"]["#"]["LANGS"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["HELPS"])
+				&& is_array($arRes["DATA"]["#"]["HELPS"])
+				&& !empty($arRes["DATA"]["#"]["HELPS"]))
+			{
+				$arResult["HELPS"] = $arRes["DATA"]["#"]["HELPS"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				$arResult["ERROR"] = $arRes["DATA"]["#"]["ERROR"];
+			}
+
+			if (isset($arRes["DATA"]["#"]["CLIENT"])
+				&& is_array($arRes["DATA"]["#"]["CLIENT"])
+				&& !empty($arRes["DATA"]["#"]["CLIENT"]))
+			{
+				$arResult["CLIENT"] = $arRes["DATA"]["#"]["CLIENT"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["SYSTEM"]))
+			{
+				$arResult["SYSTEM"] = $arRes["DATA"]["#"]["SYSTEM"][0];
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ((!isset($arResult["CLIENT"]) || !is_array($arResult["CLIENT"]))
+				&& (!isset($arResult["ERROR"]) || !is_array($arResult["ERROR"])))
+			{
+				$strError_tmp .= "[UGAUT01] ".GetMessage("SUPP_GAUT_SYSERR").".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUGAUT");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return $arResult;
+	}
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ РґРѕСЃС‚СѓРїРЅС‹Рј РѕР±РЅРѕРІР»РµРЅРёСЏРј РјРѕРґСѓР»РµР№ РЅР° СЃРµСЂРІРµСЂРµ
+	public static function GetServerModuleUpdates(&$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$arResult = array();
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::GetServerModuleUpdates");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		$arClientModules = CUpdateSystem::GetModules($strError_tmp);
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("M").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&ALL_MODULES=".urlencode("Y").
+				"&TYPENC=".((defined("DEMO") && DEMO=="Y") ? "D" : ((defined("ENCODE") && ENCODE=="Y") ? "E" : "F" )).
+				"&COUNT_ONLY=".urlencode("N").
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientModules, "bitm_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME GetServerModuleUpdates.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["UPDATE_SYSTEM"]))
+			{
+				$arResult["UPDATE_SYSTEM"] = $arRes["DATA"]["#"]["UPDATE_SYSTEM"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["MODULES"])
+				&& is_array($arRes["DATA"]["#"]["MODULES"])
+				&& !empty($arRes["DATA"]["#"]["MODULES"]))
+			{
+				$arResult["MODULES"] = $arRes["DATA"]["#"]["MODULES"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				$arResult["ERROR"] = $arRes["DATA"]["#"]["ERROR"];
+			}
+
+			if (isset($arRes["DATA"]["#"]["CLIENT"])
+				&& is_array($arRes["DATA"]["#"]["CLIENT"])
+				&& !empty($arRes["DATA"]["#"]["CLIENT"]))
+			{
+				$arResult["CLIENT"] = $arRes["DATA"]["#"]["CLIENT"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["SYSTEM"]))
+			{
+				$arResult["SYSTEM"] = $arRes["DATA"]["#"]["SYSTEM"][0];
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ((!isset($arResult["CLIENT"]) || !is_array($arResult["CLIENT"]))
+				&& (!isset($arResult["ERROR"]) || !is_array($arResult["ERROR"])))
+			{
+				$strError_tmp .= "[UGSMU01] ".GetMessage("SUPP_GAUT_SYSERR").".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUGSMU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return $arResult;
+	}
+
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ РґРѕСЃС‚СѓРїРЅС‹Рј СЏР·С‹РєР°Рј РЅР° СЃРµСЂРІРµСЂРµ
+	public static function GetServerLangsUpdates(&$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$arResult = array();
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::GetServerLangsUpdates");
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$arClientLanguages = CUpdateSystem::GetLanguages($strError_tmp);
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("L").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&ALL_MODULES=".urlencode("Y").
+				"&COUNT_ONLY=".urlencode("N").
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientLanguages, "bitl_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME GetServerLangsUpdates.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["UPDATE_SYSTEM"]))
+			{
+				$arResult["UPDATE_SYSTEM"] = $arRes["DATA"]["#"]["UPDATE_SYSTEM"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["LANGS"])
+				&& is_array($arRes["DATA"]["#"]["LANGS"])
+				&& !empty($arRes["DATA"]["#"]["LANGS"]))
+			{
+				$arResult["LANGS"] = $arRes["DATA"]["#"]["LANGS"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				$arResult["ERROR"] = $arRes["DATA"]["#"]["ERROR"];
+			}
+
+			if (isset($arRes["DATA"]["#"]["CLIENT"])
+				&& is_array($arRes["DATA"]["#"]["CLIENT"])
+				&& !empty($arRes["DATA"]["#"]["CLIENT"]))
+			{
+				$arResult["CLIENT"] = $arRes["DATA"]["#"]["CLIENT"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["SYSTEM"]))
+			{
+				$arResult["SYSTEM"] = $arRes["DATA"]["#"]["SYSTEM"][0];
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ((!isset($arResult["CLIENT"]) || !is_array($arResult["CLIENT"]))
+				&& (!isset($arResult["ERROR"]) || !is_array($arResult["ERROR"])))
+			{
+				$strError_tmp .= "[UGSLU01] ".GetMessage("SUPP_GAUT_SYSERR").".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUGSLU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return $arResult;
+	}
+
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ РґРѕСЃС‚СѓРїРЅС‹Рј СЏР·С‹РєР°Рј РЅР° СЃРµСЂРІРµСЂРµ
+	public static function GetServerHelpUpdates(&$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$arResult = array();
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::GetServerHelpUpdates");
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$arClientHelps = CUpdateSystem::GetHelps($strError_tmp);
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("H").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&ALL_MODULES=".urlencode("Y").
+				"&COUNT_ONLY=".urlencode("N").
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientHelps, "bith_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME GetServerHelpUpdates.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["UPDATE_SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["UPDATE_SYSTEM"]))
+			{
+				$arResult["UPDATE_SYSTEM"] = $arRes["DATA"]["#"]["UPDATE_SYSTEM"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["HELPS"])
+				&& is_array($arRes["DATA"]["#"]["HELPS"])
+				&& !empty($arRes["DATA"]["#"]["HELPS"]))
+			{
+				$arResult["HELPS"] = $arRes["DATA"]["#"]["HELPS"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				$arResult["ERROR"] = $arRes["DATA"]["#"]["ERROR"];
+			}
+
+			if (isset($arRes["DATA"]["#"]["CLIENT"])
+				&& is_array($arRes["DATA"]["#"]["CLIENT"])
+				&& !empty($arRes["DATA"]["#"]["CLIENT"]))
+			{
+				$arResult["CLIENT"] = $arRes["DATA"]["#"]["CLIENT"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["SYSTEM"]))
+			{
+				$arResult["SYSTEM"] = $arRes["DATA"]["#"]["SYSTEM"][0];
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ((!isset($arResult["CLIENT"]) || !is_array($arResult["CLIENT"]))
+				&& (!isset($arResult["ERROR"]) || !is_array($arResult["ERROR"])))
+			{
+				$strError_tmp .= "[UGSHU01] ".GetMessage("SUPP_GAUT_SYSERR").".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUGSHU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return $arResult;
+	}
+
+
+	// Р—Р°РіСЂСѓР¶Р°РµС‚ РѕР±РЅРѕРІР»РµРЅРёРµ РјРѕРґСѓР»РµР№ $arModules РІ С„Р°Р№Р» update_archive.gz
+	public static function LoadModuleUpdates($arModules, &$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::LoadModuleUpdates");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if (!is_array($arModules))
+		{
+			$strError_tmp .= "[ULMU01] ".GetMessage("SUPP_LMU_NO_MODS").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arClientModules = CUpdateSystem::GetModules($strError_tmp, $arModules);
+			for ($i = 0, $n = count($arModules); $i < $n; $i++)
+			{
+				if (!array_key_exists($arModules[$i], $arClientModules))
+					$arClientModules[$arModules[$i]] = "";
+			}
+			if (!is_array($arClientModules) || empty($arClientModules))
+			{
+				$strError_tmp .= "[ULMU02] ".GetMessage("SUPP_LMU_NO_MODS").".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("M").
+				"&ALL_MODULES=".urlencode("N").
+				"&TYPENC=".((defined("DEMO") && DEMO=="Y") ? "D" : ((defined("ENCODE") && ENCODE=="Y") ? "E" : "F" )).
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&COUNT_ONLY=".urlencode("F").
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientModules, "bitm_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME LoadModuleUpdates.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+			if ($content == '')
+				$strError_tmp .= "[ULMU03] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!($fp1 = fopen($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", "wb")))
+			{
+				$strError_tmp .= "[ULMU04] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates", GetMessage("SUPP_RV_ER_TEMP_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			fwrite($fp1, $content);
+			fclose($fp1);
+
+			if (!file_exists($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz")
+				|| !is_file($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz"))
+			{
+				$strError_tmp .= "[ULMU05] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", GetMessage("SUPP_LMU_NO_TMP_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CULMU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// Р—Р°РіСЂСѓР¶Р°РµС‚ РѕР±РЅРѕРІР»РµРЅРёСЏ СЏР·С‹РєРѕРІ $arLangs РІ С„Р°Р№Р» update_archive.gz
+	public static function LoadLangsUpdates($arLangs, &$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::LoadLangsUpdates");
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		if (!is_array($arLangs) || empty($arLangs))
+		{
+			$strError_tmp .= "[ULLU01] ".GetMessage("SUPP_LLU_NO_LANGS").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arClientLangs = CUpdateSystem::GetLanguages($strError_tmp, $arLangs);
+			for ($i = 0, $n = count($arLangs); $i < $n; $i++)
+			{
+				if (!array_key_exists($arLangs[$i], $arClientLangs))
+					$arClientLangs[$arLangs[$i]] = "";
+			}
+			if (!is_array($arClientLangs) || empty($arClientLangs))
+			{
+				$strError_tmp .= "[ULLU02] ".GetMessage("SUPP_LLU_NO_LANGS").".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("L").
+				"&ALL_MODULES=".urlencode("N").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&COUNT_ONLY=".urlencode("F").
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientLangs, "bitl_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME LoadLangsUpdates.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+			if ($content == '')
+				$strError_tmp .= "[ULLU03] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!($fp1 = fopen($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", "wb")))
+			{
+				$strError_tmp .= "[ULLU04] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates", GetMessage("SUPP_RV_ER_TEMP_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			fwrite($fp1, $content);
+			fclose($fp1);
+
+			if (!file_exists($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz")
+				|| !is_file($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz"))
+			{
+				$strError_tmp .= "[ULLU05] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", GetMessage("SUPP_LMU_NO_TMP_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CULLU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// Р—Р°РіСЂСѓР¶Р°РµС‚ РѕР±РЅРѕРІР»РµРЅРёРµ РїРѕРјРѕС‰Рё $load_help РІ С„Р°Р№Р» update_archive.gz
+	public static function LoadHelpUpdates($arHelp, &$strError, $lang = false, $stableVersionsOnly = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::LoadHelpUpdates");
+
+		if ($lang===false)
+			$lang = LANGUAGE_ID;
+
+		$stableVersionsOnly = (($stableVersionsOnly == "N") ? "N" : "Y");
+
+		if (!is_array($arHelp) || empty($arHelp))
+		{
+			$strError_tmp .= "[ULHU01] ".GetMessage("SUPP_LHU_NO_HELP").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arClientHelps = CUpdateSystem::GetHelps($strError_tmp, $arHelp);
+			for ($i = 0, $n = count($arHelp); $i < $n; $i++)
+			{
+				if (!array_key_exists($arHelp[$i], $arClientHelps))
+					$arClientHelps[$arHelp[$i]] = "";
+			}
+
+			if (!is_array($arClientHelps) || empty($arClientHelps))
+			{
+				$strError_tmp .= "[ULHU02] ".GetMessage("SUPP_LHU_NO_HELP").".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&lang=".urlencode($lang).
+				"&UTYPES=".urlencode("H").
+				"&ALL_MODULES=".urlencode("N").
+				"&SUPD_VER=".urlencode(UPDATE_SYSTEM_VERSION).
+				"&SUPD_STS=".urlencode(CUpdateSystem::GetFooPath("GetList")).
+				"&COUNT_ONLY=".urlencode("F").
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N").
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&stable=".urlencode($stableVersionsOnly).
+				"&".CUpdateSystem::ModulesArray2Query($arClientHelps, "bith_");
+
+			CUpdateSystem::AddMessage2Log(preg_replace("/LICENSE_KEY=[^&]*/i", "LICENSE_KEY=X", $strVars));
+
+			$stime = CUpdateSystem::getmicrotime();
+			$content = CUpdateSystem::getHTTPPage("bit_sysserver.php", $strVars, $strError_tmp);
+			CUpdateSystem::AddMessage2Log("TIME LoadHelpUpdates.getHTTPPage ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+			if ($content == '')
+				$strError_tmp .= "[ULHU03] ".GetMessage("SUPP_AS_EMPTY_RESP").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!($fp1 = fopen($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", "wb")))
+				$strError_tmp .= "[ULHU04] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates", GetMessage("SUPP_RV_ER_TEMP_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			fwrite($fp1, $content);
+			fclose($fp1);
+
+			if (!file_exists($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz")
+				|| !is_file($_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz"))
+			{
+				$strError_tmp .= "[ULHU05] ".str_replace("#FILE#", $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz", GetMessage("SUPP_LMU_NO_TMP_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CULHU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+	// Р Р°СЃРїР°РєРѕРІС‹РІР°РµС‚ Р°СЂС…РёРІ С„Р°Р№Р»РѕРІ update_archive.gz РІ РїР°РїРєy $updates_dir
+	public static function UnGzipArchive(&$updates_dir, &$strError, $DelArch = "Y")
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::UnGzipArchive");
+		$stime = CUpdateSystem::getmicrotime();
+
+		if ($DelArch!="Y")
+			$DelArch = "N";
+
+		$archiveFileName = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/update_archive.gz";
+
+		if (!file_exists($archiveFileName) || !is_file($archiveFileName))
+		{
+			$strError_tmp .= "[UUGZA01] ".str_replace("#FILE#", $archiveFileName, GetMessage("SUPP_UGA_NO_TMP_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($archiveFileName))
+				$strError_tmp .= "[UUGZA02] ".str_replace("#FILE#", $archiveFileName, GetMessage("SUPP_UGA_NO_READ_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$updates_dir = "update_m".time();
+			$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+			CUpdateSystem::CheckDirPath($updates_dir_full."/", true);
+
+			if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+			{
+				$strError_tmp .= "[UUGZA03] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_UGA_NO_TMP_CAT")).".<br>";
+			}
+			elseif (!is_writable($updates_dir_full))
+			{
+				$strError_tmp .= "[UUGZA04] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_UGA_WRT_TMP_CAT")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$bCompressionUsed = true;
+
+			$fd = fopen($archiveFileName, "rb");
+			$flabel = fread($fd, strlen("BITRIX"));
+			fclose($fd);
+
+			if ($flabel=="BITRIX")
+				$bCompressionUsed = false;
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ($bCompressionUsed)
+				$zp = gzopen($archiveFileName, "rb9f");
+			else
+				$zp = fopen($archiveFileName, "rb");
+
+			if (!$zp)
+			{
+				$strError_tmp .= "[UUGZA05] ".str_replace("#FILE#", $archiveFileName, GetMessage("SUPP_UGA_CANT_OPEN")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ($bCompressionUsed)
+				$flabel = gzread($zp, strlen("BITRIX"));
+			else
+				$flabel = fread($zp, strlen("BITRIX"));
+
+			if ($flabel!="BITRIX")
+			{
+				$strError_tmp .= "[UUGZA06] ".str_replace("#FILE#", $archiveFileName, GetMessage("SUPP_UGA_BAD_FORMAT")).".<br>";
+
+				if ($bCompressionUsed)
+					gzclose($zp);
+				else
+					fclose($zp);
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$strongUpdateCheck = COption::GetOptionString("main", "strong_update_check", "Y");
+
+			while (true)
+			{
+				if ($bCompressionUsed)
+					$add_info_size = gzread($zp, 5);
+				else
+					$add_info_size = fread($zp, 5);
+
+				$add_info_size = trim($add_info_size);
+				if (intval($add_info_size)>0
+					&& intval($add_info_size)."!"==$add_info_size."!")
+				{
+					$add_info_size = intval($add_info_size);
+				}
+				else
+				{
+					if ($add_info_size!="RTIBE")
+						$strError_tmp .= "[UUGZA071] ".str_replace("#FILE#", $archiveFileName, GetMessage("SUPP_UGA_BAD_FORMAT")).".<br>";
+
+					break;
+				}
+
+				if ($bCompressionUsed)
+					$add_info = gzread($zp, $add_info_size);
+				else
+					$add_info = fread($zp, $add_info_size);
+
+				$add_info_arr = explode("|", $add_info);
+				if (count($add_info_arr) != 3)
+				{
+					$strError_tmp .= "[UUGZA072] ".str_replace("#FILE#", $archiveFileName, GetMessage("SUPP_UGA_BAD_FORMAT")).".<br>";
+					break;
+				}
+
+				$size = $add_info_arr[0];
+				$curpath = $add_info_arr[1];
+				$crc32 = $add_info_arr[2];
+
+				$contents = "";
+				if (intval($size) > 0)
+				{
+					if ($bCompressionUsed)
+						$contents = gzread($zp, $size);
+					else
+						$contents = fread($zp, $size);
+				}
+
+				$crc32_new = dechex(crc32($contents));
+
+				if ($crc32_new !== $crc32)
+				{
+					$strError_tmp .= "[UUGZA073] ".str_replace("#FILE#", $curpath, GetMessage("SUPP_UGA_FILE_CRUSH")).".<br>";
+					break;
+				}
+				else
+				{
+					CUpdateSystem::CheckDirPath($updates_dir_full.$curpath, true);
+
+					if (!($fp1 = fopen($updates_dir_full.$curpath, "wb")))
+					{
+						$strError_tmp .= "[UUGZA074] ".str_replace("#FILE#", $updates_dir_full.$curpath, GetMessage("SUPP_UGA_CANT_OPEN_WR")).".<br>";
+						break;
+					}
+
+					if ($contents <> '' && !fwrite($fp1, $contents))
+					{
+						$strError_tmp .= "[UUGZA075] ".str_replace("#FILE#", $updates_dir_full.$curpath, GetMessage("SUPP_UGA_CANT_WRITE_F")).".<br>";
+						@fclose($fp1);
+						break;
+					}
+					fclose($fp1);
+
+					if ($strongUpdateCheck == "Y")
+					{
+						$crc32_new = dechex(crc32(file_get_contents($updates_dir_full.$curpath)));
+						if ($crc32_new !== $crc32)
+						{
+							$strError_tmp .= "[UUGZA0761] ".str_replace("#FILE#", $curpath, GetMessage("SUPP_UGA_FILE_CRUSH")).".<br>";
+							break;
+						}
+					}
+				}
+			}
+
+			if ($bCompressionUsed)
+				gzclose($zp);
+			else
+				fclose($zp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ($DelArch=="Y")
+				@unlink($archiveFileName);
+		}
+
+		CUpdateSystem::AddMessage2Log("TIME UnGzipArchive ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUUGZA");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// РџСЂРѕРІРµСЂСЏРµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РѕР±РЅРѕРІР»РµРЅРёСЏ РјРѕРґСѓР»РµР№ $arModules
+	// РЅР° РѕСЃРЅРѕРІР°РЅРёРё РєРѕРЅС‚СЂРѕР»СЏ РІРµСЂСЃРёР№ VERSION_CONTROL
+	public static function CheckVersions(&$arRes, &$strError, $arSelectedModules = false)
+	{
+		$strError_tmp = "";
+
+		$stime = CUpdateSystem::getmicrotime();
+
+		if (!is_array($arRes)
+			|| !isset($arRes["MODULES"])
+			|| !is_array($arRes["MODULES"])
+			)
+		{
+			$strError_tmp .= "[UCV01] ".GetMessage("SUPP_CV_ERR_ARR").".<br>";
+		}
+
+		if ($arSelectedModules!==false && (!is_array($arSelectedModules) || empty($arSelectedModules)))
+		{
+			$strError_tmp .= "[UCV011] ".GetMessage("SUPP_CV_NO_SELECTED").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arModulesList = $arRes["MODULES"]["#"]["MODULE"];
+
+			if (!is_array($arModulesList) || empty($arModulesList))
+			{
+				$strError_tmp .= "[UCV02] ".GetMessage("SUPP_CV_EMPTY_MODS").".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			for ($i = 0, $ni = count($arModulesList); $i < $ni; $i++)
+			{
+				if ($arSelectedModules===false || in_array($arModulesList[$i]["@"]["ID"], $arSelectedModules))
+				{
+					if (isset($arModulesList[$i]["#"]["VERSION_CONTROL"])
+						&& !empty($arModulesList[$i]["#"]["VERSION_CONTROL"]))
+					{
+						for ($j = 0, $nj = count($arModulesList[$i]["#"]["VERSION_CONTROL"]); $j < $nj; $j++)
+						{
+							$strModule_tmp = $arModulesList[$i]["#"]["VERSION_CONTROL"][$j]["@"]["MODUL"];
+							$bNeedInstall = true;
+
+							for ($k = 0, $nk = count($arModulesList); $k < $nk; $k++)
+							{
+								if ($arModulesList[$k]["@"]["ID"]==$strModule_tmp
+									&& ($arSelectedModules===false
+										|| in_array($arModulesList[$k]["@"]["ID"], $arSelectedModules)))
+								{
+									if (CUpdateSystem::CompareVersions(
+											$arModulesList[$k]["@"]["VERSION"],
+											$arModulesList[$i]["#"]["VERSION_CONTROL"][$j]["@"]["VERSION"]
+										) >= 0)
+									{
+										$bNeedInstall = false;
+										break;
+									}
+								}
+							}
+
+							if ($bNeedInstall)
+							{
+								$strModule_tmp_dir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$strModule_tmp;
+								if (file_exists($strModule_tmp_dir) && is_dir($strModule_tmp_dir))
+								{
+									if ($strModule_tmp!="main")
+									{
+										if (file_exists($strModule_tmp_dir."/install/index.php"))
+										{
+											$arModule_tmp_info = CUpdateSystem::GetModuleInfo($strModule_tmp_dir);
+											if (CUpdateSystem::CompareVersions(
+													$arModule_tmp_info["VERSION"],
+													$arModulesList[$i]["#"]["VERSION_CONTROL"][$j]["@"]["VERSION"]
+												) >= 0)
+											{
+												$bNeedInstall = false;
+											}
+										}
+									}
+									else
+									{
+										if (CUpdateSystem::CompareVersions(
+												SM_VERSION,
+												$arModulesList[$i]["#"]["VERSION_CONTROL"][$j]["@"]["VERSION"]
+											) >= 0)
+										{
+											$bNeedInstall = false;
+										}
+									}
+								}
+								else
+								{
+									$bNeedInstall = false;
+								}
+							}
+
+							if ($bNeedInstall)
+							{
+								$strError_tmp .= "[UCV_MER01] ".str_replace("#VERS#", $arModulesList[$i]["#"]["VERSION_CONTROL"][$j]["@"]["VERSION"], str_replace("#MODULE2#", $strModule_tmp, str_replace("#MODULE1#", $arModulesList[$i]["@"]["ID"], GetMessage("SUPP_CV_RES_ERR")))).".<br>";
+							}
+						}
+					}
+				}
+			}
+		}
+
+		CUpdateSystem::AddMessage2Log("TIME CheckVersions ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUCV");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рј РІ РїР°РїРєСѓ $updates_dir РѕР±РЅРѕРІР»РµРЅРёСЏРј РјРѕРґСѓР»РµР№
+	public static function CheckUpdatability($updates_dir, &$strError)
+	{
+		$strError_tmp = "";
+
+		$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+		if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+		{
+			$strError_tmp .= "[UCU01] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_NO_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full))
+			{
+				$strError_tmp .= "[UCU02] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_RD_TMP_CAT")).".<br>";
+			}
+		}
+
+		if ($handle = @opendir($updates_dir_full))
+		{
+			while (($file = readdir($handle)) !== false)
+			{
+				if ($file == "." || $file == "..") continue;
+
+				if (is_dir($updates_dir_full."/".$file))
+				{
+					CUpdateSystem::CheckUpdatability($updates_dir."/".$file, $strError_tmp);
+				}
+				elseif (is_file($updates_dir_full."/".$file))
+				{
+					$strRealPath = $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".substr($updates_dir."/".$file, strpos($updates_dir."/".$file, "/"));
+					if (file_exists($strRealPath))
+					{
+						if (!is_writeable($strRealPath))
+						{
+							$strError_tmp .= "[UCU03] ".str_replace("#FILE#", $strRealPath, GetMessage("SUPP_CU_MAIN_ERR_FILE")).".<br>";
+						}
+					}
+					else
+					{
+						$p = CUpdateSystem::bxstrrpos($strRealPath, "/");
+						$strRealPath = substr($strRealPath, 0, $p);
+
+						if (strlen($strRealPath)>1)
+							$strRealPath = rtrim($strRealPath, "/");
+
+						$p = CUpdateSystem::bxstrrpos($strRealPath, "/");
+						while ($p > 0)
+						{
+							if (file_exists($strRealPath) && is_dir($strRealPath))
+							{
+								if (!is_writable($strRealPath))
+									$strError_tmp .= "[UCU04] ".str_replace("#FILE#", $strRealPath, GetMessage("SUPP_CU_MAIN_ERR_CAT")).".<br>";
+
+								break;
+							}
+							$strRealPath = substr($strRealPath, 0, $p);
+							$p = CUpdateSystem::bxstrrpos($strRealPath, "/");
+						}
+					}
+				}
+			}
+			@closedir($handle);
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUCU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+	public static function CheckFolderUpdatability($destFolder, $srcFolder, &$strError)
+	{
+		$strError_tmp = "";
+
+		$destFolder = str_replace("\\", "/", $destFolder);
+		$destFolder = Trim($destFolder, " \t\n\r\0\x0B/\\");
+		if ($destFolder <> '')
+			$destFolder = "/".$destFolder;
+
+		if ($srcFolder && $srcFolder <> '')
+		{
+			$srcFolder = str_replace("\\", "/", $srcFolder);
+			$srcFolder = Trim($srcFolder, " \t\n\r\0\x0B/\\");
+			if ($srcFolder <> '')
+				$srcFolder = "/".$srcFolder;
+
+			$srcFolderFull = $_SERVER["DOCUMENT_ROOT"].$srcFolder;
+			if (!file_exists($srcFolderFull) || !is_dir($srcFolderFull))
+				$strError_tmp .= "[UCFU01] ".str_replace("#FILE#", $srcFolderFull, GetMessage("SUPN_NO_FOLDER_EX")).".<br>";
+
+			if ($strError_tmp == '')
+			{
+				if (!is_readable($srcFolderFull))
+					$strError_tmp .= "[UCFU02] ".str_replace("#FILE#", $srcFolderFull, GetMessage("SUPN_CU_RD_TMP_CAT")).".<br>";
+			}
+
+			if ($handle = @opendir($srcFolderFull))
+			{
+				while (($file = readdir($handle)) !== false)
+				{
+					if ($file == "." || $file == "..")
+						continue;
+
+					if (is_dir($srcFolderFull."/".$file))
+					{
+						CUpdateSystem::CheckFolderUpdatability($destFolder."/".$file, $srcFolder."/".$file, $strError_tmp);
+					}
+					elseif (is_file($srcFolderFull."/".$file))
+					{
+						$destFileFull = $_SERVER["DOCUMENT_ROOT"].$destFolder."/".$file;
+						if (file_exists($destFileFull))
+						{
+							if (!is_writeable($destFileFull))
+								$strError_tmp .= "[UCFU03] ".str_replace("#FILE#", $destFileFull, GetMessage("SUPP_CU_MAIN_ERR_FILE")).".<br>";
+						}
+						else
+						{
+							$p = CUpdateSystem::bxstrrpos($destFileFull, "/");
+							$destFileFull = substr($destFileFull, 0, $p);
+
+							while (strlen($destFileFull) > 1 && substr($destFileFull, strlen($destFileFull) - 1, 1) == "/")
+								$destFileFull = substr($destFileFull, 0, strlen($destFileFull) - 1);
+
+							$p = CUpdateSystem::bxstrrpos($destFileFull, "/");
+							while ($p > 0)
+							{
+								if (file_exists($destFileFull) && is_dir($destFileFull))
+								{
+									if (!is_writable($destFileFull))
+										$strError_tmp .= "[UCFU04] ".str_replace("#FILE#", $destFileFull, GetMessage("SUPP_CU_MAIN_ERR_CAT")).".<br>";
+
+									break;
+								}
+								$destFileFull = substr($destFileFull, 0, $p);
+								$p = CUpdateSystem::bxstrrpos($destFileFull, "/");
+							}
+						}
+					}
+				}
+				@closedir($handle);
+			}
+		}
+		else
+		{
+			$destFolderFull = $_SERVER["DOCUMENT_ROOT"].$destFolder;
+			if (!file_exists($destFolderFull) || !is_dir($destFolderFull))
+				$strError_tmp .= "[UCFU05] ".str_replace("#FILE#", $destFolderFull, GetMessage("SUPN_NO_FOLDER_EX")).".<br>";
+
+			if ($strError_tmp == '')
+			{
+				if (!is_writeable($destFolderFull))
+					$strError_tmp .= "[UCFU06] ".str_replace("#FILE#", $destFolderFull, GetMessage("SUPP_CU_MAIN_ERR_CAT")).".<br>";
+			}
+
+			if ($handle = @opendir($destFolderFull))
+			{
+				while (($file = readdir($handle)) !== false)
+				{
+					if ($file == "." || $file == "..")
+						continue;
+
+					if (is_dir($destFolderFull."/".$file))
+					{
+						CUpdateSystem::CheckFolderUpdatability($destFolder."/".$file, "", $strError_tmp);
+					}
+					elseif (is_file($destFolderFull."/".$file))
+					{
+						if (!is_writeable($destFolderFull."/".$file))
+							$strError_tmp .= "[UCFU07] ".str_replace("#FILE#", $destFolderFull."/".$file, GetMessage("SUPP_CU_MAIN_ERR_FILE")).".<br>";
+					}
+				}
+				@closedir($handle);
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUCFU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рј РІ РїР°РїРєСѓ $updates_dir РѕР±РЅРѕРІР»РµРЅРёСЏРј РјРѕРґСѓР»РµР№
+	public static function GetLoadedModuleUpdates($updates_dir, &$strError)
+	{
+		$arResult = array();
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::GetLoadedModuleUpdates");
+
+		$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+		if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+		{
+			$strError_tmp .= "[UGLMU01] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_NO_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full))
+				$strError_tmp .= "[UGLMU02] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_RD_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!file_exists($updates_dir_full."/update_info.xml") || !is_file($updates_dir_full."/update_info.xml"))
+			{
+				$strError_tmp .= "[UGLMU03] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_ER_DESCR_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[UGLMU04] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_READ_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$content = file_get_contents($updates_dir_full."/update_info.xml");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["MODULES"])
+				&& is_array($arRes["DATA"]["#"]["MODULES"])
+				&& !empty($arRes["DATA"]["#"]["MODULES"]))
+			{
+				$arResult["MODULES"] = $arRes["DATA"]["#"]["MODULES"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				$arResult["ERROR"] = $arRes["DATA"]["#"]["ERROR"];
+			}
+
+			if (isset($arRes["DATA"]["#"]["CLIENT"])
+				&& is_array($arRes["DATA"]["#"]["CLIENT"])
+				&& !empty($arRes["DATA"]["#"]["CLIENT"]))
+			{
+				$arResult["CLIENT"] = $arRes["DATA"]["#"]["CLIENT"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["SYSTEM"]))
+			{
+				$arResult["SYSTEM"] = $arRes["DATA"]["#"]["SYSTEM"][0];
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ((!isset($arResult["CLIENT"]) || !is_array($arResult["CLIENT"]))
+				&& (!isset($arResult["ERROR"]) || !is_array($arResult["ERROR"])))
+			{
+				$strError_tmp .= "[UGSMU01] ".GetMessage("SUPP_GAUT_SYSERR").".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUGLMU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return $arResult;
+	}
+
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рј РІ РїР°РїРєСѓ $updates_dir РѕР±РЅРѕРІР»РµРЅРёСЏРј СЏР·С‹РєРѕРІ
+	public static function GetLoadedLangsUpdates($updates_dir, &$strError)
+	{
+		$arResult = array();
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::GetLoadedLangsUpdates");
+
+		$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+		if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+		{
+			$strError_tmp .= "[UGLLU01] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_NO_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full))
+				$strError_tmp .= "[UGLLU02] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_RD_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!file_exists($updates_dir_full."/update_info.xml") || !is_file($updates_dir_full."/update_info.xml"))
+			{
+				$strError_tmp .= "[UGLLU03] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_ER_DESCR_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[UGLLU04] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_READ_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$content = file_get_contents($updates_dir_full."/update_info.xml");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["LANGS"])
+				&& is_array($arRes["DATA"]["#"]["LANGS"])
+				&& !empty($arRes["DATA"]["#"]["LANGS"]))
+			{
+				$arResult["LANGS"] = $arRes["DATA"]["#"]["LANGS"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				$arResult["ERROR"] = $arRes["DATA"]["#"]["ERROR"];
+			}
+
+			if (isset($arRes["DATA"]["#"]["CLIENT"])
+				&& is_array($arRes["DATA"]["#"]["CLIENT"])
+				&& !empty($arRes["DATA"]["#"]["CLIENT"]))
+			{
+				$arResult["CLIENT"] = $arRes["DATA"]["#"]["CLIENT"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["SYSTEM"]))
+			{
+				$arResult["SYSTEM"] = $arRes["DATA"]["#"]["SYSTEM"][0];
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ((!isset($arResult["CLIENT"]) || !is_array($arResult["CLIENT"]))
+				&& (!isset($arResult["ERROR"]) || !is_array($arResult["ERROR"])))
+			{
+				$strError_tmp .= "[UGSLU01] ".GetMessage("SUPP_GAUT_SYSERR").".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUGLLU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return $arResult;
+	}
+
+	// Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РїРѕ Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рј РІ РїР°РїРєСѓ $updates_dir РѕР±РЅРѕРІР»РµРЅРёСЏРј РїРѕРјРѕС‰Рё
+	public static function GetLoadedHelpUpdates($updates_dir, &$strError)
+	{
+		$arResult = array();
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::GetLoadedHelpUpdates");
+
+		$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+		if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+		{
+			$strError_tmp .= "[UGLHU01] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_NO_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full))
+				$strError_tmp .= "[UGLHU02] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_RD_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!file_exists($updates_dir_full."/update_info.xml") || !is_file($updates_dir_full."/update_info.xml"))
+			{
+				$strError_tmp .= "[UGLHU03] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_ER_DESCR_FILE")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full."/update_info.xml"))
+				$strError_tmp .= "[UGLHU04] ".str_replace("#FILE#", $updates_dir_full."/update_info.xml", GetMessage("SUPP_RV_READ_DESCR_FILE")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$content = file_get_contents($updates_dir_full."/update_info.xml");
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arRes = Array();
+			CUpdateSystem::ParseServerData($content, $arRes, $strError_tmp);
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (isset($arRes["DATA"]["#"]["HELPS"])
+				&& is_array($arRes["DATA"]["#"]["HELPS"])
+				&& !empty($arRes["DATA"]["#"]["HELPS"]))
+			{
+				$arResult["HELPS"] = $arRes["DATA"]["#"]["HELPS"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["ERROR"])
+				&& is_array($arRes["DATA"]["#"]["ERROR"])
+				&& !empty($arRes["DATA"]["#"]["ERROR"]))
+			{
+				$arResult["ERROR"] = $arRes["DATA"]["#"]["ERROR"];
+			}
+
+			if (isset($arRes["DATA"]["#"]["CLIENT"])
+				&& is_array($arRes["DATA"]["#"]["CLIENT"])
+				&& !empty($arRes["DATA"]["#"]["CLIENT"]))
+			{
+				$arResult["CLIENT"] = $arRes["DATA"]["#"]["CLIENT"][0];
+			}
+
+			if (isset($arRes["DATA"]["#"]["SYSTEM"])
+				&& is_array($arRes["DATA"]["#"]["SYSTEM"])
+				&& !empty($arRes["DATA"]["#"]["SYSTEM"]))
+			{
+				$arResult["SYSTEM"] = $arRes["DATA"]["#"]["SYSTEM"][0];
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			if ((!isset($arResult["CLIENT"]) || !is_array($arResult["CLIENT"]))
+				&& (!isset($arResult["ERROR"]) || !is_array($arResult["ERROR"])))
+			{
+				$strError_tmp .= "[UGSHU01] ".GetMessage("SUPP_GAUT_SYSERR").".<br>";
+			}
+		}
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUGLHU");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return $arResult;
+	}
+
+
+	// РћР±РЅРѕРІР»СЏРµС‚ РјРѕРґСѓР»Рё $arModules РїСЂРѕРґСѓРєС‚Р° РёР· РїР°РїРєРё $updates_dir
+	public static function UpdateKernel($updates_dir, $arModules, &$strError, &$arErrorModules, &$arSuccessModules)
+	{
+		global $DB;
+		$strError_tmp = "";
+
+		$stime = CUpdateSystem::getmicrotime();
+
+		$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+
+		if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+		{
+			$strError_tmp .= "[UUK01] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_NO_TMP_CAT")).".<br>";
+		}
+
+		if (!is_array($arModules) || empty($arModules))
+		{
+			$strError_tmp .= "[UUK02] ".GetMessage("SUPP_UK_NO_MODS").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full))
+				$strError_tmp .= "[UUK03] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_RD_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			for ($i = 0, $ni = count($arModules); $i < $ni; $i++)
+			{
+				$strError_tmp1 = "";
+
+				$from_dir = $updates_dir_full."/".$arModules[$i];
+				$to_dir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$arModules[$i];
+
+				CUpdateSystem::CheckDirPath($to_dir."/", true);
+
+				if (!file_exists($to_dir) || !is_dir($to_dir))
+				{
+					$strError_tmp1 .= "[UUK04] ".str_replace("#MODULE_DIR#", $to_dir, GetMessage("SUPP_UK_NO_MODIR")).".<br>";
+					$arErrorModules[$arModules[$i]] = str_replace("#MODULE_DIR#", $to_dir, GetMessage("SUPP_UK_NO_MODIR"))." [UUK04]. ";
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (!is_writable($to_dir))
+					{
+						$strError_tmp1 .= "[UUK05] ".str_replace("#MODULE_DIR#", $to_dir, GetMessage("SUPP_UK_WR_MODIR")).".<br>";
+						$arErrorModules[$arModules[$i]] = str_replace("#MODULE_DIR#", $to_dir, GetMessage("SUPP_UK_WR_MODIR"))." [UUK05]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (!file_exists($from_dir) || !is_dir($from_dir))
+					{
+						$strError_tmp1 .= "[UUK06] ".str_replace("#DIR#", $from_dir, GetMessage("SUPP_UK_NO_FDIR")).".<br>";
+						$arErrorModules[$arModules[$i]] = str_replace("#DIR#", $from_dir, GetMessage("SUPP_UK_NO_FDIR"))." [UUK06]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (!is_readable($from_dir))
+					{
+						$strError_tmp1 .= "[UUK07] ".str_replace("#DIR#", $from_dir, GetMessage("SUPP_UK_READ_FDIR")).".<br>";
+						$arErrorModules[$arModules[$i]] = str_replace("#DIR#", $from_dir, GetMessage("SUPP_UK_READ_FDIR"))." [UUK07]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					$handle = @opendir($from_dir);
+					$arUpdaters = array();
+					if ($handle)
+					{
+						while (false !== ($dir = readdir($handle)))
+						{
+							if (substr($dir, 0, 7)=="updater")
+							{
+								$bPostUpdater = "N";
+								if (is_file($from_dir."/".$dir))
+								{
+									$num = substr($dir, 7, strlen($dir)-11);
+									if (substr($dir, strlen($dir) - 9) == "_post.php")
+									{
+										$bPostUpdater = "Y";
+										$num = substr($dir, 7, strlen($dir)-16);
+									}
+									$arUpdaters[] = array("/".$dir, trim($num), $bPostUpdater);
+								}
+								elseif (file_exists($from_dir."/".$dir."/index.php"))
+								{
+									$num = substr($dir, 7);
+									if (substr($dir, strlen($dir) - 5) == "_post")
+									{
+										$bPostUpdater = "Y";
+										$num = substr($dir, 7, strlen($dir)-12);
+									}
+									$arUpdaters[] = array("/".$dir."/index.php", trim($num), $bPostUpdater);
+								}
+							}
+						}
+						closedir($handle);
+					}
+
+					for ($i1 = 0, $nij = count($arUpdaters); $i1 < $nij-1; $i1++)
+					{
+						for ($j1 = $i1 + 1; $j1 < $nij; $j1++)
+						{
+							if (CUpdateSystem::CompareVersions($arUpdaters[$i1][1], $arUpdaters[$j1][1])>0)
+							{
+								$tmp1 = $arUpdaters[$i1];
+								$arUpdaters[$i1] = $arUpdaters[$j1];
+								$arUpdaters[$j1] = $tmp1;
+							}
+						}
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (strtolower($DB->type)=="mysql" && defined("MYSQL_TABLE_TYPE") && MYSQL_TABLE_TYPE <> '')
+					{
+						$DB->Query("SET storage_engine = '".MYSQL_TABLE_TYPE."'", true);
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					for ($i1 = 0, $ni1 = count($arUpdaters); $i1 < $ni1; $i1++)
+					{
+						if ($arUpdaters[$i1][2]=="N")
+						{
+							$strError_tmp2 = "";
+							CUpdateSystem::RunUpdaterScript($from_dir.$arUpdaters[$i1][0], $strError_tmp2, "/bitrix/updates/".$updates_dir."/".$arModules[$i], $arModules[$i]);
+							if ($strError_tmp2 <> '')
+							{
+								$strError_tmp1 .=
+										str_replace("#MODULE#", $arModules[$i], str_replace("#VER#", $arUpdaters[$i1][1], GetMessage("SUPP_UK_UPDN_ERR"))).": ".
+										$strError_tmp2.".<br>";
+								$arErrorModules[$arModules[$i]] =
+										str_replace("#MODULE#", $arModules[$i], str_replace("#VER#", $arUpdaters[$i1][1], GetMessage("SUPP_UK_UPDN_ERR"))).": ".
+										$strError_tmp2.".<br>";
+								$strError_tmp1 .= str_replace("#MODULE#", $arModules[$i], GetMessage("SUPP_UK_UPDN_ERR_BREAK"))." ";
+								break;
+							}
+						}
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					CUpdateSystem::CopyDirFiles($from_dir, $to_dir, $strError_tmp1);
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					for ($i1 = 0, $ni1 = count($arUpdaters); $i1 < $ni1; $i1++)
+					{
+						if ($arUpdaters[$i1][2]=="Y")
+						{
+							$strError_tmp2 = "";
+							CUpdateSystem::RunUpdaterScript($from_dir.$arUpdaters[$i1][0], $strError_tmp2, "/bitrix/updates/".$updates_dir."/".$arModules[$i], $arModules[$i]);
+							if ($strError_tmp2 <> '')
+							{
+								$strError_tmp1 .=
+										str_replace("#MODULE#", $arModules[$i], str_replace("#VER#", $arUpdaters[$i1][1], GetMessage("SUPP_UK_UPDY_ERR"))).": ".
+										$strError_tmp2.".<br>";
+								$arErrorModules[$arModules[$i]] =
+										str_replace("#MODULE#", $arModules[$i], str_replace("#VER#", $arUpdaters[$i1][1], GetMessage("SUPP_UK_UPDY_ERR"))).": ".
+										$strError_tmp2.".<br>";
+								$strError_tmp1 .= str_replace("#MODULE#", $arModules[$i], GetMessage("SUPP_UK_UPDN_ERR_BREAK"))." ";
+								break;
+							}
+						}
+					}
+				}
+
+				if ($strError_tmp1 <> '')
+				{
+					$strError_tmp .= $strError_tmp1;
+					$arErrorModules[$arModules[$i]] .= str_replace("#MODULE#", $arModules[$i], GetMessage("SUPP_UK_UPDN_ERR_BREAK1"))." ";
+				}
+				else
+				{
+					$arSuccessModules[$arModules[$i]] = "Y";
+				}
+			}
+			CUpdateSystem::DeleteDirFilesEx($updates_dir_full);
+		}
+
+		CUpdateSystem::AddMessage2Log("TIME UpdateKernel ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUUK");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// РћР±РЅРѕРІР»СЏРµС‚ РјРѕРґСѓР»Рё $arLangs РїСЂРѕРґСѓРєС‚Р° РёР· РїР°РїРєРё $updates_dir
+	public static function UpdateLangs($updates_dir, $arLangs, &$strError, &$arErrorLangs, &$arSuccessLangs)
+	{
+		global $DB;
+		$strError_tmp = "";
+
+		$stime = CUpdateSystem::getmicrotime();
+
+		$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+
+		if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+		{
+			$strError_tmp .= "[UUL01] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_NO_TMP_CAT")).".<br>";
+		}
+
+		if (!is_array($arLangs) || empty($arLangs))
+		{
+			$strError_tmp .= "[UUL02] ".GetMessage("SUPP_UL_NO_LANGS").".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full))
+				$strError_tmp .= "[UUL03] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_RD_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$to_dir1 = $_SERVER["DOCUMENT_ROOT"]."/bitrix/components/bitrix";
+
+			CUpdateSystem::CheckDirPath($to_dir1."/", true);
+
+			if (file_exists($to_dir1) && is_dir($to_dir1))
+			{
+				if (!is_writable($to_dir1))
+					$strError_tmp .= "[UUL0511] ".str_replace("#FILE#", $to_dir1, GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$to_dir = $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules";
+
+			CUpdateSystem::CheckDirPath($to_dir."/", true);
+
+			if (!file_exists($to_dir) || !is_dir($to_dir))
+			{
+				$strError_tmp .= "[UUL04] ".str_replace("#FILE#", $to_dir, GetMessage("SUPP_UL_CAT")).".<br>";
+			}
+			elseif (!is_writable($to_dir))
+			{
+				$strError_tmp .= "[UUL05] ".str_replace("#FILE#", $to_dir, GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arLangModules1 = array();
+			$arLangModules2 = array();
+			$handle1 = @opendir($to_dir1);
+			if ($handle1)
+			{
+				while (false !== ($dir1 = readdir($handle1)))
+				{
+					if (is_dir($to_dir1."/".$dir1) && $dir1 != "." && $dir1 != "..")
+					{
+						if (!is_writable($to_dir1."/".$dir1))
+							$strError_tmp .= "[UUL051] ".str_replace("#FILE#", $to_dir1."/".$dir1, GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+
+						if (file_exists($to_dir1."/".$dir1."/lang")
+							&& !is_writable($to_dir1."/".$dir1."/lang"))
+							$strError_tmp .= "[UUL052] ".str_replace("#FILE#", $to_dir1."/".$dir1."/lang", GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+
+						$arLangModules1[] = $dir1;
+
+						$handle2 = @opendir($to_dir1."/".$dir1."/templates");
+						if ($handle2)
+						{
+							while (false !== ($dir2 = readdir($handle2)))
+							{
+								if (is_dir($to_dir1."/".$dir1."/templates/".$dir2) && $dir2 != "." && $dir2 != "..")
+								{
+									if (!is_writable($to_dir1."/".$dir1."/templates/".$dir2))
+										$strError_tmp .= "[UUL05111] ".str_replace("#FILE#", $to_dir1."/".$dir1."/templates/".$dir2, GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+
+									if (file_exists($to_dir1."/".$dir1."/templates/".$dir2."/lang")
+										&& !is_writable($to_dir1."/".$dir1."/templates/".$dir2."/lang"))
+										$strError_tmp .= "[UUL05211] ".str_replace("#FILE#", $to_dir1."/".$dir1."/templates/".$dir2."/lang", GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+
+									$arLangModules2[] = $dir1."@".$dir2;
+								}
+							}
+							closedir($handle2);
+						}
+					}
+				}
+				closedir($handle1);
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$arLangModules = array();
+			$handle = @opendir($to_dir);
+			if ($handle)
+			{
+				while (false !== ($dir = readdir($handle)))
+				{
+					if (is_dir($to_dir."/".$dir) && $dir!="." && $dir!="..")
+					{
+						if (!is_writable($to_dir."/".$dir))
+							$strError_tmp .= "[UUL051] ".str_replace("#FILE#", $to_dir."/".$dir, GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+
+						if (file_exists($to_dir."/".$dir."/lang")
+							&& !is_writable($to_dir."/".$dir."/lang"))
+							$strError_tmp .= "[UUL052] ".str_replace("#FILE#", $to_dir."/".$dir."/lang", GetMessage("SUPP_UL_NO_WRT_CAT")).".<br>";
+
+						$arLangModules[] = $dir;
+					}
+				}
+				closedir($handle);
+			}
+		}
+
+
+		if ($strError_tmp == '')
+		{
+			for ($i = 0, $ni = count($arLangs); $i < $ni; $i++)
+			{
+				$strError_tmp1 = "";
+
+				$from_dir = $updates_dir_full."/".$arLangs[$i];
+
+				if (!file_exists($from_dir) || !is_dir($from_dir))
+				{
+					$strError_tmp1 .= "[UUL06] ".str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_TMP_LANG")).".<br>";
+					$arErrorLangs[$arLangs[$i]] = str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_TMP_LANG"))." [UUL06]. ";
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (!is_readable($from_dir))
+					{
+						$strError_tmp1 .= "[UUL07] ".str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_READ_LANG")).".<br>";
+						$arErrorLangs[$arLangs[$i]] = str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_READ_LANG"))." [UUL07]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					$handle1 = @opendir($from_dir."/__components");
+					if ($handle1)
+					{
+						while (false !== ($dir1 = readdir($handle1)))
+						{
+							if (is_dir($from_dir."/__components/".$dir1) && $dir1 != "." && $dir1 != "..")
+							{
+								if (file_exists($from_dir."/__components/".$dir1."/lang") && in_array($dir1, $arLangModules1))
+									CUpdateSystem::CopyDirFiles($from_dir."/__components/".$dir1."/lang", $to_dir1."/".$dir1."/lang", $strError_tmp1);
+
+								$handle2 = @opendir($from_dir."/__components/".$dir1."/templates");
+								if ($handle2)
+								{
+									while (false !== ($dir2 = readdir($handle2)))
+									{
+										if (is_dir($from_dir."/__components/".$dir1."/templates/".$dir2) && $dir2 != "." && $dir2 != "..")
+										{
+											if (file_exists($from_dir."/__components/".$dir1."/templates/".$dir2."/lang") && in_array($dir1."@".$dir2, $arLangModules2))
+												CUpdateSystem::CopyDirFiles($from_dir."/__components/".$dir1."/templates/".$dir2."/lang", $to_dir1."/".$dir1."/templates/".$dir2."/lang", $strError_tmp1);
+										}
+									}
+									closedir($handle2);
+								}
+							}
+						}
+						closedir($handle1);
+					}
+				}
+
+				// РЈРґР°Р»РёС‚СЊ СЃС‚Р°СЂС‹Рµ С„Р°Р№Р»С‹
+
+				if ($strError_tmp1 <> '')
+				{
+					$strError_tmp .= $strError_tmp1;
+					$arErrorLangs[$arLangs[$i]] .= str_replace("#LANG#", $arLangs[$i], GetMessage("SUPP_UL_BREAK_LANG"))." ";
+				}
+
+				CUpdateSystem::DeleteDirFilesEx($from_dir."/__components");
+			}
+		}
+
+
+		if ($strError_tmp == '')
+		{
+			for ($i = 0, $ni = count($arLangs); $i < $ni; $i++)
+			{
+				$strError_tmp1 = "";
+
+				$from_dir = $updates_dir_full."/".$arLangs[$i];
+
+				if (!file_exists($from_dir) || !is_dir($from_dir))
+				{
+					$strError_tmp1 .= "[UUL06] ".str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_TMP_LANG")).".<br>";
+					$arErrorLangs[$arLangs[$i]] = str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_TMP_LANG"))." [UUL06]. ";
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (!is_readable($from_dir))
+					{
+						$strError_tmp1 .= "[UUL07] ".str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_READ_LANG")).".<br>";
+						$arErrorLangs[$arLangs[$i]] = str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_READ_LANG"))." [UUL07]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					for ($j = 0, $nj = count($arLangModules); $j < $nj; $j++)
+					{
+						if (file_exists($from_dir."/".$arLangModules[$j])
+							&& is_dir($from_dir."/".$arLangModules[$j]))
+						{
+							CUpdateSystem::CopyDirFiles($from_dir."/".$arLangModules[$j], $to_dir."/".$arLangModules[$j], $strError_tmp1);
+						}
+					}
+				}
+
+				// РЈРґР°Р»РёС‚СЊ СЃС‚Р°СЂС‹Рµ С„Р°Р№Р»С‹
+
+				if ($strError_tmp1 <> '')
+				{
+					$strError_tmp .= $strError_tmp1;
+					$arErrorLangs[$arLangs[$i]] .= str_replace("#LANG#", $arLangs[$i], GetMessage("SUPP_UL_BREAK_LANG"))." ";
+				}
+				else
+				{
+					$arSuccessLangs[$arLangs[$i]] = "Y";
+				}
+			}
+			CUpdateSystem::DeleteDirFilesEx($updates_dir_full);
+		}
+
+		CUpdateSystem::AddMessage2Log("TIME UpdateLangs ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUUL");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+
+	// РћР±РЅРѕРІР»СЏРµС‚ СЃРёСЃС‚РµРјСѓ РїРѕРјРѕС‰Рё РїСЂРѕРґСѓРєС‚Р° РёР· РїР°РїРєРё $updates_dir
+	public static function UpdateHelp($updates_dir, $arHelp, &$strError, &$arErrorHelp, &$arSuccessHelp)
+	{
+		$strError_tmp = "";
+
+		CUpdateSystem::AddMessage2Log("exec CUpdateSystem::UpdateHelp");
+		$stime = CUpdateSystem::getmicrotime();
+
+		$updates_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/updates/".$updates_dir;
+		$help_dir_full = $_SERVER["DOCUMENT_ROOT"]."/bitrix/help";
+
+		if (!is_array($arHelp) || empty($arHelp))
+		{
+			$strError_tmp .= "[UUH00] ".GetMessage("SUPP_UH_NO_LANG").".<br>";
+		}
+
+		if (!file_exists($updates_dir_full) || !is_dir($updates_dir_full))
+		{
+			$strError_tmp .= "[UUH01] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_NO_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			if (!is_readable($updates_dir_full))
+				$strError_tmp .= "[UUH03] ".str_replace("#FILE#", $updates_dir_full, GetMessage("SUPP_CU_RD_TMP_CAT")).".<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			CUpdateSystem::CheckDirPath($help_dir_full."/", true);
+
+			if (!file_exists($help_dir_full) || !is_dir($help_dir_full))
+			{
+				$strError_tmp .= "[UUH02] ".str_replace("#FILE#", $help_dir_full, GetMessage("SUPP_UH_NO_HELP_CAT")).".<br>";
+			}
+			elseif (!is_writable($help_dir_full))
+			{
+				$strError_tmp .= "[UUH03] ".str_replace("#FILE#", $help_dir_full, GetMessage("SUPP_UH_NO_WRT_HELP")).".<br>";
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			for ($i = 0, $ni = count($arHelp); $i < $ni; $i++)
+			{
+				$strError_tmp1 = "";
+
+				$from_dir = $updates_dir_full."/".$arHelp[$i];
+
+				if (!file_exists($from_dir) || !is_dir($from_dir))
+				{
+					$strError_tmp1 .= "[UUH04] ".str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_TMP_LANG")).".<br>";
+					$arErrorHelp[$arHelp[$i]] = str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_TMP_LANG"))." [UUH04]. ";
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (!is_readable($from_dir))
+					{
+						$strError_tmp1 .= "[UUH05] ".str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_READ_LANG")).".<br>";
+						$arErrorHelp[$arHelp[$i]] = str_replace("#FILE#", $from_dir, GetMessage("SUPP_UL_NO_READ_LANG"))." [UUH05]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (file_exists($help_dir_full."/".$arHelp[$i]."_tmp"))
+					{
+						CUpdateSystem::DeleteDirFilesEx($help_dir_full."/".$arHelp[$i]."_tmp");
+					}
+					if (file_exists($help_dir_full."/".$arHelp[$i]."_tmp"))
+					{
+						$strError_tmp1 .= "[UUH06] ".str_replace("#FILE#", $help_dir_full."/".$arHelp[$i]."_tmp", GetMessage("SUPP_UH_CANT_DEL")).".<br>";
+						$arErrorHelp[$arHelp[$i]] = str_replace("#FILE#", $help_dir_full."/".$arHelp[$i]."_tmp", GetMessage("SUPP_UH_CANT_DEL"))." [UUH06]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					if (file_exists($help_dir_full."/".$arHelp[$i]))
+					{
+						if (!rename($help_dir_full."/".$arHelp[$i], $help_dir_full."/".$arHelp[$i]."_tmp"))
+						{
+							$strError_tmp1 .= "[UUH07] ".str_replace("#FILE#", $help_dir_full."/".$arHelp[$i], GetMessage("SUPP_UH_CANT_RENAME")).".<br>";
+							$arErrorHelp[$arHelp[$i]] = str_replace("#FILE#", $help_dir_full."/".$arHelp[$i], GetMessage("SUPP_UH_CANT_RENAME"))." [UUH07]. ";
+						}
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					CUpdateSystem::CheckDirPath($help_dir_full."/".$arHelp[$i]."/", true);
+
+					if (!file_exists($help_dir_full."/".$arHelp[$i]) || !is_dir($help_dir_full."/".$arHelp[$i]))
+					{
+						$strError_tmp1 .= "[UUH08] ".str_replace("#FILE#", $help_dir_full."/".$arHelp[$i], GetMessage("SUPP_UH_CANT_CREATE")).".<br>";
+						$arErrorHelp[$arHelp[$i]] = str_replace("#FILE#", $help_dir_full."/".$arHelp[$i], GetMessage("SUPP_UH_CANT_CREATE"))." [UUH08]. ";
+					}
+					elseif (!is_writable($help_dir_full."/".$arHelp[$i]))
+					{
+						$strError_tmp1 .= "[UUH09] ".str_replace("#FILE#", $help_dir_full."/".$arHelp[$i], GetMessage("SUPP_UH_CANT_WRITE")).".<br>";
+						$arErrorHelp[$arHelp[$i]] = str_replace("#FILE#", $help_dir_full."/".$arHelp[$i], GetMessage("SUPP_UH_CANT_WRITE"))." [UUH09]. ";
+					}
+				}
+
+				if ($strError_tmp1 == '')
+				{
+					CUpdateSystem::CopyDirFiles(
+						$from_dir,
+						$help_dir_full."/".$arHelp[$i],
+						$strError_tmp1);
+				}
+
+				if ($strError_tmp1 <> '')
+				{
+					$strError_tmp .= $strError_tmp1;
+					$arErrorHelp[$arHelp[$i]] .= str_replace("#HELP#", $arHelp[$i], GetMessage("SUPP_UH_INST_BREAK"))." ";
+				}
+				else
+				{
+					$arSuccessHelp[$arHelp[$i]] = "Y";
+					if (file_exists($help_dir_full."/".$arHelp[$i]."_tmp"))
+					{
+						CUpdateSystem::DeleteDirFilesEx($help_dir_full."/".$arHelp[$i]."_tmp");
+					}
+				}
+			}
+			CUpdateSystem::DeleteDirFilesEx($updates_dir_full);
+		}
+
+		CUpdateSystem::AddMessage2Log("TIME UpdateHelp ".Round(CUpdateSystem::getmicrotime()-$stime, 3)." sec");
+
+		if ($strError_tmp <> '')
+		{
+			CUpdateSystem::AddMessage2Log($strError_tmp, "CUUH");
+			$strError .= $strError_tmp;
+			return false;
+		}
+		else
+			return true;
+	}
+
+	public static function Report2Server($arServerReport)
+	{
+		$strError_tmp = "";
+
+		if (!is_array($arServerReport) || empty($arServerReport))
+		{
+			$strError_tmp .= "[UR2S01] Empty report.<br>";
+		}
+
+		if ($strError_tmp == '')
+		{
+			$GLOBALS["DB"]->GetVersion();
+
+			$strVars = "LICENSE_KEY=".urlencode(md5(CUpdateSystem::GetLicenseKey())).
+				"&CLIENT_SITE=".urlencode($_SERVER["SERVER_NAME"]).
+				"&CLIENT_PHPVER=".urlencode(phpversion()).
+				"&SUPD_DBS=".urlencode($GLOBALS["DB"]->type).
+				"&XE=".urlencode((isset($GLOBALS["DB"]->XE) && $GLOBALS["DB"]->XE) ? "Y" : "N").
+				"&CANGZIP=".urlencode((CUpdateSystem::IsGzipInstalled()) ? "Y" : "N");
+
+			foreach ($arServerReport as $key => $value)
+			{
+				if ($strVars <> '')
+					$strVars .= "&";
+
+				$strVars .= "bitm_".$key."=".urlencode($value[0]."!".$value[1]);
+			}
+		}
+
+		if ($strError_tmp == '')
+		{
+			$content = CUpdateSystem::getHTTPPage("bit_sysreport.php", $strVars, $strError_tmp);
+
+			if ($content == '')
+				$strError_tmp .= "[UR2S03] Empty server response.<br>";
+		}
+	}
+
+
+	/*******************************************************************/
+	/********   Р’РЎРџРћРњРћР“РђРўР•Р›Р¬РќР«Р• Р¤РЈРќРљР¦Р

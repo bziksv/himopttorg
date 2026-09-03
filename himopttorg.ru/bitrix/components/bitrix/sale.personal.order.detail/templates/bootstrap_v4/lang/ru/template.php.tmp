@@ -1,0 +1,12 @@
+<?
+$MESS["SPOD_ORDER"] = "Р—Р°РєР°Р·";
+$MESS["SPOD_FROM"] = "РѕС‚";
+$MESS["SPOD_ORDER_STATUS"] = "РўРµРєСѓС‰РёР№ СЃС‚Р°С‚СѓСЃ";
+$MESS["SPOD_ORDER_PRICE"] = "РЎСѓРјРјР°";
+$MESS["SPOD_ORDER_PRICE_BILL"] = "РЎСѓРјРјР° Рє РѕРїР»Р°С‚Рµ РїРѕ СЃС‡РµС‚Сѓ";
+$MESS["SPOD_ORDER_PRICE_FULL"] = "РЎСѓРјРјР° Р·Р°РєР°Р·Р°";
+$MESS["SPOD_ORDER_SUM_PAID"] = "РћРїР»Р°С‡РµРЅРѕ";
+$MESS["SPOD_ORDER_SUM_REST"] = "РЎСѓРјРјР° Рє РѕРїР»Р°С‚Рµ";
+$MESS["SPOD_CHANGE_PAYMENT_TYPE"] = "РЎРјРµРЅРёС‚СЊ СЃРїРѕСЃРѕР± РѕРїР»Р°С‚С‹";
+$MESS["SPOD_ORDER_PAY"] = "РћРїР»Р°С‚РёС‚СЊ";
+$MESS["SPOD_USER_INFORMATION"] = "Р

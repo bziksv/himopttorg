@@ -1,0 +1,5 @@
+<?php
+$MESS["SALE_ORDER_MARKER_BLOCK_ORDER_PROBLEM"] = "РџСЂРѕР±Р»РµРјС‹ СЃ Р·Р°РєР°Р·РѕРј";
+$MESS["SALE_ORDER_MARKER_BLOCK_SHIPMENT_PROBLEM"] = "РџСЂРѕР±Р»РµРјС‹ СЃ РѕС‚РіСЂСѓР·РєРѕР№(в„–#ENTITY_ID#)";
+$MESS["SALE_ORDER_MARKER_BLOCK_PAYMENT_PROBLEM"] = "РџСЂРѕР±Р»РµРјС‹ СЃ РѕРїР»Р°С‚РѕР№(в„–#ENTITY_ID#)";
+$MESS["SALE_ORDER_MARKER_FIX"] = "Р

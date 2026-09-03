@@ -1,0 +1,21 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+/**
+ * @var $arResult
+ */
+?>
+
+<!--a task was created-->
+<div>
+	<div class="task-preview-subject">
+		<span>РќР° РѕСЃРЅРѕРІР°РЅРёРё Р·Р°РґР°С‡Рё СЃРѕР·РґР°РЅР° Р·Р°РґР°С‡Р°</span>
+		<a class="urlpreview__time" href="#">2 Р°РїСЂРµР»СЏ 05:00</a>
+	</div>
+	<div class="urlpreview__frame-inner">
+		<div class="task-preview">
+			<div class="task-preview-header">
+				<div class="task-preview-header-icon">
+					<img src="/upload/resize_cache/main/cc0/24_24_2/cat.jpg" width="24" height="24">
+				</div>
+				<span class="task-preview-header-title">
+					<a href="/company/personal/user/1/" target="_blank">РљРѕРЅСЃС‚Р°РЅС‚РёРЅ Р

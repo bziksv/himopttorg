@@ -1,0 +1,4 @@
+<?
+$MESS["SALE_BASKET_DISCOUNT_CONVERT_ERRORS_RIGHTS"] = "РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ";
+$MESS["SALE_BASKET_DISCOUNT_CONVERT_ERRORS_INCORRECT_SESSION"] = "Р’Р°С€Р° СЃРµСЃСЃРёСЏ РёСЃС‚РµРєР»Р°. Р—Р°РєСЂРѕР№ РґРёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ Рё Р°РІС‚РѕСЂРёР·СѓР№С‚РµСЃСЊ Р·Р°РЅРѕРІРѕ, РїРѕСЃР»Рµ С‡РµРіРѕ РїРѕРІС‚РѕСЂРёС‚Рµ РѕРїРµСЂР°С†РёСЋ.";
+$MESS["SALE_BASKET_DISCOUNT_CONVERT_ERRORS_MODULE_SALE_ABSENT"] = "РќРµ СѓРґР°Р»РѕСЃСЊ РїРѕРґРєР»СЋС‡РёС‚СЊ РјРѕРґСѓР»СЊ Р

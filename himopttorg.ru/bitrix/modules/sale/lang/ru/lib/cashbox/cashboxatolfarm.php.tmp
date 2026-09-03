@@ -1,0 +1,16 @@
+<?
+$MESS["SALE_CASHBOX_ATOL_FARM_TITLE"] = "РђС‚РѕР».РћРЅР»Р°Р№РЅ";
+$MESS["SALE_CASHBOX_BITRIX_SETTINGS_VAT"] = "РќР°СЃС‚СЂРѕР№РєРё СЃС‚Р°РІРѕРє РќР”РЎ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SETTINGS_AUTH"] = "РќР°СЃС‚СЂРѕР№РєРё Р°РІС‚РѕСЂРёР·Р°С†РёРё";
+$MESS["SALE_CASHBOX_ATOL_FARM_SETTINGS_AUTH_LOGIN_LABEL"] = "Р›РѕРіРёРЅ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SETTINGS_AUTH_PASS_LABEL"] = "РџР°СЂРѕР»СЊ";
+$MESS["SALE_CASHBOX_BITRIX_SETTINGS_VAT_LABEL_NOT_VAT"] = "Р‘РµР· РќР”РЎ [РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ]";
+$MESS["SALE_CASHBOX_ATOL_FARM_SETTINGS_SNO"] = "РќР°Р»РѕРіРѕРѕР±Р»РѕР¶РµРЅРёРµ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SETTINGS_SNO_LABEL"] = "РЎРёСЃС‚РµРјР° РЅР°Р»РѕРіРѕРѕР±Р»РѕР¶РµРЅРёСЏ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SNO_OSN"] = "РѕР±С‰Р°СЏ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SNO_UI"] = "СѓРїСЂРѕС‰РµРЅРЅР°СЏ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SNO_UIO"] = "СѓРїСЂРѕС‰РµРЅРЅР°СЏ (РґРѕС…РѕРґС‹ РјРёРЅСѓСЃ СЂР°СЃС…РѕРґС‹)";
+$MESS["SALE_CASHBOX_ATOL_FARM_SNO_ENVD"] = "РµРґРёРЅС‹Р№ РЅР°Р»РѕРі РЅР° РІРјРµРЅРµРЅРЅС‹Р№ РґРѕС…РѕРґ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SNO_ESN"] = "РµРґРёРЅС‹Р№ СЃРµР»СЊСЃРєРѕС…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹Р№ РЅР°Р»РѕРі";
+$MESS["SALE_CASHBOX_ATOL_FARM_SNO_PATENT"] = "РїР°С‚РµРЅС‚РЅР°СЏ";
+$MESS["SALE_CASHBOX_ATOL_FARM_SETTINGS_SERVICE"] = "Р

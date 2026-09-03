@@ -1,0 +1,5 @@
+<?php
+$MESS['LANDING_CMP_OL_NO_BUTTON_ID'] = 'РќРµ РІС‹Р±СЂР°РЅ CRM-РІРёРґР¶РµС‚';
+$MESS['LANDING_CMP_OL_NO_BUTTON'] = 'РќР° РІР°С€РµРј СЃР°Р№С‚Рµ РЅРµС‚ CRM-РІРёРґР¶РµС‚РѕРІ.';
+$MESS['LANDING_CMP_OL_NO_BUTTON_CP'] = 'РџСЂРѕРІРµСЂСЊС‚Рµ РёС… РЅР°Р»РёС‡РёРµ Рё Р°РєС‚РёРІРЅРѕСЃС‚СЊ РЅР° СЃС‚СЂР°РЅРёС†Рµ &laquo;#LINK1#CRM - CRM-С„РѕСЂРјС‹#LINK2#&raquo;.';
+$MESS['LANDING_CMP_OL_NO_BUTTON_SM'] = 'РџСЂРѕРІРµСЂСЊС‚Рµ СѓСЃС‚Р°РЅРѕРІРєСѓ РјРѕРґСѓР»СЏ &laquo;Р

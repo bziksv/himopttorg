@@ -1,0 +1,6 @@
+<?php
+$MESS["smtp_configuration_admin_title"] = "РџР°СЂР°РјРµС‚СЂС‹ SMTP-РїРѕРґРєР»СЋС‡РµРЅРёСЏ";
+$MESS["smtp_configuration_admin_nav"] = "РџР°СЂР°РјРµС‚СЂС‹ SMTP";
+$MESS["smtp_configuration_admin_sites"] = "РЎР°Р№С‚С‹";
+$MESS["smtp_configuration_admin_edit"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РїРѕРґРєР»СЋС‡РµРЅРёРµ";
+$MESS["smtp_configuration_admin_edit1"] = "Р

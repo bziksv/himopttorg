@@ -1,0 +1,42 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+
+$component = $this->__component;
+//01*
+//Р”Р»СЏ СЃРєСЂС‹С‚РёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚ Р·Р»С‹С… Р»СЋРґРµР№ СЃРѕС…СЂР°РЅРёРј РёС… РІ СЃРµСЃСЃРёРё,
+//Р° РІ РїСѓР±Р»РёС‡РєСѓ РѕС‚РґР°РґРёРј РєР»СЋС‡.
+//02*
+//Р­С‚Рё РїР°СЂР°РјРµС‚СЂС‹ (РїРѕРєР° РѕРґРёРЅ) С‚Р°Рє Рё С‚Р°Рє РґРѕСЃС‚СѓРїРЅС‹ С‡РµСЂРµР· URL Рё
+//Р·Р°С‰РёС‰Р°С‚СЊ РµРіРѕ РЅРµС‚ РѕСЃРѕР±РѕРіРѕ СЃРјС‹СЃР»Р° (С‚РѕР»СЊРєРѕ СЃРµСЃСЃРёСЏ СЂР°СЃРїСѓС…РЅРµС‚)
+$arSessionParams = array(
+	"PAGE_PARAMS" => array("ELEMENT_ID"),
+);
+//03*
+//РџСЂРѕР±РµРіР°РµРј РїРѕ РїР°СЂР°РјРµС‚СЂР°Рј С‡С‰Р°С‚РµР»СЊРЅРѕ СЃРєР»Р°РґС‹РІР°СЏ РёС… РІ С…СЂР°РЅРёР»РёС‰Рµ
+foreach($arParams as $k=>$v)
+	if(strncmp("~", $k, 1) && !in_array($k, $arSessionParams["PAGE_PARAMS"]))
+		$arSessionParams[$k] = $v;
+//04*
+//Р­С‚Рё "РїР°СЂР°РјРµС‚СЂС‹" РЅР°Рј РїРѕРЅР°РґРѕР±СЏС‚СЃСЏ РґР»СЏ РїСЂР°РІРёР»СЊРЅРѕРіРѕ РїРѕРґРєР»СЋС‡РµРЅРёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° РІ AJAX РІС‹Р·РѕРІРµ
+$arSessionParams["COMPONENT_NAME"] = $component->GetName();
+$arSessionParams["TEMPLATE_NAME"] = $component->GetTemplateName();
+if($parent = $component->GetParent())
+{
+	$arSessionParams["PARENT_NAME"] = $parent->GetName();
+	$arSessionParams["PARENT_TEMPLATE_NAME"] = $parent->GetTemplateName();
+	$arSessionParams["PARENT_TEMPLATE_PAGE"] = $parent->GetTemplatePage();
+}
+//05*
+//Р° РІРѕС‚ Рё РєР»СЋС‡!
+$idSessionParams = md5(serialize($arSessionParams));
+
+//06*
+//РњРѕРґРёС„РёС†РёСЂСѓРµРј arResult РєРѕРјРїРѕРЅРµРЅС‚Р°.
+//Р­С‚Рё РґР°РЅРЅС‹Рµ Р·Р°С‚РµРј Р±СѓРґСѓС‚ РёР·РІР»РµРєР°С‚СЊСЃСЏ РёР· РєРµС€Р°
+//Р

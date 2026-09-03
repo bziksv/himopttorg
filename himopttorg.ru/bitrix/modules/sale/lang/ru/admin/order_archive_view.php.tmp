@@ -1,0 +1,5 @@
+<?
+$MESS["SALE_OVIEW_TITLE"] = "РџСЂРѕСЃРјРѕС‚СЂ Р·Р°РєР°Р·Р° ID (#ID#), в„– #NUM#, СЃРѕР·РґР°РЅ #DATE#";
+$MESS["SALE_OVIEW_TO_ARCHIVE_LIST"] = "РђСЂС…РёРІ Р·Р°РєР°Р·РѕРІ";
+$MESS["SALE_OVIEW_TO_ARCHIVE_LIST_TITLE"] = "РџРµСЂРµР№С‚Рё Рє Р°СЂС…РёРІСѓ Р·Р°РєР°Р·РѕРІ";
+$MESS["SALE_OVIEW_TO_EDIT"] = "Р

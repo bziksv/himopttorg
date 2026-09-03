@@ -1,0 +1,5 @@
+<?
+$MESS ['SALE_DELIVERY_REQ_DRS_WRONG_ID'] = "РќРµРІРµСЂРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°СЏРІРєРё";
+$MESS ['SALE_DELIVERY_REQ_DRS_WRONG_SHP_ID'] = "РќРµРІРµСЂРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚РіСЂСѓР·РєРё";
+$MESS ['SALE_DELIVERY_REQ_DRS_LIST'] = "РЎРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ РґР»СЏ Р·Р°СЏРІРєРё";
+$MESS ['SALE_DELIVERY_REQ_DRS_F_ID'] = "Р

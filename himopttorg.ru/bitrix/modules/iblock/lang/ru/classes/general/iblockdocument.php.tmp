@@ -1,0 +1,11 @@
+<?
+$MESS["IBD_FIELD_ID"] = "ID СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBD_FIELD_TIMESTAMP_X"] = "Р”Р°С‚Р° РёР·РјРµРЅРµРЅРёСЏ СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBD_FIELD_MODYFIED"] = "РљРµРј РёР·РјРµРЅРµРЅ";
+$MESS["IBD_FIELD_MODIFIED_BY_USER_PRINTABLE"] = "РљРµРј РёР·РјРµРЅРµРЅ (РёРјСЏ)";
+$MESS["IBD_FIELD_DATE_CREATE"] = "Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBD_FIELD_IBLOCK_ID"] = "ID РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРіРѕ Р±Р»РѕРєР°";
+$MESS["IBD_FIELD_ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBD_FIELD_DATE_ACTIVE_FROM"] = "Р”Р°С‚Р° РЅР°С‡Р°Р»Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBD_FIELD_DATE_ACTIVE_TO"] = "Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ Р°РєС‚РёРІРЅРѕСЃС‚Рё СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBD_FIELD_SORT"] = "Р

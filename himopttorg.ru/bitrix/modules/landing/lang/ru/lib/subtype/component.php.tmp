@@ -1,0 +1,6 @@
+<?php
+$MESS['LANDING_BLOCK_EMPTY_CATLOG_TITLE'] = 'РќРµ РЅР°СЃС‚СЂРѕРµРЅ РєР°С‚Р°Р»РѕРі';
+$MESS['LANDING_BLOCK_EMPTY_CATLOG_DESC'] = 'Р’Р°Рј РЅРµРѕР±С…РѕРґРёРјРѕ СЃРЅР°С‡Р°Р»Р° РІС‹Р±СЂР°С‚СЊ РёСЃС‚РѕС‡РЅРёРє РєР°С‚Р°Р»РѕРіР°.';
+$MESS['LANDING_BLOCK_EMPTY_CATLOG_LINK'] = 'РќР°СЃС‚СЂРѕРёС‚СЊ';
+$MESS['LANDING_BLOCK_CATALOG_CONFIG'] = 'РџРµСЂРµР№С‚Рё РІ С‚РѕСЂРіРѕРІС‹Р№ РєР°С‚Р°Р»РѕРі';
+$MESS['LANDING_BLOCK_CATALOG_CONFIG_FEATURE'] = 'Р’ РЅР°СЃС‚СЂРѕР№РєР°С… РјРѕРґСѓР»СЏ Р

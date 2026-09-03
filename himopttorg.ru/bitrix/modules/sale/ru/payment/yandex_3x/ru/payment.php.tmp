@@ -1,0 +1,4 @@
+<?
+global $MESS;
+$MESS["SPCP_DTITLE"] = "Р®Kassa";
+$MESS["SHOP_ID"] = "Р

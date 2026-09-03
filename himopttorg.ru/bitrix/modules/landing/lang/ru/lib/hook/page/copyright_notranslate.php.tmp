@@ -1,0 +1,35 @@
+<?php
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_1'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_2'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ СЃР°РјРѕРјСѓ СЃ РЅСѓР»СЏ РЅР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_3'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ Р±РµСЃРїР»Р°С‚РЅРѕ СЃР°РјРѕРјСѓ СЃ РЅСѓР»СЏ РЅР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_4'] = 'РЎРґРµР»Р°С‚СЊ СЃР°Р№С‚ С‡РµСЂРµР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_5'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ СЃР°РјРѕРјСѓ РѕРЅР»Р°Р№РЅ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_6'] = 'РЎРґРµР»Р°С‚СЊ СЃР°Р№С‚ РѕРЅР»Р°Р№РЅ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_7'] = 'РЎРґРµР»Р°С‚СЊ СЃР°Р№С‚';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_8'] = 'РЎРґРµР»Р°С‚СЊ СЃР°Р№С‚ СЃР°РјРѕРјСѓ РѕРЅР»Р°Р№РЅ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_9'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ СЃР°РјРѕРјСѓ Р±РµСЃРїР»Р°С‚РЅРѕ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_10'] = 'РЎРґРµР»Р°С‚СЊ СЃР°Р№С‚ Р±РµСЃРїР»Р°С‚РЅРѕ РЅР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_11'] = 'Р‘РµСЃРїР»Р°С‚РЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_12'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_13'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ Р±РµСЃРїР»Р°С‚РЅРѕ Рё РѕРЅР»Р°Р№РЅ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_14'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ СЃР°РјРѕРјСѓ РЅР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_15'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ РґР»СЏ Р±РёР·РЅРµСЃР°';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_16'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ РЅР° РѕРЅР»Р°Р№РЅ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_17'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ СЃ РЅСѓР»СЏ РЅР° РѕРЅР»Р°Р№РЅ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_18'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ Р±РµСЃРїР»Р°С‚РЅРѕ РЅР° СЂСѓСЃСЃРєРѕРј';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_19'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹ РёРЅС‚РµСЂРЅРµС‚-СЃР°Р№С‚РѕРІ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_20'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚Р° РЅР° СЂСѓСЃСЃРєРѕРј';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_21'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ Р±РµСЃРїР»Р°С‚РЅРѕ СЃР°РјРѕРјСѓ РЅР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_22'] = 'РћРЅР»Р°Р№РЅ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ Р±РµСЃРїР»Р°С‚РЅРѕ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_23'] = 'РћРЅР»Р°Р№РЅ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_24'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ Р·Р° 10 РјРёРЅСѓС‚';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_25'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ СЃ РЅСѓР»СЏ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_26'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃР°Р№С‚РѕРІ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_27'] = 'РЎРѕР·РґР°С‚СЊ СЃР°Р№С‚ РЅР° РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРµ СЃ РЅСѓР»СЏ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_28'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ СЃ РЅСѓР»СЏ Р±РµСЃРїР»Р°С‚РЅРѕ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_29'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ РЅР° СЂСѓСЃСЃРєРѕРј СЏР·С‹РєРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_30'] = 'РћРЅР»Р°Р№РЅ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ РЅР° СЂСѓСЃСЃРєРѕРј СЏР·С‹РєРµ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_31'] = 'Р СѓСЃСЃРєРёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ';
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_PAGE_32'] = 'РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ Рё Р»РµРЅРґРёРЅРіРѕРІ';
+
+$MESS['LANDING_HOOK_COPYRIGHT_TEXT_STORE_1'] = 'Р

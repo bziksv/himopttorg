@@ -1,0 +1,22 @@
+<?
+$MESS["interface_form_show_all"] = "Р Р°Р·РІРµСЂРЅСѓС‚СЊ РІСЃРµ РІРєР»Р°РґРєРё РЅР° РѕРґРЅСѓ СЃС‚СЂР°РЅРёС†Сѓ";
+$MESS["interface_form_save"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["interface_form_save_title"] = "РЎРѕС…СЂР°РЅРёС‚СЊ Рё РІРµСЂРЅСѓС‚СЊСЃСЏ";
+$MESS["interface_form_apply"] = "РџСЂРёРјРµРЅРёС‚СЊ";
+$MESS["interface_form_apply_title"] = "РЎРѕС…СЂР°РЅРёС‚СЊ Рё РѕСЃС‚Р°С‚СЊСЃСЏ РІ С„РѕСЂРјРµ";
+$MESS["interface_form_cancel"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["interface_form_cancel_title"] = "РќРµ СЃРѕС…СЂР°РЅСЏС‚СЊ Рё РІРµСЂРЅСѓС‚СЊСЃСЏ";
+$MESS["interface_form_close_all"] = "РЎРІРµСЂРЅСѓС‚СЊ РІРєР»Р°РґРєРё";
+$MESS["interface_form_required"] = "РџРѕР»СЏ, РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ.";
+$MESS["interface_form_colors"] = "Р¦РІРµС‚РѕРІР°СЏ СЃС…РµРјР°";
+$MESS["interface_form_colors_title"] = "Р’С‹Р±СЂР°С‚СЊ С†РІРµС‚РѕРІСѓСЋ СЃС…РµРјСѓ С„РѕСЂРјС‹";
+$MESS["interface_form_default"] = "(РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ)";
+$MESS["interface_form_settings"] = "РќР°СЃС‚СЂРѕРёС‚СЊ С„РѕСЂРјСѓ";
+$MESS["interface_form_tabs"] = "Р’РєР»Р°РґРєРё";
+$MESS["intarface_form_up"] = "Р’С‹С€Рµ";
+$MESS["intarface_form_up_title"] = "РџРµСЂРµРјРµСЃС‚РёС‚СЊ РІС‹С€Рµ РІ СЃРїРёСЃРєРµ";
+$MESS["intarface_form_up_down"] = "РќРёР¶Рµ";
+$MESS["intarface_form_down_title"] = "РџРµСЂРµРјРµСЃС‚РёС‚СЊ РЅРёР¶Рµ РІ СЃРїРёСЃРєРµ";
+$MESS["intarface_form_add"] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS["intarface_form_add_title"] = "Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІСѓСЋ РІРєР»Р°РґРєСѓ";
+$MESS["intarface_form_edit"] = "Р

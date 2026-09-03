@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Polish PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'BР•вЂљР”вЂ¦d SMTP: Nie moР•С

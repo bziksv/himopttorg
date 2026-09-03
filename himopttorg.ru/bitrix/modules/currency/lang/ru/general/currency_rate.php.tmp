@@ -1,0 +1,4 @@
+<?
+$MESS["ERROR_ADD_REC2"] = "Р’РѕР·РјРѕР¶РЅРѕ РЅР° СЌС‚Сѓ РґР°С‚Сѓ РєСѓСЂСЃ СѓР¶Рµ Р·Р°РґР°РЅ.";
+$MESS["BT_MOD_CURR_ERR_RATE_CURRENCY_ABSENT"] = "РќРµ СѓРєР°Р·Р°РЅ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІР°Р»СЋС‚С‹";
+$MESS["BT_MOD_CURR_ERR_RATE_CURRENCY_LAT"] = "Р

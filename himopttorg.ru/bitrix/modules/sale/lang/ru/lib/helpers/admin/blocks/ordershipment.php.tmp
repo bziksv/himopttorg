@@ -1,0 +1,23 @@
+<?php
+$MESS["SALE_ORDER_SHIPMENT_TITLE"] = "РћС‚РіСЂСѓР·РєР°";
+$MESS["SALE_ORDER_PAYMENT_NO_DELIVERY_SERVICE"] = "(Р’С‹Р±РµСЂРёС‚Рµ СЃР»СѓР¶Р±Сѓ РґРѕСЃС‚Р°РІРєРё)";
+$MESS["SALE_ORDER_SHIPMENT_ALLOW_DELIVERY_YES"] = "Р”РѕСЃС‚Р°РІРєР° СЂР°Р·СЂРµС€РµРЅР°";
+$MESS["SALE_ORDER_SHIPMENT_ALLOW_DELIVERY_NO"] = "Р”РѕСЃС‚Р°РІРєР° РЅРµ СЂР°Р·СЂРµС€РµРЅР°";
+$MESS["SALE_ORDER_SHIPMENT_DEDUCTED_YES"] = "РћС‚РіСЂСѓР¶РµРЅРѕ";
+$MESS["SALE_ORDER_SHIPMENT_DEDUCTED_NO"] = "РќРµ РѕС‚РіСЂСѓР¶РµРЅРѕ";
+$MESS["SALE_ORDER_SHIPMENT_BLOCK_NEW_SHIPMENT_TITLE"] = "РќРѕРІР°СЏ РѕС‚РіСЂСѓР·РєР°";
+$MESS["SALE_ORDER_SHIPMENT_BLOCK_EDIT_SHIPMENT_TITLE"] = "РћС‚РіСЂСѓР·РєР° в„–#ID# РѕС‚ #DATE_INSERT#";
+$MESS["SALE_ORDER_SHIPMENT_STORE_SELF_DELIVERY"] = "РЎРєР»Р°РґС‹ СЃР°РјРѕРІС‹РІРѕР·Р°";
+$MESS["SALE_ORDER_SHIPMENT_BLOCK_SERVICE"] = "РЎР»СѓР¶Р±Р°";
+$MESS["SALE_ORDER_SHIPMENT_DELIVERY_SERVICE"] = "РЎР»СѓР¶Р±Р° РґРѕСЃС‚Р°РІРєРё";
+$MESS["SALE_ORDER_SHIPMENT_DELIVERY_SERVICE_PROFILE"] = "РџСЂРѕС„РёР»СЊ";
+$MESS["SALE_ORDER_SHIPMENT_DELIVERY_BLOCK_PRICE"] = "РЎС‚РѕРёРјРѕСЃС‚СЊ";
+$MESS["SALE_ORDER_SHIPMENT_DELIVERY_SUM_PRICE"] = "РЎС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё Р±РµР· СѓС‡РµС‚Р° СЃРєРёРґРєРё";
+$MESS["SALE_ORDER_SHIPMENT_DELIVERY_SUM_DISCOUNT_PRICE"] = "РЎС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё";
+$MESS["SALE_ORDER_SHIPMENT_BLOCK_SHIPMENT"] = "РћС‚РіСЂСѓР·РєР°";
+$MESS["SALE_ORDER_SHIPMENT_BLOCK_STATUS"] = "РЎС‚Р°С‚СѓСЃС‹";
+$MESS["SALE_ORDER_SHIPMENT_DELIVERY_STATUS"] = "РЎС‚Р°С‚СѓСЃ РґРѕСЃС‚Р°РІРєРё";
+$MESS["SALE_ORDER_SHIPMENT_OFFICE"] = "РћС„РёСЃ РѕС‚РіСЂСѓР·РєРё";
+$MESS["SALE_ORDER_SHIPMENT_ALLOW_DELIVERY"] = "Р”РѕСЃС‚Р°РІРєР° СЂР°Р·СЂРµС€РµРЅР°";
+$MESS["SALE_ORDER_SHIPMENT_DEDUCTED"] = "РћС‚РіСЂСѓР·РєР°";
+$MESS["SALE_ORDER_SHIPMENT_MODIFY_BY"] = "Р

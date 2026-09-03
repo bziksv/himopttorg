@@ -1,0 +1,13 @@
+<?
+$MESS["SALE_DH_PECOM_LOC_DIST_1"] = "Р -Рќ";
+$MESS["SALE_DH_PECOM_LOC_DIST_2"] = "Р Р•РЎРџ";
+$MESS["SALE_DH_PECOM_LOC_CN_1"] = "РџРћРЎ.";
+$MESS["SALE_DH_PECOM_LOC_CN_2"] = "РЎ.";
+$MESS["SALE_DH_PECOM_LOC_CN_3"] = "Рџ.";
+$MESS["SALE_DH_PECOM_LOC_CN_4"] = "Р“.";
+$MESS["SALE_DH_PECOM_LOC_CN_5"] = "Р -Рќ";
+$MESS["SALE_DH_PECOM_LOC_CN_6"] = "Р .Рџ.";
+$MESS["SALE_DH_PECOM_LOC_CN_7"] = "РђР­Р РћРџРћР Рў";
+$MESS["SALE_DH_PECOM_LOC_CN_8"] = "РџРћРЎР•Р›РћРљ";
+$MESS["SALE_DH_PECOM_LOC_PNU_1"] = "Р РђР™РћРќ";
+$MESS["SALE_DH_PECOM_LOC_PNU_2"] = "Р Р•РЎРџРЈР‘Р›Р

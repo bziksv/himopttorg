@@ -1,0 +1,401 @@
+<?php
+/**
+ * Bitrix Framework
+ * @package bitrix
+ * @subpackage main
+ * @copyright 2001-2022 Bitrix
+ */
+
+/**
+ * usertype.php, РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ СЃРІРѕР№СЃС‚РІР°
+ *
+ * РЎРѕРґРµСЂР¶РёС‚ РєР»Р°СЃСЃС‹ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРІРѕР№СЃС‚РІ.
+ * @author Bitrix <support@bitrixsoft.com>
+ * @version 1.0
+ * @package usertype
+ * @todo Р”РѕР±Р°РІРёС‚СЊ РїРѕРґСЃРєР°Р·РєСѓ
+ */
+
+IncludeModuleLangFile(__FILE__);
+
+/**
+ * Р”Р°РЅРЅС‹Р№ РєР»Р°СЃСЃ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ РјРµС‚Р°РґР°РЅРЅС‹РјРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРІРѕР№СЃС‚РІ.
+ *
+ * <p>Р’С‹Р±РѕСЂРєРё, РЈРґР°Р»РµРЅРёРµ Р”РѕР±Р°РІР»РµРЅРёРµ Рё РѕР±РЅРѕРІР»РµРЅРёРµ РјРµС‚Р°РґР°РЅРЅС‹С… С‚Р°Р±Р»РёС†С‹ b_user_field.</p>
+ * create table b_user_field (
+ * ID    int(11) not null auto_increment,
+ * ENTITY_ID  varchar(50),
+ * FIELD_NAME  varchar(50),
+ * USER_TYPE_ID  varchar(50),
+ * XML_ID    varchar(255),
+ * SORT    int,
+ * MULTIPLE  char(1) not null default 'N',
+ * MANDATORY  char(1) not null default 'N',
+ * SHOW_FILTER  char(1) not null default 'N',
+ * SHOW_IN_LIST  char(1) not null default 'Y',
+ * EDIT_IN_LIST  char(1) not null default 'Y',
+ * IS_SEARCHABLE  char(1) not null default 'N',
+ * SETTINGS  text,
+ * PRIMARY KEY (ID),
+ * UNIQUE ux_user_type_entity(ENTITY_ID, FIELD_NAME)
+ * )
+ * ------------------
+ * ID
+ * ENTITY_ID (example: IBLOCK_SECTION, USER ....)
+ * FIELD_NAME (example: UF_EMAIL, UF_SOME_COUNTER ....)
+ * SORT -- used to do check in the specified order
+ * BASE_TYPE - String, Number, Integer, Enumeration, File, DateTime
+ * USER_TYPE_ID
+ * SETTINGS (blob) -- to store some settings which may be useful for an field instance
+ * [some base settings comon to all types: mandatory or no, etc.]
+ * <p>b_user_field</p>
+ * <ul>
+ * <li><b>ID</b> int(11) not null auto_increment
+ * <li>ENTITY_ID varchar(50)
+ * <li>FIELD_NAME varchar(20)
+ * <li>USER_TYPE_ID varchar(50)
+ * <li>XML_ID varchar(255)
+ * <li>SORT int
+ * <li>MULTIPLE char(1) not null default 'N'
+ * <li>MANDATORY char(1) not null default 'N'
+ * <li>SHOW_FILTER char(1) not null default 'N'
+ * <li>SHOW_IN_LIST char(1) not null default 'Y'
+ * <li>EDIT_IN_LIST char(1) not null default 'Y'
+ * <li>IS_SEARCHABLE char(1) not null default 'N'
+ * <li>SETTINGS text
+ * <li>PRIMARY KEY (ID),
+ * <li>UNIQUE ux_user_type_entity(ENTITY_ID, FIELD_NAME)
+ * </ul>
+ * create table b_user_field_lang (
+ * USER_FIELD_ID int(11) REFERENCES b_user_field(ID),
+ * LANGUAGE_ID char(2),
+ * EDIT_FORM_LABEL varchar(255),
+ * LIST_COLUMN_LABEL varchar(255),
+ * LIST_FILTER_LABEL varchar(255),
+ * ERROR_MESSAGE varchar(255),
+ * HELP_MESSAGE varchar(255),
+ * PRIMARY KEY (USER_FIELD_ID, LANGUAGE_ID)
+ * )
+ * <p>b_user_field_lang</p>
+ * <ul>
+ * <li><b>USER_FIELD_ID</b> int(11) REFERENCES b_user_field(ID)
+ * <li><b>LANGUAGE_ID</b> char(2)
+ * <li>EDIT_FORM_LABEL varchar(255)
+ * <li>LIST_COLUMN_LABEL varchar(255)
+ * <li>LIST_FILTER_LABEL varchar(255)
+ * <li>ERROR_MESSAGE varchar(255)
+ * <li>HELP_MESSAGE varchar(255)
+ * <li>PRIMARY KEY (USER_FIELD_ID, LANGUAGE_ID)
+ * </ul>
+ * @package usertype
+ * @subpackage classes
+ */
+class CAllUserTypeEntity extends CDBResult
+{
+	function CreatePropertyTables($entity_id)
+	{
+		global $DB, $APPLICATION;
+		if(!$DB->TableExists("b_utm_".strtolower($entity_id)))
+		{
+			if(defined("MYSQL_TABLE_TYPE"))
+				$DB->Query("SET storage_engine = '".MYSQL_TABLE_TYPE."'", true);
+			$rs = $DB->Query("
+				create table IF NOT EXISTS b_utm_".strtolower($entity_id)." (
+					ID int(11) not null auto_increment,
+					VALUE_ID int(11) not null,
+					FIELD_ID int(11) not null,
+					VALUE text,
+					VALUE_INT int,
+					VALUE_DOUBLE float,
+					VALUE_DATE datetime,
+					INDEX ix_utm_".$entity_id."_2(VALUE_ID),
+					INDEX ix_utm_".$entity_id."_4(FIELD_ID, VALUE_ID, VALUE_INT),
+					PRIMARY KEY (ID)
+				)
+			", false, "FILE: ".__FILE__."<br>LINE: ".__LINE__);
+			if(!$rs)
+			{
+				$APPLICATION->ThrowException(GetMessage("USER_TYPE_TABLE_CREATION_ERROR",array(
+					"#ENTITY_ID#"=>htmlspecialcharsbx($entity_id),
+				)));
+				return false;
+			}
+		}
+		if(!$DB->TableExists("b_uts_".strtolower($entity_id)))
+		{
+			if(defined("MYSQL_TABLE_TYPE"))
+				$DB->Query("SET storage_engine = '".MYSQL_TABLE_TYPE."'", true);
+
+			$rs = $DB->Query("
+				create table IF NOT EXISTS b_uts_".strtolower($entity_id)." (
+					VALUE_ID int(11) not null,
+					PRIMARY KEY (VALUE_ID)
+				)
+			", false, "FILE: ".__FILE__."<br>LINE: ".__LINE__);
+			if(!$rs)
+			{
+				$APPLICATION->ThrowException(GetMessage("USER_TYPE_TABLE_CREATION_ERROR",array(
+					"#ENTITY_ID#"=>htmlspecialcharsbx($entity_id),
+				)));
+				return false;
+			}
+		}
+		return true;
+	}
+
+	function DropColumnSQL($strTable, $arColumns)
+	{
+		return array("ALTER TABLE ".$strTable." DROP ".implode(", DROP ", $arColumns));
+	}
+
+	/**
+	 * Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹Р±РѕСЂРєРё РјРµС‚Р°РґР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ СЃРІРѕР№СЃС‚РІР°.
+	 *
+	 * <p>Р’РѕР·РІСЂР°С‰Р°РµС‚ Р°СЃСЃРѕС†РёР°С‚РёРІРЅС‹Р№ РјР°СЃСЃРёРІ РјРµС‚Р°РґР°РЅРЅС‹С… РєРѕС‚РѕСЂС‹Р№ РјРѕР¶РЅРѕ РїРµСЂРµРґР°С‚СЊ РІ Update.</p>
+	 * @param integer $ID РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРІРѕР№СЃС‚РІР°
+	 * @return array Р•СЃР»Рё СЃРІРѕР№СЃС‚РІРѕ РЅРµ РЅР°Р№РґРµРЅРѕ, С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ false
+	 * @static
+	 */
+	public static function GetByID($ID)
+	{
+		global $DB;
+		static $arLabels = array("EDIT_FORM_LABEL", "LIST_COLUMN_LABEL", "LIST_FILTER_LABEL", "ERROR_MESSAGE", "HELP_MESSAGE");
+		static $cache = array();
+
+		if(!array_key_exists($ID, $cache))
+		{
+			$rsUserField = CUserTypeEntity::GetList(array(), array("ID" => intval($ID)));
+			if($arUserField = $rsUserField->Fetch())
+			{
+				$rs = $DB->Query("SELECT * FROM b_user_field_lang WHERE USER_FIELD_ID = " . intval($ID), false, "FILE: " . __FILE__ . "<br>LINE: " . __LINE__);
+				while($ar = $rs->Fetch())
+				{
+					foreach($arLabels as $label)
+						$arUserField[$label][$ar["LANGUAGE_ID"]] = $ar[$label];
+				}
+				$cache[$ID] = $arUserField;
+			}
+			else
+				$cache[$ID] = false;
+		}
+		return $cache[$ID];
+	}
+
+	/**
+	 * Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹Р±РѕСЂРєРё РјРµС‚Р°РґР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРІРѕР№СЃС‚РІ.
+	 *
+	 * <p>Р’РѕР·РІСЂР°С‰Р°РµС‚ CDBResult - РІС‹Р±РѕСЂРєСѓ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С„РёР»СЊС‚СЂР° Рё СЃРѕСЂС‚РёСЂРѕРІРєРё.</p>
+	 * <p>РџР°СЂР°РјРµС‚СЂ aSort РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РёРјРµРµС‚ РІРёРґ array("SORT"=>"ASC", "ID"=>"ASC").</p>
+	 * <p>Р•СЃР»Рё РІ aFilter РїРµСЂРµРґР°РµС‚СЃСЏ LANG, С‚Рѕ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕ РІС‹Р±РёСЂР°СЋС‚СЃСЏ СЏР·С‹РєРѕРІС‹Рµ СЃРѕРѕР±С‰РµРЅРёСЏ.</p>
+	 * @param array $aSort Р°СЃСЃРѕС†РёР°С‚РёРІРЅС‹Р№ РјР°СЃСЃРёРІ СЃРѕСЂС‚РёСЂРѕРІРєРё (ID, ENTITY_ID, FIELD_NAME, SORT, USER_TYPE_ID)
+	 * @param array $aFilter Р°СЃСЃРѕС†РёР°С‚РёРІРЅС‹Р№ РјР°СЃСЃРёРІ С„РёР»СЊС‚СЂР° СЃРѕ СЃС‚СЂРѕРіРёРј СЃРѕРѕР±РІРµС‚СЃС‚РІРёРµРј (<b>СЂР°РІРЅРѕ</b>) (ID, ENTITY_ID, FIELD_NAME, USER_TYPE_ID, SORT, MULTIPLE, MANDATORY, SHOW_FILTER)
+	 * @return CDBResult
+	 * @static
+	 */
+	public static function GetList($aSort = array(), $aFilter = array())
+	{
+		global $DB, $CACHE_MANAGER;
+
+		if(CACHED_b_user_field !== false)
+		{
+			$cacheId = "b_user_type" . md5(serialize($aSort) . "." . serialize($aFilter));
+			if($CACHE_MANAGER->Read(CACHED_b_user_field, $cacheId, "b_user_field"))
+			{
+				$arResult = $CACHE_MANAGER->Get($cacheId);
+				$res = new CDBResult;
+				$res->InitFromArray($arResult);
+				$res = new CUserTypeEntity($res);
+				return $res;
+			}
+		}
+
+		$bLangJoin = false;
+		$arFilter = array();
+		foreach($aFilter as $key => $val)
+		{
+			if(is_array($val) || (string)$val == '')
+				continue;
+
+			$key = mb_strtoupper($key);
+			$val = $DB->ForSql($val);
+
+			switch($key)
+			{
+				case "ID":
+				case "ENTITY_ID":
+				case "FIELD_NAME":
+				case "USER_TYPE_ID":
+				case "XML_ID":
+				case "SORT":
+				case "MULTIPLE":
+				case "MANDATORY":
+				case "SHOW_FILTER":
+				case "SHOW_IN_LIST":
+				case "EDIT_IN_LIST":
+				case "IS_SEARCHABLE":
+					$arFilter[] = "UF." . $key . " = '" . $val . "'";
+					break;
+				case "LANG":
+					$bLangJoin = $val;
+					break;
+			}
+		}
+
+		$arOrder = array();
+		foreach($aSort as $key => $val)
+		{
+			$key = mb_strtoupper($key);
+			$ord = (mb_strtoupper($val) <> "ASC" ? "DESC" : "ASC");
+			switch($key)
+			{
+				case "ID":
+				case "ENTITY_ID":
+				case "FIELD_NAME":
+				case "USER_TYPE_ID":
+				case "XML_ID":
+				case "SORT":
+					$arOrder[] = "UF." . $key . " " . $ord;
+					break;
+			}
+		}
+		if(empty($arOrder))
+		{
+			$arOrder[] = "UF.SORT asc";
+			$arOrder[] = "UF.ID asc";
+		}
+		DelDuplicateSort($arOrder);
+		$sOrder = "\nORDER BY " . implode(", ", $arOrder);
+
+		if(empty($arFilter))
+			$sFilter = "";
+		else
+			$sFilter = "\nWHERE " . implode("\nAND ", $arFilter);
+
+		$strSql = "
+			SELECT
+				UF.ID
+				,UF.ENTITY_ID
+				,UF.FIELD_NAME
+				,UF.USER_TYPE_ID
+				,UF.XML_ID
+				,UF.SORT
+				,UF.MULTIPLE
+				,UF.MANDATORY
+				,UF.SHOW_FILTER
+				,UF.SHOW_IN_LIST
+				,UF.EDIT_IN_LIST
+				,UF.IS_SEARCHABLE
+				,UF.SETTINGS
+				" . ($bLangJoin ? "
+					,UFL.EDIT_FORM_LABEL
+					,UFL.LIST_COLUMN_LABEL
+					,UFL.LIST_FILTER_LABEL
+					,UFL.ERROR_MESSAGE
+					,UFL.HELP_MESSAGE
+				" : "") . "
+			FROM
+				b_user_field UF
+				" . ($bLangJoin ? "LEFT JOIN b_user_field_lang UFL on UFL.LANGUAGE_ID = '" . $bLangJoin . "' AND UFL.USER_FIELD_ID = UF.ID" : "") . "
+			" . $sFilter . $sOrder;
+
+		if(CACHED_b_user_field === false)
+		{
+			$res = $DB->Query($strSql, false, "FILE: " . __FILE__ . "<br> LINE: " . __LINE__);
+		}
+		else
+		{
+			$arResult = array();
+			$res = $DB->Query($strSql, false, "FILE: " . __FILE__ . "<br> LINE: " . __LINE__);
+			while($ar = $res->Fetch())
+				$arResult[] = $ar;
+
+			/** @noinspection PhpUndefinedVariableInspection */
+			$CACHE_MANAGER->Set($cacheId, $arResult);
+
+			$res = new CDBResult;
+			$res->InitFromArray($arResult);
+		}
+
+		return new CUserTypeEntity($res);
+	}
+
+	/**
+	 * Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё Р·РЅР°С‡РµРЅРёР№ РјРµС‚Р°РґР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРІРѕР№СЃС‚РІ.
+	 *
+	 * <p>Р’С‹Р·С‹РІР°РµС‚СЃСЏ РІ РјРµС‚РѕРґР°С… Add Рё Update РґР»СЏ РїСЂРѕРІРµСЂРєРё РїСЂР°РІРёР»СЊРЅРѕСЃС‚Рё РІРІРµРґРµРЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№.</p>
+	 * <p>РџСЂРѕРІРµСЂРєРё:</p>
+	 * <ul>
+	 * <li>ENTITY_ID - РѕР±СЏР·Р°С‚РµР»СЊРЅРѕРµ
+	 * <li>ENTITY_ID - РЅРµ Р±РѕР»РµРµ 50-С‚Рё СЃРёРјРІРѕР»РѕРІ
+	 * <li>ENTITY_ID - РЅРµ РґРѕР»Р¶РЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЊ РЅРёРєР°РєРёС… СЃРёРјРІРѕР»РѕРІ РєСЂРѕРјРµ 0-9 A-Z Рё _
+	 * <li>FIELD_NAME - РѕР±СЏР·Р°С‚РµР»СЊРЅРѕРµ
+	 * <li>FIELD_NAME - РЅРµ РјРµРЅРµРµ 4-С… СЃРёРјРІРѕР»РѕРІ
+	 * <li>FIELD_NAME - РЅРµ Р±РѕР»РµРµ 50-С‚Рё СЃРёРјРІРѕР»РѕРІ
+	 * <li>FIELD_NAME - РЅРµ РґРѕР»Р¶РЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЊ РЅРёРєР°РєРёС… СЃРёРјРІРѕР»РѕРІ РєСЂРѕРјРµ 0-9 A-Z Рё _
+	 * <li>FIELD_NAME - РґРѕР»Р¶РЅРѕ РЅР°С‡РёРЅР°С‚СЊСЃСЏ РЅР° UF_
+	 * <li>USER_TYPE_ID - РѕР±СЏР·Р°С‚РµР»СЊРЅРѕРµ
+	 * <li>USER_TYPE_ID - РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅ
+	 * </ul>
+	 * <p>Р’ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё Р»РѕРІРёС‚Рµ РёСЃРєР»СЋС‡РµРЅРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ!</p>
+	 * @param integer $ID - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРІРѕР№СЃС‚РІР°. 0 - РґР»СЏ РЅРѕРІРѕРіРѕ.
+	 * @param array $arFields РјРµС‚Р°РґР°РЅРЅС‹Рµ СЃРІРѕР№СЃС‚РІР°
+	 * @param bool $bCheckUserType
+	 * @return boolean false - РµСЃР»Рё С…РѕС‚СЊ РѕРґРЅР° РїСЂРѕРІРµСЂРєР° РЅРµ РїСЂРѕС€Р»Р°.
+	 */
+	function CheckFields($ID, $arFields, $bCheckUserType = true)
+	{
+		/** @global CUserTypeManager $USER_FIELD_MANAGER */
+		global $APPLICATION, $USER_FIELD_MANAGER;
+		$aMsg = array();
+		$ID = intval($ID);
+
+		if(($ID <= 0 || array_key_exists("ENTITY_ID", $arFields)) && $arFields["ENTITY_ID"] == '')
+			$aMsg[] = array("id" => "ENTITY_ID", "text" => GetMessage("USER_TYPE_ENTITY_ID_MISSING"));
+		if(array_key_exists("ENTITY_ID", $arFields))
+		{
+			if(mb_strlen($arFields["ENTITY_ID"]) > 50)
+				$aMsg[] = array("id" => "ENTITY_ID", "text" => GetMessage("USER_TYPE_ENTITY_ID_TOO_LONG1"));
+			if(!preg_match('/^[0-9A-Z_]+$/', $arFields["ENTITY_ID"]))
+				$aMsg[] = array("id" => "ENTITY_ID", "text" => GetMessage("USER_TYPE_ENTITY_ID_INVALID"));
+		}
+
+		if(($ID <= 0 || array_key_exists("FIELD_NAME", $arFields)) && $arFields["FIELD_NAME"] == '')
+			$aMsg[] = array("id" => "FIELD_NAME", "text" => GetMessage("USER_TYPE_FIELD_NAME_MISSING"));
+		if(array_key_exists("FIELD_NAME", $arFields))
+		{
+			if(mb_strlen($arFields["FIELD_NAME"]) < 4)
+				$aMsg[] = array("id" => "FIELD_NAME", "text" => GetMessage("USER_TYPE_FIELD_NAME_TOO_SHORT"));
+			if(mb_strlen($arFields["FIELD_NAME"]) > 50)
+				$aMsg[] = array("id" => "FIELD_NAME", "text" => GetMessage("USER_TYPE_FIELD_NAME_TOO_LONG1"));
+			if(strncmp($arFields["FIELD_NAME"], "UF_", 3) !== 0)
+				$aMsg[] = array("id" => "FIELD_NAME", "text" => GetMessage("USER_TYPE_FIELD_NAME_NOT_UF"));
+			if(!preg_match('/^[0-9A-Z_]+$/', $arFields["FIELD_NAME"]))
+				$aMsg[] = array("id" => "FIELD_NAME", "text" => GetMessage("USER_TYPE_FIELD_NAME_INVALID"));
+		}
+
+		if(($ID <= 0 || array_key_exists("USER_TYPE_ID", $arFields)) && $arFields["USER_TYPE_ID"] == '')
+			$aMsg[] = array("id" => "USER_TYPE_ID", "text" => GetMessage("USER_TYPE_USER_TYPE_ID_MISSING"));
+		if(
+			$bCheckUserType
+			&& array_key_exists("USER_TYPE_ID", $arFields)
+			&& !$USER_FIELD_MANAGER->GetUserType($arFields["USER_TYPE_ID"])
+		)
+			$aMsg[] = array("id" => "USER_TYPE_ID", "text" => GetMessage("USER_TYPE_USER_TYPE_ID_INVALID"));
+
+		if(!empty($aMsg))
+		{
+			$e = new CAdminException($aMsg);
+			$APPLICATION->ThrowException($e);
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Р¤СѓРЅРєС†РёСЏ РґРѕР±Р°РІР»СЏРµС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРµ СЃРІРѕР№СЃС‚РІРѕ.
+	 *
+	 * <p>РЎРЅР°С‡Р°Р»Р° РІС‹Р·С‹РІР°РµС‚СЃСЏ РјРµС‚РѕРґ СЌРєР·РµРјРїР»СЏСЂР° РѕР±СЉРµРєС‚Р° CheckFields (С‚.Рµ. $this->CheckFields($arFields) ).</p>
+	 * <p>Р•СЃР»Рё РїСЂРѕРІРµСЂРєР° РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ, РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РїСЂРѕРІРµСЂРєР° РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С‚Р°РєРѕРіРѕ РїРѕР»СЏ РґР»СЏ РґР°РЅРЅРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё.</p>
+	 * <p>Р”Р°Р»РµРµ РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё СЃРѕР·РґР°СЋС‚СЃСЏ С‚Р°Р±Р»РёС‡РєРё РІРёРґР° <b>b_uts_[ENTITY_ID]</b> Рё <b>b_utm_[ENTITY_ID]</b>.</p>
+	 * <p>РџРѕСЃР»Рµ С‡РµРіРѕ РјРµС‚Р°РґР°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅСЏСЋС‚СЃСЏ РІ Р‘Р”.</p>
+	 * <p>Р

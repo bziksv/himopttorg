@@ -1,0 +1,6 @@
+<?php
+// node types
+$MESS['LANDING_DESIGNER_NODE_TEXT'] = 'РўРµРєСЃС‚';
+$MESS['LANDING_DESIGNER_NODE_LINK'] = 'РЎСЃС‹Р»РєР°';
+$MESS['LANDING_DESIGNER_NODE_IMG'] = 'РљР°СЂС‚РёРЅРєР°';
+$MESS['LANDING_DESIGNER_NODE_ICON'] = 'Р

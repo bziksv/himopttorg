@@ -1,0 +1,18 @@
+<?
+$MESS["JS_CORE_VIEWER_DOWNLOAD"] = "РЎРєР°С‡Р°С‚СЊ";
+$MESS["JS_CORE_VIEWER_EDIT"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ";
+$MESS["JS_CORE_VIEWER_DESCR_AUTHOR"] = "РђРІС‚РѕСЂ";
+$MESS["JS_CORE_VIEWER_DESCR_LAST_MODIFY"] = "РџРѕСЃР»РµРґРЅРёРµ РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["JS_CORE_VIEWER_TOO_BIG_FOR_VIEW"] = "Р¤Р°Р№Р» СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕР№ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°";
+$MESS["JS_CORE_VIEWER_OPEN_WITH_GVIEWER"] = "РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р» РІ Google Viewer";
+$MESS["JS_CORE_VIEWER_IFRAME_DESCR_ERROR"] = "Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, РЅРµ СѓРґР°Р»РѕСЃСЊ РѕС‚РєСЂС‹С‚СЊ РґРѕРєСѓРјРµРЅС‚.";
+$MESS["JS_CORE_VIEWER_IFRAME_PROCESS_SAVE_DOC"] = "РЎРѕС…СЂР°РЅРµРЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°";
+$MESS["JS_CORE_VIEWER_IFRAME_UPLOAD_DOC_TO_GOOGLE"] = "Р—Р°РіСЂСѓР·РєР° РґРѕРєСѓРјРµРЅС‚Р°";
+$MESS["JS_CORE_VIEWER_IFRAME_CONVERT_ACCEPT"] = "РљРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ";
+$MESS["JS_CORE_VIEWER_IFRAME_CONVERT_DECLINE"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["JS_CORE_VIEWER_IFRAME_CONVERT_TO_NEW_FORMAT"] = "Р”РѕРєСѓРјРµРЅС‚ Р±СѓРґРµС‚ СЃРєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅ РІ docx, xls, pptx, С‚Р°Рє РєР°Рє РёРјРµРµС‚ СЃС‚Р°СЂС‹Р№ С„РѕСЂРјР°С‚.";
+$MESS["JS_CORE_VIEWER_IFRAME_DESCR_SAVE_DOC"] = "РЎРѕС…СЂР°РЅРёС‚СЊ РґРѕРєСѓРјРµРЅС‚?";
+$MESS["JS_CORE_VIEWER_IFRAME_SAVE_DOC"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["JS_CORE_VIEWER_IFRAME_DISCARD_DOC"] = "РћС‚РјРµРЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["JS_CORE_VIEWER_IFRAME_CHOICE_SERVICE_EDIT"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃ РїРѕРјРѕС‰СЊСЋ";
+$MESS["JS_CORE_VIEWER_IFRAME_SET_DEFAULT_SERVICE_EDIT"] = "Р

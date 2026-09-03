@@ -1,0 +1,35 @@
+<?
+$MESS["CP_BCS_TPL_PROP_EMPTY"] = "Nicht ausgewРґhlt";
+$MESS["CP_BCS_TPL_ADD_PICT_PROP"] = "ZusРґtzliches Bild des Hauptproduktes";
+$MESS["CP_BCS_TPL_OFFER_ADD_PICT_PROP"] = "ZusРґtzliches Bild der Produktvariante";
+$MESS["CP_BCS_TPL_OFFER_TREE_PROPS"] = "Eigenschaften fСЊr die Gruppierung der Produktvarianten";
+$MESS["CP_BCS_TPL_MESS_BTN_BUY"] = "Text der SchaltflРґche \"Kaufen\"";
+$MESS["CP_BCE_TPL_MESS_BTN_ADD_TO_BASKET"] = "Text der SchaltflРґche \"Zum Warenkorb hinzufСЊgen\"";
+$MESS["CP_BCS_TPL_MESS_BTN_DETAIL"] = "Text der SchalflРґche \"Details\"";
+$MESS["CP_BCS_TPL_MESS_NOT_AVAILABLE"] = "Nachricht СЊber nicht verfСЊgbares Produkt";
+$MESS["CP_BCS_TPL_MESS_BTN_BUY_DEFAULT"] = "Kaufen";
+$MESS["CP_BCE_TPL_MESS_BTN_ADD_TO_BASKET_DEFAULT"] = "Zum Warenkorb hinzufСЊgen";
+$MESS["CP_BCS_TPL_MESS_BTN_DETAIL_DEFAULT"] = "Details";
+$MESS["CP_BCS_TPL_MESS_NOT_AVAILABLE_DEFAULT"] = "Produkt nicht verfСЊgbar";
+$MESS["PRODUCT_DISPLAY_MODE_TIP"] = "Modus der Produktansicht (mit oder ohne Produktvariante, etc.)";
+$MESS["ADD_PICT_PROP_TIP"] = "Eigenschaft der zusРґtzlichen Bilder fСЊr Produkt";
+$MESS["OFFER_TREE_PROPS_TIP"] = "Liste der Eigenschaften, nach denen Produktvarianten gruppiert und angezeigt werden";
+$MESS["MESS_BTN_BUY_TIP"] = "Text zum Anzeigen auf der SchaltflРґche";
+$MESS["MESS_BTN_ADD_TO_BASKET_TIP"] = "Text zum Anzeigen auf der SchaltflРґche";
+$MESS["MESS_BTN_DETAIL_TIP"] = "Text zum Anzeigen auf der SchaltflРґche";
+$MESS["MESS_BTN_SUBSCRIBE_TIP"] = "Text zum Anzeigen auf der SchaltflРґche";
+$MESS["MESS_NOT_AVAILABLE_TIP"] = "Nachricht СЊber nicht verfСЊgbares Produkt";
+$MESS["CP_BCS_TPL_DML_SIMPLE"] = "Einfacher Modus";
+$MESS["CP_BCS_TPL_DML_EXT"] = "Erweitert";
+$MESS["CP_BCS_TPL_PRODUCT_DISPLAY_MODE"] = "Ansichtsmodus";
+$MESS["CP_BCS_TPL_LABEL_PROP"] = "Eigenschaft des Produktetiketts";
+$MESS["CP_BCS_TPL_PRODUCT_SUBSCRIPTION"] = "Benachrichtigungen СЊber wieder-auf-Lager aktivieren";
+$MESS["CP_BCS_TPL_SHOW_DISCOUNT_PERCENT"] = "Rabattwert anzeigen";
+$MESS["CP_BCS_TPL_SHOW_OLD_PRICE"] = "Vorherigen Preis anzeigen";
+$MESS["CP_BCE_TPL_MESS_BTN_SUBSCRIBE"] = "Text der SchaltflРґche \"Benachrichtigen wenn wieder auf Lager\"";
+$MESS["CP_BCE_TPL_MESS_BTN_SUBSCRIBE_DEFAULT"] = "Benachrichtigen wenn wieder auf Lager";
+$MESS["LABEL_PROP_TIP"] = "Eigenschaft des Produktetiketts";
+$MESS["PRODUCT_SUBSCRIPTION_TIP"] = "Benachrichtigungen fСЊr Kunden darСЊber aktivieren, dass die Produkte, fСЊr die sich Kunden interessieren, wieder verfСЊgbar sind";
+$MESS["SHOW_DISCOUNT_PERCENT_TIP"] = "Wenn der Rabatt aktiv ist, zeigt den Rabatt in Prozentangabe an";
+$MESS["SHOW_OLD_PRICE_TIP"] = "Wenn der Rabatt aktiv ist, zeigt den vorherigen Preis an";
+?>

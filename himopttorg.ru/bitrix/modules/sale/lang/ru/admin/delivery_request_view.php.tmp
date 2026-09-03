@@ -1,0 +1,13 @@
+<?
+$MESS ['SALE_DELIVERY_REQ_VIEW_MAIN'] = "РћСЃРЅРѕРІРЅРѕРµ";
+$MESS ['SALE_DELIVERY_REQ_VIEW_MAIN_T'] = "РћСЃРЅРѕРІРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РїРѕ Р·Р°СЏРІРєРµ";
+$MESS ['SALE_DELIVERY_REQ_VIEW_CONTENT'] = "РЎРѕРґРµСЂР¶Р°РЅРёРµ";
+$MESS ['SALE_DELIVERY_REQ_VIEW_CONTENT_T'] = "РЎРѕРґРµСЂР¶Р°РЅРёРµ Р·Р°СЏРІРєРё";
+$MESS ['SALE_DELIVERY_REQ_VIEW_SHP_LIST'] = "РЎРїРёСЃРѕРє РѕС‚РіСЂСѓР·РѕРє";
+$MESS ['SALE_DELIVERY_REQ_VIEW_SHP_LIST_T'] = "РЎРїРёСЃРѕРє РѕС‚РіСЂСѓР·РѕРє РІС…РѕРґСЏС‰РёС… РІ РґРѕСЃС‚Р°РІРєСѓ";
+$MESS ['SALE_DELIVERY_REQ_VIEW_TITLE'] = "РџСЂРѕСЃРјРѕС‚СЂ С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕР№ Р·Р°СЏРІРєРё";
+$MESS ['SALE_DELIVERY_REQ_VIEW_TO_LIST'] = "Рљ СЃРїРёСЃРєСѓ";
+$MESS ['SALE_DELIVERY_REQ_VIEW_DELETE'] = "РЈРґР°Р»РёС‚СЊ Р·Р°СЏРІРєСѓ";
+$MESS ['SALE_DELIVERY_REQ_VIEW_ACTIONS'] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS ['SALE_DELIVERY_REQ_VIEW_ERROR'] = "РћС€РёР±РєР°";
+$MESS ['SALE_DELIVERY_REQ_VIEW_F_ID'] = "Р

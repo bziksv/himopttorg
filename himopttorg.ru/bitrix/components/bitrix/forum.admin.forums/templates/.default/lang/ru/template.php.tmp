@@ -1,0 +1,15 @@
+<?
+$MESS["BUTTON_CLEAR_HTML"] = "РћС‡РёСЃС‚РёС‚СЊ СЃР»СѓР¶РµР±РЅС‹Рµ РґР°РЅРЅС‹Рµ";
+$MESS["FORUM_SORT_ORDER_ASC"] = "РїРѕ СѓР±С‹РІР°РЅРёСЋ";
+$MESS["FORUM_SORT_ORDER_DESC"] = "РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ";
+$MESS["FORUM_DELETE_CONFIRM"] = "РЈРґР°Р»РёС‚СЊ С„РѕСЂСѓРј Р±РµР·РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ?";
+$MESS["FORUM_ADD_BUTTON"] = "Р”РѕР±Р°РІРёС‚СЊ С„РѕСЂСѓРј";
+$MESS["FORUM_COLUMN_NAME"] = "РќР°Р·РІР°РЅРёРµ С„РѕСЂСѓРјР°";
+$MESS["FORUM_COLUMN_DESCRIPTION"] = "РћРїРёСЃР°РЅРёРµ С„РѕСЂСѓРјР°";
+$MESS["FORUM_COLUMN_FORUM_GROUP_ID"] = "Р“СЂСѓРїРїР°";
+$MESS["FORUM_COLUMN_SORT"] = "РЎРѕСЂС‚.";
+$MESS["FORUM_COLUMN_ACTIVE"] = "РђРєС‚.";
+$MESS["FORUM_COLUMN_SITES"] = "РЎР°Р№С‚";
+$MESS["FORUM_COLUMN_PERMISSIONS"] = "Р”РѕСЃС‚СѓРї";
+$MESS["FORUM_COLUMN_MODERATION"] = "РњРѕРґРµСЂРёСЂСѓРµРјС‹Р№";
+$MESS["FORUM_COLUMN_INDEXATION"] = "Р

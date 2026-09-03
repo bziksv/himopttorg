@@ -1,0 +1,8 @@
+<?
+$MESS["SALE_DELIVERY_INP_DELETE"] = "РЈРґР°Р»РёС‚СЊ";
+$MESS["SALE_DELIVERY_INP_ADD"] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS["INPUT_DELIVERY_PERIOD"] = "РџРµСЂРёРѕРґ";
+$MESS["INPUT_DELIVERY_READ_ONLY"] = "РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ";
+$MESS["INPUT_DELIVERY_MULTI_CONTROL_STRING"] = "РЎС‚СЂРѕРєР° СЃ РІС‹Р±РѕСЂРѕРј";
+$MESS["INPUT_DELIVERY_LOCATION_MULTI"] = "РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ";
+$MESS["INPUT_DELIVERY_LOCATION_MULTI_EXCLUDE"] = "Р

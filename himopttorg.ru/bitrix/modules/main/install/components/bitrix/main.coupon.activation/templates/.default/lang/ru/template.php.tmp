@@ -1,0 +1,12 @@
+<?php
+$MESS['MAIN_COUPON_ACTIVATION_LICENSE_OVER_TITLE'] = 'РЎСЂРѕРє РґРµР№СЃС‚РІРёСЏ РІР°С€РµР№ Р»РёС†РµРЅР·РёРё Р·Р°РєРѕРЅС‡РёР»СЃСЏ';
+$MESS['MAIN_COUPON_ACTIVATION_LICENSE_OVER_DESCRIPTION'] = 'РџСЂРѕРґР»РёС‚Рµ Р»РёС†РµРЅР·РёСЋ, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ СЂР°Р±РѕС‚Сѓ. <br>
+РћРїР»Р°С‚РёС‚СЊ РїСЂРѕРґР»РµРЅРёРµ РјРѕР¶РЅРѕ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ РёР»Рё С‡РµСЂРµР· РІР°С€РµРіРѕ РїР°СЂС‚РЅС‘СЂР°.';
+$MESS['MAIN_COUPON_ACTIVATION_BUTTON_RENEW'] = 'РџСЂРѕРґР»РёС‚СЊ Р»РёС†РµРЅР·РёСЋ';
+$MESS['MAIN_COUPON_ACTIVATION_TITLE_ACTIVATE_KEY'] = 'РћР±РЅРѕРІРёС‚Рµ СЃС‚СЂР°РЅРёС†Сѓ<br> РёР»Рё РІРІРµРґРёС‚Рµ РєРѕРґ Р°РєС‚РёРІР°С†РёРё РІСЂСѓС‡РЅСѓСЋ';
+$MESS['MAIN_COUPON_ACTIVATION_LICENSE_KEY_FIELD'] = 'Р’РІРµРґРёС‚Рµ РєРѕРґ Р°РєС‚РёРІР°С†РёРё';
+$MESS['MAIN_COUPON_ACTIVATION_BUTTON_NEED_HELP'] = 'РќСѓР¶РЅР° РїРѕРјРѕС‰СЊ?';
+$MESS['MAIN_COUPON_ACTIVATION_PLEASE_WAIT'] = 'РџСЂРѕРІРµСЂСЏРµРј С‚РµРєСѓС‰РёР№ СЃС‚Р°С‚СѓСЃ';
+$MESS['MAIN_COUPON_ACTIVATION_BUTTON_PARTNER'] = 'РћР±СЂР°С‚РёС‚СЊСЃСЏ Рє РїР°СЂС‚РЅС‘СЂСѓ';
+$MESS['MAIN_COUPON_ACTIVATION_BUTTON_REFRESH_PAGE'] = 'РћР±РЅРѕРІРёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ';
+$MESS['MAIN_COUPON_ACTIVATION_NAME_FIELD'] = 'Р

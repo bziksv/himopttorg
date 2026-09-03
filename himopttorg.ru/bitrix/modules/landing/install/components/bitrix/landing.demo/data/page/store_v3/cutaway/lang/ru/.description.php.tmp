@@ -1,0 +1,7 @@
+<?php
+$MESS['LANDING_DEMO_STORE_CUTAWAY_NAME'] = 'Р’РёР·РёС‚РєР°';
+$MESS['LANDING_DEMO_STORE_CUTAWAY_TEXT_1'] = 'РќР°Р·Р°Рґ';
+$MESS['LANDING_DEMO_STORE_CUTAWAY_TEXT_2'] = 'РћСЃС‚Р°Р»РёСЃСЊ РІРѕРїСЂРѕСЃС‹?';
+$MESS['LANDING_DEMO_STORE_CUTAWAY_TEXT_3'] = 'РќР°РїРёСЃР°С‚СЊ РЅР°Рј';
+$MESS['LANDING_DEMO_STORE_CUTAWAY_TEXT_4'] = 'РќР°РїРёС€РёС‚Рµ РЅР°Рј, РµСЃР»Рё Сѓ РІР°СЃ РµСЃС‚СЊ РІРѕРїСЂРѕСЃС‹';
+$MESS['LANDING_DEMO_STORE_CUTAWAY_TEXT_5'] = 'Р

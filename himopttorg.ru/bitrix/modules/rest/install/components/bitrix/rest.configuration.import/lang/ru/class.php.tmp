@@ -1,0 +1,5 @@
+<?
+$MESS['REST_CONFIGURATION_IMPORT_ACCESS_DENIED'] = 'РќРµС‚ РґРѕСЃС‚СѓРїР°';
+$MESS['REST_CONFIGURATION_IMPORT_MANIFEST_NOT_FOUND'] = 'РњР°РЅРёС„РµСЃС‚ РЅРµ РЅР°Р№РґРµРЅ';
+$MESS['REST_CONFIGURATION_IMPORT_MANIFEST_NOT_CURRENT'] = 'Р—Р°РіСЂСѓР¶РµРЅ РЅРµРІРµСЂРЅС‹Р№ С„Р°Р№Р»';
+$MESS['REST_CONFIGURATION_IMPORT_TITLE'] = 'Р

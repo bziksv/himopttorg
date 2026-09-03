@@ -1,0 +1,8 @@
+<?
+$MESS ['pub_struct_title'] = "РЎС‚СЂСѓРєС‚СѓСЂР° СЃР°Р№С‚Р°";
+$MESS ['pub_struct_folder'] = "РџР°РїРєР°";
+$MESS ['pub_struct_file'] = "Р¤Р°Р№Р»";
+$MESS ['pub_struct_name'] = "РќР°Р·РІР°РЅРёРµ:";
+$MESS ['pub_struct_size'] = "Р Р°Р·РјРµСЂ:";
+$MESS ['pub_struct_byte'] = "Р‘Р°Р№С‚";
+$MESS ['pub_struct_modified'] = "Р

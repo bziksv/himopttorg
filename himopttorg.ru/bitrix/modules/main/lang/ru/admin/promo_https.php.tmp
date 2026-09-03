@@ -1,0 +1,6 @@
+<?
+$MESS["HTTPS_PROMO__ADMIN_TITLE"] = "РџРѕРґРіРѕС‚РѕРІРёС‚СЊ СЃР°Р№С‚ Рє РїРµСЂРµС…РѕРґСѓ РЅР° HTTPS";
+$MESS["HTTPS_PROMO__SUBTITLE"] = "HTTPS вЂ“ Р·Р°С‰РёС‚Р° РІР°С€РёС… РґР°РЅРЅС‹С… Рё Р±РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ";
+$MESS["HTTPS_PROMO__TITLE"] = "РќР°СЃС‚СЂРѕР№РєР° HTTPS-СЃРѕРµРґРёРЅРµРЅРёСЏ РґР»СЏ Р’Р°С€РµРіРѕ СЃР°Р№С‚Р°";
+$MESS["HTTPS_PROMO__PREPARE_SITE"] = "РџРѕРґРіРѕС‚РѕРІРёС‚СЊ СЃР°Р№С‚ Рє РїРµСЂРµС…РѕРґСѓ РЅР° HTTPS";
+$MESS["HTTPS_PROMO__CHANGE_LINKS_NEW"] = "Р

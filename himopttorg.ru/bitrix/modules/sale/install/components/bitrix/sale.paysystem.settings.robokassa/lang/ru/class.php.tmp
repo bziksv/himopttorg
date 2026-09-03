@@ -1,0 +1,7 @@
+<?php
+$MESS['SALE_SPSR_COMPONENT_MODULE_ERROR'] = 'РњРѕРґСѓР»СЊ "#MODULE_ID#" РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ';
+$MESS['SALE_SPSR_COMPONENT_ACCESS_DENIED_ERROR'] = 'РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ, РѕР±СЂР°С‚РёС‚РµСЃСЊ Рє Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂСѓ РїРѕСЂС‚Р°Р»Р°';
+$MESS['SALE_SPSR_COMPONENT_SECTION_TITLE'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ';
+$MESS['SALE_SPSR_COMPONENT_SECTION_TITLE_HINT'] = 'Р—Р°РїРѕР»РЅРёС‚Рµ РїРѕР»СЏ С‚РµРјРё Р¶Рµ РґР°РЅРЅС‹РјРё, С‡С‚Рѕ СѓРєР°Р·Р°РЅС‹ РІ РІР°С€РµРј Р°РєРєР°СѓРЅС‚Рµ Robokassa';
+$MESS['SALE_SPSR_COMPONENT_PAY_SYSTEM_NAME'] = 'Robokassa';
+$MESS['SALE_SPSR_ROBOXCHANGE_SHOPID'] = 'Р

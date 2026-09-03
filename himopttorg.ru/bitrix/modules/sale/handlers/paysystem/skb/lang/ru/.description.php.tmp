@@ -1,0 +1,7 @@
+<?php
+$MESS["SALE_HPS_SKB"] = "РЎРёРЅР°СЂР° Р±Р°РЅРє";
+$MESS["SALE_HPS_SKB_LOGIN"] = "Р›РѕРіРёРЅ";
+$MESS["SALE_HPS_SKB_LOGIN_DESC"] = "Р›РѕРіРёРЅ РўРЎРџ РІ СЃРёСЃС‚РµРјРµ Р±С‹СЃС‚СЂС‹С… РїР»Р°С‚РµР¶РµР№";
+$MESS["SALE_HPS_SKB_PASSWORD"] = "РџР°СЂРѕР»СЊ";
+$MESS["SALE_HPS_SKB_PASSWORD_DESC"] = "РџР°СЂРѕР»СЊ РўРЎРџ РІ СЃРёСЃС‚РµРјРµ Р±С‹СЃС‚СЂС‹С… РїР»Р°С‚РµР¶РµР№";
+$MESS["SALE_HPS_SKB_MERCHANT_ID"] = "Р

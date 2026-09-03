@@ -1,0 +1,7 @@
+<?php
+$MESS["SALE_HPS_SKB_ERROR_DECODE_RESPONSE"] = "РћС€РёР±РєР° РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ СЃС‚СЂРѕРєРё JSON";
+$MESS["SALE_HPS_SKB_MODE_SKB"] = "РЎРёРЅР°СЂР° Р±Р°РЅРє";
+$MESS["SALE_HPS_SKB_MODE_DELOBANK"] = "Р”РµР»РѕР±Р°РЅРє";
+$MESS["SALE_HPS_SKB_MODE_GAZENERGOBANK"] = "Р“Р°Р·СЌРЅРµСЂРіРѕР±Р°РЅРє";
+$MESS["SALE_HPS_SKB_ERROR_SIGN"] = "РџРѕРґРїРёСЃСЊ СЃРѕРѕР±С‰РµРЅРёСЏ РЅРµ СЃРѕРІРїР°РґР°РµС‚";
+$MESS["SALE_HPS_SKB_OPERATION_ID_DESCRIPTION"] = "Р

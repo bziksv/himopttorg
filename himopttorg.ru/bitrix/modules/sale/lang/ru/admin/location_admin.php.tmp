@@ -1,0 +1,16 @@
+<?
+$MESS ['SALE_SECTION_TITLE'] = "РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ";
+$MESS ['SALE_F_FILTER'] = "Р¤РёР»СЊС‚СЂ";
+$MESS ['SALE_F_COUNTRY'] = "РЎС‚СЂР°РЅР°";
+$MESS ['SALE_ALL'] = "(РІСЃРµ)";
+$MESS ['SALE_F_CITY'] = "Р“РѕСЂРѕРґ";
+$MESS ['SALE_F_REGION'] = "Р РµРіРёРѕРЅ";
+$MESS ['SALE_F_SUBMIT'] = "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ";
+$MESS ['SALE_F_DEL'] = "РЎР±СЂРѕСЃРёС‚СЊ";
+$MESS ['SALE_ADD'] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS ['SALE_COUNTRY'] = "РЎС‚СЂР°РЅР°";
+$MESS ['SALE_CITY'] = "Р“РѕСЂРѕРґ";
+$MESS ['SALE_REGION'] = "Р РµРіРёРѕРЅ";
+$MESS ['SALE_SORT'] = "РЎРѕСЂС‚.";
+$MESS ['SALE_ACTION'] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS ['SALE_EDIT'] = "Р

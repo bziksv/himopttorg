@@ -1,0 +1,7 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><?
+$strMerchantID = CSalePaySystemAction::GetParamValue("SHOP_ACCOUNT");
+$strMerchantName = CSalePaySystemAction::GetParamValue("SHOP_NAME");
+
+$ORDER_ID = intval($GLOBALS["SALE_INPUT_PARAMS"]["ORDER"]["ID"]);
+?>
+<p>Р’С‹ С…РѕС‚РёС‚Рµ РѕРїР»Р°С‚РёС‚СЊ РїРѕ РЎРјР°СЂС‚-РєР°СЂС‚Рµ &quot;Р

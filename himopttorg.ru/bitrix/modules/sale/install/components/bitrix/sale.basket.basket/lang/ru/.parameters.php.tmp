@@ -1,0 +1,8 @@
+<?
+$MESS["SBB_DESC_YES"] = "Р”Р°";
+$MESS["SBB_DESC_NO"] = "РќРµС‚";
+$MESS["SBB_PATH_TO_ORDER"] = "РЎС‚СЂР°РЅРёС†Р° РѕС„РѕСЂРјР»РµРЅРёСЏ Р·Р°РєР°Р·Р°";
+$MESS["SBB_HIDE_COUPON"] = "РЎРїСЂСЏС‚Р°С‚СЊ РїРѕР»Рµ РІРІРѕРґР° РєСѓРїРѕРЅР°";
+$MESS["SBB_COLUMNS_LIST"] = "Р’С‹РІРѕРґРёРјС‹Рµ РєРѕР»РѕРЅРєРё";
+$MESS["SBB_BNAME"] = "РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР°";
+$MESS["SBB_PREVIEW_PICTURE"] = "Р

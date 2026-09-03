@@ -1,0 +1,14 @@
+<?
+$MESS["SDEN_SITE"] = "РЎР°Р№С‚";
+$MESS["SDEN_ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ";
+$MESS["SDEN_PERIOD"] = "РџРµСЂРёРѕРґ Р°РєС‚РёРІРЅРѕСЃС‚Рё";
+$MESS["BT_SALE_DISCOUNT_EDIT_TAB_NAME_COMMON"] = "РћР±С‰РёРµ РїР°СЂР°РјРµС‚СЂС‹";
+$MESS["BT_SALE_DISCOUNT_EDIT_TAB_TITLE_COMMON"] = "РћР±С‰РёРµ РїР°СЂР°РјРµС‚СЂС‹ РїСЂР°РІРёР»Р°";
+$MESS["BT_SALE_DISCOUNT_EDIT_TAB_NAME_ACTIONS"] = "Р”РµР№СЃС‚РІРёСЏ Рё СѓСЃР»РѕРІРёСЏ";
+$MESS["BT_CAT_DISCOUNT_EDIT_TAB_TITLE_ACTIONS"] = "Р’С‹РїРѕР»РЅСЏРµРјС‹Рµ РґРµР№СЃС‚РІРёСЏ Рё СѓСЃР»РѕРІРёСЏ РїСЂРёРјРµРЅРµРЅРёСЏ";
+$MESS["BT_SALE_DISCOUNT_EDIT_TAB_NAME_GROUPS"] = "РћРіСЂР°РЅРёС‡РµРЅРёСЏ";
+$MESS["BT_SALE_DISCOUNT_EDIT_TAB_TITLE_GROUPS"] = "РћРіСЂР°РЅРёС‡РµРЅРёСЏ РїСЂР°РІРёР»Р°";
+$MESS["BT_SALE_DISCOUNT_EDIT_TAB_NAME_MISC"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕ";
+$MESS["BT_SALE_DISCOUNT_EDIT_TAB_TITLE_MISC"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїСЂР°РІРёР»Р°";
+$MESS["BT_SALE_DISCOUNT_EDIT_CALENDARE_PERIOD_EMPTY"] = "Р‘РµР· РѕРіСЂР°РЅРёС‡РµРЅРёР№";
+$MESS["BT_SALE_DISCOUNT_EDIT_CALENDARE_PERIOD_INTERVAL"] = "Р

@@ -1,0 +1,5 @@
+<?php
+$MESS['LANDING_CMP_ERROR_SITE_NOT_FOUND'] = 'РЎР°Р№С‚ РЅРµ РЅР°Р№РґРµРЅ РёР»Рё РґР»СЏ РЅРµРіРѕ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РјР°СЃС‚РµСЂ.';
+$MESS['LANDING_CRM_PERSON_TYPE_CONTACT'] = 'Р¤РёР·РёС‡РµСЃРєРѕРµ Р»РёС†Рѕ';
+$MESS['LANDING_ORDER_PROPERTIES_GROUP_NAME'] = 'Р›РёС‡РЅС‹Рµ РґР°РЅРЅС‹Рµ';
+$MESS['LANDING_ORDER_PROPERTY_NAME'] = 'Р

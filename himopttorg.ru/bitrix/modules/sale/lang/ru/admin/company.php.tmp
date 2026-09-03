@@ -1,0 +1,9 @@
+<?
+$MESS["SALE_COMPANY_SECTION_TITLE"] = "РљРѕРјРїР°РЅРёРё";
+$MESS["SALE_COMPANY_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["SALE_COMPANY_LOCATION_ID"] = "Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ";
+$MESS["SALE_COMPANY_CODE"] = "РљРѕРґ";
+$MESS["SALE_COMPANY_SORT"] = "РЎРѕСЂС‚РёСЂРѕРІРєР°";
+$MESS["SALE_COMPANY_ADD_NEW"] = "Р”РѕР±Р°РІРёС‚СЊ РєРѕРјРїР°РЅРёСЋ";
+$MESS["SALE_COMPANY_ADD_NEW_ALT"] = "Р”РѕР±Р°РІРёС‚СЊ РєРѕРјРїР°РЅРёСЋ";
+$MESS["SALE_COMPANY_EDIT"] = "Р

@@ -1,0 +1,440 @@
+<?php
+/**
+ * Bitrix Framework
+ * @package bitrix
+ * @subpackage main
+ * @copyright 2001-2023 Bitrix
+ */
+
+use Bitrix\Main\Config\Option;
+use Bitrix\Main\Localization\Loc;
+use Bitrix\Main\Web\Uri;
+use Bitrix\Main\UrlPreview\UrlPreview;
+use Bitrix\Main\Application;
+
+class CTextParser
+{
+	public $type = 'html';
+	public $serverName = '';
+	public $preg;
+
+	public $imageWidth = 800;
+	public $imageHeight = 800;
+	public $maxStringLen = 0;
+	public $maxAnchorLength = 40;
+
+	//https://www.w3.org/TR/CSS2/fonts.html#propdef-font-size
+	public $arFontSize = [
+		1 => 'xx-small',
+		2 => 'small',
+		3 => 'medium',
+		4 => 'large',
+		5 => 'x-large',
+		6 => 'xx-large',
+	];
+	public $allow = [
+		'HTML' => 'N',
+		'ANCHOR' => 'Y',
+		'BIU' => 'Y',
+		'IMG' => 'Y',
+		'QUOTE' => 'Y',
+		'CODE' => 'Y',
+		'FONT' => 'Y',
+		'LIST' => 'Y',
+		'EMOJI' => 'Y',
+		'SMILES' => 'Y',
+		'CLEAR_SMILES' => 'N',
+		'NL2BR' => 'N',
+		'VIDEO' => 'Y',
+		'TABLE' => 'Y',
+		'CUT_ANCHOR' => 'N',
+		'SHORT_ANCHOR' => 'N',
+		'TEXT_ANCHOR' => 'Y',
+		'ALIGN' => 'Y',
+		'USERFIELDS' => 'N',
+		'USER' => 'Y',
+		'PROJECT' => 'Y',
+		'DEPARTMENT' => 'Y',
+		'P' => 'Y',
+		'TAG' => 'N',
+		'SPOILER' => 'Y',
+	];
+	public $anchorType = 'html';
+	public $smiles = null;
+	public $smilesGallery = CSmileGallery::GALLERY_DEFAULT;
+	public $bMobile = false;
+	public $LAZYLOAD = 'N';
+	public $parser_nofollow = 'N';
+	public $link_target = '_blank';
+	public $authorName = '';
+	public $pathToUser = '';
+	public $pathToUserEntityType = false;
+	public $pathToUserEntityId = false;
+
+	protected $wordSeparator = "\\s.,;:!?\\#\\-\\*\\|\\[\\]\\(\\)\\{\\}";
+	protected $smilePatterns = null;
+	protected $smileReplaces = null;
+	protected static $repoSmiles = [];
+	protected $defended_urls = [];
+	protected $anchorSchemes = null;
+	protected $userField;
+	protected $tagPattern = "/([\s]+|^)#([^\s,\.\[\]<>]+)/is";
+	protected $pathToSmile = '';
+	protected $ajaxPage;
+
+	protected $code_open = 0;
+	protected $code_error = 0;
+	protected $code_closed = 0;
+	protected $quote_open = 0;
+	protected $quote_error = 0;
+	protected $quote_closed = 0;
+
+	public function __construct()
+	{
+		global $APPLICATION;
+
+		$this->ajaxPage = $APPLICATION->GetCurPageParam('', ['bxajaxid', 'logout']);
+	}
+
+	public function getAnchorSchemes()
+	{
+		if ($this->anchorSchemes === null)
+		{
+			static $schemes = null;
+			if ($schemes === null)
+			{
+				$schemes = Option::get('main', '~parser_anchor_schemes', 'http|https|news|ftp|aim|mailto|file|tel|callto|skype|viber');
+			}
+			$this->anchorSchemes = $schemes;
+		}
+		return $this->anchorSchemes;
+	}
+
+	public function setAnchorSchemes($schemes)
+	{
+		$this->anchorSchemes = $schemes;
+	}
+
+	protected function initSmiles()
+	{
+		if (!array_key_exists($this->smilesGallery, self::$repoSmiles))
+		{
+			$smiles = CSmile::getByGalleryId(CSmile::TYPE_SMILE, $this->smilesGallery);
+			$arSmiles = [];
+			foreach ($smiles as $smile)
+			{
+				$arTypings = explode(' ', $smile['TYPING']);
+				foreach ($arTypings as $typing)
+				{
+					$arSmiles[] = array_merge($smile, [
+						'TYPING' => $typing,
+						'IMAGE'  => CSmile::PATH_TO_SMILE . $smile['SET_ID'] . '/' . $smile['IMAGE'],
+						'DESCRIPTION' => $smile['NAME'],
+						'DESCRIPTION_DECODE' => 'Y',
+					]);
+				}
+			}
+			self::$repoSmiles[$this->smilesGallery] = $arSmiles;
+		}
+		$this->smiles = self::$repoSmiles[$this->smilesGallery];
+	}
+
+	protected function initSmilePatterns()
+	{
+		$this->smilePatterns = [];
+		$this->smileReplaces = [];
+
+		$pre = '';
+		foreach ($this->smiles as $row)
+		{
+			if (preg_match("/\\w\$/", $row['TYPING']))
+			{
+				$pre .= '|' . preg_quote($row['TYPING'], '/');
+			}
+		}
+
+		foreach ($this->smiles as $row)
+		{
+			if ($row['TYPING'] != '' && $row['IMAGE'] != '')
+			{
+				$code = str_replace(["'", "<", ">"], ["\\'", "&lt;", "&gt;"], $row["TYPING"]);
+				$patt = preg_quote($code, "/");
+				$code = preg_quote(str_replace(["\x5C"], ["&#092;"], $code));
+				$image = preg_quote(str_replace("'", "\\'", $row["IMAGE"]));
+				$description = preg_quote(htmlspecialcharsbx(str_replace(["\x5C"], ["&#092;"], $row["DESCRIPTION"]), ENT_QUOTES), "/");
+
+				$patternName = 'pattern' . count($this->smilePatterns);
+
+				$this->smilePatterns[] = "/(?<=^|\\>|[" . $this->wordSeparator . "\\&]" . $pre . ")(?P<" . $patternName . ">$patt)(?=$|\\<|[" . $this->wordSeparator . "\\&])/s" . BX_UTF_PCRE_MODIFIER;
+
+				$this->smileReplaces[$patternName] = [
+					'code' => $code,
+					'image' => $image,
+					'description' => $description,
+					'width' => intval($row['IMAGE_WIDTH']),
+					'height' => intval($row['IMAGE_HEIGHT']),
+					'descriptionDecode' => $row['DESCRIPTION_DECODE'] == 'Y',
+					'imageDefinition' => $row['IMAGE_DEFINITION'] ?: CSmile::IMAGE_SD
+				];
+			}
+		}
+		usort($this->smilePatterns, function($a, $b) { return (mb_strlen($a) > mb_strlen($b) ? -1 : 1); });
+	}
+
+	protected static function chr($a)
+	{
+		return \Bitrix\Main\Text\Encoding::convertEncoding($a, 'cp1251', SITE_CHARSET);
+	}
+
+	protected static function strpos($s, $a)
+	{
+		$a = self::chr($a);
+		return strpos($s, $a);
+	}
+
+	public function convertText($text)
+	{
+		if (!is_string($text) || $text == '')
+		{
+			return '';
+		}
+
+		$text = preg_replace(["#([?&;])PHPSESSID=([0-9a-zA-Z]{32})#i", "/\\x{00A0}/" . BX_UTF_PCRE_MODIFIER], ["\\1PHPSESSID1=", " "], $text);
+
+		$this->defended_urls = [];
+
+		if ($this->serverName == '' && $this->type == 'rss')
+		{
+			$dbSite = CSite::GetByID(SITE_ID);
+			$arSite = $dbSite->Fetch();
+			$serverName = $arSite['SERVER_NAME'];
+			if ($serverName == '')
+			{
+				if (defined('SITE_SERVER_NAME') && SITE_SERVER_NAME != '')
+				{
+					$serverName = SITE_SERVER_NAME;
+				}
+				else
+				{
+					$serverName = COption::GetOptionString('main', 'server_name');
+				}
+			}
+			if ($serverName != '')
+			{
+				$this->serverName = 'http://' . $serverName;
+			}
+		}
+
+		$this->preg = ['counter' => 0, 'pattern' => [], 'replace' => [], 'cache' => []];
+
+		foreach (GetModuleEvents('main', 'TextParserBefore', true) as $arEvent)
+		{
+			ExecuteModuleEventEx($arEvent, [&$text, &$this]);
+		}
+
+		if (($this->allow['CODE'] ?? '') == 'Y')
+		{
+			$text = preg_replace_callback(
+				[
+					"#(\\[code(?:\\s+[^]]*]|]))(.+?)(\\[/code(?:\\s+[^]]*]|]))#is" . BX_UTF_PCRE_MODIFIER,
+					"#(<code(?:\\s+[^>]*>|>))(.+?)(</code(?:\\s+[^>]*>|>))#is" . BX_UTF_PCRE_MODIFIER
+				],
+				[$this, 'convertCode'],
+				$text
+			);
+		}
+		if (($this->allow['HTML'] ?? '') != 'Y' && ($this->allow['NL2BR'] ?? '') == 'Y')
+		{
+			$text = preg_replace("#<br(.*?)>#is", "\n", $text);
+		}
+		if (($this->allow['HTML'] ?? '') != 'Y')
+		{
+			// С‚СѓС‚ РѕРЅР° РїСЂРµРІСЂР°С‰Р°РµС‚СЃСЏ!
+			if (($this->allow['ANCHOR'] ?? '') == 'Y')
+			{
+				$text = preg_replace(
+					[
+						"#<a[^>]+href\\s*=\\s*(['\"])(.+?)(?:\\1)[^>]*>(.*?)</a[^>]*>#is" . BX_UTF_PCRE_MODIFIER,
+						"#<a[^>]+href(\\s*=\\s*)([^'\">]+)>(.*?)</a[^>]*>#is" . BX_UTF_PCRE_MODIFIER
+					],
+					"[url=\\2]\\3[/url]", $text
+				);
+			}
+			if (($this->allow['BIU'] ?? '') == 'Y')
+			{
+				$replaced = 0;
+				do
+				{
+					$text = preg_replace(
+						"/<([busi])[^>a-z]*>(.+?)<\\/(\\1)[^>a-z]*>/is" . BX_UTF_PCRE_MODIFIER,
+						"[\\1]\\2[/\\1]",
+					$text, -1, $replaced);
+				}
+				while ($replaced > 0);
+			}
+			if (($this->allow['P'] ?? '') == 'Y')
+			{
+				$replaced = 0;
+				do
+				{
+					$text = preg_replace(
+						"/<p[^>a-z]*>(.+?)<\\/p[^>a-z]*>/is" . BX_UTF_PCRE_MODIFIER,
+						"[p]\\1[/p]",
+						$text, -1, $replaced);
+				}
+				while ($replaced > 0);
+			}
+			if (($this->allow['IMG'] ?? '') == 'Y')
+			{
+				$text = preg_replace(
+					"#<img[^>]+src\\s*=[\\s'\"]*(((http|https|ftp)://[.\\-_:a-z0-9@]+)*(/[-_/=:.a-z0-9@{}&?%]+)+)[\\s'\"]*[^>]*>#is" . BX_UTF_PCRE_MODIFIER,
+					"[img]\\1[/img]", $text
+				);
+			}
+			if (($this->allow['FONT'] ?? '') == 'Y')
+			{
+				$text = preg_replace(
+					[
+						"/<font[^>]+size\\s*=[\\s'\"]*([0-9]+)[\\s'\"]*[^>]*>(.+?)<\\/font[^>]*>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<font[^>]+color\\s*=[\\s'\"]*(#[a-f0-9]{6})[^>]*>(.+?)<\\/font[^>]*>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<font[^>]+face\\s*=[\\s'\"]*([a-z\\s\\-]+)[\\s'\"]*[^>]*>(.+?)<\\/font[^>]*>/is" . BX_UTF_PCRE_MODIFIER,
+					],
+					[
+						"[size=\\1]\\2[/size]",
+						"[color=\\1]\\2[/color]",
+						"[font=\\1]\\2[/font]",
+					],
+					$text
+				);
+			}
+			if (($this->allow['LIST'] ?? '') == 'Y')
+			{
+				$text = preg_replace(
+					[
+						"/<ul((\\s[^>]*)|(\\s*))>(.+?)<\\/ul([^>]*)>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<ol((\\s[^>]*)|(\\s*))>(.+?)<\\/ol([^>]*)>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<li((\\s[^>]*)|(\\s*))>(.+?)<\\/li([^>]*)>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<li((\\s[^>]*)|(\\s*))>/is" . BX_UTF_PCRE_MODIFIER,
+					],
+					[
+						"[list]\\4[/list]",
+						"[list=1]\\4[/list]",
+						"[*]\\4",
+						"[*]",
+					],
+					$text
+				);
+			}
+			if (($this->allow['TABLE'] ?? '') == 'Y')
+			{
+				$text = preg_replace(
+					[
+						"/<table((\\s[^>]*)|(\\s*))>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<\\/table([^>]*)>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<tr((\\s[^>]*)|(\\s*))>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<\\/tr([^>]*)>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<td((\\s[^>]*)|(\\s*))>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<\\/td([^>]*)>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<th((\\s[^>]*)|(\\s*))>/is" . BX_UTF_PCRE_MODIFIER,
+						"/<\\/th([^>]*)>/is" . BX_UTF_PCRE_MODIFIER,
+					],
+					[
+						"[table]",
+						"[/table]",
+						"[tr]",
+						"[/tr]",
+						"[td]",
+						"[/td]",
+						"[th]",
+						"[/th]",
+					],
+					$text
+				);
+			}
+			if (($this->allow['QUOTE'] ?? '') == 'Y')
+			{
+				$text = preg_replace("#<(/?)quote(.*?)>#is", "[\\1quote]", $text);
+			}
+
+			if (preg_match("/<cut/is" . BX_UTF_PCRE_MODIFIER, $text, $matches))
+			{
+				$text = preg_replace(
+					"/<cut([^>]*)>(.+?)<\/cut>/is" . BX_UTF_PCRE_MODIFIER,
+					"[cut=\\1]\\2[/cut]",
+					$text);
+			}
+
+			if ($text != '')
+			{
+				if ($this->preg['counter'] > 0)
+				{
+					$res = mb_strlen((string)$this->preg['counter']);
+					$p = ['\d'];
+					while (($res--) > 1)
+					{
+						$p[] = '\d{' . ($res + 1) . '}';
+					}
+					$text = preg_replace(
+						["/<(?!\017#(" . implode(")|(", $p) . ")>)/", "/(?<!<\017#(" . implode(")|(", $p) . "))>/", "/\"/"],
+						["&lt;", "&gt;", "&quot;"],
+						$text
+					);
+				}
+				else
+				{
+					$text = str_replace(
+						["<", ">", "/\"/"],
+						["&lt;", "&gt;", "&quot;"],
+						$text
+					);
+
+				}
+			}
+		}
+		$patt = [];
+		if (($this->allow['VIDEO'] ?? '') == 'Y')
+		{
+			$patt[] = "/\\[video([^\\]]*)\\](.+?)\\[\\/video[\\s]*\\]/is" . BX_UTF_PCRE_MODIFIER;
+		}
+		if (($this->allow['IMG'] ?? '') == 'Y')
+		{
+			$patt[] = "/\\[img([^\\]]*)\\](.+?)\\[\\/img\\]/is" . BX_UTF_PCRE_MODIFIER;
+		}
+
+		foreach (GetModuleEvents('main', 'TextParserBeforeAnchorTags', true) as $arEvent)
+		{
+			ExecuteModuleEventEx($arEvent, [&$text, &$this]);
+		}
+
+		if (($this->allow['ANCHOR'] ?? '') == 'Y')
+		{
+			$patt[] = "/\\[url\\](.*?)\\[\\/url\\]/i" . BX_UTF_PCRE_MODIFIER;
+			$patt[] = "/\\[url\\s*=\\s*(
+			(?:
+				[^\\[\\]]++
+				|\\[ (?: (?>[^\\[\\]]+) | (?:\\1) )* \\]
+			)+
+			)\\s*\\](.*?)\\[\\/url\\]/ixs" . BX_UTF_PCRE_MODIFIER;
+
+			$text = preg_replace_callback($patt, [$this, 'preconvertAnchor'], $text);
+
+			if (($this->allow['TEXT_ANCHOR'] ?? 'Y') == 'Y')
+			{
+				$schemes = $this->getAnchorSchemes();
+
+				$patt = [];
+				if (strpos($text, '&lt;') !== false)
+				{
+					$patt[] = "/(?<=\\&lt\\;)((((" . $schemes . "):\\/\\/)|www\\.)[._:a-z0-9@-].*?)(?=\\&gt\\;)/is" . BX_UTF_PCRE_MODIFIER;
+				}
+
+				$word_separator = str_replace('?', '', $this->wordSeparator);
+				if (self::strpos($text, '(') !== false)
+				{
+					$patt[] = "/(?<=\\()(?<!\\[nomodify\\]|<nomodify>)((((" . $schemes . "):\\/\\/)|www\\.)[._:a-z0-9@-].*?)(?=\\))/is" . BX_UTF_PCRE_MODIFIER;
+				}
+				if (self::strpos($text, 'вЂњ') !== false)
+				{
+					$patt[] = "/(?<=[" . self::chr("вЂњ") . "])(?<!\\[nomodify\\]|<nomodify>)((((" . $schemes . "):\\/\\/)|www\\.)[._:a-z0-9@-].*?)(?=[" . self::chr("вЂќ") . "])/is" . BX_UTF_PCRE_MODIFIER;
+				}
+				if (self::strpos($text, 'вЂ

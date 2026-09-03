@@ -1,0 +1,71 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+IncludeTemplateLangFile(__FILE__);
+?><?if (!preg_match("/^\/catalog\/[0-9]{1,11}\/[0-9]{1,11}\/$/i", $APPLICATION->GetCurDir())){?></div>
+
+							<!--/main_column--><?}?>
+							<?if($APPLICATION->GetCurDir() == "/"){?><!--add_column-->
+							<div class="add_column">
+								<div class="in_add_column">
+
+<!--                                    СЂРѕСЃС‚РѕРІ-->
+<!--
+									<div class="banner_block">
+										<div class="bn_t"></div>
+										<div class="bn_m">
+											<p> </p>									
+											<div class="banner_tit">												
+											  <p class="freeset">Р—Р°РєСЂС‹Р»СЃСЏ С„РёР»РёР°Р» РІ </p>
+											  <p class="freeset">Р РѕСЃС‚РѕРІ-РќР°-Р”РѕРЅСѓ!</p>
+										        </div>	
+                                                <br />	
+                                                <p>РћР±РѕСЃРѕР±Р»РµРЅРЅРѕРµ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ</p>
+                                                <p>Рі. Р РѕСЃС‚РѕРІ-РЅР°-Р”РѕРЅСѓ, СѓР». РћСЂСЃРєР°СЏ, Рґ. 10/4</p>
+												<p>С‚РµР»РµС„РѕРЅ +7(---)00-00-000</p>
+											<p class="detail"><a href="http://www.himopttorg.ru/contacts/">РџРѕРґСЂРѕР±РЅРµРµ</a></p>
+										</div>
+										<div class="bn_b"></div>
+									</div>
+-->
+
+
+
+
+
+<!--                                        РєР°СЂС‚РёРЅРєР°-->
+									<div class="banner_block">
+<!--										-><img src="/upload/medialibrary/7ae/7ae3f5671d8bb6a8830566672f7f2f1a.png" title="21.png" border="0" alt="21.png" width="180" height="208"  />-->
+										<img src="/upload/medialibrary/7ae/7ae3f5671d8bb6a8830566672f7f2f1a.png" title="21.png" border="0" alt="21.png" width="100%"   />
+									</div>
+								</div>
+							</div>		
+							<!--/add_column--><?}?>
+						</div>
+						<!--/in_content-->
+					</div>
+					<!--/content-->							
+				</div>
+				<!--/wrapper-->				
+			</div>
+			<!--/container-->
+			<div class="hfooter"></div>		
+		</div>
+		<!--/wrap-->
+		<!--footer-->
+		<div class="footer_wrap">			
+			<div id="footer">
+                                <!--
+				<div class="mistery_bg"></div>
+				<div class="mistery_block">
+					<div class="mistery">
+						<strong class="powered"><a href="http://mystery-group.ru/" target="_blank" title="?????????? ?????">???????? ??????</a></strong>
+					</div>
+				</div>
+                                -->
+
+                                <a class="prime-incut black colour marketing-only" style="    float: right;
+    margin-right: 40px;"></a>
+
+				<div class="him">
+					<p style="font-size:10px;"><a target="_blank" href="/upload/politics.pdf">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a></p>
+					<p style="font-size:10px;"><a target="_blank" href="/upload/compliance.pdf">РЎРѕРіР»Р°СЃРёРµ РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РґР°РЅРЅС‹С…</a></p>
+				 	<p>&copy; РћРћРћ В«РҐР

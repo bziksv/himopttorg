@@ -1,0 +1,6 @@
+<?
+global $MESS;
+
+$MESS["SPCP_DTITLE"] = "Р‘РёРЅРѕРј";
+$MESS["SPCP_DDESCR"] = "<a href=\"http://ehouseholding.ru/docs/binom_direct.htm\">РџСЂР°РІРёР»Р° РѕРїР»Р°С‚С‹ РїРѕ РЎРёСЃС‚РµРјРµ Р‘РёРЅРѕРј РІ С„РѕСЂРјР°С‚Рµ direct</a>";
+$MESS["SHOP_ACCOUNT"] = "Р

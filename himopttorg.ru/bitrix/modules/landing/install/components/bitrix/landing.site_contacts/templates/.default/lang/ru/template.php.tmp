@@ -1,0 +1,8 @@
+<?php
+$MESS['LANDING_TPL_TITLE'] = 'Р’Р°С€Рё РєРѕРЅС‚Р°РєС‚С‹';
+$MESS['LANDING_TPL_FORM_INPUT_NAME'] = 'РќР°Р·РІР°РЅРёРµ РІР°С€РµР№ РєРѕРјРїР°РЅРёРё';
+$MESS['LANDING_TPL_FORM_INPUT_PHONE'] = 'РљРѕРЅС‚Р°РєС‚РЅС‹Р№ С‚РµР»РµС„РѕРЅ';
+$MESS['LANDING_TPL_FORM_SAVE'] = 'РЎРѕС…СЂР°РЅРёС‚СЊ';
+$MESS['LANDING_TPL_PLACEHOLDER_COMPANY'] = 'Р‘РёС‚СЂРёРєСЃ24.РњР°РіР°Р·РёРЅ';
+$MESS['LANDING_TPL_PLACEHOLDER_PHONE'] = '+1 234 567 89 01';
+$MESS['LANDING_TPL_REQ_CHANGE'] = 'Р

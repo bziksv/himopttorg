@@ -1,0 +1,64 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+
+CJSCore::Init(array("ajax"));
+//Let's determine what value to display: rating or average ?
+if($arParams["DISPLAY_AS_RATING"] == "vote_avg")
+{
+	if($arResult["PROPERTIES"]["vote_count"]["VALUE"])
+		$DISPLAY_VALUE = round($arResult["PROPERTIES"]["vote_sum"]["VALUE"]/$arResult["PROPERTIES"]["vote_count"]["VALUE"], 2);
+	else
+		$DISPLAY_VALUE = 0;
+}
+else
+	$DISPLAY_VALUE = $arResult["PROPERTIES"]["rating"]["VALUE"];
+?>
+<div class="iblock-vote" id="vote_<?echo $arResult["ID"]?>">
+
+<script type="text/javascript">
+if(!window.voteScript) window.voteScript =
+{
+	trace_vote: function(div, flag)
+	{
+		var my_div;
+		var r = div.id.match(/^vote_(\d+)_(\d+)$/);
+		for(var i = r[2]; i >= 0; i--)
+		{
+			my_div = document.getElementById('vote_'+r[1]+'_'+i);
+			if(my_div)
+			{
+				if(flag)
+				{
+					if(!my_div.saved_class)
+						my_div.saved_className = my_div.className;
+					if(my_div.className!='star-active star-over')
+						my_div.className = 'star-active star-over';
+				}
+				else
+				{
+					if(my_div.saved_className && my_div.className != my_div.saved_className)
+						my_div.className = my_div.saved_className;
+				}
+			}
+		}
+		i = r[2]+1;
+		while(my_div = document.getElementById('vote_'+r[1]+'_'+i))
+		{
+			if(my_div.saved_className && my_div.className != my_div.saved_className)
+				my_div.className = my_div.saved_className;
+			i++;
+		}
+	},
+	<?
+	//16*
+	//Р

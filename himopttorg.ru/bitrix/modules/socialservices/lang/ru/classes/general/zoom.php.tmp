@@ -1,0 +1,4 @@
+<?php
+$MESS['SOCSERV_ZOOM_CLIENT_ID'] = 'ID РџСЂРёР»РѕР¶РµРЅРёСЏ:';
+$MESS['SOCSERV_ZOOM_CLIENT_SECRET'] = 'РЎРµРєСЂРµС‚:';
+$MESS['SOCSERV_ZOOM_NOTE'] = 'Р

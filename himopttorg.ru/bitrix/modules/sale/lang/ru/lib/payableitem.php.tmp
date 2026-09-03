@@ -1,0 +1,3 @@
+<?php
+$MESS["SALE_PAYABLE_ITEM_QUANTITY_ERROR"] = "РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР° РІ РєРѕСЂР·РёРЅРµ";
+$MESS["SALE_PAYABLE_ITEM_SHIPMENT_QUANTITY_ERROR"] = "Р

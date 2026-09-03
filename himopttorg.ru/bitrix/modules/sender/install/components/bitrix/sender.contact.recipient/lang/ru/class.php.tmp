@@ -1,0 +1,5 @@
+<?
+$MESS["SENDER_LETTER_RCP_LIST_TITLE"] = "РџРѕР»СѓС‡Р°С‚РµР»Рё";
+$MESS["SENDER_LETTER_RCP_LIST_TITLE_CONTACT"] = "РћС‚РїСЂР°РІР»РµРЅРЅС‹Рµ СЂР°СЃСЃС‹Р»РєРё";
+$MESS["SENDER_LETTER_RCP_UI_COLUMN_LETTER_TITLE"] = "Р Р°СЃСЃС‹Р»РєР°";
+$MESS["SENDER_LETTER_RCP_UI_COLUMN_NAME"] = "Р

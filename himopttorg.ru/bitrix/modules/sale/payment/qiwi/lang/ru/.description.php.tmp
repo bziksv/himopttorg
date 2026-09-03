@@ -1,0 +1,13 @@
+<?
+global $MESS;
+$MESS['SALE_QH_TITLE'] = "Qiwi Wallet";
+$MESS['SALE_QH_DESCRIPTION'] = "<div class='adm-info-message'>
+	РџР»Р°С‚РµР¶РЅС‹Р№ СЃРµСЂРІРёСЃ <a href='https://ishop.qiwi.com' target='_blank'>Visa QIWI Wallet</a><br/>
+	<ol>
+		<li>РЈРєР°Р¶РёС‚Рµ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹.</li>
+		<li>РЎРѕР·РґР°Р№С‚Рµ СЃС‚СЂР°РЅРёС†Сѓ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ СѓРІРµРґРѕРјР»РµРЅРёР№ РѕС‚ РїР»Р°С‚РµР¶РЅРѕР№ СЃРёСЃС‚РµРјС‹ Рё СЂР°СЃРїРѕР»РѕР¶РёС‚Рµ РЅР° РЅРµР№ РєРѕРјРїРѕРЅРµРЅС‚ <strong>bitrix:sale.order.payment.receive</strong>.</li>
+		<li>РќР°СЃС‚СЂРѕР№С‚Рµ <strong>bitrix:sale.order.payment.receive</strong> РЅР° СЌС‚Сѓ РїР»Р°С‚РµР¶РЅСѓСЋ СЃРёСЃС‚РµРјСѓ.</li>
+		<li>РЈРєР°Р¶РёС‚Рµ РІ <a href = 'https://ishop.qiwi.com/options/merchants.action'>Р»РёС‡РЅРѕРј РєР°Р±РёРЅРµС‚Рµ</a> Qiwi Wallet url-Р°РґСЂРµСЃ СЃРѕР·РґР°РЅРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹.</li>
+	</ol>
+</div>";
+$MESS['SALE_QH_SHOP_ID'] = "Р

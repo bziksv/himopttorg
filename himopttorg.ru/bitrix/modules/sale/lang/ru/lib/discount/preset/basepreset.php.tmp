@@ -1,0 +1,6 @@
+<?php
+$MESS["SALE_BASE_PRESET_DISCOUNT_EDIT_ERR_ADD"] = "РћС€РёР±РєР° РїСЂРё РґРѕР±Р°РІР»РµРЅРёРё РїСЂР°РІРёР»Р° СЃРєРёРґРєРё";
+$MESS["SALE_BASE_PRESET_DISCOUNT_EDIT_ERR_UPDATE"] = "РћС€РёР±РєР° РїСЂРё РѕР±РЅРѕРІР»РµРЅРёРё РїСЂР°РІРёР»Р° СЃРєРёРґРєРё";
+$MESS["SALE_BASE_PRESET_ORDERAMOUNT_FIELD_NAME"] = "РќР°Р·РІР°РЅРёРµ СЃРєРёРґРєРё";
+$MESS["SALE_BASE_PRESET_ORDERAMOUNT_FIELD_PRIORITY"] = "РџСЂРёРѕСЂРёС‚РµС‚ РїСЂРёРјРµРЅРёРјРѕСЃС‚Рё";
+$MESS["SALE_BASE_PRESET_ORDERAMOUNT_FIELD_SORT"] = "Р

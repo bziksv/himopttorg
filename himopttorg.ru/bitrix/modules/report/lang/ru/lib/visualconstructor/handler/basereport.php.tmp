@@ -1,0 +1,4 @@
+<?php
+$MESS['WITHOUT_DATA'] = 'Р‘РµР· РґР°РЅРЅС‹С…';
+$MESS['SELECT_REPORT_HANDLER_CATEGORY'] = 'РљР°С‚РµРіРѕСЂРёСЏ:';
+$MESS['SELECT_DATA_PROVIDER'] = 'Р

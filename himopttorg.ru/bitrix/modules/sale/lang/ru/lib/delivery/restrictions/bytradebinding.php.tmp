@@ -1,0 +1,4 @@
+<?php
+$MESS['SALE_SRV_RSTR_BY_TRADE_BINDING_NAME'] = 'РїРѕ РёСЃС‚РѕС‡РЅРёРєСѓ Р·Р°РєР°Р·Р°';
+$MESS['SALE_SRV_RSTR_BY_TRADE_BINDING_DESC'] = '';
+$MESS['SALE_SRV_RSTR_BY_TRADE_BINDING_LIST'] = 'Р

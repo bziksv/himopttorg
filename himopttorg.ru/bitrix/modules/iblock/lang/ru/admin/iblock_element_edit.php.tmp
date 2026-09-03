@@ -1,0 +1,16 @@
+<?php
+$MESS["IBLOCK_ELEMENT_EDIT_TAGS_TIP"] = "(РІРІРµРґРёС‚Рµ СЃР»РѕРІР° РёР»Рё СЃР»РѕРІРѕСЃРѕС‡РµС‚Р°РЅРёСЏ, СЂР°Р·РґРµР»СЏСЏ РёС… Р·Р°РїСЏС‚С‹РјРё)";
+$MESS["IBLOCK_ELEMENT_EDIT_ELEMENTS"] = "Р­Р»РµРјРµРЅС‚С‹";
+$MESS["IBLOCK_ELEMENT_EDIT_LINKED"] = "РЎРІСЏР·Р°РЅРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹:";
+$MESS["IBLOCK_ELEMENT_EDIT_PROP_ADD"] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS["IBLOCK_ELEMENT_DEL_CONF"] = "Р‘СѓРґРµС‚ СѓРґР°Р»РµРЅР° РІСЃСЏ РёРЅС„РѕСЂРјР°С†РёСЏ, СЃРІСЏР·Р°РЅРЅР°СЏ СЃ СЌС‚РѕР№ Р·Р°РїРёСЃСЊСЋ. РџСЂРѕРґРѕР»Р¶РёС‚СЊ?";
+$MESS["IBLOCK_EL_TAB_MO"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕ";
+$MESS["IBLOCK_EL_TAB_WF"] = "Р”РѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚";
+$MESS["IBLOCK_EL_TAB_WF_TITLE"] = "РџР°СЂР°РјРµС‚СЂС‹ РІ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Рµ";
+$MESS["IBLOCK_EL_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["IBLOCK_EL_CANC"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["IBLOCK_EL_EDIT_IN_PANEL"] = "РђРґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅС‹Р№ СЂР°Р·РґРµР»";
+$MESS['IBEL_E_TAB_ELEMENT'] = "РџР°СЂР°РјРµС‚СЂС‹";
+$MESS['IBEL_E_TAB_ELEMENT_TITLE'] = "РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹";
+$MESS["IBEL_E_TAB_PREV"] = "РђРЅРѕРЅСЃ";
+$MESS["IBEL_E_TAB_PREV_TITLE"] = "Р

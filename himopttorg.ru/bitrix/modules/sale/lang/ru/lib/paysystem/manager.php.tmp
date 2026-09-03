@@ -1,0 +1,17 @@
+<?php
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_ALFABANK'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ РђР»СЊС„Р°-Р‘Р°РЅРєР°';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_AUTHORIZE'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ Authorize.net';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_YANDEX'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ Р®Kassa';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_YANDEX_INVOICE'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ Р®Money';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_WEBMONEY'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ Webmoney';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_ASSIST'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ Assist';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_ROBOXCHANGE'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ RoboKassa';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_QIWI'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ QIWI';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_PAYPAL'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ PayPal';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_PAYMASTER'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ PayMaster';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_LIQPAY'] = 'РќР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ LiqPay';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILL'] = 'РќР°СЃС‚СЂРѕР№РєРё СЃС‡РµС‚РѕРІ';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLDE'] = 'РќР°СЃС‚СЂРѕР№РєРё СЃС‡РµС‚РѕРІ(РќРµРјРµС†РєРёР№)';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLEN'] = 'РќР°СЃС‚СЂРѕР№РєРё СЃС‡РµС‚РѕРІ(РђРЅРіР»РёР№СЃРєРёР№)';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLUA'] = 'РќР°СЃС‚СЂРѕР№РєРё СЃС‡РµС‚РѕРІ(РЈРєСЂР°РёРЅСЃРєРёР№)';
+$MESS['SALE_PS_MANAGER_GROUP_CONNECT_SETTINGS_BILLLA'] = 'РќР°СЃС‚СЂРѕР№РєРё СЃС‡РµС‚РѕРІ(Р

@@ -1,0 +1,59 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?>
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title langs="ru">РќР°РєР»Р°РґРЅР°СЏ</title>
+<style>
+<!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+p.Normal, li.Normal, div.Normal
+	{mso-style-name:Normal;
+	margin-top:0cm;
+	margin-right:110.0pt;
+	margin-bottom:1.0pt;
+	margin-left:514.0pt;
+	line-height:150%;
+	font-size:6.0pt;
+	font-family:"Arial","sans-serif";
+	layout-grid-mode:line;}
+/* Page Definitions */
+@page Section1
+	{size:841.0pt 595.0pt;
+	margin:72.0pt 42.0pt 36.0pt 42.0pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<p class=Normal style='line-height:133%'>РЈРЅРёС„РёС†РёСЂРѕРІР°РЅРЅР°СЏ С„РѕСЂРјР°<span lang=EN-US>
+N</span> РўРћР Р“-12 РЈС‚РІРµСЂР¶РґРµРЅР° РїРѕСЃС‚Р°РЅРѕРІР»РµРЅРёРµРј Р“РѕСЃРєРѕРјСЃС‚Р°С‚Р° Р РѕСЃСЃРёРё РѕС‚ 25 12.98 N 132</p>
+<?
+	$arCurFormat = CCurrencyLang::GetCurrencyFormat($arOrder["CURRENCY"]);
+	$currency = preg_replace('/(^|[^&])#/', '${1}', $arCurFormat['FORMAT_STRING']);
+?>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+style='width:832pt;margin-left:2.0pt;border-collapse:collapse'>
+<tr style='page-break-inside:avoid;height:10.0pt'>
+<td width=737 colspan=4 rowspan=3 valign=top style='width:552.85pt;
+border:solid windowtext 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;height:10.0pt'>
+<p class=Normal style='margin-top:1.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:normal'>&nbsp;</p>
+<p class=Normal style='margin-top:1.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:0cm;margin-bottom:.0001pt;line-height:normal'><a
+name=РўРµРєСЃС‚РѕРІРѕРµРџРѕР»Рµ28></a><?=$arParams["COMPANY_NAME"]?>, <? echo $arParams["COUNTRY"].", ".$arParams["INDEX"].", Рі. ".$arParams["CITY"].", ".$arParams["ADDRESS"];?>,  Р

@@ -1,0 +1,5 @@
+<?php
+$MESS['LANDING_DEMO_STORE_CHATS_DARK-ORDER-NAME'] = 'РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р°';
+$MESS['LANDING_DEMO_STORE_CHATS_DARK-ORDER-DESC'] = 'РЎС‚СЂР°РЅРёС†Р° СЃ РїРѕР»РЅС‹Рј РѕС„РѕСЂРјР»РµРЅРёРµРј Р·Р°РєР°Р·Р°.';
+$MESS['LANDING_DEMO_STORE_CHATS_DARK-ORDER-RICH_NAME'] = 'Р’Р°С€ Р·Р°РєР°Р·';
+$MESS['LANDING_DEMO_STORE_CHATS_DARK-ORDER-RICH_DESC'] = 'Р

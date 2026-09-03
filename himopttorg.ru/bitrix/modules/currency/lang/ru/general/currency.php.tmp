@@ -1,0 +1,9 @@
+<?
+$MESS["BT_MOD_CURR_ERR_CURR_CUR_ID_BAD"] = "РќРµРІРµСЂРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІР°Р»СЋС‚С‹";
+$MESS["BT_MOD_CURR_ERR_CURR_CUR_ID_ABSENT"] = "РќРµ СѓРєР°Р·Р°РЅ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІР°Р»СЋС‚С‹";
+$MESS["BT_MOD_CURR_ERR_CURR_AMOUNT_CNT_ABSENT"] = "РќРµ Р·Р°РґР°РЅ РЅРѕРјРёРЅР°Р»";
+$MESS["BT_MOD_CURR_ERR_CURR_AMOUNT_CNT_BAD"] = "РќРµРІРµСЂРЅС‹Р№ РЅРѕРјРёРЅР°Р»";
+$MESS["BT_MOD_CURR_ERR_CURR_AMOUNT_ABSENT"] = "РќРµ Р·Р°РґР°РЅ РєСѓСЂСЃ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["BT_MOD_CURR_ERR_CURR_AMOUNT_BAD"] = "РќРµРІРµСЂРЅС‹Р№ РєСѓСЂСЃ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["BT_MOD_CURR_ERR_CURR_CUR_ID_EXISTS"] = "Р’Р°Р»СЋС‚Р° СЃ С‚Р°РєРёРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚";
+$MESS["BT_MOD_CURR_ERR_CURR_CUR_ID_LAT"] = "Р

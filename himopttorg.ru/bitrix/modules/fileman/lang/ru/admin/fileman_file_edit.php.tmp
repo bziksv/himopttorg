@@ -1,0 +1,4 @@
+<?
+$MESS["FILEMAN_FILEEDIT_FILE_EXISTS"] = "Р¤Р°Р№Р» СЃ С‚Р°РєРёРј РёРјРµРЅРµРј СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!";
+$MESS["FILEMAN_FILEEDIT_FOLDER_EXISTS"] = "РЎ С‚Р°РєРёРј РёРјРµРЅРµРј РѕРїСЂРµРґРµР»РµРЅР° РїР°РїРєР°!";
+$MESS["FILEMAN_FILEEDIT_FILENAME_EMPTY"] = "Р

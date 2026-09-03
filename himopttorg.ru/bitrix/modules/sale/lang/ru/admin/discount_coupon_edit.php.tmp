@@ -1,0 +1,24 @@
+<?
+$MESS["BX_SALE_DISCOUNT_COUPON_EDIT_TAB_NAME_COMMON"] = "РћР±С‰РёРµ РїР°СЂР°РјРµС‚СЂС‹";
+$MESS["BX_SALE_DISCOUNT_COUPON_EDIT_TAB_TITLE_COMMON"] = "РћР±С‰РёРµ РїР°СЂР°РјРµС‚СЂС‹ РєСѓРїРѕРЅР°";
+$MESS["BX_SALE_DISCOUNT_COUPON_EDIT_TAB_TITLE_MULTI_COMMON"] = "РћР±С‰РёРµ РїР°СЂР°РјРµС‚СЂС‹ РєСѓРїРѕРЅРѕРІ";
+$MESS["BX_SALE_DISCOUNT_COUPON_EDIT_TITLE_ADD"] = "РЎРѕР·РґР°РЅРёРµ РєСѓРїРѕРЅР°";
+$MESS["BX_SALE_DISCOUNT_COUPON_EDIT_TITLE_MULTI_ADD"] = "РЎРѕР·РґР°РЅРёРµ РєСѓРїРѕРЅРѕРІ";
+$MESS["BX_SALE_DISCOUNT_COUPON_EDIT_TITLE_UPDATE"] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РєСѓРїРѕРЅР° СЃ РєРѕРґРѕРј #ID#";
+$MESS["BX_SALE_DISCOUNT_COUPON_EDIT_TITLE_COPY"] = "РљРѕРїРёСЂРѕРІР°РЅРёРµ РєСѓРїРѕРЅР° СЃ РєРѕРґРѕРј #ID#";
+$MESS["BX_SALE_DISCOUNT_COUPONT_CONTEXT_COUPON_LIST"] = "РЎРїРёСЃРѕРє РєСѓРїРѕРЅРѕРІ";
+$MESS["BX_SALE_DISCOUNT_COUPONT_CONTEXT_NEW"] = "Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІС‹Р№";
+$MESS["BX_SALE_DISCOUNT_COUPONT_CONTEXT_COPY"] = "РЎРєРѕРїРёСЂРѕРІР°С‚СЊ";
+$MESS["BX_SALE_DISCOUNT_COUPON_CONTEXT_DELETE"] = "РЈРґР°Р»РёС‚СЊ";
+$MESS["BX_SALE_DISCOUNT_COUPON_CONTEXT_DELETE_CONFIRM"] = "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РєСѓРїРѕРЅ?";
+$MESS["BX_SALE_DISCOUNT_COUPON_ERR_SAVE"] = "РћС€РёР±РєРё РїСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё";
+$MESS["BX_SALE_DISCOUNT_COUPON_FIELD_ID"] = "ID:";
+$MESS["BX_SALE_DISCOUNT_COUPON_FIELD_ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ:";
+$MESS["BX_SALE_DISCOUNT_COUPON_FIELD_DISCOUNT"] = "РџСЂР°РІРёР»Рѕ РєРѕСЂР·РёРЅС‹:";
+$MESS["BX_SALE_DISCOUNT_COUPON_MESS_DISCOUNT_ABSENT"] = "РђРєС‚РёРІРЅС‹Рµ РїСЂР°РІРёР»Р° РєРѕСЂР·РёРЅС‹ РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚.";
+$MESS["BX_SALE_DISCOUNT_COUPON_MESS_DISCOUNT_ADD"] = "РЎРѕР·РґР°С‚СЊ РїСЂР°РІРёР»Рѕ";
+$MESS["BX_SALE_DISCOUNT_COUPON_FIELD_COUPON"] = "РљСѓРїРѕРЅ:";
+$MESS["BX_SALE_DISCOUNT_COUPON_FIELD_COUPON_GENERATE"] = "РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РєСѓРїРѕРЅ";
+$MESS["BX_SALE_DISCOUNT_COUPON_FIELD_PERIOD"] = "РџРµСЂРёРѕРґ Р°РєС‚РёРІРЅРѕСЃС‚Рё:";
+$MESS["BX_SALE_DISCOUNT_COUPON_PERIOD_EMPTY"] = "Р‘РµР· РѕРіСЂР°РЅРёС‡РµРЅРёР№";
+$MESS["BX_SALE_DISCOUNT_COUPON_PERIOD_INTERVAL"] = "Р

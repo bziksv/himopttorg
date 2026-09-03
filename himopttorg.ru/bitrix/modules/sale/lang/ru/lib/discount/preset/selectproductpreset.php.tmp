@@ -1,0 +1,15 @@
+<?php
+$MESS["SALE_BASE_PRESET_DISCOUNT_EDIT_ERR_ADD"] = "РћС€РёР±РєР° РїСЂРё РґРѕР±Р°РІР»РµРЅРёРё РїСЂР°РІРёР»Р° СЃРєРёРґРєРё";
+$MESS["SALE_BASE_PRESET_DISCOUNT_EDIT_ERR_UPDATE"] = "РћС€РёР±РєР° РїСЂРё РѕР±РЅРѕРІР»РµРЅРёРё РїСЂР°РІРёР»Р° СЃРєРёРґРєРё";
+$MESS["SALE_BASE_PRESET_ORDERAMOUNT_FIELD_NAME"] = "РќР°Р·РІР°РЅРёРµ СЃРєРёРґРєРё";
+$MESS["SALE_BASE_PRESET_ORDERAMOUNT_LID"] = "РЎР°Р№С‚, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РґРµР№СЃС‚РІРѕРІР°С‚СЊ СЃРєРёРґРєР°";
+$MESS["SALE_BASE_PRESET_ORDERAMOUNT_USER_GROUPS"] = "Р“СЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РЅР° РєРѕС‚РѕСЂС‹Рµ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅСЏРµС‚СЃСЏ РїСЂР°РІРёР»Рѕ";
+$MESS["SALE_BASE_PRESET_ERROR_EMPTY_NAME"] = "РќРµ СѓРєР°Р·Р°РЅРѕ РЅР°Р·РІР°РЅРёРµ СЃРєРёРґРєРё";
+$MESS["SALE_BASE_PRESET_ERROR_EMPTY_LID"] = "РќРµ СѓРєР°Р·Р°РЅ СЃР°Р№С‚";
+$MESS["SALE_BASE_PRESET_ERROR_EMPTY_USER_GROUPS"] = "РќРµ СѓРєР°Р·Р°РЅР° РіСЂСѓРїРїР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№";
+$MESS["SALE_BASE_PRESET_ERROR_SECTION_NON_ARRAY"] = "РќРµРІРµСЂРЅРѕРµ Р·РЅР°С‡РµРЅРёСЏ РїСЂРё РІС‹Р±РѕСЂРµ СЃРµРєС†РёР№";
+$MESS["SALE_BASE_PRESET_ERROR_PRODUCT_NON_ARRAY"] = "РќРµРІРµСЂРЅРѕРµ Р·РЅР°С‡РµРЅРёСЏ РїСЂРё РІС‹Р±РѕСЂРµ РїСЂРѕРґСѓРєС‚РѕРІ";
+$MESS["SALE_BASE_PRESET_ADD_ELEMENTS"] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS["SALE_BASE_PRESET_SUB_TITLE_SECTION"] = "Р Р°Р·РґРµР»С‹";
+$MESS["SALE_BASE_PRESET_SUB_TITLE_PRODUCTS"] = "РўРѕРІР°СЂС‹";
+$MESS["SALE_BASE_PRESET_HEAD_IMAGE"] = "Р

@@ -1,0 +1,4 @@
+<?php
+$MESS['INTEGRATION_PRESET_PROVIDER_ERROR_BOT_REQUIRED_FIELD_EMPTY'] = 'РџРѕР¶Р°Р»СѓР№СЃС‚Р°, Р·Р°РїРѕР»РЅРёС‚Рµ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ Р±РѕС‚Р°';
+$MESS['INTEGRATION_PRESET_PROVIDER_ERROR_BOT_CREATE'] = 'РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ Р±РѕС‚Р°';
+$MESS['INTEGRATION_PRESET_PROVIDER_TITLE_PREFIX'] = 'Р

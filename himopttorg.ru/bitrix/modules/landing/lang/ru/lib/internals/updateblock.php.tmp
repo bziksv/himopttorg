@@ -1,0 +1,4 @@
+<?php
+$MESS['LANDING_TABLE_FIELD_BLOCK_CODE'] = 'РЎРёРјРІРѕР»СЊРЅС‹Р№ РєРѕРґ Р±Р»РѕРєР°';
+$MESS['LANDING_TABLE_FIELD_BLOCK_PARAMS'] = 'РџР°СЂР°РјРµС‚СЂС‹ РІС‹Р·РѕРІР°';
+$MESS['LANDING_TABLE_FIELD_LAST_BLOCK_ID'] = 'Р

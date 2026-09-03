@@ -1,0 +1,37 @@
+<?php
+$MESS["SALE_HPS_YANDEX_CHECKOUT_BANK_CARDS"] = "Р‘Р°РЅРєРѕРІСЃРєРёРµ РєР°СЂС‚С‹";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_YANDEX_MONEY"] = "Р®Money";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_SBERBANK"] = "SberPay";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_SBERBANK_SMS"] = "SberPay РїРѕ РЎРњРЎ";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_SBERBANK_QR"] = "SberPay QR";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_QIWI"] = "QIWI Wallet";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_WEBMONEY"] = "Webmoney";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ALFABANK"] = "РђР»СЊС„Р°-РљР»РёРє";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_CASH"] = "РћРїР»Р°С‚Р° РЅР°Р»РёС‡РЅС‹РјРё РІ С‚РµСЂРјРёРЅР°Р»Рµ";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_SMART"] = "РЈРјРЅС‹Р№ РїР»Р°С‚РµР¶";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_MOBILE_BALANCE"] = "Р‘Р°Р»Р°РЅСЃ С‚РµР»РµС„РѕРЅР°";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_EMBEDDED"] = "Р’РёРґР¶РµС‚";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_TINKOFF_BANK"] = "РўРёРЅСЊРєРѕС„С„ Р‘Р°РЅРє";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_INSTALLMENTS"] = "Р—Р°РїР»Р°С‚РёС‚СЊ РїРѕ С‡Р°СЃС‚СЏРј";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_SBP"] = "РЎР‘Рџ";
+
+$MESS["SALE_HPS_YANDEX_CHECKOUT_HTTP_STATUS_400"] = "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ Р·Р°РїСЂРѕСЃ. РќРµРєРѕСЂСЂРµРєС‚РЅРѕРµ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ СЃ API Р®Kassa";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_HTTP_STATUS_401"] = "РћС€РёР±РєР° Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё. РќРµРІРµСЂРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІР°С€РµРіРѕ Р°РєРєР°СѓРЅС‚Р° РІ Р®Kassa РёР»Рё СЃРµРєСЂРµС‚РЅС‹Р№ РєР»СЋС‡. РџСЂРѕРІРµСЂСЊС‚Рµ РЅР°СЃС‚СЂРѕР№РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ РїР»Р°С‚РµР¶РЅРѕР№ СЃРёСЃС‚РµРјС‹";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_HTTP_STATUS_OAUTH_401"] = "РћС€РёР±РєР° Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё. РќРµРІР°Р»РёРґРЅС‹Р№ OAuth-С‚РѕРєРµРЅ: РёСЃС‚РµРє СЃСЂРѕРє Р¶РёР·РЅРё С‚РѕРєРµРЅР° РёР»Рё С‚РѕРєРµРЅ Р±С‹Р» РѕС‚РѕР·РІР°Р» С‡РµСЂРµР· РЇРЅРґРµРєСЃ.РџР°СЃРїРѕСЂС‚. Р—Р°РїСЂРѕСЃРёС‚Рµ С‚РѕРєРµРЅ Р·Р°РЅРѕРІРѕ";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_HTTP_STATUS_403"] = "РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РІ РґР»СЏ РѕСЃСѓС‰РµСЃС‚РІР»РµРЅРёСЏ РѕРїРµСЂР°С†РёРё";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_HTTP_STATUS_404"] = "Р РµСЃСѓСЂСЃ РЅРµ РЅР°Р№РґРµРЅ";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_HTTP_STATUS_500"] = "РќР° СЃС‚РѕСЂРѕРЅРµ Р®Kassa С‡С‚Рѕ-С‚Рѕ РїРѕС€Р»Рѕ РЅРµ С‚Р°Рє";
+
+$MESS["SALE_HPS_YANDEX_CHECKOUT_TRANSACTION"] = "РўСЂР°РЅР·Р°РєС†РёСЏ ";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_QUERY"] = "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РёР»Рё РїСѓСЃС‚РѕР№ РѕС‚РІРµС‚ СЃРµСЂРІРµСЂР°";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_SUM"] = "РЎСѓРјРјР° РїР»Р°С‚РµР¶Р° РЅРµ СЃРѕРІРїР°РґР°РµС‚ СЃ СЃСѓРјРјРѕР№ РѕРїР»Р°С‚С‹";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_STATUS"] = "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ СЃС‚Р°С‚СѓСЃ РїР»Р°С‚РµР¶Р°";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_CHECK_IP"] = "РћС€РёР±РєР° РїСЂРѕРІРµСЂРєРё РїРѕРґР»РёРЅРЅРѕСЃС‚Рё СѓРІРµРґРѕРјР»РµРЅРёСЏ. IP-Р°РґСЂРµСЃ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СЃРїРёСЃРєСѓ СЂР°Р·СЂРµС€РµРЅРЅС‹С… IP Р°РґСЂРµСЃРѕРІ. РЈРІРµРґРѕРјР»РµРЅРёРµ РїСЂРёС€Р»Рѕ СЃ Р°РґСЂРµСЃР°: #IP_ADDRESS#";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_EXTERNAL_PAYMENT"] = "РћС€РёР±РєР° РїСЂРё РІС‹СЃС‚Р°РІР»РµРЅРёРё СЃС‡РµС‚Р°";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_PAYMENT_CANCELED"] = "РџР»Р°С‚РµР¶ РѕС‚РјРµРЅРµРЅ";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_FISCALIZATION_ENABLE"] = "Р’РєР»СЋС‡РµРЅР° С„РёСЃРєР°Р»РёР·Р°С†РёСЏ С‡РµРєРѕРІ. РќРµРѕР±С…РѕРґРёРјРѕ РѕС‚РєР»СЋС‡РёС‚СЊ С„РёСЃРєР°Р»РёР·Р°С†РёСЋ С‡РµРєРѕРІ РІ Р»РёС‡РЅРѕРј РєР°Р±РёРЅРµС‚Рµ Р®Kassa";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_ERROR_PAYMENT_METHOD_NOT_SUPPORT"] = "РЎРїРѕСЃРѕР± РѕРїР»Р°С‚С‹ \"#PAYMENT_METHOD#\" РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ. РќРµРѕР±С…РѕРґРёРјРѕ РѕР±СЂР°С‚РёС‚СЊСЃСЏ РІ Р®Kassa";
+
+$MESS["SALE_HPS_YANDEX_CHECKOUT_RESPONSE_ERROR_3D_SECURE_FAILED"] = "РќРµ РїСЂРѕР№РґРµРЅР° Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ РїРѕ 3-D Secure.";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_RESPONSE_ERROR_CALL_ISSUER"] = "РћРїР»Р°С‚Р° РґР°РЅРЅС‹Рј РїР»Р°С‚РµР¶РЅС‹Рј СЃСЂРµРґСЃС‚РІРѕРј РѕС‚РєР»РѕРЅРµРЅР° РїРѕ РЅРµРёР·РІРµСЃС‚РЅС‹Рј РїСЂРёС‡РёРЅР°Рј. РљР»РёРµРЅС‚Сѓ СЃР»РµРґСѓРµС‚ РѕР±СЂР°С‚РёС‚СЊСЃСЏ РІ Р±Р°РЅРє.";
+$MESS["SALE_HPS_YANDEX_CHECKOUT_RESPONSE_ERROR_CARD_EXPIRED"] = "Р

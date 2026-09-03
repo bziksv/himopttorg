@@ -1,0 +1,16 @@
+<?php
+$MESS['LANDING_TPL_TITLE_EDIT'] = 'РќР°СЃС‚СЂРѕР№РєРё СЃС‚СЂР°РЅРёС†С‹';
+$MESS['LANDING_TPL_TITLE_ADD'] = 'РќРѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р°';
+$MESS['LANDING_TPL_BUTTON_ADD'] = 'Р”РѕР±Р°РІРёС‚СЊ';
+$MESS['LANDING_TPL_BUTTON_SAVE'] = 'РЎРѕС…СЂР°РЅРёС‚СЊ';
+$MESS['LANDING_TPL_BUTTON_CANCEL'] = 'РћС‚РјРµРЅРёС‚СЊ';
+$MESS['LANDING_TPL_ADDITIONAL'] = 'Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕ';
+$MESS['LANDING_TPL_ADDITIONAL_METRIKA'] = 'РђРЅР°Р»РёС‚РёРєР°';
+$MESS['LANDING_TPL_ADDITIONAL_VIEW'] = 'РџСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ';
+$MESS['LANDING_TPL_ADDITIONAL_LAYOUT'] = 'РЁР°Р±Р»РѕРЅ';
+$MESS['LANDING_TPL_ADDITIONAL_TAGS'] = 'РњРµС‚Р°-С‚РµРіРё';
+$MESS['LANDING_TPL_ADDITIONAL_WIDGET'] = 'Р’РёРґР¶РµС‚';
+$MESS['LANDING_TPL_ADDITIONAL_HTMLCSS'] = 'HTML/CSS';
+$MESS['LANDING_TPL_ADDITIONAL_HTML'] = 'HTML';
+$MESS['LANDING_TPL_ADDITIONAL_CSS'] = 'CSS';
+$MESS['LANDING_TPL_ADDITIONAL_INDEX'] = 'Р

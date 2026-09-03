@@ -1,0 +1,10 @@
+<?
+$MESS["USMP_VIEW"] = "РџРѕСЃРјРѕС‚СЂРµС‚СЊ";
+$MESS["USMP_MODULES"] = "РњРѕРґСѓР»Рё";
+$MESS["USMP_H_ID"] = "РљРѕРґ РјРѕРґСѓР»СЏ";
+$MESS["USMP_H_NAME"] = "РќР°Р·РІР°РЅРёРµ РјРѕРґСѓР»СЏ";
+$MESS["USMP_H_DESCR"] = "РћРїРёСЃР°РЅРёРµ РјРѕРґСѓР»СЏ";
+$MESS["USMP_H_PARTNER"] = "РџР°СЂС‚РЅРµСЂ";
+$MESS["USMP_H_DATE_UPDATE"] = "Р”Р°С‚Р° РёР·РјРµРЅРµРЅРёСЏ";
+$MESS["USMP_H_DATE_CREATE"] = "Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ";
+$MESS["USMP_H_IMAGE"] = "Р

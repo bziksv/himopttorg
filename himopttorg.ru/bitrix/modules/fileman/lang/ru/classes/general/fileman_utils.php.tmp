@@ -1,0 +1,7 @@
+<?
+$MESS["FILEMAN_SEARCH"] = "РџРѕРёСЃРє";
+$MESS["FM_UTIL_FIND"] = "РќР°Р№С‚Рё";
+$MESS["FM_UTIL_FIND_TITLE"] = "РџРѕРёСЃРє РїР°РїРѕРє Рё С„Р°Р№Р»РѕРІ";
+$MESS["FM_UTIL_REPLACE"] = "Р—Р°РјРµРЅРёС‚СЊ";
+$MESS["FM_UTIL_REPLACE_TITLE"] = "РџРѕРёСЃРє Рё Р·Р°РјРµРЅР° РІ С„Р°Р№Р»Р°С…";
+$MESS["FM_UTIL_FILE_NAME"] = "Р

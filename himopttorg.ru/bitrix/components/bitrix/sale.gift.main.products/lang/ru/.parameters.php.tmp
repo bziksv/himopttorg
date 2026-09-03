@@ -1,0 +1,8 @@
+<?
+$MESS["IBLOCK_ACTIONS"] = "РќР°СЃС‚СЂРѕР№РєРё РґРµР№СЃС‚РІРёР№";
+$MESS["IBLOCK_PRICES"] = "Р¦РµРЅС‹";
+$MESS["IBLOCK_BASKET"] = "Р”РѕР±Р°РІР»РµРЅРёРµ РІ РєРѕСЂР·РёРЅСѓ";
+$MESS["IBLOCK_COMPARE"] = "РЎСЂР°РІРЅРµРЅРёРµ С‚РѕРІР°СЂРѕРІ";
+$MESS["IBLOCK_EXTENDED_SETTINGS"] = "РЎРїРµС†РёР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["IBLOCK_TYPE"] = "РўРёРї РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["IBLOCK_IBLOCK"] = "Р

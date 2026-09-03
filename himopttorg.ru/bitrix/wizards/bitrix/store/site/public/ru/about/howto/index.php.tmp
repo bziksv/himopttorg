@@ -1,0 +1,4 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("РљР°Рє РєСѓРїРёС‚СЊ");
+?><p>РџСЂРѕС†РµРґСѓСЂР° РїРѕРєСѓРїРєРё С‚РѕРІР°СЂР° РІ РЅР°С€РµРј Р

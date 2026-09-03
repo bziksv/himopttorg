@@ -1,0 +1,17 @@
+<?
+$MESS["PC_DEFAUL_SKIN"] = "РЎС‚Р°РЅРґР°СЂС‚РЅС‹Р№";
+$MESS["PC_GROUP_BASE_SETTINGS"] = "РћСЃРЅРѕРІРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["PC_GROUP_ADDITIONAL_SETTINGS"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["PC_GROUP_APPEARANCE_COMMON"] = "Р’РЅРµС€РЅРёР№ РІРёРґ, РѕР±С‰РёРµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["PC_GROUP_PLAYBACK_FLV"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё РІРѕСЃРїСЂРѕРёР·РІРµРґРµРЅРёСЏ flash-РїР»РµРµСЂР°";
+$MESS["PC_GROUP_APPERANCE"] = "Р’РЅРµС€РЅРёР№ РІРёРґ";
+$MESS["PC_GROUP_APPERANCE_FLV"] = "Р’РЅРµС€РЅРёР№ РІРёРґ flash-РїР»РµРµСЂР°";
+$MESS["PC_GROUP_APPERANCE_WMV"] = "Р’РЅРµС€РЅРёР№ РІРёРґ wmv-РїР»РµРµСЂР°";
+$MESS["PC_GROUP_ADDITIONAL_FLV"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё flash-РїР»РµРµСЂР°";
+$MESS["PC_GROUP_PLAYBACK"] = "РќР°СЃС‚СЂРѕР№РєРё РІРѕСЃРїСЂРѕРёР·РІРµРґРµРЅРёСЏ";
+$MESS["PC_GROUP_FILE_PARAMETERS"] = "РџР°СЂР°РјРµС‚СЂС‹ РІРёРґРµРѕСЂРѕР»РёРєР°";
+$MESS["PC_PAR_PLAYER_TYPE"] = "РўРёРї РїР»РµРµСЂР°";
+$MESS["PC_PAR_PLAYER_AUTODETECT"] = "РћРїСЂРµРґРµР»РёС‚СЊ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё";
+$MESS["PC_PAR_PLAYER_FLV"] = "HTML5 / Flash РїР»РµРµСЂ";
+$MESS["PC_PAR_PLAYER_WMV"] = "WMV РџР»РµРµСЂ";
+$MESS["PC_PAR_USE_PLAYLIST"] = "Р

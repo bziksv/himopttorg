@@ -1,0 +1,16 @@
+<?
+$MESS["SALE_HPS_BILL_KZ_TITLE"] = "РЎС‡РµС‚ (РљР°Р·Р°С…СЃРєРёР№)";
+$MESS["SALE_HPS_BILL_KZ_DATE"] = "Р”Р°С‚Р° РѕРїР»Р°С‚С‹";
+$MESS["SALE_HPS_BILL_KZ_DATE_DESC"] = "Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ РѕРїР»Р°С‚С‹";
+$MESS["SALE_HPS_BILL_KZ_ORDER_SUBJECT"] = "РќР°Р·РЅР°С‡РµРЅРёРµ СЃС‡РµС‚Р°";
+$MESS["SALE_HPS_BILL_KZ_PAYMENT_PC"] = "РљРѕРґ РЅР°Р·РЅР°С‡РµРЅРёСЏ РїР»Р°С‚РµР¶Р°";
+$MESS["SALE_HPS_BILL_KZ_PAY_BEFORE"] = "РЎСЂРѕРє РѕРїР»Р°С‚С‹";
+$MESS["SALE_HPS_BILL_KZ_PAY_BEFORE_DESC"] = "РЎСЂРѕРє РѕРїР»Р°С‚С‹ СЃС‡РµС‚Р°";
+$MESS["SALE_HPS_BILL_KZ_PAY_BEFORE_DESC"] = "РЎСЂРѕРє РѕРїР»Р°С‚С‹ СЃС‡РµС‚Р°";
+$MESS["SALE_HPS_BILL_KZ_SUPPLI"] = "РќР°Р·РІР°РЅРёРµ РєРѕРјРїР°РЅРёРё-РїРѕСЃС‚Р°РІС‰РёРєР°";
+$MESS["SALE_HPS_BILL_KZ_SUPPLI_DESC"] = "РќР°Р·РІР°РЅРёРµ РєРѕРјРїР°РЅРёРё-РїРѕСЃС‚Р°РІС‰РёРєР° (РїСЂРѕРґР°РІС†Р°)";
+$MESS["SALE_HPS_BILL_KZ_ADRESS_SUPPLI"] = "РђРґСЂРµСЃ РєРѕРјРїР°РЅРёРё-РїРѕСЃС‚Р°РІС‰РёРєР°";
+$MESS["SALE_HPS_BILL_KZ_ADRESS_SUPPLI_DESC"] = "РђРґСЂРµСЃ РєРѕРјРїР°РЅРёРё-РїРѕСЃС‚Р°РІС‰РёРєР° (РїСЂРѕРґР°РІС†Р°)";
+$MESS["SALE_HPS_BILL_KZ_PHONE_SUPPLI"] = "РўРµР»РµС„РѕРЅ РєРѕРјРїР°РЅРёРё-РїРѕСЃС‚Р°РІС‰РёРєР°";
+$MESS["SALE_HPS_BILL_KZ_PHONE_SUPPLI_DESC"] = "РўРµР»РµС„РѕРЅ РєРѕРјРїР°РЅРёРё-РїРѕСЃС‚Р°РІС‰РёРєР° (РїСЂРѕРґР°РІС†Р°)";
+$MESS["SALE_HPS_BILL_KZ_IIN_SUPPLI"] = "Р

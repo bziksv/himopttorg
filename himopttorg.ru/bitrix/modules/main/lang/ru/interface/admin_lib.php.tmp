@@ -1,0 +1,7 @@
+<?
+$MESS["admin_lib_hide_menu"] = "РЎРєСЂС‹С‚СЊ РјРµРЅСЋ";
+$MESS["admin_lib_show_menu"] = "РџРѕРєР°Р·Р°С‚СЊ РјРµРЅСЋ";
+$MESS["admin_lib_less_buttons"] = "РЈРјРµРЅСЊС€РёС‚СЊ РєРЅРѕРїРєРё";
+$MESS["admin_lib_more_buttons"] = "РЈРІРµР»РёС‡РёС‚СЊ РєРЅРѕРїРєРё";
+$MESS["admin_lib_filter_clear"] = "РџРѕРёСЃРє РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ - РїРѕРєР°Р·Р°РЅС‹ РІСЃРµ Р·Р°РїРёСЃРё";
+$MESS["admin_lib_filter_set"] = "Р

@@ -1,0 +1,8 @@
+<?
+$MESS["CATALOG_FORM_NAME"] = "РќР°РёРјРµРЅРѕРІР°РЅРёРµ";
+$MESS["CATALOG_FORM_QUANTITY"] = "РљРѕР»РёС‡РµСЃС‚РІРѕ";
+$MESS["CATALOG_FORM_BEFORE_SEARCH_TITLE"] = "Р’РІРµРґРёС‚Рµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РѕРІР°СЂР° / СѓСЃР»СѓРіРё";
+$MESS["CATALOG_FORM_CREATE"] = "СЃРѕР·РґР°С‚СЊ С‚РѕРІР°СЂ";
+$MESS["CATALOG_FORM_NOT_FOUND"] = "РќРёС‡РµРіРѕ РЅРµ РЅР°Р№РґРµРЅРѕ";
+$MESS["CATALOG_FORM_PRICE"] = "Р¦РµРЅР°";
+$MESS["CATALOG_FORM_RESULT"] = "Р

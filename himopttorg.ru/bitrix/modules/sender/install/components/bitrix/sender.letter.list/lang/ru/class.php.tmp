@@ -1,0 +1,27 @@
+<?php
+$MESS["SENDER_LETTER_LIST_COMP_TITLE"] = "Р Р°СЃСЃС‹Р»РєРё";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_DATE_INSERT"] = "Р”Р°С‚Р°";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_TITLE"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_STATE"] = "РЎС‚Р°С‚СѓСЃ СЂР°СЃСЃС‹Р»РєРё";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_MESSAGE_CODE"] = "РўРёРї СЂР°СЃСЃС‹Р»РєРё";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_STATUS"] = "РЎС‚Р°С‚СѓСЃ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_USER"] = "РЎРѕР·РґР°Р»";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_CAMPAIGN_ID"] = "РљР°РјРїР°РЅРёСЏ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_ACTIONS"] = "Р”РµР№СЃС‚РІРёСЏ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_STATS"] = "РЎС‚Р°С‚РёСЃС‚РёРєР°";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_CAMPAIGN"] = "РљР°РјРїР°РЅРёСЏ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_PRESET_MY"] = "РњРѕРё";
+$MESS["SENDER_LETTER_LIST_COMP_UI_PRESET_WORKING"] = "Р’ СЂР°Р±РѕС‚Рµ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_PRESET_FINISHED"] = "Р—Р°РІРµСЂС€РµРЅРЅС‹Рµ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_PRESET_ALL"] = "Р’СЃРµ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_DATE_INSERT2"] = "Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_DATE_SENT"] = "Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РѕС‚РїСЂР°РІРєРё";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_COUNT_SEND_ALL"] = "РћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»СѓС‡Р°С‚РµР»РµР№";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_COUNT_SEND_SUCCESS"] = "РЈСЃРїРµС€РЅРѕ РѕС‚РїСЂР°РІР»РµРЅРѕ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_COUNT_READ"] = "РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕСЃРјРѕС‚СЂРѕРІ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_COUNT_CLICK"] = "РљРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРµС…РѕРґРѕРІ";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_CONSENT_SUPPORT"] = "РЎРѕРіР»Р°СЃРёРµ";
+$MESS["SENDER_LETTER_LIST_LETTER_SENDING_TODAY"] = "СЃРµРіРѕРґРЅСЏ";
+$MESS["SENDER_LETTER_LIST_LETTER_SENDING_TOMORROW"] = "Р·Р°РІС‚СЂР°";
+$MESS["SENDER_LETTER_LIST_COMP_UI_COLUMN_COUNT_UNSUB"] = "РљРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚РїРёСЃР°РІС€РёС…СЃСЏ";
+$MESS["SENDER_DISPATCH_STATE_M"] = "Р

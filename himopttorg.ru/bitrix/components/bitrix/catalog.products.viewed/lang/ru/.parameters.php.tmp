@@ -1,0 +1,23 @@
+<?
+$MESS["CP_CPV_SECTION_ID"] = "ID СЂР°Р·РґРµР»Р°";
+$MESS["CP_CPV_SECTION_CODE"] = "РљРѕРґ СЂР°Р·РґРµР»Р°";
+$MESS["CP_CPV_IBLOCK_MODE"] = "РџРѕРєР°Р·С‹РІР°С‚СЊ С‚РѕРІР°СЂС‹ РёР·";
+$MESS["CP_CPV_IBLOCK_MODE_MULTI"] = "РЅРµСЃРєРѕР»СЊРєРёС… РёРЅС„РѕР±Р»РѕРєРѕРІ";
+$MESS["CP_CPV_IBLOCK_MODE_SINGLE"] = "РѕРґРЅРѕРіРѕ РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["CP_CPV_SHOW_FROM_SECTION"] = "РџРѕРєР°Р·С‹РІР°С‚СЊ С‚РѕРІР°СЂС‹ РёР· СЂР°Р·РґРµР»Р°";
+$MESS["CP_CPV_IBLOCK_ID"] = "ID РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["CP_CPV_SECTION_ELEMENT_ID"] = "ID СЌР»РµРјРµРЅС‚Р°, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РІС‹Р±СЂР°РЅ СЂР°Р·РґРµР»";
+$MESS["CP_CPV_SECTION_ELEMENT_CODE"] = "РЎРёРјРІРѕР»СЊРЅС‹Р№ РєРѕРґ СЌР»РµРјРµРЅС‚Р°, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РІС‹Р±СЂР°РЅ СЂР°Р·РґРµР»";
+$MESS["CP_CPV_DEPTH"] = "РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РѕС‚РѕР±СЂР°Р¶Р°РµРјР°СЏ РіР»СѓР±РёРЅР° СЂР°Р·РґРµР»РѕРІ";
+$MESS["CP_CPV_HIDE_NOT_AVAILABLE"] = "РќРµРґРѕСЃС‚СѓРїРЅС‹Рµ С‚РѕРІР°СЂС‹";
+$MESS["CP_CPV_HIDE_NOT_AVAILABLE_OFFERS"] = "РќРµРґРѕСЃС‚СѓРїРЅС‹Рµ С‚РѕСЂРіРѕРІС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["CP_CPV_HIDE_NOT_AVAILABLE_OFFERS_HIDE"] = "РЅРµ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊ";
+$MESS["CP_CPV_HIDE_NOT_AVAILABLE_OFFERS_SUBSCRIBE"] = "РѕС‚РѕР±СЂР°Р¶Р°С‚СЊ С‚РѕР»СЊРєРѕ СЃ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊСЋ РїРѕРґРїРёСЃРєРё";
+$MESS["CP_CPV_HIDE_NOT_AVAILABLE_OFFERS_SHOW"] = "РѕС‚РѕР±СЂР°Р¶Р°С‚СЊ РІСЃРµ";
+$MESS["IBLOCK_ACTIONS"] = "РќР°СЃС‚СЂРѕР№РєРё РґРµР№СЃС‚РІРёР№";
+$MESS["IBLOCK_PRICES"] = "Р¦РµРЅС‹";
+$MESS["IBLOCK_BASKET"] = "Р”РѕР±Р°РІР»РµРЅРёРµ РІ РєРѕСЂР·РёРЅСѓ";
+$MESS["IBLOCK_COMPARE"] = "РЎСЂР°РІРЅРµРЅРёРµ С‚РѕРІР°СЂРѕРІ";
+$MESS["ANALYTICS_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё Р°РЅР°Р»РёС‚РёРєРё";
+$MESS["IBLOCK_TYPE"] = "РўРёРї РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["IBLOCK_IBLOCK"] = "Р

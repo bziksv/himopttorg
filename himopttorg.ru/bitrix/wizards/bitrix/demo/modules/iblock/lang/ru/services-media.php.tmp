@@ -1,0 +1,6 @@
+<?
+$MESS ['DEMO_IBLOCK_CONTENT_MEDIA_MENU'] = "Р’РёРґРµРѕ Рё Р°СѓРґРёРѕ";
+$MESS ['DEMO_IBLOCK_CONTENT_MEDIA_TAB_TITLE'] = "Р’РёРґРµРѕСЂРѕР»РёРє";
+$MESS ['DEMO_IBLOCK_CONTENT_MEDIA_FIELD_ACTIVE'] = "Р—Р°РїРёСЃСЊ Р°РєС‚РёРІРЅР°";
+$MESS ['DEMO_IBLOCK_CONTENT_MEDIA_FIELD_ACTIVE_FROM'] = "РќР°С‡Р°Р»Рѕ Р°РєС‚РёРІРЅРѕСЃС‚Рё";
+$MESS ['DEMO_IBLOCK_CONTENT_MEDIA_FIELD_SORT'] = "Р

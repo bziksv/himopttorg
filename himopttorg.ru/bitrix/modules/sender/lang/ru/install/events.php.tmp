@@ -1,0 +1,9 @@
+<?
+$MESS ['SUBSCRIBE_CONFIRM_NAME'] = "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРѕРґРїРёСЃРєРё";
+$MESS ['SUBSCRIBE_CONFIRM_DESC'] = "#EMAIL# - Р°РґСЂРµСЃ РїРѕРґРїРёСЃРєРё
+#DATE# - РґР°С‚Р° РґРѕР±Р°РІР»РµРЅРёСЏ/РёР·РјРµРЅРµРЅРёСЏ Р°РґСЂРµСЃР°
+#CONFIRM_URL# - Р°РґСЂРµСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ
+#MAILING_LIST# - СЃРїРёСЃРѕРє РїРѕРґРїРёСЃРѕРє
+";
+$MESS ['SUBSCRIBE_CONFIRM_SUBJECT'] = "#SITE_NAME#: РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРѕРґРїРёСЃРєРё";
+$MESS ['SUBSCRIBE_CONFIRM_MESSAGE'] = "Р

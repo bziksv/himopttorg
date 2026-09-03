@@ -1,0 +1,5 @@
+<?
+$MESS["MAIN_DUMP_FILE_CNT"] = "Р¤Р°Р№Р»РѕРІ РІ Р°СЂС…РёРІРµ:";
+$MESS["MAIN_DUMP_FILE_SIZE"] = "Р Р°Р·РјРµСЂ РґР°РЅРЅС‹С…:";
+$MESS["MAIN_DUMP_FILE_FINISH"] = "РЎРѕР·РґР°РЅРёРµ СЂРµР·РµСЂРІРЅРѕР№ РєРѕРїРёРё Р·Р°РІРµСЂС€РµРЅРѕ";
+$MESS["MAIN_DUMP_FILE_MAX_SIZE"] = "Р

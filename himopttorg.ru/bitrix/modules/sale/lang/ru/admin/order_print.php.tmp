@@ -1,0 +1,16 @@
+<?
+$MESS ['SALE_EDIT_RECORD'] = "Р”РµС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ Р·Р°РєР°Р·Рµ # #ID#";
+$MESS ['SALE_RECORDS_LIST'] = "Р’ СЃРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ";
+$MESS ['P_ORDER_ID'] = "Р—Р°РєР°Р·";
+$MESS ['P_ORDER_DATE'] = "Р”Р°С‚Р° Р·Р°РєР°Р·Р°";
+$MESS ['P_ORDER_LANG'] = "РЎР°Р№С‚ Р·Р°РєР°Р·Р°";
+$MESS ['P_ORDER_STATUS'] = "РЎС‚Р°С‚СѓСЃ";
+$MESS ['P_ORDER_STATUS_DATE'] = "СЃРјРµРЅРµРЅ";
+$MESS ['P_ORDER_PRICE'] = "РЎСѓРјРјР° Р·Р°РєР°Р·Р°";
+$MESS ['P_ORDER_UPDATE_DATE'] = "РїРѕСЃР»РµРґРЅРµРµ РёР·РјРµРЅРµРЅРёРµ";
+$MESS ['P_ORDER_CANCELED'] = "РћС‚РјРµРЅРµРЅ";
+$MESS ['P_ORDER_DATE_CANCELED'] = "РѕС‚РјРµРЅРµРЅ";
+$MESS ['P_ORDER_USER_ACC'] = "Р‘СЋРґР¶РµС‚ РїРѕРєСѓРїР°С‚РµР»СЏ";
+$MESS ['P_ORDER_PERS_TYPE'] = "РўРёРї РїР»Р°С‚РµР»СЊС‰РёРєР°";
+$MESS ['P_ORDER_ACCOUNT'] = "РџРѕРєСѓРїР°С‚РµР»СЊ";
+$MESS ['P_ORDER_USER_LOGIN'] = "Р

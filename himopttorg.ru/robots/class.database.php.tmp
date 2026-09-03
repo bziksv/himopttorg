@@ -1,0 +1,103 @@
+<?
+
+if (!MODULE_SYS) die("Р¤Р°Р№Р» РјРѕР¶РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ С‚РѕР»СЊРєРѕ РєР°Рє РјРѕРґСѓР»СЊ!");
+
+#РљР»Р°СЃСЃ СЂР°Р±РѕС‚С‹ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С…
+class database {
+	private $db_name;
+	private $db_host;
+	private $db_user;
+	private $db_password;
+	public $dbh;
+	private $sql;
+	private $query;
+	private $log = false;
+	private $queryLog = array();
+	private $countQuery = 0;
+	
+	public function setConnectValue($db_host,$db_name,$db_user,$db_password){
+		$this->db_host = $db_host;
+		$this->db_name = $db_name;
+		$this->db_password = $db_password;
+		$this->db_user = $db_user;
+		$this->connect();
+	}
+	public function setLog($flag){
+		$this->log = $flag;
+	}
+	
+	function __destruct(){
+	  if ($this->dbh)
+	   mysql_close($this->dbh);
+	}
+#РљРѕРЅРЅРµРєС‚
+	private function connect () {
+		$this->dbh = @mysql_connect($this->db_host, $this->db_user, $this->db_password);
+		if (!($this->dbh)) {
+		  die("<div align='center' style='font-size:19px;margin-top:40px;'>РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЃСЏ Рє С…РѕСЃС‚Сѓ: <b>$this->db_host</b></div>");
+		}
+		if (!mysql_select_db($this->db_name, $this->dbh)) {
+		   die("<div align='center' style='font-size:19px;margin-top:40px;'>РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЃСЏ Рє Р‘Р”: <b>$this->db_name</b></div>");
+		}
+		mysql_query("SET NAMES 'utf8' COLLATE 'utf8_unicode_ci'");
+	}
+#Р”РёСЃРєРѕРЅРЅРµРєС‚
+	private function disconnect(){
+		mysql_close($this->dbh);
+	}
+#SQL Р·Р°РїСЂРѕСЃ
+	public function query($sql,$type = 0){
+		if (empty($sql)) return false;
+		if (!$this->dbh) $this->connect();
+		if($this->log)$time1=microtime();
+		$query=mysql_query($sql,$this->dbh) or $this->print_error($sql,mysql_error());
+		if($this->log)$time2=microtime();
+		if ($query){
+			if($this->log){$time=$time2-$time1;$this->setQueryInLog($sql,$time);}
+			$this->sql = $sql;
+			$this->query = $query;
+			$this->countQuery ++;
+			switch ($type){
+				case 1:$res=$this->query;break;
+				case 2:$res=$this->getObject();break;
+				case 3:$res=$this->getArray();break;
+				case 7:$res=mysql_fetch_assoc($query);break;
+				case 4:$res=$this->getInsertId();break;
+				case 5:$res=$this->getCountRSql();break;
+				case 6:if ($this->getCountRSql()==0)$res=null;else$res=$this->getResult(0,0);break;
+				default:$res=false;break;
+			}
+			return $res;
+		}
+		else{$this->query=null; return false;}
+	}
+#SQL Р·Р°РїСЂРѕСЃ Р±РµР· Р±СѓС„С„РµСЂРёР·Р°С†РёРё
+	public function queryUnbuffer($sql,$type = 0){
+		if (empty($sql)) return false;
+		if (!$this->dbh) $this->connect();
+		if($this->log)$time1=microtime();
+		$query=mysql_unbuffered_query($sql,$this->dbh) or $this->print_error($sql,mysql_error());
+		if($this->log)$time2=microtime();
+		if ($query){
+			if($this->log){$time=$time2-$time1;$this->setQueryInLog($sql,$time);}
+			$this->sql = $sql;
+			$this->query = $query;
+			switch ($type){
+				case 1:$res=$this->query;break;
+				case 2:$res=$this->getObject();break;
+				case 3:$res=$this->getArray();break;
+				case 4:$res=$this->getInsertId();break;
+				case 5:$res=$this->getCountRSql();break;
+				case 6:if ($this->getCountRSql()==0)$res=null;else$res=$this->getResult(0,0);break;
+				default:$res=false;break;
+			}
+			return $res;
+		}
+		else return false;
+	}
+#Р’С‹РІРѕРґ РѕС€РёР±РєРё
+	public function print_error($sql,$error){
+		print '
+		<table cellpadding="5" cellspacing="0" style="border:1px Solid #000000;">
+		<tr>
+			<td bgcolor="#faf859" height="20" align="center" style="border-bottom:1px Solid #000000;font-weight:bold;font-family:tahoma;font-size:9px;">РћРЁР

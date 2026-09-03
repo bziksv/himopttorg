@@ -1,0 +1,8 @@
+<?
+$MESS["IBLOCK_ADM_UPD_ERROR"] = "РћС€РёР±РєР° РёР·РјРµРЅРµРЅРёСЏ Р·Р°РїРёСЃРё:";
+$MESS["IBLOCK_ADM_HEADER_EL"] = "Р­Р»РµРјРµРЅС‚РѕРІ";
+$MESS["IBLOCK_ADM_HEADER_SECT"] = "Р Р°Р·РґРµР»РѕРІ";
+$MESS["IBLOCK_ADM_HEADER_LIST_URL"] = "URL СЃС‚СЂР°РЅРёС†С‹ РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["IBLOCK_ADM_HEADER_DETAIL_URL"] = "URL СЃС‚СЂР°РЅРёС†С‹ СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBLOCK_ADM_HEADER_CANONICAL_PAGE_URL"] = "РљР°РЅРѕРЅРёС‡РµСЃРєРёР№ URL СЌР»РµРјРµРЅС‚Р°";
+$MESS["IBLOCK_ADM_HEADER_TOINDEX"] = "Р

@@ -1,0 +1,12 @@
+alter b_sale_order = 0.528743982315
+alter b_sale_order_props_value = 0.128035068512
+alter b_sale_order_props = 0.1205098629
+CSaleDelivery::convertToNew = 0.0915429592133
+CSaleDeliveryHandler::convertToNew = 0.221838951111
+CSaleDelivery::convertPSRelations= 0.0123209953308
+Migrate statuses and properties = 0.156764030457
+insert into b_sale_order_payment = 0.0502188205719
+insert into b_sale_order_delivery = 0.0185880661011
+insert into b_sale_order_dlv_basket = 0.0393249988556
+update b_sale_store_barcode = 0.000373125076294
+update b_sale_order = 0.000692844390869

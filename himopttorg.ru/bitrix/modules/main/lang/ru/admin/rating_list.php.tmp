@@ -1,0 +1,16 @@
+<?
+$MESS ['MAIN_RATING_LIST'] = "РЎРїРёСЃРѕРє СЂРµР№С‚РёРЅРіРѕРІ";
+$MESS ['RATING_NAME'] = "РќР°Р·РІР°РЅРёРµ";
+$MESS ['RATING_CREATED'] = "РЎРѕР·РґР°РЅ";
+$MESS ['RATING_LAST_MODIFIED'] = "РњРѕРґРёС„РёС†РёСЂРѕРІР°РЅ";
+$MESS ['RATING_LAST_CALCULATED'] = "Р Р°СЃСЃС‡РёС‚Р°РЅ";
+$MESS ['RATING_ACTIVE'] = "РђРєС‚РёРІРµРЅ";
+$MESS ['RATING_STATUS'] = "РЎРѕСЃС‚РѕСЏРЅРёРµ";
+$MESS ['RATING_ENTITY_ID'] = "РћС†РµРЅРёРІР°РµРјС‹Р№ РѕР±СЉРµРєС‚";
+$MESS ['RATING_LIST_NAV'] = "Р РµР№С‚РёРЅРіРё";
+$MESS ['RATING_ACTIVE_YES'] = "Р”Р°";
+$MESS ['RATING_ACTIVE_NO'] = "РќРµС‚";
+$MESS ['RATING_STATUS_DONE'] = "СЂР°СЃСЃС‡РёС‚Р°РЅ";
+$MESS ['RATING_STATUS_WORKING'] = "РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РѕР±РЅРѕРІР»РµРЅРёРµ";
+$MESS ['RATING_STATUS_WAITING'] = "РѕР¶РёРґР°РµС‚ РѕР±РЅРѕРІР»РµРЅРёСЏ";
+$MESS ['RATING_LIST_EDIT'] = "Р

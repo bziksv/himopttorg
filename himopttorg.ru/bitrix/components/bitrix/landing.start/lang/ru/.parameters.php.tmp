@@ -1,0 +1,9 @@
+<?php
+$MESS['LANDING_CMP_PAR_VAR_SITE'] = 'РџРµСЂРµРјРµРЅРЅР°СЏ ID СЃР°Р№С‚Р° (РїСЂРѕСЃРјРѕС‚СЂ)';
+$MESS['LANDING_CMP_PAR_VAR_SITE_EDIT'] = 'РџРµСЂРµРјРµРЅРЅР°СЏ ID СЃР°Р№С‚Р° (СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ)';
+$MESS['LANDING_CMP_PAR_VAR_LANDING_EDIT'] = 'РџРµСЂРµРјРµРЅРЅР°СЏ ID Р»РµРЅРґРёРЅРіР° (СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ)';
+$MESS['LANDING_CMP_PAR_VAR_LANDING_VIEW'] = 'РџРµСЂРµРјРµРЅРЅР°СЏ ID Р»РµРЅРґРёРЅРіР° (РїСЂРѕСЃРјРѕС‚СЂ/РЅР°РїРѕР»РЅРµРЅРёРµ)';
+$MESS['LANDING_CMP_PAR_VAR_DOMAIN_EDIT'] = 'РџРµСЂРµРјРµРЅРЅР°СЏ ID РґРѕРјРµРЅР° (СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ)';
+$MESS['LANDING_CMP_PAR_VAR_ROLE_EDIT'] = 'РџРµСЂРµРјРµРЅРЅР°СЏ ID СЂРѕР»Рё (СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ)';
+$MESS['LANDING_CMP_PAR_VAR_FOLDER_EDIT'] = 'РџРµСЂРµРјРµРЅРЅР°СЏ ID РїР°РїРєРё (СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ)';
+$MESS['LANDING_CMP_PAR_VAR_PAGE'] = 'Р

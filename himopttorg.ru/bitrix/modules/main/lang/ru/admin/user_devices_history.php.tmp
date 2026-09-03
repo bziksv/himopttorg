@@ -1,0 +1,15 @@
+<?
+$MESS['main_user_devices_history_device_id'] = 'ID СѓСЃС‚СЂРѕР№СЃС‚РІР°';
+$MESS['main_user_devices_history_date'] = 'Р”Р°С‚Р° РІС…РѕРґР°';
+$MESS['main_user_devices_history_ip'] = 'IP-Р°РґСЂРµСЃ';
+$MESS['main_user_devices_history_city_id'] = 'РљРѕРґ РіРѕСЂРѕРґР°';
+$MESS['main_user_devices_history_region_id'] = 'РљРѕРґ СЂРµРіРёРѕРЅР°';
+$MESS['main_user_devices_history_country_id'] = 'РљРѕРґ СЃС‚СЂР°РЅС‹';
+$MESS['main_user_devices_history_city'] = 'Р“РѕСЂРѕРґ';
+$MESS['main_user_devices_history_region'] = 'Р РµРіРёРѕРЅ';
+$MESS['main_user_devices_history_country'] = 'РЎС‚СЂР°РЅР°';
+$MESS['main_user_devices_history_app_pass'] = 'РџР°СЂРѕР»СЊ РїСЂРёР»РѕР¶РµРЅРёСЏ';
+$MESS['main_user_devices_history_stored_pass'] = 'РЎРѕС…СЂР°РЅРµРЅРЅС‹Р№ РїР°СЂРѕР»СЊ';
+$MESS['main_user_devices_history_hash_pass'] = 'РћРґРЅРѕСЂР°Р·РѕРІС‹Р№ РїР°СЂРѕР»СЊ';
+$MESS['main_user_devices_history_page'] = 'РЎС‚СЂР°РЅРёС†Р°';
+$MESS['main_user_devices_history_title'] = 'Р

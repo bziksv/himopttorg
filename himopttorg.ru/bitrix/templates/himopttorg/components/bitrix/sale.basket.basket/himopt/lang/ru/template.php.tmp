@@ -1,0 +1,13 @@
+<?
+$MESS ['SALE_REFRESH'] = "       РћР±РЅРѕРІРёС‚СЊ       ";
+$MESS ['SALE_ORDER'] = "РћС„РѕСЂРјРёС‚СЊ Р·Р°РєР°Р·";
+$MESS ['SALE_NAME'] = "РќР°Р·РІР°РЅРёРµ";
+$MESS ['SALE_PROPS'] = "РЎРІРѕР№СЃС‚РІР°";
+$MESS ['SALE_PRICE'] = "Р¦РµРЅР°";
+$MESS ['SALE_PRICE_TYPE'] = "РўРёРї С†РµРЅС‹";
+$MESS ['SALE_QUANTITY'] = "РљРѕР»РёС‡РµСЃС‚РІРѕ";
+$MESS ['SALE_DELETE'] = "РЈРґР°Р»РёС‚СЊ";
+$MESS ['SALE_OTLOG'] = "РћС‚Р»РѕР¶РёС‚СЊ";
+$MESS ['SALE_WEIGHT'] = "Р’РµСЃ";
+$MESS ['SALE_WEIGHT_G'] = "Рі";
+$MESS ['SALE_ITOGO'] = "Р

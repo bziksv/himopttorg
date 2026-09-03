@@ -1,0 +1,24 @@
+<?php
+$MESS["smtp_configuration_edit_tab"] = "РџР°СЂР°РјРµС‚СЂС‹";
+$MESS["smtp_configuration_edit_tab_title"] = "РџР°СЂР°РјРµС‚СЂС‹ SMTP-РїРѕРґРєР»СЋС‡РµРЅРёСЏ";
+$MESS["smtp_configuration_edit_title"] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ SMTP-РїРѕРґРєР»СЋС‡РµРЅРёСЏ";
+$MESS["smtp_configuration_edit_add"] = "Р”РѕР±Р°РІР»РµРЅРёРµ SMTP РїРѕРґРєР»СЋС‡РµРЅРёСЏ";
+$MESS["smtp_configuration_edit_list"] = "РЎРїРёСЃРѕРє РїРѕРґРєР»СЋС‡РµРЅРёР№ SMTP";
+$MESS["smtp_configuration_edit_list_title"] = "РџРµСЂРµР№С‚Рё РІ СЃРїРёСЃРѕРє РїРѕРґРєР»СЋС‡РµРЅРёР№ SMTP";
+$MESS["smtp_configuration_edit_add_btn"] = "Р”РѕР±Р°РІРёС‚СЊ";
+$MESS["smtp_configuration_edit_add_btn_title"] = "Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕРµ SMTP-РїРѕРґРєР»СЋС‡РµРЅРёРµ";
+$MESS["smtp_configuration_edit_copy"] = "РљРѕРїРёСЂРѕРІР°С‚СЊ";
+$MESS["smtp_configuration_edit_copy_title"] = "РљРѕРїРёСЂРѕРІР°С‚СЊ РїРѕРґРєР»СЋС‡РµРЅРёРµ";
+$MESS["smtp_configuration_edit_del"] = "РЈРґР°Р»РёС‚СЊ";
+$MESS["smtp_configuration_edit_del_conf"] = "Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ РїРѕРґРєР»СЋС‡РµРЅРёРµ?";
+$MESS["smtp_configuration_edit_del_title"] = "РЈРґР°Р»РёС‚СЊ SMTP РїРѕРґРєР»СЋС‡РµРЅРёРµ";
+$MESS["smtp_configuration_edit_sites"] = "РЎР°Р№С‚С‹:";
+$MESS["smtp_configuration_edit_not_set"] = "(РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ)";
+$MESS["smtp_configuration_edit_insert"] = "Р’СЃС‚Р°РІРёС‚СЊ РІ С‚РµРєСЃС‚";
+$MESS["smtp_configuration_edit_fields"] = "Р”РѕСЃС‚СѓРїРЅС‹Рµ РїРѕР»СЏ:";
+$MESS["smtp_configuration_edit_err_site"] = "Р”РѕР»Р¶РµРЅ Р±С‹С‚СЊ СѓРєР°Р·Р°РЅ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ СЃР°Р№С‚.";
+$MESS["smtp_configuration_edit_host"] = "РЎРµСЂРІРµСЂ";
+$MESS["smtp_configuration_edit_title"] = "РЎРµСЂРІРµСЂ";
+$MESS["smtp_configuration_edit_port"] = "РџРѕСЂС‚";
+$MESS["smtp_configuration_edit_password"] = "РџР°СЂРѕР»СЊ";
+$MESS["smtp_configuration_edit_encrypted"] = "Р

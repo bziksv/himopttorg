@@ -1,0 +1,30 @@
+<?php
+
+use Bitrix\Main\DB\SqlExpression;
+use Bitrix\Main\Entity;
+use Bitrix\Main\Localization\Loc;
+use Bitrix\Main\Text\HtmlFilter;
+use Bitrix\Main\UserField\Types\BaseType;
+use Bitrix\Main\UserField\Types\DateTimeType;
+
+IncludeModuleLangFile(__FILE__);
+
+/**
+ * Р”Р°РЅРЅС‹Р№ РєР»Р°СЃСЃ С„Р°РєС‚РёС‡РµСЃРєРё СЏРІР»СЏРµС‚СЃСЏ РёРЅС‚РµСЂС„РµР№СЃРЅРѕР№ РїСЂРѕСЃР»РѕР№РєРѕР№ РјРµР¶РґСѓ Р·РЅР°С‡РµРЅРёСЏРјРё
+ * РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРІРѕР№СЃС‚РІ Рё СЃСѓС‰РЅРѕСЃС‚СЊСЋ Рє РєРѕС‚РѕСЂРѕР№ РѕРЅРё РїСЂРёРІСЏР·Р°РЅС‹.
+ * @package usertype
+ * @subpackage classes
+ */
+class CUserTypeManager
+{
+	const BASE_TYPE_INT = "int";
+	const BASE_TYPE_FILE = "file";
+	const BASE_TYPE_ENUM = "enum";
+	const BASE_TYPE_DOUBLE = "double";
+	const BASE_TYPE_DATETIME = "datetime";
+	const BASE_TYPE_STRING = "string";
+
+	/**
+	 * РҐСЂР°РЅРёС‚ РІСЃРµ С‚РёРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРІРѕР№СЃС‚РІ.
+	 *
+	 * <p>Р

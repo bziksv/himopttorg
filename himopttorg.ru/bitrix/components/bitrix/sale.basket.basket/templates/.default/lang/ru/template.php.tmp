@@ -1,0 +1,28 @@
+<?
+$MESS["SBB_DELETE"] = "РЈРґР°Р»РёС‚СЊ";
+$MESS["SBB_FILTER_EMPTY_RESULT"] = "РџРѕ РґР°РЅРЅРѕРјСѓ Р·Р°РїСЂРѕСЃСѓ С‚РѕРІР°СЂРѕРІ РЅРµ РЅР°Р№РґРµРЅРѕ";
+$MESS["SBB_BASKET_ITEM_WARNING"] = "Р’ РІР°С€РµР№ РєРѕСЂР·РёРЅРµ <a href=\"javascript:void(0)\" data-entity=\"basket-items-warning-count\"></a> С‚СЂРµР±СѓРµС‚ РІРЅРёРјР°РЅРёСЏ.";
+$MESS["SBB_BASKET_FILTER"] = "Р¤РёР»СЊС‚СЂ";
+$MESS["SBB_BASKET_ITEMS_WARNING"] = "c РѕС€РёР±РєР°РјРё";
+$MESS["SBB_NOT_AVAILABLE_ITEM"] = "РЅРµРґРѕСЃС‚СѓРїРµРЅ";
+$MESS["SBB_NOT_AVAILABLE_ITEM_2"] = "РЅРµРґРѕСЃС‚СѓРїРЅРѕ";
+$MESS["SBB_NOT_AVAILABLE_ITEMS"] = "РЅРµРґРѕСЃС‚СѓРїРЅРѕ";
+$MESS["SBB_DELAYED_ITEM"] = "РѕС‚Р»РѕР¶РµРЅ";
+$MESS["SBB_DELAYED_ITEM_2"] = "РѕС‚Р»РѕР¶РµРЅРѕ";
+$MESS["SBB_DELAYED_ITEMS"] = "РѕС‚Р»РѕР¶РµРЅРѕ";
+$MESS["SBB_SIMILAR_ITEM"] = "РїРѕС…РѕР¶РёР№";
+$MESS["SBB_SIMILAR_ITEM_2"] = "РїРѕС…РѕР¶РёС…";
+$MESS["SBB_SIMILAR_ITEMS"] = "РїРѕС…РѕР¶РёС…";
+$MESS["SBB_BASKET_ITEM_NOT_AVAILABLE"] = "Р’ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ СЌС‚РѕС‚ С‚РѕРІР°СЂ РЅРµРґРѕСЃС‚СѓРїРµРЅ";
+$MESS["SBB_BASKET_ITEM_DELAYED"] = "РўРѕРІР°СЂ РѕС‚Р»РѕР¶РµРЅ";
+$MESS["SBB_BASKET_ITEM_REMOVE_DELAYED"] = "Р”РѕР±Р°РІРёС‚СЊ Рє Р·Р°РєР°Р·Сѓ?";
+$MESS["SBB_BASKET_ITEM_SIMILAR_P1"] = "Р­С‚РѕС‚ С‚РѕРІР°СЂ";
+$MESS["SBB_BASKET_ITEM_SIMILAR_P2"] = "СѓР¶Рµ РµСЃС‚СЊ РІ РєРѕСЂР·РёРЅРµ РІ РєРѕР»РёС‡РµСЃС‚РІРµ";
+$MESS["SBB_BASKET_ITEM_SIMILAR_P3"] = "РћР±СЉРµРґРёРЅРёС‚СЊ С‚РѕРІР°СЂС‹ РІ РѕРґРЅСѓ РїРѕР·РёС†РёСЋ c РєРѕР»РёС‡РµСЃС‚РІРѕРј";
+$MESS["SBB_BASKET_ITEM_PRICE_FOR"] = "С†РµРЅР° Р·Р°";
+$MESS["SBB_BASKET_ITEM_ECONOMY"] = "Р­РєРѕРЅРѕРјРёСЏ";
+$MESS["SBB_BASKET_ITEM_DELETED"] = "Р±С‹Р» СѓРґР°Р»РµРЅ РёР· РєРѕСЂР·РёРЅС‹";
+$MESS["SBB_BASKET_ITEM_RESTORE"] = "Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ";
+$MESS["SBB_COUPON_ENTER"] = "Р’РІРµРґРёС‚Рµ РєРѕРґ РєСѓРїРѕРЅР° РґР»СЏ СЃРєРёРґРєРё";
+$MESS["SBB_COUPON"] = "РєСѓРїРѕРЅ";
+$MESS["SBB_TOTAL"] = "Р

@@ -1,0 +1,7 @@
+<?
+global $MESS;
+
+$MESS["PPL_NAME"] = "<a href=\"http://www.paypal.ru\" target=\"_blank\">http://www.paypal.ru</a><br />РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ, С‡С‚Рѕ РїР»Р°С‚РµР¶Рё РјРѕР¶РЅРѕ РїСЂРёРЅРёРјР°С‚СЊ С‚РѕР»СЊРєРѕ РѕС‚ Р¤РёР·РёС‡РµСЃРєРёС… Р»РёС†.";
+$MESS["PPL_BUSINESS_NAME"] = "Email";
+$MESS["PPL_BUSINESS_DESCR"] = "Email Р°РґСЂРµСЃ РІР°С€РµРіРѕ Р°РєРєР°СѓРЅС‚Р° PayPal";
+$MESS["PPL_IDENTITY_TOKEN_NAME"] = "Р

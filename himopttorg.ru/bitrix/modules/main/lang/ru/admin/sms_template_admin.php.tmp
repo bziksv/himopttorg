@@ -1,0 +1,6 @@
+<?
+$MESS["sms_template_admin_title"] = "РЁР°Р±Р»РѕРЅС‹ РЎРњРЎ-СЃРѕРѕР±С‰РµРЅРёР№";
+$MESS["sms_template_admin_nav"] = "РЁР°Р±Р»РѕРЅС‹";
+$MESS["sms_template_admin_sites"] = "РЎР°Р№С‚С‹";
+$MESS["sms_template_admin_edit"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ С€Р°Р±Р»РѕРЅ";
+$MESS["sms_template_admin_edit1"] = "Р

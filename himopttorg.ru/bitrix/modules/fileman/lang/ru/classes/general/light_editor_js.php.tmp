@@ -1,0 +1,15 @@
+<?
+$MESS["CreateLink"] = "РЎСЃС‹Р»РєР°";
+$MESS["EditLink"] = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃСЃС‹Р»РєСѓ";
+$MESS["DialogSave"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["DialogCancel"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["DialogClose"] = "Р—Р°РєСЂС‹С‚СЊ";
+$MESS["Width"] = "РЁРёСЂРёРЅР°";
+$MESS["Height"] = "Р’С‹СЃРѕС‚Р°";
+$MESS["Source"] = "Р РµР¶РёРј HTML-РєРѕРґР°";
+$MESS["BBSource"] = "Р РµР¶РёРј BB-Code";
+$MESS["On"] = "РІРєР»СЋС‡РµРЅРѕ";
+$MESS["Off"] = "РІС‹РєР»СЋС‡РµРЅРѕ";
+$MESS["Anchor"] = "РЇРєРѕСЂСЊ";
+$MESS["DeleteLink"] = "РЈРґР°Р»РёС‚СЊ СЃСЃС‹Р»РєСѓ";
+$MESS["Image"] = "Р

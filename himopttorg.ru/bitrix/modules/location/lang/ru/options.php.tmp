@@ -1,0 +1,11 @@
+<?php
+$MESS ['LOCATION_OPT_TAB_OPTIONS'] = "РќР°СЃС‚СЂРѕР№РєРё";
+$MESS ['LOCATION_OPT_FORMAT'] = "Р¤РѕСЂРјР°С‚ Р°РґСЂРµСЃР°";
+$MESS ['LOCATION_OPT_SOURCE_GOOGLE_API_KEY_BACKEND'] = "РљР»СЋС‡ СЃ РїСЂР°РІР°РјРё РЅР° Google Places API, Geocoding API РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РЅР° СЃРµСЂРІРµСЂРµ";
+$MESS ['LOCATION_OPT_SOURCE_GOOGLE_API_KEY_BACKEND_NOTE'] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РєР°Рє РїРѕР»СѓС‡РёС‚СЊ РєР»СЋС‡: <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">https://developers.google.com/maps/documentation/javascript/get-api-key</a>";
+$MESS ['LOCATION_OPT_SOURCE_GOOGLE_API_KEY_FRONTEND'] = "РљР»СЋС‡ СЃ РїСЂР°РІР°РјРё РЅР° Google Maps JavaScript API, Places API, Geocoding API РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РІ Р±СЂР°СѓР·РµСЂРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ";
+$MESS ['LOCATION_OPT_SOURCE_GOOGLE_USE_GEOCODING_SERVICE'] = "РџРѕРєР°Р·С‹РІР°С‚СЊ РєР°СЂС‚Сѓ РґР»СЏ РЅРµСЂР°СЃРїРѕР·РЅР°РЅРЅС‹С… Р°РґСЂРµСЃРѕРІ";
+$MESS ['LOCATION_OPT_SOURCE_GOOGLE_USE_GEOCODING_SERVICE_NOTE'] = "Р’РЅРёРјР°РЅРёРµ! Р—Р° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЌС‚РѕР№ РѕРїС†РёРё Google РјРѕР¶РµС‚ РІР·РёРјР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РїР»Р°С‚Сѓ.";
+$MESS ['LOCATION_OPT_SOURCE_GOOGLE_SHOW_PHOTOS_ON_MAP'] = "РџРѕРєР°Р·С‹РІР°С‚СЊ С„РѕС‚РѕРіСЂР°С„РёРё РјРµСЃС‚ РїСЂРё РїРѕРєР°Р·Рµ РєР°СЂС‚С‹";
+$MESS ['LOCATION_OPT_SOURCE_GOOGLE_SHOW_PHOTOS_ON_MAP_NOTE'] = "Р’РЅРёРјР°РЅРёРµ! Р—Р° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЌС‚РѕР№ РѕРїС†РёРё Google РјРѕР¶РµС‚ РІР·РёРјР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РїР»Р°С‚Сѓ.";
+$MESS ['LOCATION_OPT_TAB_SOURCES_OPTIONS'] = "Р

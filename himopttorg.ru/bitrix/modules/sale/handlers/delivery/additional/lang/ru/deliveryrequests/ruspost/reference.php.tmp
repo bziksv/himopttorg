@@ -1,0 +1,11 @@
+<?
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_G"] = "РџСЂРёРіРѕРґРµРЅ РґР»СЏ РїРѕС‡С‚РѕРІРѕР№ СЂР°СЃСЃС‹Р»РєРё";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_OD"] = "Р”Рѕ РІРѕСЃС‚СЂРµР±РѕРІР°РЅРёСЏ";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_PB"] = "РђР±РѕРЅРµРЅС‚СЃРєРёР№ СЏС‰РёРє";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_U1"] = "РќРµ РѕРїСЂРµРґРµР»РµРЅ СЂРµРіРёРѕРЅ";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_U2"] = "РќРµ РѕРїСЂРµРґРµР»РµРЅ РіРѕСЂРѕРґ РёР»Рё РЅР°СЃРµР»РµРЅРЅС‹Р№ РїСѓРЅРєС‚";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_U3"] = "РќРµ РѕРїСЂРµРґРµР»РµРЅР° СѓР»РёС†Р°";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_U4"] = "РќРµ РѕРїСЂРµРґРµР»РµРЅ РЅРѕРјРµСЂ РґРѕРјР°";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_U5"] = "РќРµ РѕРїСЂРµРґРµР»РµРЅР° РєРІР°СЂС‚РёСЂР°/РѕС„РёСЃ";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_U6"] = "РќРµ РѕРїСЂРµРґРµР»РµРЅ";
+$MESS["SALE_DLVRS_ADD_DREQ_REF_QC_U7"] = "Р

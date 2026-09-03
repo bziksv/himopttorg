@@ -1,0 +1,14 @@
+<?php
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT1"] = "РќР°С‡Р°Р»Рѕ СЃС‚СЂР°РЅРёС†С‹";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT2"] = "Р§С‚Рѕ РјС‹ РїСЂРµРґР»Р°РіР°РµРј";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT3"] = "РЎРїРµС†РёР°Р»СЊРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT4"] = "СЃ РїСЂР°Р·РґРЅРёРєРѕРј, РјСѓР¶С‡РёРЅС‹!";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT5"] = "РїРѕРґР°СЂРєРё РЅР° Р»СЋР±РѕР№ РІРєСѓСЃ";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT6"] = "РїРѕРґР°СЂРєРё";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT7"] = "РїРѕ РјРµР»РѕС‡Рё";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT8"] = "РЈР·РЅР°С‚СЊ Р±РѕР»СЊС€Рµ";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT9"] = "РїРѕРґР°СЂРєРё";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT10"] = "РїРѕ РјРµР»РѕС‡Рё";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT11"] = "РЈР·РЅР°С‚СЊ Р±РѕР»СЊС€Рµ";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT12"] = "СЃС‡Р°СЃС‚Р»РёРІС‹Рµ РѕР±Р»Р°РґР°С‚РµР»Рё РїРѕРґР°СЂРєРѕРІ";
+$MESS["NOTTRANSLATE__LANDING_DEMO_23FEB1__TEXT13"] = "РњР« РћРЎР§РђРЎРўР›Р

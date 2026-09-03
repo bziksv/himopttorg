@@ -1,0 +1,31 @@
+<?
+$MESS ['BLOG_GROUP_ADD'] = "HinzufСЊgen >>";
+$MESS ['BLOG_ALL_USERS'] = "alle Nutzer";
+$MESS ['BLOG_APPLY'] = "Anwenden";
+$MESS ['BLOG_AUTO_MSG'] = "Automatische Nachrichten:";
+$MESS ['BLOG_DESCR'] = "Blogbeschreibung:";
+$MESS ['BLOG_GRP'] = "Bloggruppe:";
+$MESS ['BLOG_TITLE'] = "BlogСЊberschrift:";
+$MESS ['BLOG_CANCEL'] = "Abbrechen";
+$MESS ['BLOG_COMMENTS'] = "Kommentar";
+$MESS ['BLOG_CREATE'] = "Blog erstellen";
+$MESS ['BLOG_DEF_PERMS'] = "Standard Zugriff:";
+$MESS ['BLOG_GROUP_DELETE'] = "LС†schen";
+$MESS ['BLOG_NAME_CHANGE'] = "Bearbeiten";
+$MESS ['BLOG_NEED_AUTH'] = "Sie mСЊssen sich auf der Seite anmelden.";
+$MESS ['BLOG_GROUPS'] = "Gruppen";
+$MESS ['BLOG_MESSAGES'] = "BeitrРґge";
+$MESS ['BLOG_EMAIL_NOTIFY'] = "Benachrichtigung";
+$MESS ['BLOG_OPENED_GRPS'] = "Offene Gruppen:";
+$MESS ['BLOG_URL'] = "Lateinische Bezeichnung:";
+$MESS ['BLOG_REGISTERED'] = "registr. Nutzer";
+$MESS ['BLOG_CAPTHA'] = "Die Eingabe des Bildtextes beim Erstellen eines Kommentars fСЊr nicht autorisierte Nutzer verlangen";
+$MESS ['STOF_REQUIED_FIELDS_NOTE'] = "Felder, die mit dem Sternchen (<font color=\"#FF0000\">*</font>) markiert sind, mСЊssen ausgefСЊllt werden.";
+$MESS ['BLOG_SAVE'] = "Speichern";
+$MESS ['BLOG_EMAIL_NOTIFY_TITLE'] = "Mitteilung per E-Mail senden";
+$MESS ['BLOG_OPENED_TITLE'] = "Geben Sie die Gruppen an, zu denen alle Personen, ohne Ihre BestРґtigung, hinzugefСЊgt werden kС†nnen";
+$MESS ['BLOG_URL_TITLE'] = "Geben Sie eine eindeutige BlogСЊberschrift an. Dieser wird bei der URL-Erstellung verwendet. Beispiel: <nobr>http://IhreSeite.de/blog/[Blogname]</nobr>";
+$MESS ['BLOG_CONFIRM_DELETE'] = "Es existieren Nutzer in dieser Gruppe. Wollen Sie diese Gruppe wirklich lС†schen?";
+$MESS ['BLOG_EMAIL_NOTIFY_HELP'] = "Wenn diese Option ausgewРґhlt ist, werden Sie per E-Mail СЊber Kommentare und neue Nachrichten in Ihrem Blog informiert";
+$MESS ['BLOG_AUTO_MSG_TITLE'] = "Schutz vor automatischen Mitteilungen benutzen";
+?>

@@ -1,0 +1,71 @@
+<?
+/**********************************************************************/
+/**    DO NOT MODIFY THIS FILE                                       **/
+/**    MODIFICATION OF THIS FILE WILL ENTAIL SITE FAILURE            **/
+/**********************************************************************/
+if (!defined("UPDATE_SYSTEM_VERSION"))
+	define("UPDATE_SYSTEM_VERSION", "10.0.11");
+if (file_exists($_SERVER["DOCUMENT_ROOT"]."/bitrix/admin/update_system.php"))
+{
+	require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/admin/update_system.php");
+	die();
+}
+
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_admin_before.php");
+define("HELP_FILE", "updates/index.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/update_class.php");
+
+@set_time_limit(0);
+ini_set("track_errors", "1");
+ignore_user_abort(true);
+
+if(defined("SM_VERSION") && version_compare(SM_VERSION, "5.0.10") >= 0)
+{
+	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/update_update5.php");
+	die();
+}
+
+include(GetLangFileName($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/lang/", "/classes/general/update_update.php", $lang));
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/prolog.php");
+
+$MAIN_RIGHT = $APPLICATION->GetGroupRight("main");
+if ($MAIN_RIGHT<"R") $APPLICATION->AuthForm(GetMessage("ACCESS_DENIED"));
+
+$strErrorMessage = "";
+
+/* РќР°СЃС‚СЂР°РёРІР°РµРј РїР°СЂР°РјРµС‚СЂС‹ РІС‹Р·РѕРІР° СЃС‚СЂР°РЅРёС†С‹ */
+$STEP = IntVal($STEP);
+if ($STEP <= 0 || $STEP > 4)
+	$STEP = 1;
+
+if ($MAIN_RIGHT != "W")
+	$STEP = 1;
+
+if ($TYPE!="REGVER" && $TYPE!="LOADSRC" && $TYPE!="UPDUPD" && $TYPE!="LANGS" && $TYPE!="HELP" && $TYPE!="HISTORY" && $TYPE!="SAVE_KEY" && $TYPE!="ACTIVATE_KEY" && $TYPE!="ADD_SITE" && $TYPE!="SUBSCR_UPDATE" && $TYPE!="TURN_STABILITY" && $TYPE!="AGREE_LICENSE_ACT")
+{
+	$TYPE = "UPDATE";
+}
+
+if ($TYPE=="REGVER" || $TYPE=="LOADSRC" || $TYPE=="UPDUPD" || $TYPE=="SAVE_KEY" || $TYPE=="ACTIVATE_KEY" || $TYPE=="SUBSCR_UPDATE" || $TYPE=="TURN_STABILITY" || $TYPE=="AGREE_LICENSE_ACT")
+{
+	$STEP = 1;
+}
+/* РљРѕРЅРµС† РЅР°СЃС‚СЂРѕР№РєРё РїР°СЂР°РјРµС‚СЂРѕРІ РІС‹Р·РѕРІР° СЃС‚СЂР°РЅРёС†С‹ */
+$bLockUpdateSystemKernel = CUpdateSystem::IsInCommonKernel();
+if ($bLockUpdateSystemKernel)
+{
+	$STEP = 1;
+	$TYPE = "UPDATE";
+	$strErrorMessage .= GetMessage("SUP_CANT_CONTRUPDATE").". ";
+}
+
+$stableVersionsOnly = COption::GetOptionString("main", "stable_versions_only", "Y");
+
+
+if ($TYPE=="AGREE_LICENSE_ACT" && $MAIN_RIGHT=="W")
+{
+	COption::SetOptionString("main", "~new_license11_sign", "Y");
+	$TYPE = "UPDATE";
+}
+
+/*********** Р’РљР›Р®Р§Р•РќР

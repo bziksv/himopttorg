@@ -1,0 +1,162 @@
+<?
+//**********************************************************************/
+//**    DO NOT MODIFY THIS FILE                                       **/
+//**    MODIFICATION OF THIS FILE WILL ENTAIL SITE FAILURE            **/
+//**********************************************************************/
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+IncludeModuleLangFile(__FILE__);
+
+$MAIN_RIGHT = $APPLICATION->GetGroupRight("main");
+if ($MAIN_RIGHT<"R") 
+	$APPLICATION->AuthForm(GetMessage("ACCESS_DENIED"));
+
+class CUpdateOutput
+{
+	function ShowBlock($top, $bottom="", $icon="")
+	{
+		$s = '
+<div class="update-block">
+<table cellspacing="0" cellpadding="0" border="0" class="update-block">
+	<tr class="top">
+		<td class="left"><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td class="right"><div class="empty"></div></td>
+	</tr>
+	<tr>
+		<td class="left"><div class="empty"></div></td>
+		<td class="content">
+			<div class="top">
+				<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td class="icon"><div class="icon '.$icon.'"></div></td>
+						<td>'.$top.'</td>
+					</tr>
+				</table>
+			</div>';
+
+		if($bottom <> "")
+		{
+			$s .= '
+			<div class="bottom">
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td class="icon" width="0%"><div class="icon"></div></td>
+						<td width="100%">'.$bottom.'</td>
+					</tr>
+				</table>
+			</div>
+';			
+		}
+		
+		$s .= '
+		</td>
+		<td class="right"><div class="empty"></div></td>
+	</tr>
+	<tr class="bottom">
+		<td class="left"><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td class="right"><div class="empty"></div></td>
+	</tr>
+</table>
+</div>
+';
+		return $s;
+	}
+
+	function ShowScript()
+	{
+		if(defined("__CUpdateOutputScript"))
+			return "";
+		define("__CUpdateOutputScript", true);
+		return '
+<script type="text/javascript">
+function ToggleInfo(id, obj)
+{
+	var visible = jsUtils.ToggleDiv(id);
+	jsUserOptions.SaveOption("sysupdate", "hidden_blocks", id, (visible? "on":"off"));
+	obj.className = (visible? "button button-up":"button button-down");
+	obj.title = (visible? "'.GetMessage("SUP_COLLAPSE").'":"'.GetMessage("SUP_EXPAND").'");
+}
+</script>
+';		
+	}
+
+	function ShowBlockInfo($top, $bottom, $id)
+	{
+		$aOpt = CUserOptions::GetOption("sysupdate", "hidden_blocks", array());
+		$s = CUpdateOutput::ShowScript();
+		$s .= '
+<div class="update-block-info">
+<table cellspacing="0" cellpadding="0" border="0" class="update-block-info">
+	<tr class="top">
+		<td class="left"><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td class="right"><div class="empty"></div></td>
+	</tr>
+	<tr>
+		<td class="left"><div class="empty"></div></td>
+		<td class="content">
+			<div class="top">
+			<table cellspacing="0" width="100%">
+				<tr>
+					<td class="caption">'.$top.'</td>
+					<td align="right"><a class="button '.($aOpt[$id]=="off"? "button-down":"button-up").'" title="'.($aOpt[$id]=="off"? GetMessage("SUP_EXPAND"):GetMessage("SUP_COLLAPSE")).'" href="javascript:void(0);" onclick="ToggleInfo(\''.$id.'\', this)"></a></td>
+				</tr>
+			</table>
+			</div>
+			
+			<div class="bottom" id="'.$id.'" style="display:'.($aOpt[$id]=="off"? "none":"block").'">'.$bottom.'</div>
+		</td>
+		<td class="right"><div class="empty"></div></td>
+	</tr>
+	<tr class="bottom">
+		<td class="left"><div class="empty"></div></td>
+		<td><div class="empty"></div></td>
+		<td class="right"><div class="empty"></div></td>
+	</tr>
+</table>
+</div>
+';
+		return $s;
+	}
+}
+
+$strErrorMessage = "";
+
+/* РќР°СЃС‚СЂР°РёРІР°РµРј РїР°СЂР°РјРµС‚СЂС‹ РІС‹Р·РѕРІР° СЃС‚СЂР°РЅРёС†С‹ */
+$STEP = IntVal($STEP);
+if ($STEP <= 0 || $STEP > 4)
+	$STEP = 1;
+
+if ($MAIN_RIGHT != "W")
+	$STEP = 1;
+
+if ($TYPE!="REGVER" && $TYPE!="LOADSRC" && $TYPE!="UPDUPD" && $TYPE!="LANGS" && $TYPE!="HELP" && $TYPE!="SAVE_KEY" && $TYPE!="ACTIVATE_KEY" && $TYPE!="ADD_SITE" && $TYPE!="SUBSCR_UPDATE" && $TYPE!="TURN_STABILITY" && $TYPE!="AGREE_LICENSE_ACT")
+{
+	$TYPE = "UPDATE";
+}
+
+if ($TYPE=="REGVER" || $TYPE=="LOADSRC" || $TYPE=="UPDUPD" || $TYPE=="SAVE_KEY" || $TYPE=="ACTIVATE_KEY" || $TYPE=="SUBSCR_UPDATE" || $TYPE=="TURN_STABILITY" || $TYPE=="AGREE_LICENSE_ACT")
+{
+	$STEP = 1;
+}
+/* РљРѕРЅРµС† РЅР°СЃС‚СЂРѕР№РєРё РїР°СЂР°РјРµС‚СЂРѕРІ РІС‹Р·РѕРІР° СЃС‚СЂР°РЅРёС†С‹ */
+
+$bLockUpdateSystemKernel = CUpdateSystem::IsInCommonKernel();
+
+if ($bLockUpdateSystemKernel)
+{
+	$STEP = 1;
+	$TYPE = "UPDATE";
+	$strErrorMessage .= GetMessage("SUP_CANT_CONTRUPDATE").". ";
+}
+
+$stableVersionsOnly = COption::GetOptionString("main", "stable_versions_only", "Y");
+
+if ($TYPE=="AGREE_LICENSE_ACT" && $MAIN_RIGHT=="W")
+{
+	COption::SetOptionString("main", "~new_license11_sign", "Y");
+	$TYPE = "UPDATE";
+}
+
+//*********** Р’РљР›Р®Р§Р•РќР

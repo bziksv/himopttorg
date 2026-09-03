@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Р“Р»Р°РІРЅР°СЏ", 
+		"#SITE_DIR#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"РљР°С‚Р°Р»РѕРі", 
+		"catalog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"РљР°Рє РєСѓРїРёС‚СЊ", 
+		"about/howto/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Р”РѕСЃС‚Р°РІРєР°", 
+		"about/delivery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Рћ РјР°РіР°Р·РёРЅРµ", 
+		"about/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

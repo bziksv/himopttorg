@@ -1,0 +1,5 @@
+<?php
+$MESS["USER_TYPE_EDIT_TAB"] = "Р”РѕРї. РїРѕР»СЏ";
+$MESS["USER_TYPE_EDIT_TAB_TITLE"] = "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ";
+$MESS["USER_TYPE_EDIT_TAB_HREF"] = "Р”РѕР±Р°РІРёС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРµ РїРѕР»Рµ";
+$MESS["MAIN_EDIT"] = "Р

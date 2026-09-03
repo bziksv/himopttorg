@@ -1,0 +1,9 @@
+<?php
+$MESS['LANDING_TABLE_FIELD_ACTIVE'] = 'РђРєС‚РёРІРЅРѕСЃС‚СЊ';
+$MESS['LANDING_TABLE_FIELD_DOMAIN'] = 'Р”РѕРјРµРЅ';
+$MESS['LANDING_TABLE_FIELD_PREV_DOMAIN'] = 'РџСЂРµРґС‹РґСѓС‰РёР№ РґРѕРјРµРЅ';
+$MESS['LANDING_TABLE_FIELD_XML_ID'] = 'Р’РЅРµС€РЅРёР№ РєРѕРґ';
+$MESS['LANDING_TABLE_FIELD_PROTOCOL'] = 'РџСЂРѕС‚РѕРєРѕР»';
+$MESS['LANDING_TABLE_FIELD_PROVIDER'] = 'РџСЂРѕРІР°Р№РґРµСЂ СЂРµРіРёСЃС‚СЂР°С†РёРё';
+$MESS['LANDING_TABLE_FIELD_FAIL_COUNT'] = 'РљРѕР»РёС‡РµСЃС‚РІРѕ РЅРµСѓСЃРїРµС€РЅС‹С… РїСЂРѕРІРµСЂРѕРє РґРѕРјРµРЅР°';
+$MESS['LANDING_TABLE_FIELD_CREATED_BY_ID'] = 'Р

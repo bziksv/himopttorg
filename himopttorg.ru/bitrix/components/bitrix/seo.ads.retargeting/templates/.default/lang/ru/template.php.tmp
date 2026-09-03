@@ -1,0 +1,37 @@
+<?php
+
+$MESS["CRM_ADS_RTG_ERROR_ACTION"] = "РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°. Р”РµР№СЃС‚РІРёРµ РѕС‚РјРµРЅРµРЅРѕ.";
+$MESS["CRM_ADS_RTG_CLOSE"] = "Р—Р°РєСЂС‹С‚СЊ";
+$MESS["CRM_ADS_RTG_APPLY"] = "Р’С‹РїРѕР»РЅРёС‚СЊ";
+$MESS["CRM_ADS_RTG_CREATE"] = "РЎРѕР·РґР°С‚СЊ";
+$MESS["CRM_ADS_RTG_CANCEL"] = "РћС‚РјРµРЅРёС‚СЊ";
+$MESS["CRM_ADS_RTG_CANCEL_ALT"] = "РћС‚РјРµРЅР°";
+$MESS["CRM_ADS_RTG_LOGIN"] = "РџРѕРґРєР»СЋС‡РёС‚СЊ";
+$MESS["CRM_ADS_RTG_LOGIN_GOOGLE"] = "Р’РѕР№С‚Рё СЃ Google";
+$MESS["CRM_ADS_RTG_LOGOUT"] = "РћС‚РєР»СЋС‡РёС‚СЊ";
+$MESS["CRM_ADS_RTG_REFRESH"] = "РћР±РЅРѕРІРёС‚СЊ";
+$MESS["CRM_ADS_RTG_ADD_AUDIENCE"] = "РЎРѕР·РґР°С‚СЊ Р°СѓРґРёС‚РѕСЂРёСЋ";
+$MESS["CRM_ADS_RTG_REFRESH_TEXT"] = "РћР±РЅРѕРІРёС‚Рµ СЃРїРёСЃРѕРє Р°СѓРґРёС‚РѕСЂРёР№.";
+$MESS["CRM_ADS_RTG_REFRESH_TEXT_YANDEX"] = "РћР±РЅРѕРІРёС‚Рµ СЃРїРёСЃРѕРє СЃРµРіРјРµРЅС‚РѕРІ.";
+$MESS['CRM_ADS_RTG_CABINET_FACEBOOK'] = 'Р РµРєР»Р°РјРЅС‹Р№ РєР°Р±РёРЅРµС‚ Facebook';
+$MESS['CRM_ADS_RTG_CABINET_YANDEX'] = 'РљР°Р±РёРЅРµС‚ РЇРЅРґРµРєСЃ.РђСѓРґРёС‚РѕСЂРёРё';
+$MESS['CRM_ADS_RTG_CABINET_VKONTAKTE'] = 'Р РµРєР»Р°РјРЅС‹Р№ РєР°Р±РёРЅРµС‚ Р’РєРѕРЅС‚Р°РєС‚Рµ';
+$MESS['CRM_ADS_RTG_CABINET_GOOGLE_1'] = 'Р РµРєР»Р°РјРЅС‹Р№ РєР°Р±РёРЅРµС‚ Google Ads';
+$MESS['CRM_ADS_RTG_TITLE'] = 'РќР°СЃС‚СЂРѕРёС‚СЊ СЂРµРєР»Р°РјРЅСѓСЋ Р°СѓРґРёС‚РѕСЂРёСЋ';
+$MESS['CRM_ADS_RTG_SELECT_ACCOUNT'] = 'Р’С‹Р±СЂР°С‚СЊ СЂРµРєР»Р°РјРЅС‹Р№ РєР°Р±РёРЅРµС‚';
+$MESS['CRM_ADS_RTG_SELECT_AUDIENCE'] = 'Р”РѕР±Р°РІРёС‚СЊ РІ Р°СѓРґРёС‚РѕСЂРёСЋ';
+$MESS['CRM_ADS_RTG_SELECT_EXISTING_AUDIENCE'] = 'Р’С‹Р±СЂР°С‚СЊ СЃСѓС‰РµСЃС‚РІСѓСЋС‰СѓСЋ Р°СѓРґРёС‚РѕСЂРёСЋ';
+$MESS['CRM_ADS_RTG_SELECT_EXISTING_AUDIENCE_HINT'] = 'РќРѕРІС‹Р№ СЃРµРіРјРµРЅС‚ Р±СѓРґРµС‚ СЃРѕСЃС‚РѕСЏС‚СЊ РёР· РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РїРѕС…РѕР¶РёС… РїРѕ РїРѕРІРµРґРµРЅРёСЋ РІ РёРЅС‚РµСЂРЅРµС‚Рµ РЅР° Р°СѓРґРёС‚РѕСЂРёСЋ РёСЃС…РѕРґРЅРѕРіРѕ СЃРµРіРјРµРЅС‚Р°.';
+$MESS['CRM_ADS_RTG_SELECT_CONTACT_DATA'] = 'Р”РѕР±Р°РІР»СЏС‚СЊ С‚РµР»РµС„РѕРЅ/email РІ СЃРµРіРјРµРЅС‚С‹';
+$MESS['CRM_ADS_RTG_SELECT_CONTACT_DATA_EMAIL'] = 'e-mail';
+$MESS['CRM_ADS_RTG_SELECT_CONTACT_DATA_PHONE'] = 'С‚РµР»РµС„РѕРЅ';
+$MESS['CRM_ADS_RTG_ERROR_NO_AUDIENCES'] = 'РђСѓРґРёС‚РѕСЂРёРё РЅРµ РЅР°Р№РґРµРЅС‹, РїРµСЂРµР№РґРёС‚Рµ РІ %name% Рё СЃРѕР·РґР°Р№С‚Рµ Р°СѓРґРёС‚РѕСЂРёСЋ.';
+$MESS['CRM_ADS_RTG_AUTO_REMOVE_TITLE'] = 'СѓРґР°Р»РёС‚СЊ РёР· Р°СѓРґРёС‚РѕСЂРёРё С‡РµСЂРµР·';
+$MESS['CRM_ADS_RTG_AUTO_REMOVE_TITLE_YANDEX'] = 'СѓРґР°Р»РёС‚СЊ РёР· СЃРµРіРјРµРЅС‚РѕРІ С‡РµСЂРµР·';
+$MESS['CRM_ADS_RTG_AUTO_REMOVE_DAYS'] = 'РґРЅРµР№';
+$MESS['CRM_ADS_RTG_AUDIENCE_TYPE_HINT_GOOGLE'] = 'РџРѕРґРґРµСЂР¶РёРІР°СЋС‚СЃСЏ Р°СѓРґРёС‚РѕСЂРёРё С‚РёРїР° "РЎРїРёСЃРѕРє РєР»РёРµРЅС‚РѕРІ".';
+$MESS['CRM_ADS_RTG_AUDIENCE_ADD_HINT_GOOGLE'] = 'РЎРѕР·РґР°С‚СЊ Р°СѓРґРёС‚РѕСЂРёСЋ РІС‹ РјРѕР¶РµС‚Рµ РІ СЂР°Р·РґРµР»Рµ "РћР±С‰Р°СЏ Р±РёР±Р»РёРѕС‚РµРєР° -> РњРµРЅРµРґР¶РµСЂ Р°СѓРґРёС‚РѕСЂРёР№".';
+$MESS['CRM_ADS_RTG_AUDIENCE_TYPE_HINT_YANDEX'] = 'РџРѕРґРґРµСЂР¶РёРІР°СЋС‚СЃСЏ Р°СѓРґРёС‚РѕСЂРёРё С‚РёРїР° "Р”Р°РЅРЅС‹Рµ CRM".';
+$MESS['CRM_ADS_RTG_AUDIENCE_ADD_HINT_VKONTAKTE'] = 'РЎРѕР·РґР°С‚СЊ Р°СѓРґРёС‚РѕСЂРёСЋ РІС‹ РјРѕР¶РµС‚Рµ РІ СЂР°Р·РґРµР»Рµ "Р РµС‚Р°СЂРіРµС‚РёРЅРі".';
+$MESS['CRM_ADS_RTG_AUDIENCE_TYPE_HINT_VKONTAKTE'] = 'РџРѕРґРґРµСЂР¶РёРІР°СЋС‚СЃСЏ Р°СѓРґРёС‚РѕСЂРёРё, РїРѕР»СѓС‡РµРЅРЅС‹Рµ РёР· РїРёРєСЃРµР»СЏ РёР»Рё Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рµ РёР· С„Р°Р№Р»Р°.';
+$MESS['CRM_ADS_RTG_AUDIENCE_TYPE_HINT_FACEBOOK'] = 'РџРѕРґРґРµСЂР¶РёРІР°СЋС‚СЃСЏ Р°СѓРґРёС‚РѕСЂРёРё С‚РёРїР° "Р

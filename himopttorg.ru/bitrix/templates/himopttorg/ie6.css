@@ -1,0 +1,42 @@
+.minwidth{
+	width:expression(document.body.clientWidth > 980? "auto": "980px" );
+}
+#container,#footer,.sub,.mainnav,.basket p.offer,.search,.log_passw,.in_content,.block, .bn3,ul.addnav li a{
+	zoom:1;
+}
+
+ul.addnav li.hover {
+	background:url(images/nav_r1.gif) 100% 50% no-repeat;  	
+}
+i.nav_l{	
+	background:url(images/nav_l1.gif) 0 50% no-repeat; 		
+}
+ul.addnav li.active{
+	background:url(images/nav_r2.png) 100% 50% no-repeat;  	
+}
+ul.addnav li.active i.nav_l{
+	background:url(images/nav_l3.png) 0 50% no-repeat;  	
+}
+ul.partner li{		
+    display: inline;    
+}
+.btn input{		
+	margin-top:1px;
+}
+ul.nav li a.base:hover, ul.nav li:hover a.base, ul.nav li.hover a.base{	
+	background:url(images/sub_t4.gif) 50% 0 no-repeat; 		
+}
+.in_sub{	
+	background:url(images/sub_bg.gif) 0 0 repeat-y; 		
+}
+ul.nav li a.base.w177:hover, ul.nav li:hover a.base.w177, ul.nav li.hover a.base.w177{	
+	background:url(images/sub_t5.gif) 50% 0 no-repeat; 		
+}
+.sub_top{
+	zoom:1;	
+	background:url(images/sub_t3.gif) 0 0 no-repeat; 	
+}
+.sub_bot{
+	zoom:1;	
+	background:url(images/sub_b.gif) 0 0 no-repeat; 	
+}

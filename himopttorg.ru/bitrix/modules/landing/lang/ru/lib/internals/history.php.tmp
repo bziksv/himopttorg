@@ -1,0 +1,11 @@
+<?php
+$MESS['LANDING_TABLE_HISTORY_FIELD_ENTITY_TYPE'] = 'РўРёРї СЃСѓС‰РЅРѕСЃС‚Рё';
+$MESS['LANDING_TABLE_HISTORY_FIELD_ENTITY_ID'] = 'ID СЃСѓС‰РЅРѕСЃС‚Рё';
+$MESS['LANDING_TABLE_HISTORY_FIELD_UNDO'] = 'РћС‚РјРµРЅРёС‚СЊ';
+$MESS['LANDING_TABLE_HISTORY_FIELD_REDO'] = 'РџРѕРІС‚РѕСЂРёС‚СЊ';
+$MESS['LANDING_TABLE_HISTORY_FIELD_ACTION'] = 'РљРѕРјР°РЅРґР°';
+$MESS['LANDING_TABLE_HISTORY_FIELD_ACTION_PARAMS'] = 'РџР°СЂР°РјРµС‚СЂС‹ РєРѕРјР°РЅРґС‹';
+$MESS['LANDING_TABLE_HISTORY_FIELD_MULTIPLY_ID'] = 'ID РјРЅРѕР¶РµСЃС‚РІРµРЅРЅРѕР№ РєРѕРјР°РЅРґС‹';
+$MESS['LANDING_TABLE_HISTORY_FIELD_POSITION'] = 'РџРѕР·РёС†РёСЏ';
+$MESS['LANDING_TABLE_HISTORY_FIELD_ACTIVE'] = 'РђРєС‚РёРІРЅРѕСЃС‚СЊ';
+$MESS['LANDING_TABLE_HISTORY_FIELD_CREATED_BY_ID'] = 'Р

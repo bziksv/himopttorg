@@ -1,0 +1,6 @@
+<?
+$MESS["PERFMON_IDETAIL_TABLE_TITLE"] = "Р”РµС‚Р°Р»СЊРЅС‹Р№ Р°РЅР°Р»РёР· РёРЅРґРµРєСЃР°";
+$MESS["PERFMON_IDETAIL_MENU_LIST"] = "РЎРїРёСЃРѕРє";
+$MESS["PERFMON_IDETAIL_MENU_LIST_TITLE"] = "Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє Р°РЅР°Р»РёР·Сѓ РёРЅРґРµРєСЃРѕРІ";
+$MESS["PERFMON_IDETAIL_TABLE_TAB"] = "РЎС‚СЂСѓРєС‚СѓСЂР° С‚Р°Р±Р»РёС†С‹";
+$MESS["PERFMON_IDETAIL_TABLE_TAB_TITLE"] = "Р

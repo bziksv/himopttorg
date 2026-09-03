@@ -1,0 +1,12 @@
+<?php
+$MESS["FACEBOOK_CONVERSION_DESCRIPTION"] = "РњС‹ РїСЂРµРґР»Р°РіР°РµРј РЅРѕРІС‹Р№ РёРЅСЃС‚СЂСѓРјРµРЅС‚ РґР»СЏ Р±РёР·РЅРµСЃР°, РёСЃРїРѕР»СЊР·СѓСЋС‰РёР№ \"Facebook Conversion API\", РєРѕС‚РѕСЂС‹Р№ РїРѕР·РІРѕР»СЏРµС‚ РІР°Рј:";
+$MESS["FACEBOOK_CONVERSION_DESCRIPTION_GIVE_EVENTS"] = "РџРµСЂРµРґР°РІР°С‚СЊ РѕСЃРЅРѕРІРЅС‹Рµ СЃРѕР±С‹С‚РёСЏ РІР°С€РµРіРѕ СЃР°Р№С‚Р° Рё РјР°РіР°Р·РёРЅР°";
+$MESS["FACEBOOK_CONVERSION_DESCRIPTION_GIVE_CLIENT_ACTIONS"] = "РџРµСЂРµРґР°РІР°С‚СЊ РґРµР№СЃС‚РІРёСЏ РєР»РёРµРЅС‚РѕРІ РїСЂРё СЂР°Р±РѕС‚Рµ СЃ С‚РѕРІР°СЂРѕРј";
+$MESS["FACEBOOK_CONVERSION_DESCRIPTION_MAKE_AD_AUDIENCES"] = "РЎРѕР·РґР°РІР°С‚СЊ СЂРµРєР»Р°РјРЅС‹Рµ Р°СѓРґРёС‚РѕСЂРёРё РёР· СЃРѕР±С‹С‚РёР№ РІР°С€РµРіРѕ РёРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅР°";
+$MESS["FACEBOOK_CONVERSION_DESCRIPTION_SHOW_AD"] = "РџРѕРєР°Р·С‹РІР°С‚СЊ СЂРµРєР»Р°РјСѓ С‚РµРј, РєС‚Рѕ СѓР¶Рµ СЂР°РЅРµРµ РѕР±СЂР°С‰Р°Р»СЃСЏ РІ Р’Р°С€Сѓ РєРѕРјРїР°РЅРёСЋ, РЅРѕ РЅРµ СЃС‚Р°Р» РєР»РёРµРЅС‚РѕРј";
+$MESS["FACEBOOK_CONVERSION_DESCRIPTION_INFO"] = "РџРѕРґСЂРѕР±РЅРµРµ Рѕ РїРѕРґРєР»СЋС‡РµРЅРёРё";
+$MESS["FACEBOOK_CONVERSION_NOT_AVAILABLE"] = "РЎРµСЂРІРёСЃ РЅРµРґРѕСЃС‚СѓРїРµРЅ";
+$MESS["FACEBOOK_CONVERSION_DISCONNECT"] = "РћС‚РєР»СЋС‡РёС‚СЊ";
+$MESS["FACEBOOK_CONVERSION_CONNECT_TITLE"] = "РџРѕРґРєР»СЋС‡РёС‚СЊ Р°РєРєР°СѓРЅС‚ Facebook";
+$MESS["FACEBOOK_CONVERSION_CONNECT"] = "РџРѕРґРєР»СЋС‡РёС‚СЊ";
+$MESS["FACEBOOK_CONVERSION_CONNECT_INFO"] = "Р

@@ -1,0 +1,6 @@
+<?
+global $MESS;
+
+$MESS["SPCP_DTITLE"] = "Р®Money";
+$MESS["SPCP_DDESCR"] = "Р Р°Р±РѕС‚Р° С‡РµСЂРµР· Р¦РµРЅС‚СЂ РџСЂРёРµРјР° РџР»Р°С‚РµР¶РµР№ <a href=\"https://yookassa.ru\" target=\"_blank\">https://yookassa.ru</a>";
+$MESS["SHOP_ID"] = "Р

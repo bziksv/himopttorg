@@ -1,0 +1,8 @@
+<?php
+$MESS['LANDING_TABLE_FIELD_TITLE'] = 'РќР°Р·РІР°РЅРёРµ';
+$MESS['LANDING_TABLE_FIELD_ACTIVE'] = 'РђРєС‚РёРІРЅРѕСЃС‚СЊ';
+$MESS['LANDING_TABLE_FIELD_SORT'] = 'РЎРѕСЂС‚РёСЂРѕРІРєР°';
+$MESS['LANDING_TABLE_FIELD_XML_ID'] = 'Р’РЅРµС€РЅРёР№ РєРѕРґ';
+$MESS['LANDING_TABLE_FIELD_CONTENT'] = 'РЎРѕРґРµСЂР¶РёРјРѕРµ';
+$MESS['LANDING_TABLE_FIELD_AREA_COUNT'] = 'Р§РёСЃР»Рѕ РІРєР»СЋС‡Р°РµРјС‹С… РѕР±Р»Р°СЃС‚РµР№';
+$MESS['LANDING_TABLE_FIELD_CREATED_BY_ID'] = 'Р

@@ -1,0 +1,18 @@
+<?
+$MESS["SALE_ACCESS_DENIED"] = "Р”РѕСЃС‚СѓРї Р·Р°РїСЂРµС‰РµРЅ.";
+$MESS["SALE_CASHBOX_TITLE"] = "РЎРїРёСЃРѕРє РєР°СЃСЃ";
+$MESS["SALE_F_ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ";
+$MESS["SALE_ALL"] = "Р’СЃРµ";
+$MESS["SALE_YES"] = "Р”Р°";
+$MESS["SALE_NO"] = "РќРµС‚";
+$MESS["SALE_CASHBOX_ADD_NEW"] = "Р”РѕР±Р°РІРёС‚СЊ РєР°СЃСЃСѓ";
+$MESS["SALE_CASHBOX_GENERATE_LINK"] = "РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ СЃСЃС‹Р»РєСѓ";
+$MESS["SALE_CASHBOX_ID"] = "ID";
+$MESS["SALE_CASHBOX_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["SALE_CASHBOX_ACTIVE"] = "РђРєС‚РёРІРЅРѕСЃС‚СЊ";
+$MESS["SALE_CASHBOX_SORT"] = "РЎРѕСЂС‚РёСЂРѕРІРєР°";
+$MESS["SALE_CASHBOX_DATE_CREATE"] = "Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ";
+$MESS["SALE_CASHBOX_NUMBER_KKM"] = "РќРѕРјРµСЂ РљРљРњ";
+$MESS["SALE_CASHBOX_LAST_CHECK_STATUS"] = "РЎС‚Р°С‚СѓСЃ РїРѕСЃР»РµРґРЅРµРіРѕ РѕР±СЂР°С‰РµРЅРёСЏ";
+$MESS["SALE_CASHBOX_DATE_LAST_CHECK"] = "РџРѕСЃР»РµРґРЅРµРµ РѕР±СЂР°С‰РµРЅРёРµ";
+$MESS["SALE_CASHBOX_EDIT"] = "Р

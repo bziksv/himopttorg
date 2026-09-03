@@ -1,0 +1,9 @@
+<?
+$MESS["SENDER_TEMPLATE_EDITOR_MAILBLOCK"] = "РџРѕС‡С‚РѕРІС‹Рµ Р±Р»РѕРєРё";
+$MESS["SENDER_TEMPLATE_EDITOR_MAILBLOCK_SEARCH"] = "РџРѕРёСЃРє РїРѕС‡С‚РѕРІС‹С… Р±Р»РѕРєРѕРІ...";
+$MESS["SENDER_TEMPLATE_EDITOR_PLACEHOLDER"] = "РџРµСЂСЃРѕРЅР°Р»РёР·Р°С†РёСЏ";
+$MESS["SENDER_TEMPLATE_EDITOR_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ РІ РјРѕРё С€Р°Р±Р»РѕРЅС‹";
+$MESS["SENDER_TEMPLATE_EDITOR_SAVE_NAME"] = "СЃ РЅР°Р·РІР°РЅРёРµРј";
+$MESS["SENDER_ENTITY_TEMPLATE_FIELD_TITLE_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["SENDER_ENTITY_TEMPLATE_FIELD_TITLE_CONTENT"] = "РўРµРєСЃС‚ С€Р°Р±Р»РѕРЅР°";
+$MESS["SENDER_ENTITY_TEMPLATE_NOTE_OLD_EDITOR"] = "Р§С‚РѕР±С‹ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІРёР·СѓР°Р»СЊРЅС‹Р№ СЂРµРґР°РєС‚РѕСЂ, %LINK_START%РІРєР»СЋС‡РёС‚Рµ РЅР°СЃС‚СЂРѕР№РєСѓ%LINK_END% \"Р

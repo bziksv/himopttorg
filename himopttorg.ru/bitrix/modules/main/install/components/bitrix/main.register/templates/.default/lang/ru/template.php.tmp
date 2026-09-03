@@ -1,0 +1,14 @@
+<?
+$MESS["AUTH_REGISTER"] = "Р РµРіРёСЃС‚СЂР°С†РёСЏ";
+$MESS["REGISTER_CAPTCHA_TITLE"] = "Р—Р°С‰РёС‚Р° РѕС‚ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕР№ СЂРµРіРёСЃС‚СЂР°С†РёРё";
+$MESS["REGISTER_CAPTCHA_PROMT"] = "Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ РЅР° РєР°СЂС‚РёРЅРєРµ";
+$MESS["AUTH_REQ"] = "РџРѕР»СЏ, РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ.";
+$MESS["USER_DONT_KNOW"] = "(РЅРµРёР·РІРµСЃС‚РЅРѕ)";
+$MESS["USER_MALE"] = "РњСѓР¶СЃРєРѕР№";
+$MESS["USER_FEMALE"] = "Р–РµРЅСЃРєРёР№";
+$MESS["REGISTER_FIELD_LOGIN"] = "Р›РѕРіРёРЅ (РјРёРЅ. 3 СЃРёРјРІРѕР»Р°)";
+$MESS["REGISTER_FIELD_EMAIL"] = "Email";
+$MESS["REGISTER_FIELD_PASSWORD"] = "РџР°СЂРѕР»СЊ";
+$MESS["REGISTER_FIELD_CONFIRM_PASSWORD"] = "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїР°СЂРѕР»СЏ";
+$MESS["REGISTER_FIELD_TITLE"] = "РћР±СЂР°С‰РµРЅРёРµ";
+$MESS["REGISTER_FIELD_NAME"] = "Р

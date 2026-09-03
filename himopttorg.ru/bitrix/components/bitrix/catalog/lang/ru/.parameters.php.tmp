@@ -1,0 +1,9 @@
+<?
+$MESS["CP_BC_GROUP_BIG_DATA_SETTINGS"] = "РџРµСЂСЃРѕРЅР°Р»СЊРЅС‹Рµ СЂРµРєРѕРјРµРЅРґР°С†РёРё";
+$MESS["IBLOCK_EXTENDED_SETTINGS"] = "РЎРїРµС†РёР°Р»СЊРЅС‹Рµ РЅР°СЃС‚СЂРѕР№РєРё";
+$MESS["ANALYTICS_SETTINGS"] = "РќР°СЃС‚СЂРѕР№РєРё Р°РЅР°Р»РёС‚РёРєРё";
+$MESS["IBLOCK_ACTIONS"] = "РќР°СЃС‚СЂРѕР№РєРё РґРµР№СЃС‚РІРёР№";
+$MESS["IBLOCK_SORT_ASC"] = "РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ";
+$MESS["IBLOCK_SORT_DESC"] = "РїРѕ СѓР±С‹РІР°РЅРёСЋ";
+$MESS["IBLOCK_TYPE"] = "РўРёРї РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["IBLOCK_IBLOCK"] = "Р

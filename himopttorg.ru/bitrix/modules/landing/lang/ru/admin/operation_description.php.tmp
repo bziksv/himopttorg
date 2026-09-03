@@ -1,0 +1,4 @@
+<?php
+$MESS['LANDING_OP_NAME_READ'] = 'РџСЂРѕСЃРјРѕС‚СЂ';
+$MESS['LANDING_OP_NAME_EDIT'] = 'Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ';
+$MESS['LANDING_OP_NAME_SETT'] = 'Р

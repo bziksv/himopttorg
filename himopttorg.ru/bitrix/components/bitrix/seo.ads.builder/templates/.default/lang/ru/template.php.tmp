@@ -1,0 +1,5 @@
+<?php
+$MESS["CRM_ADS_RTG_TITLE_FACEBOOK"] = "Р РµРєР»Р°РјР° РІ Facebook";
+$MESS["CRM_ADS_RTG_TITLE_INSTAGRAM"] = "Р РµРєР»Р°РјР° РІ Instagram";
+$MESS["CRM_ADS_RTG_CONNECT_DESCRIPTION"] = "Report will show the Instagram marketing ROI and the performance of your sales representatives.";
+$MESS["CRM_ADS_RTG_CONNECT_INSTRUCTION"] = "Р

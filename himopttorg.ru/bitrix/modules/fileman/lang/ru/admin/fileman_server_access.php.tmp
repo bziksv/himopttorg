@@ -1,0 +1,9 @@
+<?
+$MESS ['FILEMAN_SERV_ACCESS_TITLE'] = "РџСЂР°РІР° РЅР° РґРѕСЃС‚СѓРї СЃРµСЂРІРµСЂР°";
+$MESS ['FILEMAN_SA_TAB'] = "РџСЂР°РІР° РЅР° РґРѕСЃС‚СѓРї СЃРµСЂРІРµСЂР°";
+$MESS ['FILEMAN_SA_TAB_ALT'] = "РЈСЃС‚Р°РЅРѕРІРєР° РїСЂР°РІ СЃРµСЂРІРµСЂР° РЅР° С„Р°Р№Р»С‹ Рё РїР°РїРєРё (РћРЎ Unix/Linux)";
+$MESS ['FILEMAN_SA_WINDOWS_WARN'] = "Р”Р°РЅРЅС‹Р№ С„СѓРЅРєС†РёРѕРЅР°Р» РЅРµРґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РћРЎ Microsoft Windows";
+$MESS ['FILEMAN_SA_BACK_2_FOLDER'] = "РќР°Р·Р°Рґ РІ РїР°РїРєСѓ";
+$MESS ['FILEMAN_SA_BACK_2_SEARCH_RES'] = "РќР°Р·Р°Рґ Рє СЂРµР·СѓР»СЊС‚Р°С‚Р°Рј РїРѕРёСЃРєР°";
+
+$MESS ['FILEMAN_SA_CHANGE_TO'] = "Р

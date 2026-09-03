@@ -1,0 +1,6 @@
+<?
+$MESS["TYPE_PRESET_MAILBLOCK_PERSONALISE"] = "РџРµСЂСЃРѕРЅР°Р»РёР·Р°С†РёСЏ";
+$MESS["TYPE_PRESET_MAILBLOCK_BASE"] = "Р‘Р°Р·РѕРІС‹Рµ Р±Р»РѕРєРё";
+$MESS["TYPE_PRESET_MAILBLOCK_SOCIAL"] = "РЎРѕС†РёР°Р»СЊРЅС‹Рµ СЃРµС‚Рё";
+
+$MESS["PRESET_MAILBLOCK_NAME"] = "Р

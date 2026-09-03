@@ -1,0 +1,7 @@
+<?php
+$MESS['LANDING_BLOCK_FAQ_5'] = 'РўРµРєСЃС‚ РІ СЂР°СЃРєСЂС‹РІР°СЋС‰РёС…СЃСЏ РїСѓРЅРєС‚Р°С… РІ СЂР°РјРєРµ';
+$MESS['LANDING_BLOCK_FAQ_5_CARD'] = 'РљР°СЂС‚РѕС‡РєР°';
+$MESS['LANDING_BLOCK_FAQ_5_TITLE'] = 'Р—Р°РіРѕР»РѕРІРѕРє';
+$MESS['LANDING_BLOCK_FAQ_5_TEXT'] = 'РўРµРєСЃС‚';
+$MESS['LANDING_BLOCK_FAQ_5_COLUMN'] = 'РљРѕР»РѕРЅРєР°';
+$MESS['LANDING_BLOCK_FAQ_5_ICON'] = 'Р

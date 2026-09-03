@@ -1,0 +1,16 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+IncludeTemplateLangFile(__FILE__);
+?><?if (!preg_match("/^\/catalog\/[0-9]{1,11}\/[0-9]{1,11}\/$/i", $APPLICATION->GetCurDir())){?></div>
+							<!--/main_column--><?}?>
+							<?if($APPLICATION->GetCurDir() == "/"){?><!--add_column-->
+							<div class="add_column">
+								<div class="in_add_column">					
+									<div class="banner_block">
+										<div class="bn_t"></div>
+										<div class="bn_m">
+											<div class="banner_tit">
+												<p class="freeset">РўРѕСЂРјРѕР·РЅС‹Рµ</p>
+											</div>		
+                                            <p>Р°СЃР±РµСЃС‚РѕРІС‹Рµ С„СЂРёРєС†РёРѕРЅРЅС‹Рµ РЅР°РєР»Р°РґРєРё</p>
+                                            <br />						
+											<p>РЅР° РљРђРњРђР— РњРђР— Р“РђР— Р—Р

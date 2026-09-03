@@ -1,0 +1,14 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>РћРїР»Р°С‚Р° С‡РµСЂРµР· WebMoney</title>
+<meta http-equiv="Content-Type" content="text/html; charset=<?= LANG_CHARSET ?>">
+</head>
+<body bgColor="#ffffff">
+<?
+$ORDER_ID = intval($GLOBALS["SALE_INPUT_PARAMS"]["ORDER"]["ID"]);
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["SendAdditionalInfo"] <> '')
+{
+	$strSql = 
+		"UPDATE b_sale_order SET ".
+		"	ADDITIONAL_INFO = 'Р

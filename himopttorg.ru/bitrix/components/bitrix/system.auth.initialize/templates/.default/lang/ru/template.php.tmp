@@ -1,0 +1,8 @@
+<?
+$MESS ['CT_MAIN_REG_INIT_CONFIRM'] = "РџРѕРґС‚РІРµСЂРґРёС‚СЊ";
+$MESS ['CT_MAIN_REG_INIT_LOGIN_TITLE'] = "Р›РѕРіРёРЅ";
+$MESS ['CT_MAIN_REG_INIT_CHECKWORD_TITLE'] = "РљРѕРЅС‚СЂРѕР»СЊРЅРѕРµ СЃР»РѕРІРѕ";
+$MESS ['CT_MAIN_REG_INIT_PASSWORD_TITLE'] = "РџР°СЂРѕР»СЊ (РјРёРЅ. 6 СЃРёРјРІРѕР»РѕРІ)";
+$MESS ['CT_MAIN_REG_INIT_CONFIRM_PASSWORD_TITLE'] = "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїР°СЂРѕР»СЏ";
+$MESS ['CT_MAIN_REG_INIT_REMEMBER_TITLE'] = "Р—Р°РїРѕРјРЅРёС‚СЊ РјРµРЅСЏ РЅР° СЌС‚РѕРј РєРѕРјРїСЊСЋС‚РµСЂРµ";
+$MESS ['CT_MAIN_REG_INIT_NAME_TITLE'] = "Р

@@ -1,0 +1,9 @@
+<?php
+$MESS['SAVE_AND_CONDUCT_BUTTON'] = 'РЎРѕС…СЂР°РЅРёС‚СЊ Рё РїСЂРѕРІРµСЃС‚Рё';
+$MESS['CONDUCT_BUTTON'] = 'РџСЂРѕРІРµСЃС‚Рё РґРѕРєСѓРјРµРЅС‚';
+$MESS['CANCEL_CONDUCT_BUTTON'] = 'РћС‚РјРµРЅРёС‚СЊ РїСЂРѕРІРµРґРµРЅРёРµ';
+$MESS['DOCUMENT_LINK_COPIED'] = 'РЎСЃС‹Р»РєР° РЅР° РґРѕРєСѓРјРµРЅС‚ СЃРєРѕРїРёСЂРѕРІР°РЅР° РІ Р±СѓС„РµСЂ РѕР±РјРµРЅР°';
+$MESS['DOCUMENT_CONTRACTOR_FIELD_PLACEHOLDER'] = 'РќР°Р№С‚Рё РёР»Рё СЃРѕР·РґР°С‚СЊ РїРѕСЃС‚Р°РІС‰РёРєР°';
+$MESS['DOCUMENT_CONTRACTOR_NOT_FILLED'] = 'РЅРµ Р·Р°РїРѕР»РЅРµРЅРѕ';
+$MESS['DOCUMENT_ADD_CONTRACTOR'] = 'РЎРѕР·РґР°С‚СЊ РїРѕСЃС‚Р°РІС‰РёРєР°:';
+$MESS['DOCUMENT_PRODUCTS_TOTAL'] = 'Р

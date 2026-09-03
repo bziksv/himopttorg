@@ -1,0 +1,19 @@
+<?
+$MESS["SBB_DESC_YES"] = "Р”Р°";
+$MESS["SBB_DESC_NO"] = "РќРµС‚";
+$MESS["SBB_PATH_TO_ORDER"] = "РЎС‚СЂР°РЅРёС†Р° РѕС„РѕСЂРјР»РµРЅРёСЏ Р·Р°РєР°Р·Р°";
+$MESS["SBB_HIDE_COUPON"] = "РЎРїСЂСЏС‚Р°С‚СЊ РїРѕР»Рµ РІРІРѕРґР° РєСѓРїРѕРЅР°";
+$MESS["SBB_COLUMNS_LIST"] = "Р’С‹РІРѕРґРёРјС‹Рµ РєРѕР»РѕРЅРєРё";
+$MESS["SBB_BNAME"] = "РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР°";
+$MESS["SBB_BPROPS"] = "РЎРІРѕР№СЃС‚РІР° С‚РѕРІР°СЂР°";
+$MESS["SBB_BPRICE"] = "Р¦РµРЅР°";
+$MESS["SBB_BTYPE"] = "РўРёРї С†РµРЅС‹";
+$MESS["SBB_BQUANTITY"] = "РљРѕР»РёС‡РµСЃС‚РІРѕ";
+$MESS["SBB_BDELETE"] = "РЈРґР°Р»РёС‚СЊ";
+$MESS["SBB_BDELAY"] = "РћС‚Р»РѕР¶РёС‚СЊ";
+$MESS["SBB_BWEIGHT"] = "Р’РµСЃ";
+$MESS["SBB_BDISCOUNT"] = "РЎРєРёРґРєР°";
+$MESS["SBB_WEIGHT_UNIT"] = "Р•РґРёРЅРёС†Р° РІРµСЃР°";
+$MESS["SBB_WEIGHT_UNIT_G"] = "Рі";
+$MESS["SBB_WEIGHT_KOEF"] = "РљРѕСЌС„С„РёС†РёРµРЅС‚ РµРґРёРЅРёС†С‹ Рє РіСЂР°РјРјСѓ";
+$MESS["SBB_QUANTITY_FLOAT"] = "Р

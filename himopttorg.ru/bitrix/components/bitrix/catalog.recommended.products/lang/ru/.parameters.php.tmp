@@ -1,0 +1,7 @@
+<?
+$MESS["CATALOG_RECOMMENDED_PRODUCTS_COMPONENT_NEED_REQUIRED_MODULES"] = "Р”Р»СЏ СЂР°Р±РѕС‚С‹ РєРѕРјРїРѕРЅРµРЅС‚Р° РЅСѓР¶РЅС‹ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ РјРѕРґСѓР»Рё РјР°РіР°Р·РёРЅР°, РёРЅС„РѕР±Р»РѕРєРѕРІ, Рё РєР°С‚Р°Р»РѕРіР°.";
+$MESS["CATALOG_RECOMMENDED_PRODUCTS_COMPONENT_DETAIL_URL"] = "URL, РІРµРґСѓС‰РёР№ РЅР° СЃС‚СЂР°РЅРёС†Сѓ СЃ СЃРѕРґРµСЂР¶РёРјС‹Рј СЌР»РµРјРµРЅС‚Р° СЂР°Р·РґРµР»Р°";
+$MESS["CATALOG_RECOMMENDED_PRODUCTS_COMPONENT_PRICES"] = "Р¦РµРЅС‹";
+$MESS["CATALOG_RECOMMENDED_PRODUCTS_COMPONENT_BASKET"] = "Р”РѕР±Р°РІР»РµРЅРёРµ РІ РєРѕСЂР·РёРЅСѓ";
+$MESS["CATALOG_RECOMMENDED_PRODUCTS_COMPONENT_TYPE"] = "РўРёРї РёРЅС„РѕР±Р»РѕРєР°";
+$MESS["CATALOG_RECOMMENDED_PRODUCTS_COMPONENT_IBLOCK"] = "Р

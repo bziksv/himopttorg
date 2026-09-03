@@ -1,0 +1,15 @@
+<?
+$MESS ['SMOB_ORDERS_MANAGEMENT'] = 'РЈРїСЂР°РІР»РµРЅРёРµ Р·Р°РєР°Р·Р°РјРё';
+$MESS ['SMOB_ORDERS_LIST'] = 'РЎРїРёСЃРѕРє Р·Р°РєР°Р·РѕРІ';
+$MESS ['SMOB_WAITING_FOR_PAY'] = 'РћР¶РёРґР°СЋС‚ РѕРїР»Р°С‚С‹';
+$MESS ['SMOB_WAITING_FOR_DELIVERY'] = 'РћР¶РёРґР°СЋС‚ РґРѕСЃС‚Р°РІРєСѓ';
+$MESS ['SMOB_ORDERS_FILTER'] = 'Р¤РёР»СЊС‚СЂ Р·Р°РєР°Р·РѕРІ';
+$MESS ['SMOB_REPORTS'] = 'РћС‚С‡РµС‚С‹';
+$MESS ['SMOB_P_BALANCE'] = 'РћСЃС‚Р°С‚РѕРє С‚РѕРІР°СЂРѕРІ';
+$MESS ['SMOB_P_SELLING'] = 'РџСЂРѕРґР°Р¶Рё С‚РѕРІР°СЂРѕРІ';
+$MESS ['SMOB_C_SELLING'] = 'РџСЂРѕРґР°Р¶Рё РїРѕ РєР»РёРµРЅС‚Р°Рј';
+$MESS ['SMOB_PRICE_LIST'] = 'РџСЂР°Р№СЃ Р»РёСЃС‚';
+$MESS ['SMOB_PRIVATE_OFFICE'] = 'Р›РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚';
+$MESS ['SMOB_PUSH_SETTINGS'] = 'РќР°СЃС‚СЂРѕР№РєР° РїСѓС€ СѓРІРµРґРѕРјР»РµРЅРёР№';
+$MESS ['SMOB_ORDER'] = 'Р—Р°РєР°Р·';
+$MESS ['SMOB_HISTORY'] = 'Р

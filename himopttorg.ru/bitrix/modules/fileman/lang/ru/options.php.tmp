@@ -1,0 +1,20 @@
+<?
+$MESS["FILEMAN_OPTION_DEF_EDITOR"] = "Р РµРґР°РєС‚РѕСЂ СЃС‚СЂР°РЅРёС† РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ:";
+$MESS["FILEMAN_OPTION_EDITOR_TEXT"] = "РўРµРєСЃС‚РѕРІС‹Р№ СЂРµРґР°РєС‚РѕСЂ";
+$MESS["FILEMAN_OPTION_EDITOR_HTML"] = "Р’РёР·СѓР°Р»СЊРЅС‹Р№ HTML СЂРµРґР°РєС‚РѕСЂ";
+$MESS["FILEMAN_OPTION_MENU_TYPES"] = "РўРёРїС‹ РјРµРЅСЋ:";
+$MESS["FILEMAN_OPTION_MENU_TYPE"] = "РўРёРї";
+$MESS["FILEMAN_OPTION_MENU_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["FILEMAN_OPTION_LEFT_MENU_NAME"] = "Р›РµРІРѕРµ РјРµРЅСЋ";
+$MESS["FILEMAN_OPTION_TOP_MENU_NAME"] = "Р’РµСЂС…РЅРµРµ РјРµРЅСЋ";
+$MESS["FILEMAN_OPTION_MENU_PARAMS"] = "РљРѕР»РёС‡РµСЃС‚РІРѕ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ РјРµРЅСЋ:";
+$MESS["FILEMAN_OPTION_SAVE"] = "РЎРѕС…СЂР°РЅРёС‚СЊ";
+$MESS["FILEMAN_OPTION_RESET"] = "РЎР±СЂРѕСЃРёС‚СЊ";
+$MESS["MAIN_RESTORE_DEFAULTS"] = "РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ";
+$MESS["FILEMAN_OPTION_PROPS_TYPES"] = "РўРёРїС‹ СЃРІРѕР№СЃС‚РІ:";
+$MESS["FILEMAN_OPTION_PROPS_TYPE"] = "РўРёРї";
+$MESS["FILEMAN_OPTION_PROPS_NAME"] = "РќР°Р·РІР°РЅРёРµ";
+$MESS["FILEMAN_OPTION_PROPS_DESCR"] = "РћРїРёСЃР°РЅРёРµ";
+$MESS["FILEMAN_OPTION_PROPS_KEYW"] = "РљР»СЋС‡РµРІС‹Рµ СЃР»РѕРІР°";
+$MESS["FILEMAN_OPTION_EDITOR_PHP"] = "Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ PHP СЃРєСЂРёРїС‚Р°";
+$MESS["FILEMAN_OPTION_USE_OLD_VER"] = "Р

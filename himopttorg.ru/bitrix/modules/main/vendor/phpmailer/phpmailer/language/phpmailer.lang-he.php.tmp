@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Hebrew PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author Ronny Sherer <ronny@hoojima.com>
+ */
+
+$PHPMAILER_LANG['authenticate']         = 'Р§В©Р§вЂ™Р§в„ўР§С’Р§Р„ SMTP: Р§В¤Р§СћР§вЂўР§СљР§Р„ Р§вЂќР§С’Р§в„ўР§С›Р§вЂўР§Р„ Р§В Р§вЂєР§В©Р§СљР§вЂќ.';
+$PHPMAILER_LANG['connect_host']         = 'Р§В©Р§вЂ™Р§в„ўР§С’Р§Р„ SMTP: Р§СљР§С’ Р§вЂќР§В¦Р§СљР§вЂ”Р§Р„Р§в„ў Р§СљР§вЂќР§Р„Р§вЂ”Р§вЂ

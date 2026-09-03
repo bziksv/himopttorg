@@ -1,0 +1,7 @@
+<?php
+$MESS["SALE_APPLE_PAY_ORDER_SUBTITLE"] = "Р—Р°РєР°Р· #ORDER_ID# РЅР° СЃСѓРјРјСѓ #SUM#";
+$MESS["SALE_APPLE_PAY_LINE_ITEM_ORDER"] = "Р—Р°РєР°Р· #ORDER_ID#";
+$MESS["SALE_APPLE_PAY_LINE_ITEM_TAX"] = "РќР”РЎ";
+$MESS["SALE_APPLE_PAY_LINE_ITEM_SHIPPING"] = "Р”РѕСЃС‚Р°РІРєР°";
+$MESS["SALE_APPLE_PAY_LINE_ITEM_DISCOUNT"] = "РЎРєРёРґРєР°";
+$MESS["SALE_APPLE_PAY_LINE_ITEM_TOTAL"] = "Р

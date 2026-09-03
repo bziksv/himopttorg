@@ -1,0 +1,5 @@
+<?php
+$MESS['LANDING_PANEL_MASTER_TITLE'] = 'РЎС‚СЂР°РЅРёС†Р°<br/>РЎР°Р№С‚Р°24';
+$MESS['LANDING_PANEL_MASTER_HINT'] = 'РЎР°Р№С‚С‹24';
+$MESS['LANDING_PANEL_MASTER_HINT_TITLE'] = 'РЎРѕР·РґР°С‚СЊ СЃС‚СЂР°РЅРёС†Сѓ РІ С‚РµРєСѓС‰РµРј СЂР°Р·РґРµР»Рµ РІ СЂР°РјРєР°С… РЎР°Р№С‚Р°24.';
+$MESS['LANDING_PANEL_MASTER_HINT_TITLE_EDIT'] = 'Р

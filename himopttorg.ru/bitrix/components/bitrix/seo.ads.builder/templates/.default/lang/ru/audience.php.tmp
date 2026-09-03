@@ -1,0 +1,8 @@
+<?php
+$MESS["CRM_ADS_RTG_AUDIENCE_TITLE"] = "РђСѓРґРёС‚РѕСЂРёСЏ РїРѕР»СѓС‡Р°С‚РµР»РµР№";
+$MESS["CRM_ADS_RTG_GENDER"] = "РџРѕР»";
+$MESS["CRM_ADS_RTG_GENDER_MALE"] = "РњСѓР¶СЃРєРѕР№";
+$MESS["CRM_ADS_RTG_GENDER_FEMALE"] = "Р–РµРЅСЃРєРёР№";
+$MESS["CRM_ADS_RTG_AGE"] = "Р’РѕР·СЂР°СЃС‚";
+$MESS["CRM_ADS_RTG_YEARS_OLD"] = "Р»РµС‚";
+$MESS["CRM_ADS_RTG_INTEREST"] = "Р

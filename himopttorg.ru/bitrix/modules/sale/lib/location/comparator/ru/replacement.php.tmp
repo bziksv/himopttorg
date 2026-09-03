@@ -1,0 +1,9 @@
+<?
+namespace Bitrix\Sale\Location\Comparator;
+
+class Replacement
+{
+	public static function getLocalityTypes()
+	{
+		return array(
+			'Р РђР‘РћР§Р
