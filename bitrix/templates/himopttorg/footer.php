@@ -71,7 +71,7 @@ IncludeTemplateLangFile(__FILE__);
 
 </div>
 
-	<div style="color: #787878; min-width: 980px; max-width: 1420px; margin: 10px auto; line-height: 1.2;">Мы используем <a target="_blank" href="/legal/cookie/">cookies</a> и <a target="_blank" href="/legal/recommendation/">рекомендательные технологии</a>, чтобы сделать сайт удобнее, показывать релевантную рекламу и анализировать посещаемость. Продолжая работу с сайтом, вы принимаете <a href="/legal/personal-data/">условия обработки персональных данных</a>, в соответствии с <a href="/legal/personal-data/" target="_blank">политикой обработки персональных данных</a>. Отключить cookies можно в настройках вашего браузера.
+	<div style="color: #787878; min-width: 980px; max-width: 1420px; margin: 10px auto; line-height: 1.2;">Мы используем <a target="_blank" href="/legal/cookie/">cookies</a> и <a target="_blank" href="/legal/recommendation/">рекомендательные технологии</a>, чтобы сделать сайт удобнее, показывать релевантную рекламу и анализировать посещаемость. Продолжая работу с сайтом, вы <a href="/legal/consent/">принимаете</a> условия обработки персональных данных, в соответствии с <a href="/legal/personal-data/" target="_blank">политикой обработки персональных данных</a>. Отключить cookies можно в настройках вашего браузера.
 </div>
 
 </div>

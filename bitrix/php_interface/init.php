@@ -89,22 +89,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_REQUEST["g-recaptcha-response"]){
 			die('wrong captcha');
 }
 
+function himopt_sayt_keep_on_zero($value)
+{
+	$value = trim((string)$value);
+	return $value === "Yes" || $value === "Да";
+}
+
 function catalogProductActive()
-{	
+{
 	$IBLOCK_ID = 6;
 
-	$res = CIBlockElement::GetList([], ["IBLOCK_ID" => $IBLOCK_ID, "<=QUANTITY" => 0, "!PROPERTY_SAYT_1" => "Yes"], false, false, ["ID", "NAME"]);
+	$res = CIBlockElement::GetList(
+		[],
+		["IBLOCK_ID" => $IBLOCK_ID, "<=QUANTITY" => 0],
+		false,
+		false,
+		["ID", "PROPERTY_SAYT_1"]
+	);
 	while ($arFields = $res->GetNext())
 	{
+		$sayt = isset($arFields["PROPERTY_SAYT_1_VALUE"]) ? $arFields["PROPERTY_SAYT_1_VALUE"] : "";
+		if (himopt_sayt_keep_on_zero($sayt)) {
+			continue;
+		}
 		(new CIBlockElement)->Update($arFields["ID"], ["ACTIVE" => "N"]);
 	}
 
-	$res = CIBlockElement::GetList([], ["IBLOCK_ID" => $IBLOCK_ID, ">QUANTITY" => 0], false, false, ["ID", "NAME"]);
+	$res = CIBlockElement::GetList(
+		[],
+		["IBLOCK_ID" => $IBLOCK_ID, ">QUANTITY" => 0],
+		false,
+		false,
+		["ID"]
+	);
 	while ($arFields = $res->GetNext())
 	{
 		(new CIBlockElement)->Update($arFields["ID"], ["ACTIVE" => "Y"]);
 	}
-		
+
+	$res = CIBlockElement::GetList(
+		[],
+		[
+			"IBLOCK_ID" => $IBLOCK_ID,
+			"<=QUANTITY" => 0,
+			"ACTIVE" => "N",
+			"PROPERTY_SAYT_1" => ["Yes", "Да"],
+		],
+		false,
+		false,
+		["ID", "PROPERTY_SAYT_1"]
+	);
+	while ($arFields = $res->GetNext())
+	{
+		(new CIBlockElement)->Update($arFields["ID"], ["ACTIVE" => "Y"]);
+	}
+
 	return "catalogProductActive();";
 }
 

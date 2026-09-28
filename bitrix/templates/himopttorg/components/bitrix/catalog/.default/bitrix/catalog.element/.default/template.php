@@ -3,7 +3,9 @@
 $APPLICATION->SetPageProperty("keywords", $arResult['SECTION']['NAME'].'/'.$arResult['NAME']);
 $APPLICATION->SetPageProperty("description", "Лакокрасочная, химическая, резино- и асбестотехническая, пластмассовая и пр. продукция, строительные материалы для розничных и оптовых покупателей: {$arResult['SECTION']['NAME']}/{$arResult['NAME']}");
 if (isset($_GET['BUY'])){
-	Add2BasketByProductID($arResult['ID'], intval($_GET["QUANTITY"]));
+	if ((float)$arResult['CATALOG_QUANTITY'] > 0) {
+		Add2BasketByProductID($arResult['ID'], intval($_GET["QUANTITY"]));
+	}
 	LocalRedirect($arResult['DETAIL_PAGE_URL']);
 }
 //,strtotime($arResult['DATE_CREATE'])
@@ -58,7 +60,8 @@ if (isset($_GET['BUY'])){
 	$uniqueId = $arResult['ID'].'_'.md5($this->randString().$component->getAction());
 	$areaId = $this->GetEditAreaId($uniqueId);
 	
-	$showSubscribe = ($arResult["CATALOG_QUANTITY"] <= 0 && ($arResult["PROPERTIES"]["SAYT_1"]["VALUE"] === "Yes" || $arResult["PROPERTIES"]["SAYT_1"]["VALUE"] === "Р”Р°"));
+	$sayt = isset($arResult["PROPERTIES"]["SAYT_1"]["VALUE"]) ? $arResult["PROPERTIES"]["SAYT_1"]["VALUE"] : "";
+	$showSubscribe = ($arResult["CATALOG_QUANTITY"] <= 0 && function_exists("himopt_sayt_keep_on_zero") && himopt_sayt_keep_on_zero($sayt));
 	$linkSubscribe = $areaId.'_subscribe';
 ?>
 <!--add_column-->

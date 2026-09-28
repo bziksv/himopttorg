@@ -11,7 +11,17 @@ if (count($arResult['ITEMS']) >= 1)
 
 	
 if (isset($_GET['BUY'])){
-	Add2BasketByProductID($_GET['P_ID'], intval($_GET["QUANTITY"]));
+	$buyId = intval($_GET["P_ID"]);
+	$buyQty = 0;
+	foreach ($arResult['ITEMS'] as $buyItem) {
+		if ((int)$buyItem['ID'] === $buyId) {
+			$buyQty = (float)$buyItem['CATALOG_QUANTITY'];
+			break;
+		}
+	}
+	if ($buyQty > 0) {
+		Add2BasketByProductID($buyId, intval($_GET["QUANTITY"]));
+	}
 	LocalRedirect($arResult['SECTION_PAGE_URL']);
 }
 	
@@ -43,7 +53,8 @@ foreach ($arResult['ITEMS'] as $key => $arElement):
 	$this->AddEditAction($arElement['ID'], $arElement['EDIT_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arElement['ID'], $arElement['DELETE_LINK'], CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CATALOG_ELEMENT_DELETE_CONFIRM')));
 	
-	$showSubscribe = ($arElement["CATALOG_QUANTITY"] <= 0 && $arElement["PROPERTIES"]["SAYT_1"]["VALUE"] === "Yes");
+	$sayt = isset($arElement["PROPERTIES"]["SAYT_1"]["VALUE"]) ? $arElement["PROPERTIES"]["SAYT_1"]["VALUE"] : "";
+	$showSubscribe = ($arElement["CATALOG_QUANTITY"] <= 0 && function_exists("himopt_sayt_keep_on_zero") && himopt_sayt_keep_on_zero($sayt));
 	$linkSubscribe = $areaId.'_subscribe';
 	?>
 

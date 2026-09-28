@@ -132,5 +132,11 @@ Disallow: /catalog/rastvoriteli/*/
 Disallow: /catalog/izolenta_pvkh/
 Disallow: /login/*
 Disallow /legal/*
+Disallow: /catalog/remni_klinovye_1/
+Disallow: /catalog/syraya_rezina_1/
+Disallow: /catalog/polistirol/
+Disallow: /catalog/mramornaya_kroshka_1/
+Disallow: /catalog/koronki_i_chashki_almaznye_1/
+Disallow: /catalog/slesarnye_instrumenty_1/
 Host: https://himopttorg.ru
 Sitemap: https://himopttorg.ru/sitemap.xml
