@@ -74,7 +74,13 @@ if($showSubscribe):?>
 			onclick="var __s=window['<?=CUtil::JSEscape($jsObject)?>']; if(__s&&__s.subscribe){__s.subscribe();} return false;"
 			style="<?=($arResult['DEFAULT_DISPLAY']?'':'display: none;')?>">
 		<span>
-			<?=$subscribeBtnName?>
+			<?php
+			if ($subscribeBtnName === 'Уведомить о поступлении') {
+				echo 'Уведомить<br>о поступлении';
+			} else {
+				echo htmlspecialcharsbx($subscribeBtnName);
+			}
+			?>
 		</span>
 	</span>
 	<input type="hidden" id="<?=htmlspecialcharsbx($arResult['BUTTON_ID'])?>_hidden">

@@ -1363,8 +1363,9 @@ table.order_tbl td{
 }	
 table.order_tbl th.c5,
 table.order_tbl td.c5.w85{
-	width:1%;
-	white-space:nowrap;
+	width:100px;
+	max-width:110px;
+	white-space:normal;
 }	
 table.order_tbl td.first, table.order_tbl td.last, table.order_tbl th.last, table.order_tbl th.first {		
 	background:transparent; 
@@ -1931,20 +1932,22 @@ ul.addnav li.active a.item15{
 	overflow: visible;
 	pointer-events: auto;
 }
-table.order_tbl .btn.btn-subscribe,
-table.order_tbl .btn.btn-subscribe span {
+table.order_tbl .btn.btn-subscribe {
 	display: inline-block;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 4px 8px;
+	padding: 4px 7px;
 	font-size: 11px;
-	line-height: 1.2;
-	white-space: nowrap;
-	width: auto;
+	line-height: 1.25;
+	white-space: normal;
+	width: 96px;
 	text-align: center;
 }
 table.order_tbl .btn.btn-subscribe span {
+	display: block;
 	padding: 0;
+	white-space: normal;
+	line-height: 1.25;
 }
 .btn {
 	
@@ -1983,6 +1986,37 @@ table.order_tbl .btn.btn-subscribe span {
 #himopt-basket-toast.is-error {
 	border-color: #c0392b;
 	color: #7b1e1e;
+}
+.himopt-consent {
+	display: block;
+	margin: 14px 0 10px;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #333;
+	text-align: left;
+	max-width: 520px;
+}
+.himopt-consent-check {
+	display: inline-block !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+	width: auto !important;
+	height: auto !important;
+	position: static !important;
+	margin: 0 8px 0 0 !important;
+	padding: 0 !important;
+	vertical-align: middle;
+}
+.himopt-consent a {
+	color: #1b6fb6;
+}
+.himopt-consent-error {
+	color: #c0392b;
+	margin: 0 0 12px;
+}
+input.himopt-need-consent:disabled {
+	opacity: .45;
+	cursor: default;
 }
 input[name="USER_AGREE"] {
     display: inline-block !important;
