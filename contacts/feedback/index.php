@@ -31,7 +31,7 @@ $message2 = '';
 include 'feedback.php';
 
 ?>
-	<form method="post" style="width:343px; " action="/contacts/feedback/?send=yes">
+	<form method="post" style="width:343px;" action="/contacts/feedback/?send=yes" id="feedback-form">
 		 <? if ($error != ''){?>
 		<div style="color:red;">
 			 <?=$error?><br>
@@ -43,62 +43,48 @@ include 'feedback.php';
 		 <?}?>
 		<div class="log_passw2">
 			<p class="inp">
- <label for="log">ФИО </label><input name="name" class="field2" id="log" title="Код PHP: &lt;?=$_POST['name']?&gt;" type="text"><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false"> </span></span>
+ <label for="fb-name">ФИО </label><input name="name" class="field2" id="fb-name" type="text" value="<?=htmlspecialcharsbx((string)($_POST['name'] ?? ''))?>">
 			</p>
 		</div>
 		<div class="log_passw2">
 			<p class="inp">
- <label for="log">Компания </label><input name="company" class="field2" id="log" title="Код PHP: &lt;?=$_POST['company']?&gt;" type="text"><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false"> </span></span>
+ <label for="fb-company">Компания </label><input name="company" class="field2" id="fb-company" type="text" value="<?=htmlspecialcharsbx((string)($_POST['company'] ?? ''))?>">
 			</p>
 		</div>
 		<div class="log_passw2">
 			<p class="inp">
- <label for="log">E-mail </label><input name="mail" class="field2" id="log" title="Код PHP: &lt;?=$_POST['mail']?&gt;" type="text"><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false"> </span></span>
+ <label for="fb-mail">E-mail </label><input name="mail" class="field2" id="fb-mail" type="text" value="<?=htmlspecialcharsbx((string)($_POST['mail'] ?? ''))?>">
 			</p>
 		</div>
 		<div class="log_passw2">
 			<p class="inp">
- <label for="passw">Телефон</label><input name="phone" class="field2" id="passw" title="Код PHP: &lt;?=$_POST['phone']?&gt;" type="text"><span class="bxhtmled-surrogate-inner"><span class="bxhtmled-right-side-item-icon"></span><span class="bxhtmled-comp-lable" unselectable="on" spellcheck="false"> </span></span>
+ <label for="fb-phone">Телефон</label><input name="phone" class="field2" id="fb-phone" type="text" value="<?=htmlspecialcharsbx((string)($_POST['phone'] ?? ''))?>">
 			</p>
 		</div>
 		<div class="log_passw2">
 			<p>
- <label for="passw">Сообщение</label><textarea id="t1" class="area" cols="30" rows="10" name="msg" style="width: 270px; height: 150px;"></textarea>
+ <label for="fb-msg">Сообщение</label><textarea id="fb-msg" class="area" cols="30" rows="10" name="msg" style="width: 270px; height: 150px;"><?=htmlspecialcharsbx((string)($_POST['msg'] ?? ''))?></textarea>
 			</p>
 		</div>
-		<div class="enter clearfix">
+		<input style="position:unset;" type="checkbox" id="rule" name="RULE" value="Y">
+		Нажимая на эту кнопку, я даю свое <a href="/legal/consent/" target="_blank">согласие</a> на обработку персональных данных, в соответствии с <a href="/legal/personal-data/" target="_blank">Политикой обработки персональных данных</a>
+		<div class="enter clearfix" style="margin-top:12px;">
+			<div>
+ <input name="Register" value="Отправить" type="submit" disabled>
+			</div>
 		</div>
- <input style="position:unset;" type="checkbox" id="rule" name="RULE" value="Y">
-		Нажимая на эту кнопку, я даю свое <a href="/legal/consent/">согласие</a> на обработку персональных данных, в соответствии с <a href="/legal/personal-data/" target="_blank">Политикой обработки персональных данных</a>&nbsp; <script>
- $(function(){
-	 
-	 
-	 $('#rule').change(function(){
-		 $('input[type="submit"]').attr('disabled',$(this).is(':checked') ? false : true);
-	 });
-	 
-	 
- });
- 
- </script>
 	</form>
-</div>
- <script>
- $(function(){
-	 
-	 
-	 $('#rule').change(function(){
-		 $('input[type="submit"]').attr('disabled',$(this).is(':checked') ? false : true);
-	 });
-	 
-	 
- });
- 
- </script> <br>
-<div class="enter clearfix">
-	<div>
- <input name="Register" value="Отправить" type="submit">
-	</div>
+	<script>
+	$(function(){
+		var $rule = $('#feedback-form #rule');
+		var $submit = $('#feedback-form input[type="submit"]');
+		function syncFeedbackSubmit() {
+			$submit.prop('disabled', !$rule.is(':checked'));
+		}
+		$rule.on('change', syncFeedbackSubmit);
+		syncFeedbackSubmit();
+	});
+	</script>
 </div>
  <br>
  <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -40,6 +40,7 @@ done
 # Shared logic only. City phones / Metrika stay in header.php and footer.php.
 SHARED_PATHS="
 legal
+contacts/feedback
 bitrix/php_interface/init.php
 bitrix/php_interface/include
 bitrix/templates/himopttorg/template_styles.css
