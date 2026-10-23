@@ -108,6 +108,9 @@
 	{
 		this.elemButtonSubscribe = BX(this.buttonId);
 		if(!this.elemButtonSubscribe) return false;
+		if(this._subscribeLock) return false;
+		this._subscribeLock = true;
+		setTimeout(BX.delegate(function(){ this._subscribeLock = false; }, this), 1500);
 
 		BX.ajax({
 			method: 'POST',

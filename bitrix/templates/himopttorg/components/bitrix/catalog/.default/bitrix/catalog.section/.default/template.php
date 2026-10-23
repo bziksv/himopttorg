@@ -28,7 +28,7 @@ if (isset($_GET['BUY'])){
 ?>
 
 
-<form class="order_form" action="">
+<form class="order_form" action="" onsubmit="return false;">
 	<table class="order_tbl" id="order_tbl">
 		<thead>
 			<tr>
