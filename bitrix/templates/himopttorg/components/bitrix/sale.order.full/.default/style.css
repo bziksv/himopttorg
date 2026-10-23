@@ -22,6 +22,21 @@ table.sale_order_full th, table.sale_order_full td
 	vertical-align:top;
 }
 
+table.sale_order_full_table
+{
+	width:100%;
+	background-color:#FFFFFF;
+	border-collapse:collapse;
+	font-size:12px;
+	border:1px solid #ADC3D5;
+}
+
+table.sale_order_full_table td
+{
+	padding: 8px 10px;
+	vertical-align:top;
+}
+
 table.sale_order_full_table_no_border
 {
 	width:100%;
@@ -37,3 +52,38 @@ table.sale_order_full_table_no_border td
 }
 
 .sof-req{color:red;}
+
+.himopt-order-actions {
+	margin-top: 12px;
+}
+
+.himopt-order-actions--row {
+	text-align: right;
+	margin-top: 12px;
+}
+
+.himopt-order-step2 {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.himopt-order-step2-main {
+	width: 62%;
+	padding: 0 16px 0 0;
+	vertical-align: top;
+}
+
+.himopt-order-step2-note {
+	width: 38%;
+	padding: 0;
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 1.45;
+	color: #555;
+}
+
+.himopt-order-confirm {
+	display: block;
+	margin: 8px 0 0;
+	text-align: left;
+}

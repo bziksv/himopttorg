@@ -46,11 +46,14 @@ contacts/feedback
 catalog/.left.menu.php
 bitrix/php_interface/init.php
 bitrix/php_interface/include
+local/modules/prime.alerts
 bitrix/templates/himopttorg/template_styles.css
 bitrix/templates/himopttorg/js/himopt_basket.js
 bitrix/templates/himopttorg/js/himopt_consent.js
+bitrix/templates/himopttorg/js/himopt_order.js
 bitrix/templates/himopttorg/js/form.js
 personal/order/make/index.php
+bitrix/templates/himopttorg/components/bitrix/sale.basket.basket.small/him
 bitrix/templates/himopttorg/components/bitrix/sale.order.full/.default
 bitrix/templates/himopttorg/components/bitrix/catalog.product.subscribe/.default
 bitrix/templates/himopttorg/components/bitrix/catalog/.default/bitrix/catalog.section/.default

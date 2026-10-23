@@ -15,6 +15,18 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 		<?
 		foreach($arSource as $arProperties)
 		{
+			$code = strtoupper(trim((string)($arProperties["CODE"] ?? "")));
+			$nameLow = function_exists("mb_strtolower")
+				? mb_strtolower((string)$arProperties["NAME"], "UTF-8")
+				: strtolower((string)$arProperties["NAME"]);
+			$isZip = ($arProperties["IS_ZIP"] ?? "") === "Y" || $code === "ZIP" || $nameLow === "индекс";
+			$isFax = $code === "FAX" || $nameLow === "факс";
+			$isLocation = ($arProperties["IS_LOCATION"] ?? "") === "Y" || $code === "LOCATION" || $nameLow === "местоположение";
+			if ($isZip || $isFax || $isLocation) {
+				continue;
+			}
+			$isPhone = ($arProperties["IS_PHONE"] ?? "") === "Y" || $code === "PHONE" || $nameLow === "телефон";
+
 			if($arProperties["SHOW_GROUP_NAME"] == "Y")
 			{
 				?>
@@ -26,7 +38,7 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 				<?
 			}
 			?>
-			<tr>
+			<tr<?= $isPhone ? ' class="himopt-order-prop himopt-order-prop--phone"' : ' class="himopt-order-prop"' ?>>
 				<td align="right" valign="top">
 					<?= $arProperties["NAME"] ?>:<?
 					if($arProperties["REQUIED_FORMATED"]=="Y")
@@ -45,9 +57,20 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 					}
 					elseif($arProperties["TYPE"] == "TEXT")
 					{
+						$phoneClass = $isPhone ? " himopt-order-phone himopt-auth-field" : " himopt-auth-field";
+						$phoneAttrs = $isPhone
+							? ' inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" maxlength="18"'
+							: "";
 						?>
-						<input type="text" maxlength="250" size="<?=$arProperties["SIZE1"]?>" value="<?=$arProperties["VALUE"]?>" name="<?=$arProperties["FIELD_NAME"]?>">
+						<input type="text" maxlength="250" size="<?=$arProperties["SIZE1"]?>" value="<?=$arProperties["VALUE"]?>" name="<?=$arProperties["FIELD_NAME"]?>" class="<?=trim($phoneClass)?>"<?=$phoneAttrs?>>
 						<?
+						if ($isPhone)
+						{
+							?>
+							<div class="himopt-phone-hint">Формат: +7 (999) 123-45-67</div>
+							<div class="himopt-phone-error" hidden>Укажите корректный номер телефона</div>
+							<?
+						}
 					}
 					elseif($arProperties["TYPE"] == "SELECT")
 					{
@@ -81,9 +104,14 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 					}
 					elseif ($arProperties["TYPE"] == "TEXTAREA")
 					{
+						$isDeliveryAddr = $code === "ADDRESS" || $nameLow === "адрес доставки";
 						?>
-						<textarea rows="<?=$arProperties["SIZE2"]?>" cols="<?=$arProperties["SIZE1"]?>" name="<?=$arProperties["FIELD_NAME"]?>"><?=$arProperties["VALUE"]?></textarea>
+						<textarea rows="<?=$arProperties["SIZE2"]?>" cols="<?=$arProperties["SIZE1"]?>" name="<?=$arProperties["FIELD_NAME"]?>" class="himopt-auth-field himopt-order-textarea"><?=$arProperties["VALUE"]?></textarea>
 						<?
+						if ($isDeliveryAddr)
+						{
+							?><div class="himopt-phone-hint">Нужен только если на следующем шаге выберете доставку курьером. При самовывозе можно не заполнять.</div><?
+						}
 					}
 					elseif ($arProperties["TYPE"] == "LOCATION")
 					{
@@ -155,24 +183,16 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 	return false;
 }
 ?>
-<br />
-<table border="0" cellspacing="0" cellpadding="5">
+<table class="himopt-order-step2" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-		<td valign="top" width="60%" align="right"></td>
-		<td valign="top" width="5%" rowspan="3">&nbsp;</td>
-		<td valign="top" width="35%" rowspan="3">
-			<?echo GetMessage("STOF_CORRECT_NOTE")?>
-		</td>
-	</tr>
-	<tr>
-		<td valign="top" width="60%">
+		<td class="himopt-order-step2-main" valign="top">
 			<?
 			$bPropsPrinted = PrintPropsForm($arResult["PRINT_PROPS_FORM"]["USER_PROPS_N"], GetMessage("SALE_INFO2ORDER"), $arParams);
 
 			if(!empty($arResult["USER_PROFILES"]))
 			{
 				if ($bPropsPrinted)
-					echo "<br /><br />";
+					echo "<br />";
 				?>
 				<b><?echo GetMessage("STOF_PROFILES")?></b><br /><br />
 				<table class="sale_order_full_table">
@@ -205,12 +225,19 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 								<?
 								foreach($arUserProfiles["USER_PROPS_VALUES"] as $arUserPropsValues)
 								{
-									
+									$propMeta = $arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"][$arUserPropsValues["ORDER_PROPS_ID"]] ?? null;
+									$propCode = strtoupper((string)($propMeta["CODE"] ?? ""));
+									$propNameLow = function_exists("mb_strtolower")
+										? mb_strtolower((string)($propMeta["NAME"] ?? ""), "UTF-8")
+										: strtolower((string)($propMeta["NAME"] ?? ""));
+									if ($propCode === "ADDRESS" || $propNameLow === "адрес доставки" || $propCode === "FAX" || $propNameLow === "факс") {
+										continue;
+									}
 									if (strlen($arUserPropsValues["VALUE_FORMATED"]) > 0)
 									{
 										?>
 										<tr>
-											<td><?=$arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"][$arUserPropsValues["ORDER_PROPS_ID"]]["NAME"]?>:</td>
+											<td><?=$propMeta["NAME"]?>:</td>
 											<td><?=$arUserPropsValues["VALUE_FORMATED"]?></td>
 										</tr>
 										<?
@@ -231,6 +258,7 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 						<td width="100%"><b><label for="ID_PROFILE_ID_0"><?echo GetMessage("SALE_NEW_PROFILE")?></label></b><br /></td>
 					</tr>
 				</table>
+				<br />
 				<?
 			}
 			else
@@ -238,7 +266,6 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 				?><input type="hidden" name="PROFILE_ID" value="0"><?
 			}
 			?>
-			<br /><br />
 			<div id="sof-prof-div">
 			<?
 			PrintPropsForm($arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"], GetMessage("SALE_NEW_PROFILE_TITLE"), $arParams);
@@ -254,19 +281,46 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 				<?
 			}
 			?>
-		</td>
-	</tr>
-	<tr>
-		<td valign="top" width="60%" align="right">
-		<?if(!($arResult["SKIP_FIRST_STEP"] == "Y"))
-		{
-			?>
-			<input type="submit" onclick="document.order_form.CurrentStep.value='1'; document.order_form.BACK.value='Y'; document.order_form.submit();" style="cursor:pointer;border:0;width:75px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-prev.png) no-repeat;" value="">
-		
 			<?
-		}
-		?>
-			<input type="submit" name="contButton" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="">
+			// Hidden location (Воронеж) — поле скрыто, нужно чтобы шаг доставки не пропускался
+			$himoptLocId = 0;
+			if (!empty($arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"])) {
+				foreach ($arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"] as $p) {
+					if (($p["IS_LOCATION"] ?? "") === "Y" || strtoupper((string)($p["CODE"] ?? "")) === "LOCATION") {
+						$himoptLocId = intval($p["ID"]);
+						break;
+					}
+				}
+			}
+			if ($himoptLocId <= 0 && !empty($arResult["PRINT_PROPS_FORM"]["USER_PROPS_N"])) {
+				foreach ($arResult["PRINT_PROPS_FORM"]["USER_PROPS_N"] as $p) {
+					if (($p["IS_LOCATION"] ?? "") === "Y" || strtoupper((string)($p["CODE"] ?? "")) === "LOCATION") {
+						$himoptLocId = intval($p["ID"]);
+						break;
+					}
+				}
+			}
+			if ($himoptLocId <= 0) {
+				$himoptLocId = (intval($arResult["PERSON_TYPE"] ?? 0) === 2) ? 18 : 5;
+			}
+			$himoptLocVal = !empty($arResult["POST"]["ORDER_PROP_".$himoptLocId])
+				? $arResult["POST"]["ORDER_PROP_".$himoptLocId]
+				: "1029";
+			?>
+			<input type="hidden" name="ORDER_PROP_<?=$himoptLocId?>" value="<?=htmlspecialcharsbx($himoptLocVal)?>">
+			<div class="himopt-order-actions himopt-order-actions--row">
+			<?if(!($arResult["SKIP_FIRST_STEP"] == "Y"))
+			{
+				?>
+				<input type="submit" onclick="document.order_form.CurrentStep.value='1'; document.order_form.BACK.value='Y'; document.order_form.submit();" style="cursor:pointer;border:0;width:75px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-prev.png) no-repeat;" value="">
+				<?
+			}
+			?>
+				<input type="submit" name="contButton" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="">
+			</div>
+		</td>
+		<td class="himopt-order-step2-note" valign="top">
+			<?echo GetMessage("STOF_CORRECT_NOTE")?>
 		</td>
 	</tr>
 </table>

@@ -62,8 +62,11 @@ else
 	}
 	?>
 	<tr>
-		<td><br />
+		<td>
 			<? echo ShowError($arResult["ERROR_MESSAGE"]);
+			if (function_exists("himopt_order_phone_error_html")) {
+				himopt_order_phone_error_html();
+			}
 			if (function_exists("himopt_consent_error_html")) {
 				himopt_consent_error_html();
 			} 

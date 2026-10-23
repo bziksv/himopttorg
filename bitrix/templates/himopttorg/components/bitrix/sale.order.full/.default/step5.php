@@ -84,7 +84,14 @@
 						<?
 						if (is_array($arResult["PAY_SYSTEM"]))
 						{
-							echo $arResult["PAY_SYSTEM"]["PSA_NAME"];
+							$payName = "";
+							if (!empty($arResult["PAY_SYSTEM"]["PSA_NAME"]))
+								$payName = $arResult["PAY_SYSTEM"]["PSA_NAME"];
+							elseif (!empty($arResult["PAY_SYSTEM"]["~PSA_NAME"]))
+								$payName = htmlspecialcharsEx($arResult["PAY_SYSTEM"]["~PSA_NAME"]);
+							elseif (!empty($arResult["PAY_SYSTEM"]["NAME"]))
+								$payName = $arResult["PAY_SYSTEM"]["NAME"];
+							echo $payName;
 						}
 						elseif ($arResult["PAY_SYSTEM"]=="ERROR")
 						{
@@ -220,8 +227,12 @@
 			<?
 		}
 		?>
-		<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
-		<input onclick="yaCounter9308620.reachGoal('ORDER'); return true; _gaq.push(['_trackEvent','ORDER','click']);" type="submit" name="contButton" class="himopt-need-consent" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="" disabled>
+		<div class="himopt-order-confirm">
+			<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
+			<div class="himopt-order-actions himopt-order-actions--row">
+				<input onclick="yaCounter9308620.reachGoal('ORDER'); return true; _gaq.push(['_trackEvent','ORDER','click']);" type="submit" name="contButton" class="himopt-need-consent" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="" disabled>
+			</div>
+		</div>
 	</td>
 </tr>
 </table>

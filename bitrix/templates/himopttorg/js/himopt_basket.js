@@ -19,20 +19,48 @@
 		return "";
 	}
 
-	function notify(text, isError) {
+	function esc(s) {
+		return String(s == null ? "" : s)
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;");
+	}
+
+	function notify(opts) {
+		var isError = !!(opts && opts.error);
+		var title = isError ? "Не добавлено" : "Добавлено в корзину";
+		var text = opts && opts.text ? opts.text : "";
+		var name = opts && opts.name ? opts.name : "";
+		var sum = opts && typeof opts.sum !== "undefined" ? opts.sum : null;
 		var box = document.getElementById("himopt-basket-toast");
 		if (!box) {
 			box = document.createElement("div");
 			box.id = "himopt-basket-toast";
 			document.body.appendChild(box);
 		}
+		var html = '<div class="himopt-toast-inner">'
+			+ '<div class="himopt-toast-ico" aria-hidden="true"></div>'
+			+ '<div class="himopt-toast-body">'
+			+ '<div class="himopt-toast-title">' + esc(title) + "</div>";
+		if (name) {
+			html += '<div class="himopt-toast-name">' + esc(name) + "</div>";
+		} else if (text) {
+			html += '<div class="himopt-toast-name">' + esc(text) + "</div>";
+		}
+		if (!isError && sum !== null) {
+			html += '<div class="himopt-toast-sum">Сумма заказа: <b>' + esc(sum) + " Р</b></div>";
+		}
+		if (!isError) {
+			html += '<a class="himopt-toast-link" href="/personal/cart/">Перейти в корзину</a>';
+		}
+		html += "</div></div>";
+		box.innerHTML = html;
 		box.className = isError ? "is-error is-show" : "is-show";
-		box.innerHTML = "";
-		box.appendChild(document.createTextNode(text));
 		clearTimeout(notify._t);
 		notify._t = setTimeout(function () {
 			box.className = isError ? "is-error" : "";
-		}, 4000);
+		}, 4500);
 	}
 
 	function updateHeader(sum) {
@@ -42,12 +70,12 @@
 		}
 		var wrap = document.createElement("div");
 		wrap.innerHTML = ""
-			+ '<div class="basket_block">'
-			+ '<div class="basket">'
-			+ "<p>Ваш заказ на сумму</p>"
-			+ "<p><b>" + sum + " Р</b></p>"
-			+ '<p class="offer"><a href="/personal/cart/">сделать заказ</a></p>'
-			+ "</div></div>";
+			+ '<a class="basket_block" href="/personal/cart/">'
+			+ '<span class="basket">'
+			+ '<span class="basket-line">Ваш заказ на сумму</span>'
+			+ '<span class="basket-sum"><b>' + sum + " Р</b></span>"
+			+ '<span class="offer">сделать заказ</span>'
+			+ "</span></a>";
 		old.parentNode.replaceChild(wrap.firstChild, old);
 	}
 
@@ -95,14 +123,17 @@
 		postAdd(id, qty, function (res, status) {
 			lock = false;
 			if (res && res.ok) {
-				notify(res.message || "Товар добавлен в корзину");
+				notify({
+					name: res.name || res.message || "Товар",
+					sum: typeof res.sum !== "undefined" ? res.sum : null
+				});
 				if (typeof res.sum !== "undefined") {
 					updateHeader(res.sum);
 				}
 			} else if (res && res.error) {
-				notify(res.error, true);
+				notify({ error: true, text: res.error });
 			} else {
-				notify(status === 200 ? "Не удалось добавить товар" : "Не удалось добавить товар", true);
+				notify({ error: true, text: "Не удалось добавить товар" });
 			}
 		});
 		return false;

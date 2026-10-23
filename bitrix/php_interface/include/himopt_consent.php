@@ -11,10 +11,12 @@ function himopt_consent_html($name = "RULE")
 	$n++;
 	$id = "himopt-consent-".$n;
 	?>
-	<label class="himopt-consent" for="<?=htmlspecialcharsbx($id)?>">
-		<input type="checkbox" id="<?=htmlspecialcharsbx($id)?>" name="<?=htmlspecialcharsbx($name)?>" value="Y" class="himopt-consent-check">
-		<span>Даю <a href="/legal/consent/" target="_blank">согласие</a> на обработку персональных данных и принимаю <a href="/legal/personal-data/" target="_blank">политику обработки персональных данных</a>.</span>
-	</label>
+	<div class="himopt-consent-box">
+		<label class="himopt-consent" for="<?=htmlspecialcharsbx($id)?>">
+			<input type="checkbox" id="<?=htmlspecialcharsbx($id)?>" name="<?=htmlspecialcharsbx($name)?>" value="Y" class="himopt-consent-check">
+			<span class="himopt-consent-text">Даю <a href="/legal/consent/" target="_blank">согласие</a> на обработку персональных данных и принимаю <a href="/legal/personal-data/" target="_blank">политику</a>.</span>
+		</label>
+	</div>
 	<?php
 }
 
@@ -23,7 +25,7 @@ function himopt_consent_error_html()
 	if (empty($GLOBALS["HIMOPT_CONSENT_ERROR"])) {
 		return;
 	}
-	echo '<p class="himopt-consent-error">Чтобы продолжить, дайте согласие на обработку персональных данных.</p>';
+	echo '<p class="himopt-consent-error">Отметьте согласие на обработку персональных данных, чтобы продолжить.</p>';
 }
 
 function himopt_consent_guard()

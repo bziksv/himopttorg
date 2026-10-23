@@ -85,8 +85,11 @@
 								?><br /><?
 							}
 							?>
-							<?=GetMessage("SALE_DELIV_PRICE");?> <?=$arDelivery["PRICE_FORMATED"]?><br />
 							<?
+							if (doubleval($arDelivery["PRICE"]) > 0)
+							{
+								echo GetMessage("SALE_DELIV_PRICE")." ".$arDelivery["PRICE_FORMATED"]."<br />";
+							}
 							if (strlen($arDelivery["DESCRIPTION"])>0)
 							{
 								?>
