@@ -38,6 +38,7 @@ SSH: `himopttorg@himopttorg.beget.tech`, ключ `~/.ssh/id_ed25519`. CLI PHP �
 
 ## Копировать (whitelist в `scripts/sync-regions.sh`)
 
+- `legal/` (согласие, политика, cookie, рекомендательные технологии)
 - `bitrix/php_interface/init.php` и `include/`
 - `bitrix/templates/himopttorg/template_styles.css`
 - шаблон `catalog.product.subscribe`
@@ -45,4 +46,4 @@ SSH: `himopttorg@himopttorg.beget.tech`, ключ `~/.ssh/id_ed25519`. CLI PHP �
 - `catalog/.default/section.php`
 - шаблоны `system.auth.*` (вход / пароль)
 
-Городское (Метрика, PDF политики, телефоны) оставлять в файлах сайта или выбирать в рантайме (`/legal/personal-data/` на Воронеже, `upload/personal-data*.pdf` на регионах). Не хардкодить один городской URL на все копии.
+Дисклеймер подписки: ссылка «согласие» → `/legal/consent/`, политика → `/legal/personal-data/`. Старые `upload/personal-data*.pdf` не использовать. Городское (Метрика, телефоны) оставлять в header/footer. Не хардкодить один городской URL на все копии.

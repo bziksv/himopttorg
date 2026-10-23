@@ -457,10 +457,9 @@
 							props: {
 								className: 'bx-rules-text',
 							},
-							html: (BX.message('CPST_PRIVACY_CONSENT') || '').replace(
-								'#URL#',
-								BX.message('HIMOPT_PRIVACY_POLICY_URL') || '/legal/personal-data/'
-							),
+							html: (BX.message('CPST_PRIVACY_CONSENT') || '')
+								.replace('#URL#', BX.message('HIMOPT_CONSENT_URL') || '/legal/consent/')
+								.replace('#POLICY_URL#', BX.message('HIMOPT_PRIVACY_POLICY_URL') || '/legal/personal-data/'),
 							style: {
 								'font-size': '12px',
 							},

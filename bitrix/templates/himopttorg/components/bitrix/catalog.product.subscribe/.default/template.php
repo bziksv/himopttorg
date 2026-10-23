@@ -56,14 +56,13 @@ $templateData['showSubscribe'] = $showSubscribe;
 $subscribeBtnName = !empty($arParams['MESS_BTN_SUBSCRIBE']) ? $arParams['MESS_BTN_SUBSCRIBE'] : Loc::getMessage('CPST_SUBSCRIBE_BUTTON_NAME');
 $titleAlreadySubscribed = !empty($arParams['TITLE_ALREADY_SUBSCRIBED']) ? $arParams['TITLE_ALREADY_SUBSCRIBED'] : Loc::getMessage('CPST_TITLE_ALREADY_SUBSCRIBED');
 
-$privacyUrl = '/legal/personal-data/';
 $docRoot = rtrim((string)$_SERVER['DOCUMENT_ROOT'], '/');
-if (!is_file($docRoot.'/legal/personal-data/index.php')) {
-	$pdfs = glob($docRoot.'/upload/personal-data*.pdf') ?: [];
-	if ($pdfs) {
-		$privacyUrl = '/upload/'.basename($pdfs[0]);
-	}
-}
+$consentUrl = is_file($docRoot.'/legal/consent/index.php')
+	? '/legal/consent/'
+	: 'https://himopttorg.ru/legal/consent/';
+$privacyUrl = is_file($docRoot.'/legal/personal-data/index.php')
+	? '/legal/personal-data/'
+	: 'https://himopttorg.ru/legal/personal-data/';
 
 if($showSubscribe):?>
 	<span id="<?=htmlspecialcharsbx($arResult['BUTTON_ID'])?>"
@@ -83,6 +82,7 @@ if($showSubscribe):?>
 		BX.message({
 			CPST_SUBSCRIBE_POPUP_TITLE: '<?=GetMessageJS('CPST_SUBSCRIBE_POPUP_TITLE');?>',
 			CPST_SUBSCRIBE_BUTTON_NAME: '<?=CUtil::JSEscape($subscribeBtnName)?>',
+			HIMOPT_CONSENT_URL: '<?=CUtil::JSEscape($consentUrl)?>',
 			HIMOPT_PRIVACY_POLICY_URL: '<?=CUtil::JSEscape($privacyUrl)?>',
 			CPST_PRIVACY_CONSENT: '<?=GetMessageJS('CPST_PRIVACY_CONSENT');?>',
 			CPST_SUBSCRIBE_BUTTON_CLOSE: '<?=GetMessageJS('CPST_SUBSCRIBE_BUTTON_CLOSE');?>',

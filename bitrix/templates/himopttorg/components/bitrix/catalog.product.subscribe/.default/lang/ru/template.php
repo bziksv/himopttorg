@@ -14,5 +14,5 @@ $MESS["CPST_ENTER_WORD_PICTURE"] = "Введите слово на картин�
 $MESS["CPST_TITLE_ALREADY_SUBSCRIBED"] = "Уже подписаны";
 $MESS["CPST_POPUP_SUBSCRIBED_TITLE"] = "Вы подписаны";
 $MESS["CPST_POPUP_SUBSCRIBED_TEXT"] = "Список товаров на которые вы подписаны можно увидеть по ссылке #URL#";
-$MESS["CPST_PRIVACY_CONSENT"] = "Нажимая на эту кнопку, я даю свое согласие на обработку персональных данных и соглашаюсь с условиями <a href=\"#URL#\" target=\"_blank\">политики обработки персональных данных</a>.";
+$MESS["CPST_PRIVACY_CONSENT"] = "Нажимая на эту кнопку, я даю свое <a href=\"#URL#\" target=\"_blank\">согласие</a> на обработку персональных данных и соглашаюсь с условиями <a href=\"#POLICY_URL#\" target=\"_blank\">политики обработки персональных данных</a>.";
 ?>
