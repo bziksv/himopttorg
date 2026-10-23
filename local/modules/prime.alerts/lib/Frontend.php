@@ -22,7 +22,10 @@ class Frontend
 		}
 
 		// Only full HTML pages — never append to JSON/AJAX (location selector, sale.order.ajax, etc.)
-		if (stripos($content, '</body>') === false) {
+		// himopttorg footer historically omits </body></html>, so also accept open <body>
+		$hasBodyClose = (stripos($content, '</body>') !== false);
+		$hasBodyOpen = (stripos($content, '<body') !== false);
+		if (!$hasBodyClose && !$hasBodyOpen) {
 			return;
 		}
 		try {
@@ -59,8 +62,8 @@ class Frontend
 			'noticeCheckout' => EmailPolicy::getNoticeHtml('checkout'),
 		];
 
-		$cssHref = '/local/modules/prime.alerts/assets/style.css?v=1.2.2';
-		$jsHref = '/local/modules/prime.alerts/assets/policy.js?v=1.2.2';
+		$cssHref = '/local/modules/prime.alerts/assets/style.css?v=1.2.3';
+		$jsHref = '/local/modules/prime.alerts/assets/policy.js?v=1.2.3';
 		$flash = '';
 		try {
 			$session = \Bitrix\Main\Application::getInstance()->getSession();
@@ -91,6 +94,10 @@ class Frontend
 			}
 		}
 
-		$content = preg_replace('/<\/body>/i', $inject . '</body>', $content, 1);
+		if ($hasBodyClose) {
+			$content = preg_replace('/<\/body>/i', $inject . '</body>', $content, 1);
+		} else {
+			$content .= $inject;
+		}
 	}
 }
