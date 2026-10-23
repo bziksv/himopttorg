@@ -201,6 +201,7 @@ function himopttorgSverkaAdminButton(&$items)
 }
 
 require_once __DIR__."/include/himopttorg_1c_catalog_lock.php";
+require_once __DIR__."/include/himopt_consent.php";
 
 AddEventHandler("main", "OnProlog", "himoptRegisterBasketAssets");
 function himoptRegisterBasketAssets()
@@ -208,6 +209,7 @@ function himoptRegisterBasketAssets()
 	if (defined("ADMIN_SECTION") && ADMIN_SECTION === true) {
 		return;
 	}
+	himopt_consent_guard();
 	if (isset($_REQUEST["himopt_ajax"]) && $_REQUEST["himopt_ajax"] === "add2basket") {
 		require __DIR__."/include/himopt_add2basket.php";
 	}
@@ -218,6 +220,7 @@ function himoptRegisterBasketAssets()
 			true
 		);
 		$APPLICATION->AddHeadScript("/bitrix/templates/himopttorg/js/himopt_basket.js");
+		$APPLICATION->AddHeadScript("/bitrix/templates/himopttorg/js/himopt_consent.js");
 	}
 }
 

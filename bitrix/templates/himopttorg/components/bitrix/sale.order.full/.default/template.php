@@ -63,7 +63,10 @@ else
 	?>
 	<tr>
 		<td><br />
-			<? echo ShowError($arResult["ERROR_MESSAGE"]); 
+			<? echo ShowError($arResult["ERROR_MESSAGE"]);
+			if (function_exists("himopt_consent_error_html")) {
+				himopt_consent_error_html();
+			} 
 			if ($arResult["CurrentStep"] == 1)
 				include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/step1.php");
 			elseif ($arResult["CurrentStep"] == 2)

@@ -85,22 +85,10 @@ if (strlen($arResult["BACKURL"]) > 0)
 	?>
 
 
-<div class="my-custom-agreement" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 15px;">
-   <input type="checkbox" name="USER_AGREE" id="user_agree" value="Y" required style="flex-shrink: 0; margin-top: 4px;" class=" outtaHere">
-    <label style="font-size: 14px; line-height: 1.4; cursor: pointer;">
-        <span>Нажимая на кнопку "Зарегистрироваться" я даю свое <a href="/legal/consent/" target="_blank">согласие</a> на обработку персональных данных и соглашаюсь с условиями <a target="_blank" href="/legal/personal-data/">политики обработки персональных данных.</a></span>
-    </label>
-</div>
-
-
-
-
-
-
-
+		<?php if (function_exists("himopt_consent_html")) { himopt_consent_html("USER_AGREE"); } ?>
 	<div class="enter clearfix">
 		<div class="">										
-			<input onclick="yaCounter9308620.reachGoal('Register'); return true; _gaq.push(['_trackEvent','Register','click']);" type="submit" name="Register" value="<?=GetMessage("AUTH_REGISTER")?>" />					
+			<input onclick="yaCounter9308620.reachGoal('Register'); return true; _gaq.push(['_trackEvent','Register','click']);" type="submit" name="Register" class="himopt-need-consent" value="<?=GetMessage("AUTH_REGISTER")?>" disabled />					
 		</div>
 	</div>
 
@@ -108,56 +96,6 @@ if (strlen($arResult["BACKURL"]) > 0)
 <!--/noindex-->
 <script type="text/javascript">
 document.bform.USER_NAME.focus();
-</script>
-
- <script>
- $(function(){
-	 
-	 
-	 $('#rule').change(function(){
-		 $('input[type="submit"]').attr('disabled',$(this).is(':checked') ? false : true);
-	 });
-	 
-	 
- });
- 
- </script>
-
-<script>
-(function() {
-    // Ждём полной загрузки, чтобы все скрипты отработали
-    window.addEventListener('load', function() {
-        var container = document.querySelector('.my-custom-agreement');
-        if (!container) return;
-
-        // Находим старый чекбокс
-        var oldCheckbox = container.querySelector('input[name="USER_AGREE"]');
-        if (!oldCheckbox) return;
-
-        // Создаём новый чекбокс с теми же атрибутами
-        var newCheckbox = document.createElement('input');
-        newCheckbox.type = 'checkbox';
-        newCheckbox.name = 'USER_AGREE';
-        newCheckbox.value = 'Y';
-        newCheckbox.required = true; // обязательно для валидации
-        // Копируем inline-стили, чтобы не нарушить вёрстку
-        newCheckbox.style.cssText = oldCheckbox.style.cssText || 'flex-shrink:0; margin-top:4px;';
-        // Добавляем стандартные стили для видимости (на всякий случай)
-        newCheckbox.style.display = 'inline-block';
-        newCheckbox.style.opacity = '1';
-        newCheckbox.style.visibility = 'visible';
-
-        // Заменяем старый чекбокс новым
-        oldCheckbox.parentNode.replaceChild(newCheckbox, oldCheckbox);
-
-        // Удаляем лишний div.checkboxArea, если он ещё есть в контейнере
-        var wrapper = container.querySelector('.checkboxArea');
-        if (wrapper) wrapper.remove();
-
-        // Теперь чекбокс полностью стандартный, валидация должна работать
-        // Проверим: при отправке формы, если чекбокс не отмечен, браузер покажет предупреждение.
-    });
-})();
 </script>
 
 <?endif?>

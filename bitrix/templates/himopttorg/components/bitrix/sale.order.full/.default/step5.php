@@ -8,8 +8,7 @@
 	<td valign="top" width="35%" rowspan="3">
 		<?echo GetMessage("STOF_CORRECT_PROMT_NOTE")?><br /><br />
 		<?echo GetMessage("STOF_CONFIRM_NOTE")?><br /><br />
-		<?echo GetMessage("STOF_CORRECT_ADDRESS_NOTE")?><br /><br />
-		<?echo GetMessage("STOF_PRIVATE_NOTES")?>
+		<?echo GetMessage("STOF_CORRECT_ADDRESS_NOTE")?>
 	</td>
 </tr>
 <tr>
@@ -221,7 +220,8 @@
 			<?
 		}
 		?>
-		<input onclick="yaCounter9308620.reachGoal('ORDER'); return true; _gaq.push(['_trackEvent','ORDER','click']);" type="submit" name="contButton" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="">
+		<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
+		<input onclick="yaCounter9308620.reachGoal('ORDER'); return true; _gaq.push(['_trackEvent','ORDER','click']);" type="submit" name="contButton" class="himopt-need-consent" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="" disabled>
 	</td>
 </tr>
 </table>

@@ -10,11 +10,7 @@ $APPLICATION->SetTitle("Заказы");
 		"COMPOSITE_FRAME_TYPE" => "AUTO",
 		"PATH" => "",
 		"SITE_ID" => "s1",
-		"START_FROM" => "1",
-		"USER_CONSENT" => "Y",
-		"USER_CONSENT_ID" => "1",
-		"USER_CONSENT_IS_CHECKED" => "Y",
-		"USER_CONSENT_IS_LOADED" => "Y"
+		"START_FROM" => "1"
 	),
 false,
 Array(
@@ -45,17 +41,4 @@ Array(
 	)
 );?>
 </div>
- <input type="checkbox" id="rule" name="RULE" value="Y">
-Нажимая на эту кнопку, я даю свое <a href="/legal/consent/">согласие</a> на обработку персональных данных и соглашаюсь с условиями <a href="/legal/personal-data/" target="_blank">политики обработки персональных данных</a>.
- <script>
- $(function(){
-	 
-	 
-	 $('#rule').change(function(){
-		 $('input[type="submit"]').attr('disabled',$(this).is(':checked') ? false : true);
-	 });
-	 
-	 
- });
- 
- </script><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

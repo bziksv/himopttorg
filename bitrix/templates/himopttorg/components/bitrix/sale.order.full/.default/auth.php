@@ -142,8 +142,13 @@
 						}
 						?>
 						<tr>
+							<td>
+								<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
+							</td>
+						</tr>
+						<tr>
 							<td align="center">
-								<input type="submit" value="<?echo GetMessage("STOF_NEXT_STEP")?>">
+								<input type="submit" class="himopt-need-consent" value="<?echo GetMessage("STOF_NEXT_STEP")?>" disabled>
 								<input type="hidden" name="do_register" value="Y">
 							</td>
 						</tr>
@@ -158,4 +163,4 @@
 <?if($arResult["AUTH"]["new_user_registration"]=="Y"):?>
 	<?echo GetMessage("STOF_EMAIL_NOTE")?><br /><br />
 <?endif;?>
-<?echo GetMessage("STOF_PRIVATE_NOTES")?>
+<?php if (function_exists("himopt_consent_error_html")) { himopt_consent_error_html(); } ?>

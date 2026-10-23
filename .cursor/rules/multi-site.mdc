@@ -44,9 +44,13 @@ SSH: `himopttorg@himopttorg.beget.tech`, ключ `~/.ssh/id_ed25519`. CLI PHP �
 - `bitrix/php_interface/init.php` и `include/`
 - `bitrix/templates/himopttorg/template_styles.css`
 - `bitrix/templates/himopttorg/js/himopt_basket.js`
+- `bitrix/templates/himopttorg/js/himopt_consent.js`
+- `bitrix/templates/himopttorg/js/form.js`
+- `personal/order/make/index.php`
+- шаблон `sale.order.full/.default`
 - шаблон `catalog.product.subscribe`
 - шаблоны `catalog.section` (`.default` и `table`) и `catalog.element/.default`
 - `catalog/.default/section.php`
-- шаблоны `system.auth.*` (вход / пароль)
+- шаблоны `system.auth.*` (вход / пароль / регистрация)
 
 Дисклеймер подписки: ссылка «согласие» → `/legal/consent/`, политика → `/legal/personal-data/`. Старые `upload/personal-data*.pdf` не использовать. Городское (Метрика, телефоны) оставлять в header/footer. Не хардкодить один городской URL на все копии.

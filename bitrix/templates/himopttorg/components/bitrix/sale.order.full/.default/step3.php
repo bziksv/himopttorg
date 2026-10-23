@@ -7,8 +7,7 @@
 	<td valign="top" width="5%" rowspan="3">&nbsp;</td>
 	<td valign="top" width="35%" rowspan="3">
 		
-		<?echo GetMessage("STOF_DELIVERY_NOTES")?><br /><br />
-		<?echo GetMessage("STOF_PRIVATE_NOTES")?>
+		<?echo GetMessage("STOF_DELIVERY_NOTES")?>
 		
 	</td>
 </tr>

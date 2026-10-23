@@ -161,8 +161,7 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 		<td valign="top" width="60%" align="right"></td>
 		<td valign="top" width="5%" rowspan="3">&nbsp;</td>
 		<td valign="top" width="35%" rowspan="3">
-			<?echo GetMessage("STOF_CORRECT_NOTE")?><br /><br />
-			<?echo GetMessage("STOF_PRIVATE_NOTES")?>
+			<?echo GetMessage("STOF_CORRECT_NOTE")?>
 		</td>
 	</tr>
 	<tr>

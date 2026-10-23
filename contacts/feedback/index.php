@@ -66,33 +66,13 @@ include 'feedback.php';
  <label for="fb-msg">Сообщение</label><textarea id="fb-msg" class="area" cols="30" rows="10" name="msg" style="width: 270px; height: 150px;"><?=htmlspecialcharsbx((string)($_POST['msg'] ?? ''))?></textarea>
 			</p>
 		</div>
-		<input style="position:unset;" type="checkbox" id="rule" name="RULE" value="Y">
-		Нажимая на эту кнопку, я даю свое <a href="/legal/consent/" target="_blank">согласие</a> на обработку персональных данных, в соответствии с <a href="/legal/personal-data/" target="_blank">Политикой обработки персональных данных</a>
+		<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
 		<div class="enter clearfix" style="margin-top:12px;">
 			<div>
- <input name="Register" value="Отправить" type="submit" disabled>
+ <input name="Register" value="Отправить" type="submit" class="himopt-need-consent" disabled>
 			</div>
 		</div>
 	</form>
-	<script>
-	(function(){
-		var form = document.getElementById('feedback-form');
-		if (!form) return;
-		var rule = form.querySelector('#rule');
-		var submit = form.querySelector('input[type="submit"]');
-		if (!rule || !submit) return;
-		function syncFeedbackSubmit() {
-			submit.disabled = !rule.checked;
-		}
-		if (rule.addEventListener) {
-			rule.addEventListener('change', syncFeedbackSubmit, false);
-			rule.addEventListener('click', syncFeedbackSubmit, false);
-		} else {
-			rule.onchange = syncFeedbackSubmit;
-		}
-		syncFeedbackSubmit();
-	})();
-	</script>
 </div>
  <br>
  <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
