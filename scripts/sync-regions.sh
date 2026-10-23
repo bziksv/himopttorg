@@ -41,6 +41,9 @@ done
 SHARED_PATHS="
 legal
 contacts/feedback
+.left.menu.php
+.left.menu_ext.php
+catalog/.left.menu.php
 bitrix/php_interface/init.php
 bitrix/php_interface/include
 bitrix/templates/himopttorg/template_styles.css

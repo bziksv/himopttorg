@@ -77,7 +77,10 @@ if(CModule::IncludeModule('iblock'))
  }
 }
 
-$aMenuLinks = array_merge($aMenuLinks, $aMenuLinksExt);
+// Sidebar is catalog sections only. Do not merge $aMenuLinks from
+// contacts/.left.menu.php when the first request after cache flush
+// was /contacts/feedback/ (bitrix:menu cache id ignores the current dir).
+$aMenuLinks = $aMenuLinksExt;
 
 
 ?>
