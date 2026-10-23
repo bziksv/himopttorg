@@ -80,7 +80,7 @@ foreach ($arResult['ITEMS'] as $key => $arElement):
 						'BUTTON_ID' => $linkSubscribe,
 						'BUTTON_CLASS' => 'btn btn-subscribe',
 						'DEFAULT_DISPLAY' => true,
-						'MESS_BTN_SUBSCRIBE' => "Уведомить",
+						'MESS_BTN_SUBSCRIBE' => "Уведомить о поступлении",
 						'TITLE_ALREADY_SUBSCRIBED' => "Подписаны",
 					),
 					$component,

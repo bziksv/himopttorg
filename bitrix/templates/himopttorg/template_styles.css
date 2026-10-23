@@ -1363,8 +1363,8 @@ table.order_tbl td{
 }	
 table.order_tbl th.c5,
 table.order_tbl td.c5.w85{
-	width:90px;
-	max-width:90px;
+	width:1%;
+	white-space:nowrap;
 }	
 table.order_tbl td.first, table.order_tbl td.last, table.order_tbl th.last, table.order_tbl th.first {		
 	background:transparent; 
@@ -1931,15 +1931,20 @@ ul.addnav li.active a.item15{
 	overflow: visible;
 	pointer-events: auto;
 }
-table.order_tbl .btn.btn-subscribe {
+table.order_tbl .btn.btn-subscribe,
+table.order_tbl .btn.btn-subscribe span {
 	display: inline-block;
 	box-sizing: border-box;
 	margin: 0;
-	padding: 3px 8px;
+	padding: 4px 8px;
 	font-size: 11px;
 	line-height: 1.2;
 	white-space: nowrap;
+	width: auto;
 	text-align: center;
+}
+table.order_tbl .btn.btn-subscribe span {
+	padding: 0;
 }
 .btn {
 	
