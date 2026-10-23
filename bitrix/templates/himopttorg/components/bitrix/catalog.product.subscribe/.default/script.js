@@ -143,6 +143,10 @@
 							className : 'btn btn-primary',
 							events: {
 								click : BX.delegate(function() {
+									if(!this.elemPopupWin.contentContainer.querySelector('#rule').checked)
+									{
+										return false;
+									}
 									if(!this.validateContactField(result.contactTypeData))
 									{
 										return false;
@@ -191,6 +195,10 @@
 						})
 					]);
 					this.elemPopupWin.show();
+					var subscribeBtn = this.elemPopupWin.buttonsContainer.querySelector('.btn-primary');
+					if (subscribeBtn) {
+						subscribeBtn.style.display = 'none';
+					}
 				}
 				else if(result.error)
 				{
@@ -436,7 +444,6 @@
 								type: 'checkbox',
 								id: 'rule',
 								name: 'rule',
-								checked: "checked",
 								value: true,
 							},
 							events: {
