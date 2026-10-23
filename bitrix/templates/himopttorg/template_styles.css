@@ -302,7 +302,22 @@ i.btn_l{
 .header_adress{
 	padding-top:9px;
 	width:46%;
-}	
+	overflow-x:auto;
+	overflow-y:hidden;
+	-webkit-overflow-scrolling:touch;
+	scrollbar-width:thin;
+	scrollbar-color:rgba(255,255,255,.35) transparent;
+}
+.header_adress::-webkit-scrollbar{
+	height:3px;
+}
+.header_adress::-webkit-scrollbar-track{
+	background:transparent;
+}
+.header_adress::-webkit-scrollbar-thumb{
+	background:rgba(255,255,255,.35);
+	border-radius:3px;
+}
 .thumbs, .thumbs  td{
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -311,10 +326,13 @@ i.btn_l{
 }			
 .thumbs{
 	margin:0 0 4px 0;
-	padding:0;	
+	padding:0;
+	width:max-content;
+	max-width:none;
 }
 .thumbs td{
-	vertical-align:top;	
+	vertical-align:top;
+	white-space:nowrap;
 }
 .thumbs td a{
 	display:block;
