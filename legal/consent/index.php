@@ -198,7 +198,6 @@ $APPLICATION->SetTitle("Согласие на обработку персона�
 </p>
 <ul>
 	<li class="project-var-block"><span class="project-var">ООО «Яндекс»</span> (ИНН <span class="project-var">7736207543</span>) (<span class="project-var">Яндекс Метрика, сервисы карт</span>) — <a href="https://yandex.ru/" target="_blank" rel="noopener"><span class="project-var">https://yandex.ru/</span></a>;</li>
-	<li class="project-var-block"><span class="project-var">CDN Cloudflare (cdnjs)</span> (<span class="project-var">cdnjs.cloudflare.com, подгрузка сторонних библиотек (стили Fancybox)</span>) — <a href="https://cdnjs.cloudflare.com/" target="_blank" rel="noopener"><span class="project-var">https://cdnjs.cloudflare.com/</span></a>;</li>
 	<li class="project-var-block"><span class="project-var">ООО «1С-Битрикс»</span> (<span class="project-var">платформа сайта</span>)&nbsp;(ИНН 7717586110) — <a href="https://www.1c-bitrix.ru/" target="_blank" rel="noopener"><span class="project-var">https://www.1c-bitrix.ru/</span></a>;</li>
 	<li class="project-var-block"><span class="project-var">агентство «Прайм»</span> (<span class="project-var">prime-ltd.su, SEO-сопровождение, обезличенная аналитика</span>)&nbsp;ИНН (3665107119)— <a href="https://prime-ltd.su/" target="_blank" rel="noopener"><span class="project-var">https://prime-ltd.su/</span></a>;</li>
 	<li>партнёрам по доставке (курьерские службы, транспортные компании) для выполнения обязательств по доставке заказов;</li>

@@ -231,7 +231,6 @@ $APPLICATION->SetTitle("Политика обработки персональн
 </p>
 <ul>
 	<li class="project-var-block">ООО «Яндекс» (ИНН 7736207543) — <a href="https://yandex.ru/" target="_blank" rel="noopener">Яндекс Метрика</a>, сервисы карт;</li>
-	<li class="project-var-block">CDN Cloudflare (cdnjs) — <a href="https://cdnjs.cloudflare.com/" target="_blank" rel="noopener">cdnjs.cloudflare.com</a>, подгрузка сторонних библиотек (стили Fancybox);</li>
 	<li class="project-var-block">ООО «1С-Битрикс» (ИНН 7717586110)&nbsp;&nbsp;— <a href="https://www.1c-bitrix.ru/" target="_blank" rel="noopener">платформа сайта</a>;</li>
 	<li class="project-var-block">агентство «Прайм»&nbsp;(ИНН 3665107119)&nbsp;— <a href="https://prime-ltd.su/" target="_blank" rel="noopener">prime-ltd.su</a>, SEO-сопровождение, обезличенная аналитика;</li>
 	<li>партнёрам по доставке (курьерские и транспортные компании);</li>
