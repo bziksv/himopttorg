@@ -75,15 +75,23 @@ include 'feedback.php';
 		</div>
 	</form>
 	<script>
-	$(function(){
-		var $rule = $('#feedback-form #rule');
-		var $submit = $('#feedback-form input[type="submit"]');
+	(function(){
+		var form = document.getElementById('feedback-form');
+		if (!form) return;
+		var rule = form.querySelector('#rule');
+		var submit = form.querySelector('input[type="submit"]');
+		if (!rule || !submit) return;
 		function syncFeedbackSubmit() {
-			$submit.prop('disabled', !$rule.is(':checked'));
+			submit.disabled = !rule.checked;
 		}
-		$rule.on('change', syncFeedbackSubmit);
+		if (rule.addEventListener) {
+			rule.addEventListener('change', syncFeedbackSubmit, false);
+			rule.addEventListener('click', syncFeedbackSubmit, false);
+		} else {
+			rule.onchange = syncFeedbackSubmit;
+		}
 		syncFeedbackSubmit();
-	});
+	})();
 	</script>
 </div>
  <br>
