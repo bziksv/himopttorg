@@ -47,6 +47,10 @@ bitrix/templates/himopttorg/components/bitrix/catalog/.default/bitrix/catalog.se
 bitrix/templates/himopttorg/components/bitrix/catalog/.default/bitrix/catalog.section/table
 bitrix/templates/himopttorg/components/bitrix/catalog/.default/bitrix/catalog.element/.default
 bitrix/templates/himopttorg/components/bitrix/catalog/.default/section.php
+bitrix/templates/himopttorg/components/bitrix/system.auth.authorize/.default
+bitrix/templates/himopttorg/components/bitrix/system.auth.forgotpasswd/.default
+bitrix/templates/himopttorg/components/bitrix/system.auth.confirmation/.default
+bitrix/templates/himopttorg/components/bitrix/system.auth.form/store
 "
 
 SITES="l.himopttorg.ru kursk.himopttorg.ru belgorod.himopttorg.ru tambov.himopttorg.ru"

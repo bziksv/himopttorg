@@ -43,5 +43,6 @@ SSH: `himopttorg@himopttorg.beget.tech`, ключ `~/.ssh/id_ed25519`. CLI PHP �
 - шаблон `catalog.product.subscribe`
 - шаблоны `catalog.section` (`.default` и `table`) и `catalog.element/.default`
 - `catalog/.default/section.php`
+- шаблоны `system.auth.*` (вход / пароль)
 
 Городское (Метрика, PDF политики, телефоны) оставлять в файлах сайта или выбирать в рантайме (`/legal/personal-data/` на Воронеже, `upload/personal-data*.pdf` на регионах). Не хардкодить один городской URL на все копии.

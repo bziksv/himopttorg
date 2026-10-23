@@ -19,20 +19,20 @@
 	<input type="hidden" name="AUTH_FORM" value="Y" />
 	<input type="hidden" name="TYPE" value="AUTH" />
 	
-	<p class="tit">Р’С…РѕРґ / <a href="<?=$arResult["AUTH_REGISTER_URL"]?>">Р РµРіРёСЃС‚СЂР°С†РёСЏ</a></p>
+	<p class="tit">Вход / <a href="<?=$arResult["AUTH_REGISTER_URL"]?>">Регистрация</a></p>
 	<div class="log_passw">
-		<p class="inp"><label for="log">Р›РѕРіРёРЅ </label><input name="USER_LOGIN" type="text" class="field2" id="log" value="" /></p>
+		<p class="inp"><label for="log">Логин </label><input name="USER_LOGIN" type="text" class="field2" id="log" value="" /></p>
 	</div>
 	<div class="log_passw">
-		<p class="inp"><label for="passw">РџР°СЂРѕР»СЊ</label><input name="USER_PASSWORD" type="password" class="field2" id="passw" value="" /></p>
+		<p class="inp"><label for="passw">Пароль</label><input name="USER_PASSWORD" type="password" class="field2" id="passw" value="" /></p>
 	</div>
 	<div class="enter clearfix">
-		<div class="ch"><input type="checkbox" id="ch1" checked="checked" name="USER_REMEMBER" value="Y" /><span>Р—Р°РїРѕРјРЅРёС‚СЊ</span></div>
+		<div class="ch"><input type="checkbox" id="ch1" checked="checked" name="USER_REMEMBER" value="Y" /><span>Запомнить</span></div>
 		<div class="btn_enter">										
 			<input type="submit" value="" />					
 		</div>
 	</div>
-	<p class="remaind"><a href="<?=$arResult["AUTH_FORGOT_PASSWORD_URL"]?>">РќР°РїРѕРјРЅРёС‚СЊ РїР°СЂРѕР»СЊ</a></p>
+	<p class="remaind"><a href="<?=$arResult["AUTH_FORGOT_PASSWORD_URL"]?>">Напомнить пароль</a></p>
 </form>
 <!--/autorization-->
 <?/*
