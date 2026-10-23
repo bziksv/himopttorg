@@ -41,7 +41,7 @@ function bxModifySaleMails($orderID, &$eventName, &$arFields)
 	?>
 	<TABLE style="border:1px solid #000;border-collapse:collapse;">
 			<TR>
-			<TD><strong>Р”Р°РЅРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</strong></TD>
+			<TD><strong>Данные покупателя</strong></TD>
 			</TR>
 			<TR>
 			<TD style="border:1px solid #000;padding:0px;">
@@ -59,14 +59,14 @@ function bxModifySaleMails($orderID, &$eventName, &$arFields)
 
 
 CModule::IncludeModule('sale');
-$res = CSaleBasket::GetList(array(), array("ORDER_ID" => $orderID)); // ID Р·Р°РєР°Р·Р°
+$res = CSaleBasket::GetList(array(), array("ORDER_ID" => $orderID)); // ID заказа
 
 
 $order_list = '';
 $order_list .= '<TABLE style="border:1px solid #000;border-collapse:collapse;">';
-$order_list .= '<TR><TD style="border:1px solid;padding: 5px;">РќР°РёРјРµРЅРѕРІР°РЅРёРµ</TD><TD style="border:1px solid;padding: 5px;">РЎС‚РѕРёРјРѕСЃС‚СЊ</TD><TD style="border:1px solid;padding: 5px;">РљРѕР»-РІРѕ</TD></TR>';
+$order_list .= '<TR><TD style="border:1px solid;padding: 5px;">Наименование</TD><TD style="border:1px solid;padding: 5px;">Стоимость</TD><TD style="border:1px solid;padding: 5px;">Кол-во</TD></TR>';
 while ($arItem = $res->Fetch()) {
-	$order_list .= '<TR><TD style="border:1px solid;padding: 5px;">'.$arItem['NAME'].'</TD><TD style="border:1px solid;padding: 5px;">'.CurrencyFormat($arItem['PRICE'], "RUB").' </TD><TD style="border:1px solid;padding: 5px;">'.$arItem['QUANTITY'].' С€С‚.</TD></TR>';
+	$order_list .= '<TR><TD style="border:1px solid;padding: 5px;">'.$arItem['NAME'].'</TD><TD style="border:1px solid;padding: 5px;">'.CurrencyFormat($arItem['PRICE'], "RUB").' </TD><TD style="border:1px solid;padding: 5px;">'.$arItem['QUANTITY'].' шт.</TD></TR>';
 }
 $order_list .= '</TABLE>';
 
