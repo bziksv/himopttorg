@@ -56,6 +56,15 @@ $templateData['showSubscribe'] = $showSubscribe;
 $subscribeBtnName = !empty($arParams['MESS_BTN_SUBSCRIBE']) ? $arParams['MESS_BTN_SUBSCRIBE'] : Loc::getMessage('CPST_SUBSCRIBE_BUTTON_NAME');
 $titleAlreadySubscribed = !empty($arParams['TITLE_ALREADY_SUBSCRIBED']) ? $arParams['TITLE_ALREADY_SUBSCRIBED'] : Loc::getMessage('CPST_TITLE_ALREADY_SUBSCRIBED');
 
+$privacyUrl = '/legal/personal-data/';
+$docRoot = rtrim((string)$_SERVER['DOCUMENT_ROOT'], '/');
+if (!is_file($docRoot.'/legal/personal-data/index.php')) {
+	$pdfs = glob($docRoot.'/upload/personal-data*.pdf') ?: [];
+	if ($pdfs) {
+		$privacyUrl = '/upload/'.basename($pdfs[0]);
+	}
+}
+
 if($showSubscribe):?>
 	<span id="<?=htmlspecialcharsbx($arResult['BUTTON_ID'])?>"
 			class="<?=htmlspecialcharsbx($arResult['BUTTON_CLASS'])?>"
@@ -70,7 +79,9 @@ if($showSubscribe):?>
 	<script type="text/javascript">
 		BX.message({
 			CPST_SUBSCRIBE_POPUP_TITLE: '<?=GetMessageJS('CPST_SUBSCRIBE_POPUP_TITLE');?>',
-			CPST_SUBSCRIBE_BUTTON_NAME: '<?=$subscribeBtnName?>',
+			CPST_SUBSCRIBE_BUTTON_NAME: '<?=CUtil::JSEscape($subscribeBtnName)?>',
+			HIMOPT_PRIVACY_POLICY_URL: '<?=CUtil::JSEscape($privacyUrl)?>',
+			CPST_PRIVACY_CONSENT: '<?=GetMessageJS('CPST_PRIVACY_CONSENT');?>',
 			CPST_SUBSCRIBE_BUTTON_CLOSE: '<?=GetMessageJS('CPST_SUBSCRIBE_BUTTON_CLOSE');?>',
 			CPST_SUBSCRIBE_MANY_CONTACT_NOTIFY: '<?=GetMessageJS('CPST_SUBSCRIBE_MANY_CONTACT_NOTIFY');?>',
 			CPST_SUBSCRIBE_LABLE_CONTACT_INPUT: '<?=GetMessageJS('CPST_SUBSCRIBE_LABLE_CONTACT_INPUT');?>',
@@ -81,7 +92,7 @@ if($showSubscribe):?>
 			CPST_STATUS_SUCCESS: '<?=GetMessageJS('CPST_STATUS_SUCCESS');?>',
 			CPST_STATUS_ERROR: '<?=GetMessageJS('CPST_STATUS_ERROR');?>',
 			CPST_ENTER_WORD_PICTURE: '<?=GetMessageJS('CPST_ENTER_WORD_PICTURE');?>',
-			CPST_TITLE_ALREADY_SUBSCRIBED: '<?=$titleAlreadySubscribed?>',
+			CPST_TITLE_ALREADY_SUBSCRIBED: '<?=CUtil::JSEscape($titleAlreadySubscribed)?>',
 			CPST_POPUP_SUBSCRIBED_TITLE: '<?=GetMessageJS('CPST_POPUP_SUBSCRIBED_TITLE');?>',
 			CPST_POPUP_SUBSCRIBED_TEXT: '<?=GetMessageJS('CPST_POPUP_SUBSCRIBED_TEXT');?>'
 		});

@@ -1,0 +1,46 @@
+---
+description: Пять копий сайта Himopttorg — один git, без веток по городам
+alwaysApply: true
+---
+
+# Мультисайт: один репозиторий на все города
+
+Это не один Битрикс на пять доменов, а **пять независимых копий** на Beget: своя `public_html`, своя БД, свой `header`/`footer`. Git есть только у Воронежа. Отдельные ветки по городам не заводить.
+
+| Сайт | Корень на Beget | БД |
+|---|---|---|
+| himopttorg.ru | `~/himopttorg.beget.tech/public_html` | `himopttorg_s` |
+| l.himopttorg.ru | `~/l.himopttorg.ru/public_html` | `himopttorg_l` |
+| kursk.himopttorg.ru | `~/kursk.himopttorg.ru/public_html` | `himopttorg_kursk` |
+| belgorod.himopttorg.ru | `~/belgorod.himopttorg.ru/public_html` | `himopttorg_belgo` |
+| tambov.himopttorg.ru | `~/tambov.himopttorg.ru/public_html` | `himopttorg_tambo` |
+
+SSH: `himopttorg@himopttorg.beget.tech`, ключ `~/.ssh/id_ed25519`. CLI PHP на Beget — `/usr/local/bin/php8.3` (системный `php` это 5.6).
+
+## Общий баг
+
+Правим в этом репо → `git pull` на Воронеже → копируем **только общие файлы** на регионы:
+
+```sh
+./scripts/sync-regions.sh                      # dry-run
+./scripts/sync-regions.sh --apply --clear-cache
+./scripts/sync-regions.sh --site l --apply --clear-cache
+./scripts/sync-regions.sh --from-local --apply
+```
+
+`--site`: `l` | `kursk` | `belgorod` | `tambov`.
+
+## Не копировать никогда
+
+- `bitrix/php_interface/dbconn.php`, `bitrix/.settings.php`, лицензия, `upload/`
+- `bitrix/templates/himopttorg/header.php` и `footer.php` — телефоны, город, Метрика/счётчики
+- ядро `bitrix/modules/` целиком
+
+## Копировать (whitelist в `scripts/sync-regions.sh`)
+
+- `bitrix/php_interface/init.php` и `include/`
+- шаблон `catalog.product.subscribe`
+- шаблоны `catalog.section` (`.default` и `table`) и `catalog.element/.default`
+- `catalog/.default/section.php`
+
+Городское (Метрика, PDF политики, телефоны) оставлять в файлах сайта или выбирать в рантайме (`/legal/personal-data/` на Воронеже, `upload/personal-data*.pdf` на регионах). Не хардкодить один городской URL на все копии.

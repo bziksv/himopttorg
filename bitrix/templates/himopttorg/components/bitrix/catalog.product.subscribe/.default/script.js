@@ -106,7 +106,7 @@
 
 	window.JCCatalogProductSubscribe.prototype.subscribe = function()
 	{
-		this.elemButtonSubscribe = BX.proxy_context;
+		this.elemButtonSubscribe = BX(this.buttonId);
 		if(!this.elemButtonSubscribe) return false;
 
 		BX.ajax({
@@ -454,7 +454,10 @@
 							props: {
 								className: 'bx-rules-text',
 							},
-							html: 'Нажимая на эту кнопку, я даю свое согласие на обработку персональных данных и соглашаюсь с условиями <a href="/upload/personal-data-belgorod-himopttorg.pdf" target="_blank">политики обработки персональных данных</a>.',
+							html: (BX.message('CPST_PRIVACY_CONSENT') || '').replace(
+								'#URL#',
+								BX.message('HIMOPT_PRIVACY_POLICY_URL') || '/legal/personal-data/'
+							),
 							style: {
 								'font-size': '12px',
 							},
