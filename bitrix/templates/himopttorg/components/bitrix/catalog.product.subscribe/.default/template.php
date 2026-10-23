@@ -70,6 +70,7 @@ if($showSubscribe):?>
 			data-item="<?=htmlspecialcharsbx($arResult['PRODUCT_ID'])?>"
 			role="button"
 			tabindex="0"
+			title="Уведомить о поступлении"
 			onclick="var __s=window['<?=CUtil::JSEscape($jsObject)?>']; if(__s&&__s.subscribe){__s.subscribe();} return false;"
 			style="<?=($arResult['DEFAULT_DISPLAY']?'':'display: none;')?>">
 		<span>

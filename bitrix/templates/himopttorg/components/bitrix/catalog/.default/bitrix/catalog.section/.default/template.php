@@ -80,8 +80,8 @@ foreach ($arResult['ITEMS'] as $key => $arElement):
 						'BUTTON_ID' => $linkSubscribe,
 						'BUTTON_CLASS' => 'btn btn-subscribe',
 						'DEFAULT_DISPLAY' => true,
-						'MESS_BTN_SUBSCRIBE' => "Уведомить о поступлении",
-						'TITLE_ALREADY_SUBSCRIBED' => "Уведомим на почту о поступлении товара",
+						'MESS_BTN_SUBSCRIBE' => "Уведомить",
+						'TITLE_ALREADY_SUBSCRIBED' => "Подписаны",
 					),
 					$component,
 					array('HIDE_ICONS' => 'Y')
@@ -89,7 +89,7 @@ foreach ($arResult['ITEMS'] as $key => $arElement):
 				?>
 			
 			<? else: ?>
-				<input type="button" value="" class="btns status2" title="Положить в корзину" onclick="document.location.href='?BUY&P_ID=<?=$arElement['ID']?>&QUANTITY='+$('#P_<?=$arElement['ID']?>').val()" /><p class="inp3"><input type="text" class="field3" id="P_<?=$arElement['ID']?>" value="1" /></p>
+				<input type="button" value="" class="btns status2" title="Положить в корзину" onclick="return himoptAdd2Basket(<?=(int)$arElement['ID']?>);" /><p class="inp3"><input type="text" class="field3" id="P_<?=$arElement['ID']?>" value="1" /></p>
 			<? endif; ?>
 		</td>																							
 		<td class="last">&nbsp;</td>

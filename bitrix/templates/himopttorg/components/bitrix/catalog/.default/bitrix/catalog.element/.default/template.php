@@ -106,7 +106,7 @@ if (isset($_GET['BUY'])){
 			</div>
 			<div class="btn btn_order">
 				<div class="btn_r">
-					<input type="button" id="orderbu" value="Добавить" onclick="document.location.href='?BUY&QUANTITY='+$('#cnt_count').val()" />
+					<input type="button" id="orderbu" value="Добавить" onclick="return himoptAdd2Basket(<?=(int)$arResult['ID']?>, 'cnt_count');" />
 				</div>
 				<i class="btn_l"></i>								
 			</div>

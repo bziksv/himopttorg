@@ -43,6 +43,7 @@ SSH: `himopttorg@himopttorg.beget.tech`, ключ `~/.ssh/id_ed25519`. CLI PHP �
 - `.left.menu.php`, `.left.menu_ext.php`, `catalog/.left.menu.php` (левое меню — только разделы каталога)
 - `bitrix/php_interface/init.php` и `include/`
 - `bitrix/templates/himopttorg/template_styles.css`
+- `bitrix/templates/himopttorg/js/himopt_basket.js`
 - шаблон `catalog.product.subscribe`
 - шаблоны `catalog.section` (`.default` и `table`) и `catalog.element/.default`
 - `catalog/.default/section.php`

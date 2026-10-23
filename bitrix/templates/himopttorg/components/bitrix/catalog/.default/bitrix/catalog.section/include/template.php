@@ -40,7 +40,7 @@ foreach ($arResult['ITEMS'] as $key => $arElement):
 		</td>
 		<td class="c3"><?=$arElement["PROPERTIES"]['CML2_BASE_UNIT']['VALUE']?></td>
 		<td class="c4"><?=$arElement['CATALOG_PRICE_2']?></td>		
-		<td class="c5 w85"><input type="button" value="" class="btns status2" title="РџРѕР»РѕР¶РёС‚СЊ РІ РєРѕСЂР·РёРЅСѓ" onclick="document.location.href='?BUY&P_ID=<?=$arElement['ID']?>&QUANTITY='+$('#P_<?=$arElement['ID']?>').val()" /><p class="inp3"><input type="text" class="field3" id="P_<?=$arElement['ID']?>" value="1" /></p></td>																							
+		<td class="c5 w85"><input type="button" value="" class="btns status2" title="Положить в корзину" onclick="return himoptAdd2Basket(<?=(int)$arElement['ID']?>);" /><p class="inp3"><input type="text" class="field3" id="P_<?=$arElement['ID']?>" value="1" /></p></td>																							
 		<td class="last">&nbsp;</td>
 	</tr>
 <?endforeach;?>

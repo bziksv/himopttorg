@@ -1361,8 +1361,10 @@ table.order_tbl td{
 	background:url(images/dot2.gif) 0 100% repeat-x; 	
 	line-height:1.3;	
 }	
-table.order_tbl td.c5.w85{	
-	width:170px;
+table.order_tbl th.c5,
+table.order_tbl td.c5.w85{
+	width:90px;
+	max-width:90px;
 }	
 table.order_tbl td.first, table.order_tbl td.last, table.order_tbl th.last, table.order_tbl th.first {		
 	background:transparent; 
@@ -1927,10 +1929,17 @@ ul.addnav li.active a.item15{
 	position: relative;
 	z-index: 2;
 	overflow: visible;
-	white-space: nowrap;
-	min-width: 160px;
-	display: inline-block;
 	pointer-events: auto;
+}
+table.order_tbl .btn.btn-subscribe {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 3px 8px;
+	font-size: 11px;
+	line-height: 1.2;
+	white-space: nowrap;
+	text-align: center;
 }
 .btn {
 	
@@ -1942,6 +1951,33 @@ ul.addnav li.active a.item15{
 }
 .primelogo {
 	width: 10%;
+}
+#himopt-basket-toast {
+	position: fixed;
+	top: 18px;
+	left: 50%;
+	right: auto;
+	z-index: 100000;
+	max-width: 360px;
+	padding: 12px 18px;
+	background: #fff;
+	border: 1px solid #3a9a3a;
+	color: #1b5e20;
+	font-size: 14px;
+	line-height: 1.35;
+	box-shadow: 0 4px 16px rgba(0,0,0,.18);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-50%);
+	transition: opacity .2s ease;
+}
+#himopt-basket-toast.is-show {
+	opacity: 1;
+	visibility: visible;
+}
+#himopt-basket-toast.is-error {
+	border-color: #c0392b;
+	color: #7b1e1e;
 }
 input[name="USER_AGREE"] {
     display: inline-block !important;

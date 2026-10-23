@@ -47,6 +47,7 @@ catalog/.left.menu.php
 bitrix/php_interface/init.php
 bitrix/php_interface/include
 bitrix/templates/himopttorg/template_styles.css
+bitrix/templates/himopttorg/js/himopt_basket.js
 bitrix/templates/himopttorg/components/bitrix/catalog.product.subscribe/.default
 bitrix/templates/himopttorg/components/bitrix/catalog/.default/bitrix/catalog.section/.default
 bitrix/templates/himopttorg/components/bitrix/catalog/.default/bitrix/catalog.section/table
