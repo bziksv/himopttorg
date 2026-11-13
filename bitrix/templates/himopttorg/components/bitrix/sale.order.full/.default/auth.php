@@ -97,7 +97,7 @@
 
 				<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
 				<div class="himopt-order-actions">
-					<input type="submit" class="himopt-order-btn himopt-need-consent" value="<?echo GetMessage("STOF_NEXT_STEP")?>" disabled>
+					<input type="submit" class="himopt-order-btn himopt-need-consent" value="<?echo GetMessage("STOF_NEXT_STEP")?>">
 					<input type="hidden" name="do_register" value="Y">
 				</div>
 			</form>

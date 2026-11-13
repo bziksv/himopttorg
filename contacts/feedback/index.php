@@ -69,7 +69,7 @@ include 'feedback.php';
 		<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
 		<div class="enter clearfix" style="margin-top:12px;">
 			<div>
- <input name="Register" value="Отправить" type="submit" class="himopt-need-consent" disabled>
+ <input name="Register" value="Отправить" type="submit" class="himopt-need-consent">
 			</div>
 		</div>
 	</form>

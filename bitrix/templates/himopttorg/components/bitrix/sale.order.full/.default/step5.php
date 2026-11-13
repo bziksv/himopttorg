@@ -119,7 +119,7 @@
 				<th><?echo GetMessage("SALE_CONTENT_NAME")?></th>
 				<th><?echo GetMessage("SALE_CONTENT_DISCOUNT")?></th>
 				<th><?echo GetMessage("SALE_CONTENT_QUANTITY")?></th>
-				<th><?echo GetMessage("SALE_CONTENT_PRICE")?>, СЂСѓР±</th>
+				<th><?echo GetMessage("SALE_CONTENT_PRICE")?>, руб</th>
 			</tr>
 			<?
 			foreach($arResult["BASKET_ITEMS"] as $arBasketItems)
@@ -230,7 +230,7 @@
 		<div class="himopt-order-confirm">
 			<?php if (function_exists("himopt_consent_html")) { himopt_consent_html(); } ?>
 			<div class="himopt-order-actions himopt-order-actions--row">
-				<input onclick="yaCounter9308620.reachGoal('ORDER'); return true; _gaq.push(['_trackEvent','ORDER','click']);" type="submit" name="contButton" class="himopt-need-consent" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="" disabled>
+				<input onclick="yaCounter9308620.reachGoal('ORDER'); return true; _gaq.push(['_trackEvent','ORDER','click']);" type="submit" name="contButton" class="himopt-need-consent" style="cursor:pointer;border:0;width:123px;height:27px;background: url(<?=SITE_TEMPLATE_PATH?>/images/btn-next.png) no-repeat;" value="">
 			</div>
 		</div>
 	</td>
