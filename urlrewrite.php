@@ -50,8 +50,8 @@ $arUrlRewrite=array (
   ),
   14 => 
   array (
-    'CONDITION' => '#^\\??(.*)#',
-    'RULE' => '&$1',
+    'CONDITION' => '#^/dev/#',
+    'RULE' => '',
     'ID' => 'bitrix:catalog.section',
     'PATH' => '/dev/index.php',
     'SORT' => 100,

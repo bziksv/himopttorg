@@ -161,6 +161,8 @@ false
                                          "CACHE_GROUPS"                    => $arParams["CACHE_GROUPS"],
                                          "SET_TITLE"                       => $arParams["SET_TITLE"],
                                          "SET_STATUS_404"                  => $arParams["SET_STATUS_404"],
+                                         "SHOW_404"                        => $arParams["SHOW_404"],
+                                         "FILE_404"                        => $arParams["FILE_404"],
                                          "DISPLAY_COMPARE"                 => $arParams["USE_COMPARE"],
                                          "PAGE_ELEMENT_COUNT"              => $arParams["PAGE_ELEMENT_COUNT"],
                                          "LINE_ELEMENT_COUNT"              => $arParams["LINE_ELEMENT_COUNT"],
