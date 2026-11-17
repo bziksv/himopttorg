@@ -1,6 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
-<div class="title_h1">РџРѕС…РѕР¶РёРµ С‚РѕРІР°СЂС‹</div>
+<div class="title_h1">Похожие товары</div>
 
 <?	
 if (isset($_GET['BUY'])){
@@ -15,10 +15,10 @@ if (isset($_GET['BUY'])){
 		<thead>
 			<tr>
 				<th class="first">&nbsp;</th>
-				<th class="c2">РќР°РёРјРµРЅРѕРІР°РЅРёРµ</th>
-				<th class="c3">Р•РґРёРЅРёС†Р°</th>													
-				<th class="c4">РЎС‚РѕРёРјРѕСЃС‚СЊ<br />СЃ РќР”РЎ (СЂСѓР±.)</th>
-				<th class="c5">Р’ РєРѕСЂР·РёРЅСѓ</th>
+				<th class="c2">Наименование</th>
+				<th class="c3">Единица</th>													
+				<th class="c4">Стоимость<br />с НДС (руб.)</th>
+				<th class="c5">В корзину</th>
 				<th class="last">&nbsp;</th>
 			</tr>
 		</thead>
