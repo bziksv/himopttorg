@@ -211,6 +211,7 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 						</td>
 					</tr>
 					<?
+					$profilePropMeta = $arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"] ?? array();
 					foreach($arResult["USER_PROFILES"] as $arUserProfiles)
 					{
 						?>
@@ -225,7 +226,11 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 								<?
 								foreach($arUserProfiles["USER_PROPS_VALUES"] as $arUserPropsValues)
 								{
-									$propMeta = $arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"][$arUserPropsValues["ORDER_PROPS_ID"]] ?? null;
+									$propId = (int)$arUserPropsValues["ORDER_PROPS_ID"];
+									if (!array_key_exists($propId, $profilePropMeta)) {
+										$profilePropMeta[$propId] = CSaleOrderProps::GetByID($propId);
+									}
+									$propMeta = $profilePropMeta[$propId];
 									if (empty($propMeta["NAME"])) {
 										continue;
 									}
