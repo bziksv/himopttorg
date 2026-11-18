@@ -226,6 +226,9 @@ function PrintPropsForm($arSource=Array(), $PRINT_TITLE = "", $arParams)
 								foreach($arUserProfiles["USER_PROPS_VALUES"] as $arUserPropsValues)
 								{
 									$propMeta = $arResult["PRINT_PROPS_FORM"]["USER_PROPS_Y"][$arUserPropsValues["ORDER_PROPS_ID"]] ?? null;
+									if (empty($propMeta["NAME"])) {
+										continue;
+									}
 									$propCode = strtoupper((string)($propMeta["CODE"] ?? ""));
 									$propNameLow = function_exists("mb_strtolower")
 										? mb_strtolower((string)($propMeta["NAME"] ?? ""), "UTF-8")
